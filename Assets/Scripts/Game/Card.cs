@@ -13,6 +13,8 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
     private Vector3 originPosition;
     private CanvasGroup canvasGroup;
 
+    public GameObject panelCard;
+
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
@@ -24,17 +26,20 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
         transform.GetComponent<Image>().sprite = cardDetail.cardSprite;
     }
 
+    Vector3 temp = new Vector3(30f, 0, 0);
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         Debug.Log("Mouse enter");
         transform.localScale += new Vector3(0.1f, 0.1f, 0f);
+        this.transform.position -= temp;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         Debug.Log("Mouse exit");
         transform.localScale -= new Vector3(0.1f, 0.1f, 0f);
+        this.transform.position += temp;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -60,6 +65,17 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
     public void OnPointerDown(PointerEventData eventData)
     {
         isDraged = false;
+        panelCard.SetActive(true);
+    }
+    public void OnPointerUp(PointerEventData eventData)
+    {
+
+    }
+
+    /*
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        isDraged = false;
         originPosition = rectTransform.anchoredPosition;
     }
 
@@ -79,4 +95,5 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
             }
         }
     }
+    */
 }
