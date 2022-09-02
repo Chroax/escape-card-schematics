@@ -28,17 +28,14 @@ public class MainMenu : MonoBehaviour
 
     public void GoToPlayGames()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Game Scene");
     }
 
     public void GoToTutorial()
     {
         SceneManager.LoadScene("Tutorial");
     }
-    public void GoToOption()
-    {
-        SceneManager.LoadScene("Option");
-    }
+
     public void PanelPopUp()
     {
         panel.SetActive(true);
