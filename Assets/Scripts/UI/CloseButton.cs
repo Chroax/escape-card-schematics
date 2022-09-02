@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class CloseButton : MonoBehaviour
 {
-    [SerializeField] GameObject gameObject;
     // Start is called before the first frame update
     public void DeactivePanel()
     {
         if(gameObject.activeInHierarchy)
-            gameObject.SetActive(false);
+            this.gameObject.SetActive(false);
     }
 }
