@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: Flashlight Off
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 0}
+  cardSprite: {fileID: 21300000, guid: 2d75420ece52bdb44b4d8f98efbc3f27, type: 3}
   cardDescription: 
   cardID: 12
   cardType: 3

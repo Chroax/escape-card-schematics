@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: Stack of file
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 0}
+  cardSprite: {fileID: 21300000, guid: 9d011ae4e5b516245b497fa3378759d2, type: 3}
   cardDescription: 
   cardID: V
   cardType: 4
