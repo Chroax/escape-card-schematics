@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -8875709783444141035}
   - component: {fileID: 257679084240061466}
   m_Layer: 5
-  m_Name: Card
+  m_Name: Second key
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e9978e300f3ed5d4aaa9f8fbcb3aa9c1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 11d3a11d9f36bb34388792f58162a58f, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -90,7 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a73c637f30077547a29fce5269d95fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardDetail: {fileID: 0}
+  cardDetail: {fileID: 11400000, guid: dbd78b49252566640bb9e0243a909d38, type: 2}
+  panelCard: {fileID: 0}
 --- !u!225 &257679084240061466
 CanvasGroup:
   m_ObjectHideFlags: 0
