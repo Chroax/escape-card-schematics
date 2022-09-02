@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 using TMPro;
+using UnityEngine.SceneManagement;
 public class LoginScript : MonoBehaviour
 {
     
@@ -48,7 +49,6 @@ public class LoginScript : MonoBehaviour
                 //Set a username and score to the system
                 DBManager.username = usernameField.text;
                 DBManager.score = webRequest.downloadHandler.text.Split('\t')[1];
-                
             }
             else
             {
@@ -63,6 +63,7 @@ public class LoginScript : MonoBehaviour
             if (DBManager.LoggedIn)
             {
                 //Load a scene or something
+                SceneManager.LoadScene("Main Menu");
             }
 
             webRequest.Dispose();
