@@ -53,9 +53,6 @@ public class LoginScript : MonoBehaviour
             else
             {
                 //Clear username and password field to prep for another input
-
-                usernameField.text = $"";
-                passwordField.text = $"";
                 warningMessage.text = $"wrong username or password!!";
                 warningMessage.gameObject.SetActive(true);
             }
