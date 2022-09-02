@@ -13,6 +13,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     [Space(10)]
     [Header("General References")]
     #endregion
+    public Player player;
     public GameObject cardListHolder;
     [HideInInspector] public CardDetailSO selectedCardHidden;
     [HideInInspector] public CardDetailSO selectedCardUnlock;
@@ -57,6 +58,11 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     public CardType unlockCardType;
     public CardType combineCardType1;
     public CardType combineCardType2;
+
+    public void Start()
+    {
+        player.Init();
+    }
 
     public CardDetailSO GetCardDetailByID(string cardID)
     {
