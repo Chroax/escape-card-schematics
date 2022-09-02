@@ -11,6 +11,8 @@ public class MainMenu : MonoBehaviour
     public GameObject logo;
     public TextMeshProUGUI text;
     public GameObject panel;
+    public GameObject mainMenu;
+
 
     public void HoverText()
     {
@@ -41,7 +43,7 @@ public class MainMenu : MonoBehaviour
     {
         panel.SetActive(true);
         logo.SetActive(false);
-        this.gameObject.SetActive(false);
+        mainMenu.SetActive(false);
     }
 
     public void QuitGame()
@@ -53,7 +55,7 @@ public class MainMenu : MonoBehaviour
     {
         logo.SetActive(false);
         panel.SetActive(false);
-        this.gameObject.SetActive(true);
+        mainMenu.SetActive(true);
     }
 
 }
