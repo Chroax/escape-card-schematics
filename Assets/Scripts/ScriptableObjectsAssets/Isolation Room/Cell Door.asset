@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: Cell Door
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 0}
+  cardSprite: {fileID: 21300000, guid: 6d6cd2284eb56c543b186d50df674c3a, type: 3}
   cardDescription: 
-  cardID: 
+  cardID: 17
   cardType: 0
-  combineCardsProducesID: 
+  combineCardsProducesID: 87
   hiddenCardID: 
   unlockCardAnswer: 
   unlockCardID: 

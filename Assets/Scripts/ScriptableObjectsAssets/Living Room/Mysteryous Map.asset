@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 0}
   cardDescription: 
-  cardID: 
+  cardID: Y
   cardType: 0
   combineCardsProducesID: 
   hiddenCardID: 

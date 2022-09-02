@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 0}
   cardDescription: 
-  cardID: 
+  cardID: 88
   cardType: 0
-  combineCardsProducesID: 
+  combineCardsProducesID: 191
   hiddenCardID: 
   unlockCardAnswer: 
   unlockCardID: 
