@@ -1048,6 +1048,7 @@ GameObject:
   - component: {fileID: 936209572}
   - component: {fileID: 936209574}
   - component: {fileID: 936209573}
+  - component: {fileID: 936209575}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -1113,6 +1114,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 936209571}
   m_CullTransparentMesh: 1
+--- !u!95 &936209575
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936209571}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0c9eedb36bc498b4a95f8f4f96ce6867, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &973688356
 GameObject:
   m_ObjectHideFlags: 0
@@ -1630,7 +1651,7 @@ GameObject:
   - component: {fileID: 1413704383}
   - component: {fileID: 1413704382}
   m_Layer: 0
-  m_Name: Control
+  m_Name: LoginController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
