@@ -45,7 +45,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     public GameObject combineCardImageSelected1;
     public GameObject combineCardImageSelected2;
     public GameObject HintCardPanel;
-    public GameObject HintCardImageSelected;
+    public GameObject hintCardImageSelected;
     public GameObject combineCardProducedImage;
     public GameObject combineCardPanel;
     public GameObject BackyardMapPanel;
