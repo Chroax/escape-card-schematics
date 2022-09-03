@@ -46,7 +46,7 @@ public class UnlockCardPanel : MonoBehaviour
 
             //Misal terunlock, maka kartu akan hilang
             silangButton.SetActive(false);
-            Destroy(GameManager.Instance.GetCardByID(GameManager.Instance.selectedCardUnlock.cardID));
+            //Destroy(GameManager.Instance.GetCardByID(GameManager.Instance.selectedCardUnlock.cardID));
             Player.instance.DiscardCards(GameManager.Instance.selectedCardUnlock.cardID);
             GameManager.Instance.selectedCardUnlock = null;
             GameManager.Instance.unlockCardImageSelected.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
