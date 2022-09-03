@@ -10,7 +10,7 @@
     $usernameClean=filter_var($username, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_HIGH);
     $password=$_POST["password"];
        
-    $checkquery = "SELECT `username` , `password`, `score` FROM `users` WHERE `username`='".$usernameClean."';";
+    $checkquery = "SELECT `team_name` , `password` FROM `accounts` WHERE `team_name`='".$usernameClean."';";
     $checkname = mysqli_query($connect, $checkquery) or die("name check failed");
     
     if (mysqli_num_rows($checkname)!=1) {
@@ -28,6 +28,7 @@
         exit;
     }
    
-    echo "0\t". $info["score"];
+    // $_SESSION["login"]=true;
+    echo "0\t". $info["team_name"];
 
 ?>

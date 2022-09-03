@@ -45,6 +45,7 @@ public class MainMenu : MonoBehaviour
 
     public void QuitGame()
     {
+        DBManager.Logout();
         SceneManager.LoadScene("Scenes/Login Scene");
     }
 
