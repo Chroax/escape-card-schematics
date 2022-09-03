@@ -646,7 +646,7 @@ GameObject:
   - component: {fileID: 84083551}
   - component: {fileID: 84083550}
   m_Layer: 5
-  m_Name: YellowImage
+  m_Name: GreyImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -745,9 +745,9 @@ RectTransform:
   m_Father: {fileID: 1025655801}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 161.915, y: -132.3885}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 478, y: 88.7454}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &108303862
@@ -2173,6 +2173,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448306232}
   m_CullTransparentMesh: 1
+--- !u!1 &453963205 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2200402164340673790, guid: 5b59513ba43c6a045b6f6aeff86ca550, type: 3}
+  m_PrefabInstance: {fileID: 1838435831}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &453963209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453963205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 532605038}
+          m_TargetAssemblyTypeName: HintPanel, Assembly-CSharp
+          m_MethodName: SelectCardChoice
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &481939755
 GameObject:
   m_ObjectHideFlags: 0
@@ -2332,6 +2366,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2200402163771787958, guid: 5b59513ba43c6a045b6f6aeff86ca550, type: 3}
   m_PrefabInstance: {fileID: 1838435831}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &532605038 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2200402163771787957, guid: 5b59513ba43c6a045b6f6aeff86ca550, type: 3}
+  m_PrefabInstance: {fileID: 1838435831}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532605036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 368b20fd61568054ebfa522fb7348e9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &532968003
 GameObject:
   m_ObjectHideFlags: 0
@@ -4601,9 +4646,9 @@ RectTransform:
   m_Father: {fileID: 1025655801}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 161.915, y: -59.0079}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 322.9084, y: 58.0158}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &945931916
@@ -5059,9 +5104,9 @@ RectTransform:
   m_Father: {fileID: 670755171}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 239, y: -69.0862}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 323.83, y: 138.1724}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1025655802
@@ -7425,6 +7470,7 @@ GameObject:
   - component: {fileID: 1327668901}
   - component: {fileID: 1327668903}
   - component: {fileID: 1327668902}
+  - component: {fileID: 1327668904}
   m_Layer: 5
   m_Name: SubmitCodeButton
   m_TagString: Untagged
@@ -7447,9 +7493,9 @@ RectTransform:
   m_Father: {fileID: 670755171}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 239, y: -246.37025}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 235, y: 72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1327668902
@@ -7490,6 +7536,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1327668900}
   m_CullTransparentMesh: 1
+--- !u!114 &1327668904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327668900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1823683558}
+          m_TargetAssemblyTypeName: HiddenCardPanel, Assembly-CSharp
+          m_MethodName: HiddenCardSubmit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1327885132
 GameObject:
   m_ObjectHideFlags: 0
@@ -9439,6 +9514,7 @@ MonoBehaviour:
   player: {fileID: 1531110656}
   cardListHolder: {fileID: 0}
   selectedCardHidden: {fileID: 0}
+  selectedCardHint: {fileID: 0}
   selectedCardUnlock: {fileID: 0}
   panelChoiceCard: {fileID: 0}
   selectedCombineCard1: {fileID: 0}
@@ -9450,17 +9526,18 @@ MonoBehaviour:
   allCardDetailList: []
   panelTransform: {fileID: 1467881294}
   activePanel: 5
-  hiddenCardImageSelected: {fileID: 0}
+  hiddenCardImageSelected: {fileID: 870367456}
   hiddenCardPanel: {fileID: 1823683554}
   unlockCardImageSelected: {fileID: 0}
   unlockCardPanel: {fileID: 1969685838}
   combineCardImageSelected1: {fileID: 0}
   combineCardImageSelected2: {fileID: 0}
+  HintCardImageSelected: {fileID: 453963205}
   combineCardProducedImage: {fileID: 0}
   combineCardPanel: {fileID: 1357172477}
   BackyardMapPanel: {fileID: 2088449396}
   machineCardPanel: {fileID: 57014999}
-  hiddenCardType: 0
+  hiddenCardType: 4
   unlockCardType: 0
   combineCardType1: 0
   combineCardType2: 0
@@ -10471,7 +10548,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1823683555
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10642,8 +10719,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200402163771787953, guid: 5b59513ba43c6a045b6f6aeff86ca550, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2200402163771787957, guid: 5b59513ba43c6a045b6f6aeff86ca550, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1531110656}
     - target: {fileID: 2200402163771787958, guid: 5b59513ba43c6a045b6f6aeff86ca550, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -12078,7 +12159,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2088449397
 RectTransform:
   m_ObjectHideFlags: 0

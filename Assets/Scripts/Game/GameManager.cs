@@ -16,6 +16,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     public Player player;
     public GameObject cardListHolder;
     [HideInInspector] public CardDetailSO selectedCardHidden;
+    [HideInInspector] public CardDetailSO selectedCardHint;
     [HideInInspector] public CardDetailSO selectedCardUnlock;
     public GameObject panelChoiceCard;
 
@@ -43,6 +44,8 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     public GameObject unlockCardPanel;
     public GameObject combineCardImageSelected1;
     public GameObject combineCardImageSelected2;
+    public GameObject HintCardPanel;
+    public GameObject HintCardImageSelected;
     public GameObject combineCardProducedImage;
     public GameObject combineCardPanel;
     public GameObject BackyardMapPanel;
