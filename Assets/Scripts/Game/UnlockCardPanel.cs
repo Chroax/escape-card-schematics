@@ -33,12 +33,15 @@ public class UnlockCardPanel : MonoBehaviour
             Debug.Log("benar");
             var generatedCard = Instantiate(GameResource.Instance.card, GameManager.Instance.cardListHolder.transform);
             generatedCard.transform.GetComponent<Card>().cardDetail = GameManager.Instance.GetCardDetailByID(GameManager.Instance.selectedCardUnlock.unlockCardID);
+            generatedCard.transform.GetComponent<Image>().sprite = generatedCard.GetComponent<Card>().cardDetail.cardSprite;
 
-            // Misal terunlock, maka kartu akan hilang
-            //Destroy(GameManager.Instance.GetCardByID(GameManager.Instance.selectedCard.cardID));
+
+            //Misal terunlock, maka kartu akan hilang
+            //Destroy(GameManager.Instance.GetCardByID(GameManager.Instance.selectedCardUnlock.cardID));
         }
         else
         {
+            warning.SetActive(false);
             PenaltyPanel.SetActive(true);
             Debug.Log("Salah");
         }

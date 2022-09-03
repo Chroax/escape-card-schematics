@@ -90,7 +90,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a73c637f30077547a29fce5269d95fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardDetail: {fileID: 11400000, guid: feb552a1d232dc14b990259eb98413bc, type: 2}
+  cards: {fileID: 0}
+  cardDetail: {fileID: 11400000, guid: 7062e61244e13bf4cb8f2067bbf9505c, type: 2}
+  imageDetail: {fileID: 0}
   panelCard: {fileID: 0}
 --- !u!225 &257679084240061466
 CanvasGroup:

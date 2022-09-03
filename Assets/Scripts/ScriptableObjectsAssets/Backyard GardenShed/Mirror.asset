@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 7b66cf091544e4a47bb4c8eaa83da8dc, type: 3}
   cardDescription: 
-  cardID: 36
+  cardID: 0
   cardType: 3
   combineCardsProducesID: 51
   hiddenCardID: 

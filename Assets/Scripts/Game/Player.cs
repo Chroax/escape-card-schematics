@@ -48,6 +48,7 @@ public class Player : MonoBehaviour
         }
         
         //debug
+        /*
         if (Input.GetKeyDown(KeyCode.Space))
         {
             getPenalty(10);
@@ -58,9 +59,10 @@ public class Player : MonoBehaviour
         {
             GetCoin(5);
         }
+        */
     }
 
-    private bool getPenalty(int time)
+    public bool getPenalty(int time)
     {
         currentTime -= time;
         timeUI.SetTime(currentTime);
