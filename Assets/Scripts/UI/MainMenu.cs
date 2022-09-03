@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
     public TextMeshProUGUI text;
     public GameObject panel;
     public GameObject mainMenu;
-    public string scene;
+
 
     public void HoverText()
     {
@@ -26,9 +26,14 @@ public class MainMenu : MonoBehaviour
         logo.SetActive(false);
     }
 
-    public void LoadScene()
+    public void GoToPlayGames()
     {
-        SceneManager.LoadScene(scene);
+        SceneManager.LoadScene("Game Scene");
+    }
+
+    public void GoToTutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
     }
 
     public void PanelPopUp()
@@ -36,6 +41,11 @@ public class MainMenu : MonoBehaviour
         panel.SetActive(true);
         logo.SetActive(false);
         mainMenu.SetActive(false);
+    }
+
+    public void QuitGame()
+    {
+        SceneManager.LoadScene("Scenes/Login Scene");
     }
 
     public void BackFromPanel()
