@@ -7,6 +7,7 @@ using TMPro;
 public class UnlockCardPanel : MonoBehaviour
 {
     public TMP_InputField inputText;
+    public GameObject warning;
 
     private void OnEnable()
     {
@@ -15,8 +16,14 @@ public class UnlockCardPanel : MonoBehaviour
 
     public void UnlockCardSubmit()
     {
-        if (GameManager.Instance.selectedCardUnlock.unlockCardAnswer == inputText.text && inputText.text != "0")
+        Debug.Log(inputText.text);
+        if (GameManager.Instance.selectedCardUnlock == null)
         {
+            warning.SetActive(true);
+        }
+        else if (GameManager.Instance.selectedCardUnlock.unlockCardAnswer == inputText.text && inputText.text != "0" && inputText.text != "")
+        {
+            warning.SetActive(false);
             if(GameManager.Instance.GetCardByID(GameManager.Instance.selectedCardUnlock.unlockCardID) != null)
             {
                 Debug.Log("Udah pernah keunlock");
@@ -24,6 +31,7 @@ public class UnlockCardPanel : MonoBehaviour
             }
 
             Debug.Log("benar");
+            Debug.Log(inputText.text);
             var generatedCard = Instantiate(GameResource.Instance.card, GameManager.Instance.cardListHolder.transform);
             generatedCard.transform.GetComponent<Card>().cardDetail = GameManager.Instance.GetCardDetailByID(GameManager.Instance.selectedCardUnlock.unlockCardID);
 
