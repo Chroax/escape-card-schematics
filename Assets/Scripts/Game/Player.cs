@@ -15,8 +15,8 @@ public class Player : MonoBehaviour
     [SerializeField] public TeamUI teamUI;
 
     private string teamName;
-    private GameObject discardCards;
-    private GameObject ownedCards;
+    private GameObject[] discardCards;
+    private GameObject[] ownedCards;
 
     private int currentCoin;
     private float currentTime;
