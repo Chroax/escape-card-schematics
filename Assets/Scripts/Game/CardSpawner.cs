@@ -12,7 +12,10 @@ public class CardSpawner : MonoBehaviour
 
     public void SetSpawn(GameObject objToSpawn)
     {
-        Player.instance.ownedCards.Add(Instantiate(objToSpawn, spawnRoots));
+        if (objToSpawn.GetComponent<Card>().cardDetail.cardType != CardType.map)
+            Player.instance.ownedCards.Add(Instantiate(objToSpawn, spawnRoots));
+        else
+            Player.instance.ownedCards.Add(objToSpawn);
     }
 
     public void DestroyCard(GameObject objToDestroy)

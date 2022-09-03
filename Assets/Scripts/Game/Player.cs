@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject tesObj2;
     [SerializeField] private GameObject tesObj3;
 
+
     private string teamName;
     public List<GameObject> discardCards;
     public List<GameObject> ownedCards;

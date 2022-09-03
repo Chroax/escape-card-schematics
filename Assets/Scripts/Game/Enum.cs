@@ -15,6 +15,7 @@ public enum CardType
     yellow, 
     green, 
     blue, 
-    grey, 
+    grey,
+    map,
     none
 }

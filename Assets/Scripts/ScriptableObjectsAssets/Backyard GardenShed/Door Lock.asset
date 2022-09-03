@@ -17,6 +17,6 @@ MonoBehaviour:
   cardID: 5
   cardType: 1
   combineCardsProducesID: 
-  hiddenCardID: 
+  hiddenCardID: B
   unlockCardAnswer: 3251
   unlockCardID: Q
