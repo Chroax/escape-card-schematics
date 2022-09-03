@@ -17,22 +17,20 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject tesObj1;
     [SerializeField] private GameObject tesObj2;
     [SerializeField] private GameObject tesObj3;
+    [SerializeField] private GameObject tesObj4;
+    [SerializeField] private GameObject tesObj5;
+    [SerializeField] private ListCard listCard;
 
     private string teamName;
-    public List<GameObject> discardCards;
-    public List<GameObject> ownedCards;
 
     private int currentCoin;
     private float currentTime;
     private int currentDiscard;
 
     public GameObject timeOut;
-
     public void Awake(){instance = this;}
     public void Init()
     {
-        discardCards = new List<GameObject>();
-        ownedCards = new List<GameObject>();
         teamName = DBManager.username;
         currentCoin = defaultCoin;
         currentTime = defaultTimer;
@@ -64,48 +62,50 @@ public class Player : MonoBehaviour
             UseCoin(5);
 
             //test
-            DiscardCards("36");
+            DiscardCards("25");
         }
         if (Input.GetKeyDown(KeyCode.Tab))
             GetCoin(5);
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
+            CardSpawner.instance.SetSpawn(tesObj1);
+            listCard.AddCardToList(tesObj1);
             //test
-            AddCards(tesObj1);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
+            CardSpawner.instance.SetSpawn(tesObj2);
+            listCard.AddCardToList(tesObj2);
             //test
-            AddCards(tesObj2);
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
+            CardSpawner.instance.SetSpawn(tesObj3);
+            listCard.AddCardToList(tesObj3);
             //test
-            AddCards(tesObj3);
         }
-    }
-
-    private void AddCards(params GameObject[] cards)
-    {
-        foreach(GameObject card in cards)
-            CardSpawner.instance.SetSpawn(card);
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            CardSpawner.instance.SetSpawn(tesObj4);
+            listCard.AddCardToList(tesObj4);
+            //test
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            CardSpawner.instance.SetSpawn(tesObj5);
+            listCard.AddCardToList(tesObj5);
+            //test
+        }
     }
 
     public void DiscardCards(params string[] ids)
     {
         foreach (string id in ids)
         {
-            foreach(GameObject card in ownedCards)
-            {
-                Card details = card.GetComponent<Card>();
-                if(details.cardDetail.cardID == id)
-                {
-                    CardSpawner.instance.DestroyCard(card);
-                    currentDiscard++;
-                    discUI.SetDiscard(currentDiscard);
-                    break;
-                }
-            }
+            CardSpawner.instance.DestroyCard(id);
+            ListCard.instance.DeleteCardFromList(id);
+            currentDiscard++;
+            discUI.SetDiscard(currentDiscard);
         }
     }
 
@@ -142,7 +142,4 @@ public class Player : MonoBehaviour
         currentCoin += coin;
         coinUI.SetCoin(currentCoin);
     }
-
-
-
 }

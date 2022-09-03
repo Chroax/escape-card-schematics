@@ -9,16 +9,37 @@ public class CardSpawner : MonoBehaviour
     void Awake() { instance = this; }
     public Transform spawnRoots;
     public Transform discardRoots;
-
+    public Transform redList;
+    public Transform blueList;
+    public Transform yellowList;
+    public Transform greyList;
+    public Transform greenList;
     public void SetSpawn(GameObject objToSpawn)
     {
-        Player.instance.ownedCards.Add(Instantiate(objToSpawn, spawnRoots));
+        Instantiate(objToSpawn, spawnRoots);
     }
 
-    public void DestroyCard(GameObject objToDestroy)
+    public void DestroyCard(string id)
     {
-        Player.instance.discardCards.Add(Instantiate(objToDestroy, discardRoots));
-        Player.instance.ownedCards.Remove(objToDestroy);
-        Destroy(objToDestroy);
+        GameObject objToDestroy = GetCardByID(id, spawnRoots);
+        if(objToDestroy != null)
+        {
+            Instantiate(objToDestroy, discardRoots);
+            Destroy(objToDestroy);
+        }
+        else
+            Debug.Log("Card Not Found");
+    }
+
+    public GameObject GetCardByID(string cardID, Transform transform)
+    {
+        foreach (Transform child in transform)
+        {
+            if (child.GetComponent<Card>().cardDetail.cardID == cardID)
+            {
+                return child.gameObject;
+            }
+        }
+        return null;
     }
 }
