@@ -70,30 +70,35 @@ public class Player : MonoBehaviour
         {
             CardSpawner.instance.SetSpawn(tesObj1);
             listCard.AddCardToList(tesObj1);
+            Debug.Log("berhasil1");
             //test
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             CardSpawner.instance.SetSpawn(tesObj2);
             listCard.AddCardToList(tesObj2);
+            Debug.Log("berhasil2");
             //test
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             CardSpawner.instance.SetSpawn(tesObj3);
             listCard.AddCardToList(tesObj3);
+            Debug.Log("berhasil3");
             //test
         }
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             CardSpawner.instance.SetSpawn(tesObj4);
             listCard.AddCardToList(tesObj4);
+            Debug.Log("berhasil4");
             //test
         }
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
             CardSpawner.instance.SetSpawn(tesObj5);
             listCard.AddCardToList(tesObj5);
+            Debug.Log("berhasil5");
             //test
         }
     }
@@ -103,7 +108,7 @@ public class Player : MonoBehaviour
         foreach (string id in ids)
         {
             CardSpawner.instance.DestroyCard(id);
-            ListCard.instance.DeleteCardFromList(id);
+            listCard.DeleteCardFromList(id);
             currentDiscard++;
             discUI.SetDiscard(currentDiscard);
         }

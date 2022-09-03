@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 
 public class ListCard : MonoBehaviour
 {
+    public GameObject card;
     public static ListCard instance;
     public GameObject redList;
     public GameObject blueList;
@@ -19,6 +20,7 @@ public class ListCard : MonoBehaviour
     public Transform cardGreenList;
 
     private void Awake(){ instance = this; }
+
     public void CloseAllListPanel()
     {
         redList.SetActive(false);
@@ -60,22 +62,23 @@ public class ListCard : MonoBehaviour
 
     public void AddCardToList(GameObject card)
     {
+        this.card.GetComponent<Image>().sprite = card.GetComponent<Image>().sprite;
         switch (card.GetComponent<Card>().cardDetail.cardType)
         {
             case CardType.red:
-                Instantiate(card, cardRedList);
+                Instantiate(this.card, cardRedList);
                 break;
             case CardType.blue:
-                Instantiate(card, cardBlueList);
+                Instantiate(this.card, cardBlueList);
                 break;
             case CardType.yellow:
-                Instantiate(card, cardYellowList);
+                Instantiate(this.card, cardYellowList);
                 break;
             case CardType.grey:
-                Instantiate(card, cardGreyList);
+                Instantiate(this.card, cardGreyList);
                 break;
             case CardType.green:
-                Instantiate(card, cardGreenList);
+                Instantiate(this.card, cardGreenList);
                 break;
         }
     }

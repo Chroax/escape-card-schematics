@@ -66,7 +66,6 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
 
     public void OnPointerDown(PointerEventData eventData)
     {
-
         isDraged = false;
         panelCard.SetActive(true);
         imageDetail.sprite = cards.sprite;
