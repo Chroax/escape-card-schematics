@@ -13,10 +13,11 @@ public class Player : MonoBehaviour
     [SerializeField] public int defaultDiscard;
     [SerializeField] public DiscardSystem discUI;
     [SerializeField] public TeamUI teamUI;
+    [SerializeField] public CardSpawner cardSpawn;
 
     private string teamName;
     private GameObject[] discardCards;
-    private GameObject[] ownedCards;
+    public GameObject[] ownedCards;
 
     private int currentCoin;
     private float currentTime;
@@ -38,9 +39,16 @@ public class Player : MonoBehaviour
     }
 
     void Update()
-    {
+    {   
+
+        //OwnedCard
+        //if(ownedCards.)
+        
+        //countdown
         currentTime -= Time.deltaTime;
         timeUI.SetTime(currentTime);
+        
+        //penalty
         if(currentTime <= 0)
         {
             timeOut.SetActive(true);
@@ -57,7 +65,18 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             GetCoin(5);
+            Spawner();
         }
+        if (Input.GetKeyDown(KeyCode.Keypad1))
+        {
+            Spawner();
+        }
+    }
+
+    public bool Spawner()
+    {
+        cardSpawn.SetSpawn();
+        return true;
     }
 
     private bool getPenalty(int time)
@@ -99,4 +118,5 @@ public class Player : MonoBehaviour
         currentDiscard += card;
         discUI.SetDiscard(currentDiscard);
     }
+
 }
