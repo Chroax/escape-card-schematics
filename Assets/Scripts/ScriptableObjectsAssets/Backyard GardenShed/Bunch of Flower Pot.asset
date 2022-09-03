@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bunch of Flower Pot
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 8e45aeb3b44578f488642c9223ed168e, type: 3}
-  cardDescription: 
+  cardDescription: Jumlah warna pada bunga berhubungan dengan kunci
   cardID: M
   cardType: 4
   combineCardsProducesID: 

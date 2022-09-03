@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Flashlight Off
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 2d75420ece52bdb44b4d8f98efbc3f27, type: 3}
-  cardDescription: 
+  cardDescription: Bisa dinyalakan dengan sesuatu
   cardID: 12
   cardType: 3
   combineCardsProducesID: 74

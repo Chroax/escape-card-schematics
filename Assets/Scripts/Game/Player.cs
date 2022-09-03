@@ -6,24 +6,29 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] public int defaultCoin;
-    [SerializeField] public CoinSystem coinUI;
-    [SerializeField] public float defaultTimer;
-    [SerializeField] public TimeSystem timeUI;
-    [SerializeField] public int defaultDiscard;
-    [SerializeField] public DiscardSystem discUI;
-    [SerializeField] public TeamUI teamUI;
+    public static Player instance;
+    [SerializeField] private int defaultCoin;
+    [SerializeField] private CoinSystem coinUI;
+    [SerializeField] private float defaultTimer;
+    [SerializeField] private TimeSystem timeUI;
+    [SerializeField] private int defaultDiscard;
+    [SerializeField] private DiscardSystem discUI;
+    [SerializeField] private TeamUI teamUI;
+    [SerializeField] private GameObject tesObj1;
+    [SerializeField] private GameObject tesObj2;
+    [SerializeField] private GameObject tesObj3;
+    [SerializeField] private GameObject tesObj4;
+    [SerializeField] private GameObject tesObj5;
+    [SerializeField] private ListCard listCard;
 
     private string teamName;
-    private GameObject[] discardCards;
-    private GameObject[] ownedCards;
 
     private int currentCoin;
     private float currentTime;
     private int currentDiscard;
 
     public GameObject timeOut;
-
+    public void Awake(){instance = this;}
     public void Init()
     {
         teamName = DBManager.username;
@@ -38,9 +43,12 @@ public class Player : MonoBehaviour
     }
 
     void Update()
-    {
+    {   
+        //countdown
         currentTime -= Time.deltaTime;
         timeUI.SetTime(currentTime);
+        
+        //penalty
         if(currentTime <= 0)
         {
             timeOut.SetActive(true);
@@ -52,11 +60,52 @@ public class Player : MonoBehaviour
         {
             getPenalty(10);
             UseCoin(5);
-            GetDiscard(1);
+
+            //test
+            DiscardCards("25");
         }
         if (Input.GetKeyDown(KeyCode.Tab))
-        {
             GetCoin(5);
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            CardSpawner.instance.SetSpawn(tesObj1);
+            listCard.AddCardToList(tesObj1);
+            //test
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            CardSpawner.instance.SetSpawn(tesObj2);
+            listCard.AddCardToList(tesObj2);
+            //test
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            CardSpawner.instance.SetSpawn(tesObj3);
+            listCard.AddCardToList(tesObj3);
+            //test
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            CardSpawner.instance.SetSpawn(tesObj4);
+            listCard.AddCardToList(tesObj4);
+            //test
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            CardSpawner.instance.SetSpawn(tesObj5);
+            listCard.AddCardToList(tesObj5);
+            //test
+        }
+    }
+
+    public void DiscardCards(params string[] ids)
+    {
+        foreach (string id in ids)
+        {
+            CardSpawner.instance.DestroyCard(id);
+            ListCard.instance.DeleteCardFromList(id);
+            currentDiscard++;
+            discUI.SetDiscard(currentDiscard);
         }
     }
 
@@ -92,11 +141,5 @@ public class Player : MonoBehaviour
     {
         currentCoin += coin;
         coinUI.SetCoin(currentCoin);
-    }
-
-    public void GetDiscard(int card)
-    {
-        currentDiscard += card;
-        discUI.SetDiscard(currentDiscard);
     }
 }

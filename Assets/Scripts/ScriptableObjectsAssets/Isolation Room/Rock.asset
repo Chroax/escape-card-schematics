@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Rock
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: c6b202ca85912ef4aacb136270ccee5c, type: 3}
-  cardDescription: 
+  cardDescription: Untuk menempa suatu benda
   cardID: 34
   cardType: 0
   combineCardsProducesID: 70

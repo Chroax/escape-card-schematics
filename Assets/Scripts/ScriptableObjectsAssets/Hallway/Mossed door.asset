@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Mossed door
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: f4738bea07350fb49ba81859c0be96e7, type: 3}
-  cardDescription: 
+  cardDescription: Lumutnya bisa dibersihkan
   cardID: 45
   cardType: 0
   combineCardsProducesID: 97

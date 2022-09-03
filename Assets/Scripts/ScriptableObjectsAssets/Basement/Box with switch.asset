@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
-  m_Name: CardDetail_
+  m_Name: Box with switch
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 1cd9d6bdc3b6b844b91651ac2fb034b5, type: 3}
   cardDescription: 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Modifier 11
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 22b7fac6cd93e46489ecf4c5305b6585, type: 3}
-  cardDescription: 
+  cardDescription: Gabungkan dengan pintu
   cardID: 11
   cardType: 3
   combineCardsProducesID: 32

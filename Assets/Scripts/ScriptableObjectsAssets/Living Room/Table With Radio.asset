@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Table With Radio
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 4279e584ece006244be6c3fd78e6388d, type: 3}
-  cardDescription: 
+  cardDescription: Korden bisa dibuka dengan nomor tersembunyi
   cardID: 44
   cardType: 0
   combineCardsProducesID: 
