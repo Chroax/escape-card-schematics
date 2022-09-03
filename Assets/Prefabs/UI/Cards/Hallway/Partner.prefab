@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8363853093573485640}
   - component: {fileID: -8875709783444141035}
   - component: {fileID: 257679084240061466}
+  - component: {fileID: -1568153380775261566}
   m_Layer: 5
   m_Name: Partner
   m_TagString: Untagged
@@ -90,7 +91,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a73c637f30077547a29fce5269d95fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cards: {fileID: 0}
   cardDetail: {fileID: 11400000, guid: add53477c5b8929498b2c89621480e1b, type: 2}
+  imageDetail: {fileID: 0}
   panelCard: {fileID: 0}
 --- !u!225 &257679084240061466
 CanvasGroup:
@@ -104,3 +107,16 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &-1568153380775261566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8363853093573485642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9244099c2af165545be713ffdfe40bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardDetail: {fileID: 11400000, guid: add53477c5b8929498b2c89621480e1b, type: 2}

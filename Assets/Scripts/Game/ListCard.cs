@@ -63,6 +63,7 @@ public class ListCard : MonoBehaviour
     public void AddCardToList(GameObject card)
     {
         this.card.GetComponent<Image>().sprite = card.GetComponent<Image>().sprite;
+        this.card.GetComponent<CardDetailSO>().cardDetail = card.GetComponent<CardDetailSO>().cardDetail;
         switch (card.GetComponent<Card>().cardDetail.cardType)
         {
             case CardType.red:

@@ -7741,7 +7741,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 655634127}
-  - component: {fileID: 655634129}
   - component: {fileID: 655634128}
   m_Layer: 5
   m_Name: Card Place
@@ -7794,25 +7793,6 @@ MonoBehaviour:
   m_Spacing: {x: 15, y: 15}
   m_Constraint: 0
   m_ConstraintCount: 2
---- !u!114 &655634129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 655634126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b635183eaf875d4eb7d2d01aafd761d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnRoots: {fileID: 655634127}
-  discardRoots: {fileID: 0}
-  redList: {fileID: 0}
-  blueList: {fileID: 0}
-  yellowList: {fileID: 0}
-  greyList: {fileID: 0}
-  greenList: {fileID: 0}
 --- !u!1 &661002406
 GameObject:
   m_ObjectHideFlags: 0
@@ -21419,7 +21399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1531110656}
-  cardListHolder: {fileID: 0}
+  cardListHolder: {fileID: 1642202294}
   selectedCardHidden: {fileID: 0}
   selectedCardHint: {fileID: 0}
   selectedCardUnlock: {fileID: 0}
@@ -21710,6 +21690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74e570d3406539f42b996e4e065a7aa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  card: {fileID: 8363853093573485642, guid: b0f54badd2022df4ab1222ad48fefde3, type: 3}
   redList: {fileID: 1576683750}
   blueList: {fileID: 865781458}
   yellowList: {fileID: 117423621}
@@ -23293,7 +23274,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1778700315}
-  - component: {fileID: 1778700317}
   - component: {fileID: 1778700316}
   m_Layer: 5
   m_Name: Card Place
@@ -23346,25 +23326,6 @@ MonoBehaviour:
   m_Spacing: {x: 15, y: 15}
   m_Constraint: 0
   m_ConstraintCount: 2
---- !u!114 &1778700317
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1778700314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b635183eaf875d4eb7d2d01aafd761d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnRoots: {fileID: 1778700315}
-  discardRoots: {fileID: 0}
-  redList: {fileID: 0}
-  blueList: {fileID: 0}
-  yellowList: {fileID: 0}
-  greyList: {fileID: 0}
-  greenList: {fileID: 0}
 --- !u!114 &1791356895 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8363853093573485640, guid: 813d24c51f77d8f4a9db45f32a618c16, type: 3}
@@ -26053,7 +26014,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1960727332}
-  - component: {fileID: 1960727334}
   - component: {fileID: 1960727333}
   m_Layer: 5
   m_Name: Card Place
@@ -26106,25 +26066,6 @@ MonoBehaviour:
   m_Spacing: {x: 15, y: 15}
   m_Constraint: 0
   m_ConstraintCount: 2
---- !u!114 &1960727334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1960727331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b635183eaf875d4eb7d2d01aafd761d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnRoots: {fileID: 1960727332}
-  discardRoots: {fileID: 0}
-  redList: {fileID: 0}
-  blueList: {fileID: 0}
-  yellowList: {fileID: 0}
-  greyList: {fileID: 0}
-  greenList: {fileID: 0}
 --- !u!1 &1969255608
 GameObject:
   m_ObjectHideFlags: 0
@@ -28760,7 +28701,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2125160104}
-  - component: {fileID: 2125160106}
   - component: {fileID: 2125160105}
   m_Layer: 5
   m_Name: Card Place
@@ -28813,25 +28753,6 @@ MonoBehaviour:
   m_Spacing: {x: 15, y: 15}
   m_Constraint: 0
   m_ConstraintCount: 2
---- !u!114 &2125160106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2125160103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b635183eaf875d4eb7d2d01aafd761d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnRoots: {fileID: 2125160104}
-  discardRoots: {fileID: 0}
-  redList: {fileID: 0}
-  blueList: {fileID: 0}
-  yellowList: {fileID: 0}
-  greyList: {fileID: 0}
-  greenList: {fileID: 0}
 --- !u!1 &2137098087
 GameObject:
   m_ObjectHideFlags: 0
@@ -29246,7 +29167,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2143995320}
-  - component: {fileID: 2143995322}
   - component: {fileID: 2143995321}
   m_Layer: 5
   m_Name: Card Place
@@ -29299,25 +29219,6 @@ MonoBehaviour:
   m_Spacing: {x: 15, y: 15}
   m_Constraint: 0
   m_ConstraintCount: 2
---- !u!114 &2143995322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2143995319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b635183eaf875d4eb7d2d01aafd761d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnRoots: {fileID: 2143995320}
-  discardRoots: {fileID: 0}
-  redList: {fileID: 0}
-  blueList: {fileID: 0}
-  yellowList: {fileID: 0}
-  greyList: {fileID: 0}
-  greenList: {fileID: 0}
 --- !u!1 &2144653366
 GameObject:
   m_ObjectHideFlags: 0
