@@ -12,6 +12,9 @@ public class Player : MonoBehaviour
     [SerializeField] public TimeSystem timeUI;
     [SerializeField] public int defaultDiscard;
     [SerializeField] public DiscardSystem discUI;
+    [SerializeField] public TeamUI teamUI;
+
+    private string teamName;
     private GameObject discardCards;
     private GameObject ownedCards;
 
@@ -27,6 +30,7 @@ public class Player : MonoBehaviour
         currentTime = defaultTimer;
         currentDiscard = defaultDiscard;
 
+        teamUI.SetName(teamName);
         timeUI.SetTime(currentTime);
         coinUI.SetCoin(currentCoin);
         discUI.SetDiscard(currentDiscard);

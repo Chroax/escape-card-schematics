@@ -1884,7 +1884,7 @@ MonoBehaviour:
   logo: {fileID: 377397355}
   text: {fileID: 1616929887}
   panel: {fileID: 1515033273}
-  mainMenu: {fileID: 0}
+  mainMenu: {fileID: 2018519091}
 --- !u!1 &1147842807
 GameObject:
   m_ObjectHideFlags: 0
