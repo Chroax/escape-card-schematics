@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: First Key
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: d16ccf519994cad418785e4fd03adb24, type: 3}
-  cardDescription: 
+  cardDescription: Lihat dibawah kunci
   cardID: 14
   cardType: 0
   combineCardsProducesID: 

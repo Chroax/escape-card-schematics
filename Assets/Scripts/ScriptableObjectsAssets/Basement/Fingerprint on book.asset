@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Fingerprint on book
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 1b29aad533336664c9848ef69e4537aa, type: 3}
-  cardDescription: 
+  cardDescription: Perhatikan buku di fingerprint
   cardID: 95
   cardType: 4
   combineCardsProducesID: 

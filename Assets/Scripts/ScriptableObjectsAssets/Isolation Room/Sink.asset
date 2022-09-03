@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sink
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: ae18e628f2051854baeeb76a34b430eb, type: 3}
-  cardDescription: 
+  cardDescription: Bautnya bisa dibuka dengan sesuatu
   cardID: 9
   cardType: 0
   combineCardsProducesID: 70

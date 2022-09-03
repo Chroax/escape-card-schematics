@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Vent
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 7c16b97e92807c54ca30ad3a1286f2ba, type: 3}
-  cardDescription: 
+  cardDescription: Ventilasi terlalu tinggi untuk membukanya
   cardID: 49
   cardType: 0
   combineCardsProducesID: 97

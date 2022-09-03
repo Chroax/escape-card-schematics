@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Electricity Panel
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 7692a19b0be2ba449b749634b6a10e62, type: 3}
-  cardDescription: 
+  cardDescription: electrical panel bisa dibuka dengan suatu benda
   cardID: 41
   cardType: 0
   combineCardsProducesID: 71
