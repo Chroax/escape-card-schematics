@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
 
     public void Init()
     {
+        teamName = DBManager.username;
         currentCoin = defaultCoin;
         currentTime = defaultTimer;
         currentDiscard = defaultDiscard;
