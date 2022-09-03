@@ -6,13 +6,14 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-
     [SerializeField] public int defaultCoin;
     [SerializeField] public CoinSystem coinUI;
     [SerializeField] public float defaultTimer;
     [SerializeField] public TimeSystem timeUI;
     [SerializeField] public int defaultDiscard;
     [SerializeField] public DiscardSystem discUI;
+    private GameObject discardCards;
+    private GameObject ownedCards;
 
     private int currentCoin;
     private float currentTime;
