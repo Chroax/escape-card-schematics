@@ -47,6 +47,8 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     public GameObject combineCardPanel;
     public GameObject BackyardMapPanel;
     public GameObject machineCardPanel;
+    public GameObject cardDetailPanel;
+    public Image detailImageCard;
     
 
 

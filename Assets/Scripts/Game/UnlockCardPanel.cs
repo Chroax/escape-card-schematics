@@ -42,9 +42,10 @@ public class UnlockCardPanel : MonoBehaviour
             var generatedCard = Instantiate(GameResource.Instance.card, GameManager.Instance.cardListHolder.transform);
             generatedCard.transform.GetComponent<Card>().cardDetail = GameManager.Instance.GetCardDetailByID(GameManager.Instance.selectedCardUnlock.unlockCardID);
             generatedCard.transform.GetComponent<Image>().sprite = generatedCard.GetComponent<Card>().cardDetail.cardSprite;
+            generatedCard.transform.GetComponent<Card>().panelCard = GameManager.Instance.cardDetailPanel;
+            generatedCard.transform.GetComponent<Card>().imageDetail = GameManager.Instance.detailImageCard;
             Player.instance.AddCards(generatedCard);
             Destroy(generatedCard);
-
 
             //Misal terunlock, maka kartu akan hilang
             silangButton.SetActive(false);

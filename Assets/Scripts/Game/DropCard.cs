@@ -20,11 +20,13 @@ public class DropCard : MonoBehaviour, IDropHandler
                 switch (GameManager.Instance.activePanel)
                 {
                     case ActivePanel.hidden:
+                        /*
                         if (cardDetail.cardType != GameManager.Instance.hiddenCardType)
                         {
                             Debug.Log("Salah type card");
                             break;
                         }
+                        */
                         silangButton.SetActive(true);
                         GameManager.Instance.selectedCardHidden = cardDetail;
                         GameManager.Instance.hiddenCardImageSelected.GetComponent<Image>().sprite = cardDetail.cardSprite;
