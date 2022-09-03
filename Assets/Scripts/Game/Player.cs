@@ -84,7 +84,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void AddCards(params GameObject[] cards)
+    public void AddCards(params GameObject[] cards)
     {
         foreach(GameObject card in cards)
             CardSpawner.instance.SetSpawn(card);
