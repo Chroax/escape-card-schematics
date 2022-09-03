@@ -7205,7 +7205,7 @@ RectTransform:
   - {fileID: 1823683555}
   - {fileID: 57015000}
   m_Father: {fileID: 1203817462}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10506,8 +10506,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2066413754}
   - {fileID: 867984509}
+  - {fileID: 2066413754}
   m_Father: {fileID: 1410452279}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17021,6 +17021,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputText: {fileID: 0}
+  warning: {fileID: 0}
+  PenaltyPanel: {fileID: 0}
+  silangButton: {fileID: 0}
 --- !u!1 &1975265084
 GameObject:
   m_ObjectHideFlags: 0
@@ -17934,7 +17937,7 @@ RectTransform:
   - {fileID: 1745172745}
   - {fileID: 546982501}
   m_Father: {fileID: 1203817462}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

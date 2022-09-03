@@ -66,20 +66,6 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
 
     public void OnPointerDown(PointerEventData eventData)
     {
-
-        isDraged = false;
-        panelCard.SetActive(true);
-        imageDetail.sprite = cards.sprite;
-    }
-
-    public void OnPointerUp(PointerEventData eventData)
-    {
-
-    }
-
-    /*
-    public void OnPointerDown(PointerEventData eventData)
-    {
         isDraged = false;
         originPosition = rectTransform.anchoredPosition;
     }
@@ -88,9 +74,8 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
     {
         if (!isDraged)
         {
-            var cardPanel = Instantiate(GameResource.Instance.detailPanel, GameManager.Instance.panelTransform);
-            cardPanel.transform.GetChild(0).transform.GetChild(1).GetComponent<Image>().sprite = cardDetail.cardSprite;
-            cardPanel.transform.GetChild(0).transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = cardDetail.cardDescription;
+            panelCard.SetActive(true);
+            imageDetail.sprite = cards.sprite;
         }
         else
         {
@@ -100,5 +85,4 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
             }
         }
     }
-    */
 }

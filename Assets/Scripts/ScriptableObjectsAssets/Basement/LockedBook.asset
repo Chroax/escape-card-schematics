@@ -15,7 +15,7 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: d2106d7dfef5b1a498684bdef904dcc1, type: 3}
   cardDescription: Bisa dibuka dengan kunci
   cardID: 53
-  cardType: 0
+  cardType: 1
   combineCardsProducesID: 
   hiddenCardID: 
   unlockCardAnswer: 3214

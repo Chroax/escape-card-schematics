@@ -56,8 +56,7 @@ public class Player : MonoBehaviour
             timeOut.SetActive(true);
             currentTime = 0;
         }
-        
-        //debug
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             getPenalty(10);
@@ -95,6 +94,7 @@ public class Player : MonoBehaviour
     {
         foreach (string id in ids)
         {
+            bool find = false;
             foreach(GameObject card in ownedCards)
             {
                 Card details = card.GetComponent<Card>();
@@ -103,13 +103,17 @@ public class Player : MonoBehaviour
                     CardSpawner.instance.DestroyCard(card);
                     currentDiscard++;
                     discUI.SetDiscard(currentDiscard);
+                    find = true;
                     break;
                 }
             }
+
+            if (!find)
+                Debug.Log("You dont have that card");
         }
     }
 
-    private bool getPenalty(int time)
+    public bool getPenalty(int time)
     {
         currentTime -= time;
         timeUI.SetTime(currentTime);
