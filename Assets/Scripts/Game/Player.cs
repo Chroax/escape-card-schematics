@@ -47,7 +47,6 @@ public class Player : MonoBehaviour
             currentTime = 0;
         }
 
-        Debug.Log(ownedCards);
         
         //debug
         /*
