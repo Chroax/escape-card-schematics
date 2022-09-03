@@ -11,9 +11,12 @@ public class Player : MonoBehaviour
     [SerializeField] public CoinSystem coinUI;
     [SerializeField] public float defaultTimer;
     [SerializeField] public TimeSystem timeUI;
+    [SerializeField] public int defaultDiscard;
+    [SerializeField] public DiscardSystem discUI;
 
     private int currentCoin;
     private float currentTime;
+    private int currentDiscard;
 
     public GameObject timeOut;
 
@@ -21,8 +24,11 @@ public class Player : MonoBehaviour
     {
         currentCoin = defaultCoin;
         currentTime = defaultTimer;
+        currentDiscard = defaultDiscard;
+
         timeUI.SetTime(currentTime);
         coinUI.SetCoin(currentCoin);
+        discUI.SetDiscard(currentDiscard);
     }
 
     void Update()
@@ -40,6 +46,7 @@ public class Player : MonoBehaviour
         {
             getPenalty(10);
             UseCoin(5);
+            GetDiscard(1);
         }
         if (Input.GetKeyDown(KeyCode.Tab))
         {
@@ -79,5 +86,11 @@ public class Player : MonoBehaviour
     {
         currentCoin += coin;
         coinUI.SetCoin(currentCoin);
+    }
+
+    public void GetDiscard(int card)
+    {
+        currentDiscard += card;
+        discUI.SetDiscard(currentDiscard);
     }
 }
