@@ -6,18 +6,21 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] public int defaultCoin;
-    [SerializeField] public CoinSystem coinUI;
-    [SerializeField] public float defaultTimer;
-    [SerializeField] public TimeSystem timeUI;
-    [SerializeField] public int defaultDiscard;
-    [SerializeField] public DiscardSystem discUI;
-    [SerializeField] public TeamUI teamUI;
-    [SerializeField] public CardSpawner cardSpawn;
+    public static Player instance;
+    [SerializeField] private int defaultCoin;
+    [SerializeField] private CoinSystem coinUI;
+    [SerializeField] private float defaultTimer;
+    [SerializeField] private TimeSystem timeUI;
+    [SerializeField] private int defaultDiscard;
+    [SerializeField] private DiscardSystem discUI;
+    [SerializeField] private TeamUI teamUI;
+    [SerializeField] private GameObject tesObj1;
+    [SerializeField] private GameObject tesObj2;
+    [SerializeField] private GameObject tesObj3;
 
     private string teamName;
-    private GameObject[] discardCards;
-    public GameObject[] ownedCards;
+    public List<GameObject> discardCards;
+    public List<GameObject> ownedCards;
 
     private int currentCoin;
     private float currentTime;
@@ -25,8 +28,11 @@ public class Player : MonoBehaviour
 
     public GameObject timeOut;
 
+    public void Awake(){instance = this;}
     public void Init()
     {
+        discardCards = new List<GameObject>();
+        ownedCards = new List<GameObject>();
         teamName = DBManager.username;
         currentCoin = defaultCoin;
         currentTime = defaultTimer;
@@ -40,10 +46,6 @@ public class Player : MonoBehaviour
 
     void Update()
     {   
-
-        //OwnedCard
-        //if(ownedCards.)
-        
         //countdown
         currentTime -= Time.deltaTime;
         timeUI.SetTime(currentTime);
@@ -60,23 +62,51 @@ public class Player : MonoBehaviour
         {
             getPenalty(10);
             UseCoin(5);
-            GetDiscard(1);
+
+            //test
+            DiscardCards("36");
         }
         if (Input.GetKeyDown(KeyCode.Tab))
-        {
             GetCoin(5);
-            Spawner();
-        }
-        if (Input.GetKeyDown(KeyCode.Keypad1))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Spawner();
+            //test
+            AddCards(tesObj1);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            //test
+            AddCards(tesObj2);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            //test
+            AddCards(tesObj3);
         }
     }
 
-    public bool Spawner()
+    private void AddCards(params GameObject[] cards)
     {
-        cardSpawn.SetSpawn();
-        return true;
+        foreach(GameObject card in cards)
+            CardSpawner.instance.SetSpawn(card);
+    }
+
+    public void DiscardCards(params string[] ids)
+    {
+        foreach (string id in ids)
+        {
+            foreach(GameObject card in ownedCards)
+            {
+                Card details = card.GetComponent<Card>();
+                if(details.cardDetail.cardID == id)
+                {
+                    CardSpawner.instance.DestroyCard(card);
+                    currentDiscard++;
+                    discUI.SetDiscard(currentDiscard);
+                    break;
+                }
+            }
+        }
     }
 
     private bool getPenalty(int time)
@@ -113,10 +143,6 @@ public class Player : MonoBehaviour
         coinUI.SetCoin(currentCoin);
     }
 
-    public void GetDiscard(int card)
-    {
-        currentDiscard += card;
-        discUI.SetDiscard(currentDiscard);
-    }
+
 
 }
