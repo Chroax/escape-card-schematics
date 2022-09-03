@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
@@ -11,6 +12,7 @@ public class MainMenu : MonoBehaviour
     public TextMeshProUGUI text;
     public GameObject panel;
     public GameObject mainMenu;
+
 
     public void HoverText()
     {
@@ -26,7 +28,7 @@ public class MainMenu : MonoBehaviour
 
     public void GoToPlayGames()
     {
-        SceneManager.LoadScene("PlayGames");
+        SceneManager.LoadScene("Game Scene");
     }
 
     public void GoToTutorial()
@@ -43,7 +45,7 @@ public class MainMenu : MonoBehaviour
 
     public void QuitGame()
     {
-        SceneManager.LoadScene("Login");
+        SceneManager.LoadScene("Scenes/Login Scene");
     }
 
     public void BackFromPanel()

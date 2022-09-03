@@ -7,11 +7,15 @@ using UnityEngine.EventSystems;
 
 public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IPointerDownHandler, IPointerUpHandler
 {
+    public Image cards;
     public CardDetailSO cardDetail;
+    public Image imageDetail;
     private RectTransform rectTransform;
     private bool isDraged = false;
     private Vector3 originPosition;
     private CanvasGroup canvasGroup;
+
+    public GameObject panelCard;
 
     private void Awake()
     {
@@ -21,20 +25,23 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
 
     private void Start()
     {
-        transform.GetComponent<Image>().sprite = cardDetail.cardSprite;
+        cards.sprite = cardDetail.cardSprite;
     }
 
+    Vector3 temp = new Vector3(30f, 0, 0);
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         Debug.Log("Mouse enter");
         transform.localScale += new Vector3(0.1f, 0.1f, 0f);
+        this.transform.position -= temp;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         Debug.Log("Mouse exit");
         transform.localScale -= new Vector3(0.1f, 0.1f, 0f);
+        this.transform.position += temp;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -59,6 +66,20 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
 
     public void OnPointerDown(PointerEventData eventData)
     {
+
+        isDraged = false;
+        panelCard.SetActive(true);
+        imageDetail.sprite = cards.sprite;
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+
+    }
+
+    /*
+    public void OnPointerDown(PointerEventData eventData)
+    {
         isDraged = false;
         originPosition = rectTransform.anchoredPosition;
     }
@@ -79,4 +100,5 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
             }
         }
     }
+    */
 }
