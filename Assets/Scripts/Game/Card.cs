@@ -7,7 +7,9 @@ using UnityEngine.EventSystems;
 
 public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IPointerDownHandler, IPointerUpHandler
 {
+    public Image cards;
     public CardDetailSO cardDetail;
+    public Image imageDetail;
     private RectTransform rectTransform;
     private bool isDraged = false;
     private Vector3 originPosition;
@@ -23,7 +25,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
 
     private void Start()
     {
-        transform.GetComponent<Image>().sprite = cardDetail.cardSprite;
+        cards.sprite = cardDetail.cardSprite;
     }
 
     Vector3 temp = new Vector3(30f, 0, 0);
@@ -64,8 +66,10 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
 
     public void OnPointerDown(PointerEventData eventData)
     {
+
         isDraged = false;
         panelCard.SetActive(true);
+        imageDetail.sprite = cards.sprite;
     }
     public void OnPointerUp(PointerEventData eventData)
     {
