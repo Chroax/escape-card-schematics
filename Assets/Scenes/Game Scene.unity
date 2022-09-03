@@ -664,7 +664,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 783386689}
-  - {fileID: 1272128304}
+  - {fileID: 1135569983}
   - {fileID: 821305636}
   - {fileID: 1005728164}
   m_Father: {fileID: 1410452279}
@@ -6438,6 +6438,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1127843310}
   m_CullTransparentMesh: 1
+--- !u!224 &1135569983 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6114447751533901698, guid: 88b33fdb9e9befe4882a914b2252f680, type: 3}
+  m_PrefabInstance: {fileID: 6136884114981934609}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1136019901
 GameObject:
   m_ObjectHideFlags: 0
@@ -12280,6 +12285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputText: {fileID: 448306234}
   warning: {fileID: 1552732370}
+  PenaltyPanel: {fileID: 82103068}
 --- !u!1 &1975265084
 GameObject:
   m_ObjectHideFlags: 0

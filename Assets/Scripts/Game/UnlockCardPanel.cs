@@ -8,6 +8,7 @@ public class UnlockCardPanel : MonoBehaviour
 {
     public TMP_InputField inputText;
     public GameObject warning;
+    public GameObject PenaltyPanel;
 
     private void OnEnable()
     {
@@ -16,7 +17,6 @@ public class UnlockCardPanel : MonoBehaviour
 
     public void UnlockCardSubmit()
     {
-        Debug.Log(inputText.text);
         if (GameManager.Instance.selectedCardUnlock == null)
         {
             warning.SetActive(true);
@@ -31,7 +31,6 @@ public class UnlockCardPanel : MonoBehaviour
             }
 
             Debug.Log("benar");
-            Debug.Log(inputText.text);
             var generatedCard = Instantiate(GameResource.Instance.card, GameManager.Instance.cardListHolder.transform);
             generatedCard.transform.GetComponent<Card>().cardDetail = GameManager.Instance.GetCardDetailByID(GameManager.Instance.selectedCardUnlock.unlockCardID);
 
@@ -40,6 +39,7 @@ public class UnlockCardPanel : MonoBehaviour
         }
         else
         {
+            PenaltyPanel.SetActive(true);
             Debug.Log("Salah");
         }
     }
