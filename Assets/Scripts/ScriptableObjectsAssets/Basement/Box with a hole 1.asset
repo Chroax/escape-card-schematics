@@ -10,17 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
-<<<<<<<< HEAD:Assets/Scripts/ScriptableObjectsAssets/Basement/Box with switch.asset
-  m_Name: Box with switch
-========
-  m_Name: Book with Switch
->>>>>>>> Key-and-Kanza:Assets/Scripts/ScriptableObjectsAssets/Basement/Book with Switch.asset
+  m_Name: Box with a hole 1
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: 1cd9d6bdc3b6b844b91651ac2fb034b5, type: 3}
+  cardSprite: {fileID: 21300000, guid: 116efc24927846a42881c4b428dc828c, type: 3}
   cardDescription: 
-  cardID: 3
-  cardType: 1
-  combineCardsProducesID: 
+  cardID: 39
+  cardType: 0
+  combineCardsProducesID: 86
   hiddenCardID: 
   unlockCardAnswer: 
   unlockCardID: 

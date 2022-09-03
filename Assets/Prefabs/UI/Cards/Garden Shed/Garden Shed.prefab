@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 25ba1ca03e80ae745aa4cc84f7250db0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 43e52f2d5baa92d4ea4f0eb69792f323, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -90,7 +90,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a73c637f30077547a29fce5269d95fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cards: {fileID: 8363853093573485640}
   cardDetail: {fileID: 11400000, guid: 107d41ffe79aaef478918fcbc2036e34, type: 2}
+  imageDetail: {fileID: 0}
   panelCard: {fileID: 0}
 --- !u!225 &257679084240061466
 CanvasGroup:
