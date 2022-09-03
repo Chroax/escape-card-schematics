@@ -46,6 +46,8 @@ public class Player : MonoBehaviour
             timeOut.SetActive(true);
             currentTime = 0;
         }
+
+        Debug.Log(ownedCards);
         
         //debug
         /*

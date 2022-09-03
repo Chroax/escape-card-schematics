@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class DropCard : MonoBehaviour, IDropHandler
 {
     [SerializeField] private bool isCombineCardLeft = false;
+    public GameObject silangButton;
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -24,6 +25,7 @@ public class DropCard : MonoBehaviour, IDropHandler
                             Debug.Log("Salah type card");
                             break;
                         }
+                        silangButton.SetActive(true);
                         GameManager.Instance.selectedCardHidden = cardDetail;
                         GameManager.Instance.hiddenCardImageSelected.GetComponent<Image>().sprite = cardDetail.cardSprite;
                         break;
@@ -34,6 +36,7 @@ public class DropCard : MonoBehaviour, IDropHandler
                             Debug.Log("Salah type card");
                             break;
                         }
+                        silangButton.SetActive(true);
                         GameManager.Instance.selectedCardUnlock = cardDetail;
                         GameManager.Instance.unlockCardImageSelected.GetComponent<Image>().sprite = cardDetail.cardSprite;
                         break;

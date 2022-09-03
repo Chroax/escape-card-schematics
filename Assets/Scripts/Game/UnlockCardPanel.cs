@@ -9,10 +9,18 @@ public class UnlockCardPanel : MonoBehaviour
     public TMP_InputField inputText;
     public GameObject warning;
     public GameObject PenaltyPanel;
+    public GameObject silangButton;
 
     private void OnEnable()
     {
         GameManager.Instance.activePanel = ActivePanel.unlock;
+    }
+
+    public void removeCardFromHolder()
+    {
+        silangButton.SetActive(false);
+        GameManager.Instance.selectedCardUnlock = null;
+        GameManager.Instance.unlockCardImageSelected.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
     }
 
     public void UnlockCardSubmit()
@@ -37,13 +45,14 @@ public class UnlockCardPanel : MonoBehaviour
 
 
             //Misal terunlock, maka kartu akan hilang
-            //Destroy(GameManager.Instance.GetCardByID(GameManager.Instance.selectedCardUnlock.cardID));
+            Destroy(GameManager.Instance.GetCardByID(GameManager.Instance.selectedCardUnlock.cardID));
         }
         else
         {
             warning.SetActive(false);
             PenaltyPanel.SetActive(true);
             Debug.Log("Salah");
+            GameManager.Instance.player.getPenalty(180);
         }
     }
 
