@@ -493,6 +493,7 @@ MonoBehaviour:
   text: {fileID: 1780893118}
   panel: {fileID: 0}
   mainMenu: {fileID: 0}
+  scene: Game Scene
 --- !u!1 &382430783
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,6 +695,7 @@ MonoBehaviour:
   text: {fileID: 562457697}
   panel: {fileID: 1515033273}
   mainMenu: {fileID: 2018519091}
+  scene: Login Scene
 --- !u!1 &488476921
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,6 +1040,7 @@ MonoBehaviour:
   text: {fileID: 1606665771}
   panel: {fileID: 108332837}
   mainMenu: {fileID: 2018519091}
+  scene: Option
 --- !u!1 &662634391
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,7 +1441,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 854464776}
           m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-          m_MethodName: GoToTutorial
+          m_MethodName: LoadScene
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1515,6 +1518,7 @@ MonoBehaviour:
   text: {fileID: 782765938}
   panel: {fileID: 0}
   mainMenu: {fileID: 0}
+  scene: Game Scene
 --- !u!1 &886380520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1884,7 +1888,8 @@ MonoBehaviour:
   logo: {fileID: 377397355}
   text: {fileID: 1616929887}
   panel: {fileID: 1515033273}
-  mainMenu: {fileID: 0}
+  mainMenu: {fileID: 2018519091}
+  scene: 
 --- !u!1 &1147842807
 GameObject:
   m_ObjectHideFlags: 0
@@ -2246,7 +2251,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1988204524}
           m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-          m_MethodName: QuitGame
+          m_MethodName: LoadScene
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3347,7 +3352,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 381976234}
           m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-          m_MethodName: GoToPlayGames
+          m_MethodName: LoadScene
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3826,7 +3831,8 @@ MonoBehaviour:
   logo: {fileID: 1044768725}
   text: {fileID: 1575237320}
   panel: {fileID: 1515033273}
-  mainMenu: {fileID: 0}
+  mainMenu: {fileID: 2018519091}
+  scene: Login Scene
 --- !u!1 &2018519091
 GameObject:
   m_ObjectHideFlags: 0
