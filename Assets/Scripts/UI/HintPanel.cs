@@ -6,13 +6,14 @@ using TMPro;
 
 public class HintPanel : MonoBehaviour
 {
+    public static HintPanel instance;
     public GameObject hintPanel;
     public GameObject cardHint;
     public GameObject confirmationPanel;
     public TextMeshProUGUI cardHintText;
     public TextMeshProUGUI hintCost;
     public Sprite placHolder;
-
+    void Awake() { instance = this;  }
     public void OnEnable()
     {
         GameManager.Instance.activePanel = ActivePanel.hint;

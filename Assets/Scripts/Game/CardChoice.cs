@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class CardChoice : MonoBehaviour
 {
     public CardDetailSO cardDetail;
-    
     public void SelectCard()
     {
         if(GameManager.Instance.activePanel != ActivePanel.combine)
@@ -36,6 +35,7 @@ public class CardChoice : MonoBehaviour
                     break;
 
                 case ActivePanel.hint:
+                    HintPanel.instance.GetSetCardHintText("");
                     GameManager.Instance.selectedCardHint = cardDetail;
                     GameManager.Instance.hintCardImageSelected.GetComponent<Image>().sprite = cardDetail.cardSprite;
                     break;
