@@ -35,6 +35,11 @@ public class CardChoice : MonoBehaviour
                     GameManager.Instance.unlockCardImageSelected.GetComponent<Image>().sprite = cardDetail.cardSprite;
                     break;
 
+                case ActivePanel.hint:
+                    GameManager.Instance.selectedCardHint = cardDetail;
+                    GameManager.Instance.hintCardImageSelected.GetComponent<Image>().sprite = cardDetail.cardSprite;
+                    break;
+
             }
         }
         else

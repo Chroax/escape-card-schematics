@@ -2,6 +2,7 @@ public enum ActivePanel
 {
     hidden,
     unlock,
+    hint,
     combine,
     machine,
     BackyardMap,

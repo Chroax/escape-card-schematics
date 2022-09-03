@@ -10,7 +10,7 @@ public class CombineCardPanel : MonoBehaviour
 
     private void OnEnable()
     {
-        // GameManager.Instance.activePanel = ActivePanel.combine;
+        GameManager.Instance.activePanel = ActivePanel.combine;
     }
 
     public void CombineCardSubmit()
