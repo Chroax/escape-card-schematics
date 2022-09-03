@@ -8905,7 +8905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultCoin: 10000
   coinUI: {fileID: 1497317975}
-  defaultTimer: 10
+  defaultTimer: 3600
   timeUI: {fileID: 1751916806}
   defaultDiscard: 0
   discUI: {fileID: 1069207026}
