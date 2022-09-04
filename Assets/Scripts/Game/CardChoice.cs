@@ -10,6 +10,7 @@ public class CardChoice : MonoBehaviour
     {
         if(GameManager.Instance.activePanel != ActivePanel.combine)
         {
+            Debug.Log("bukan combine");
             GameManager.Instance.panelChoiceCard.SetActive(false);
 
             switch (GameManager.Instance.activePanel)
@@ -39,6 +40,7 @@ public class CardChoice : MonoBehaviour
         }
         else
         {
+            Debug.Log("MASUK KE COMBINE");
             
             if(GameManager.Instance.choiceCombineCard1 && !GameManager.Instance.choiceCombineCard2 && cardDetail.cardType == CardType.red)
             {
