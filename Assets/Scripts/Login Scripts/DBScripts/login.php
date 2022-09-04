@@ -15,7 +15,7 @@
     
     if (mysqli_num_rows($checkname)!=1) {
         
-        echo "2\tuser with no name lah";
+        echo "w\tuser with no name lah";
         exit;
     }
     
@@ -24,10 +24,18 @@
     $hashDB=$info["password"];
     
     if ($hashPass != $hashDB) {
-        echo "1\tFailure";
+        echo "w\tFailure";
         exit;
     }
    
+
+    // $checkquery = 
+    // "INSERT INTO `account_log` (`account_log_id`, `account_id`) 
+    // SELECT team_name, account_id
+    // FROM accounts
+    // WHERE account_log_id=".$usernameClean."';";
+    // mysqli_query($connect, $checkquery) or die("login check failed");
+    
     // $_SESSION["login"]=true;
     echo "0\t". $info["team_name"];
 
