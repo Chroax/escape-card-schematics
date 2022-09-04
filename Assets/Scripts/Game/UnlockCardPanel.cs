@@ -96,4 +96,10 @@ public class UnlockCardPanel : MonoBehaviour
         GameManager.Instance.CloseAllPanel();
         this.gameObject.SetActive(true);
     }
+
+    public void OnDisable()
+    {
+        this.removeCardFromHolder();
+        inputText.text = "";
+    }
 }
