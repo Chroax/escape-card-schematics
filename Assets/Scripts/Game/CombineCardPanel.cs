@@ -39,6 +39,7 @@ public class CombineCardPanel : MonoBehaviour
         if (GameManager.Instance.selectedCombineCard1 == null || GameManager.Instance.selectedCombineCard2 == null)
         {
             warning.SetActive(true);
+            return;
         }
 
         if (GameManager.Instance.selectedCombineCard1.combineCardsProducesID == GameManager.Instance.selectedCombineCard2.combineCardsProducesID 
@@ -59,6 +60,7 @@ public class CombineCardPanel : MonoBehaviour
             generatedCard.transform.GetComponent<Image>().sprite = generatedCard.GetComponent<Card>().cardDetail.cardSprite;
             generatedCard.transform.GetComponent<Card>().panelCard = GameManager.Instance.cardDetailPanel;
             generatedCard.transform.GetComponent<Card>().imageDetail = GameManager.Instance.detailImageCard;
+            generatedCard.transform.GetComponent<CardChoice>().cardDetail = GameManager.Instance.GetCardDetailByID(GameManager.Instance.selectedCombineCard1.combineCardsProducesID);
 
             if (generatedCard.GetComponent<Card>().cardDetail.cardType == CardType.map)
             {
@@ -127,6 +129,11 @@ public class CombineCardPanel : MonoBehaviour
             cardCollected = true;
             GameManager.Instance.combineCardProducedImage.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
         }
+    }
+
+    public void SelectCardChoice()
+    {
+        GameManager.Instance.panelChoiceCard.SetActive(true);
     }
 
     public void OpenPanelCombine()
