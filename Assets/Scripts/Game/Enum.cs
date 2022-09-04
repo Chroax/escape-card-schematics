@@ -20,3 +20,12 @@ public enum CardType
     map,
     none
 }
+public enum ActiveMap
+{
+    Backyard,
+    BackyardandGardenShed,
+    LivingRoomandKitchen,
+    Basement,
+    IsolationRoom,
+    Hallway
+}

@@ -32,6 +32,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
 
     // Keeps track which panel open
     [HideInInspector] public ActivePanel activePanel = ActivePanel.main;
+    [HideInInspector] public ActiveMap activeMap = ActiveMap.Backyard;
 
     // Each Panel reference
     #region Header Panel References

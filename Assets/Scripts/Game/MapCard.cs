@@ -4,5 +4,7 @@ using UnityEngine;
 
 public class MapCard : MonoBehaviour
 {
-    public CardDetailSO cardDetail;
+    // Start is called before the first frame update
+    public List<GameObject> cardList = new List<GameObject>();
+    
 }

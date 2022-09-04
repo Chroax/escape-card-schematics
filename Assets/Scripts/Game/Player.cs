@@ -20,6 +20,12 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject tesObj4;
     [SerializeField] private GameObject tesObj5;
     [SerializeField] private ListCard listCard;
+    [SerializeField] private GameObject BackyardMap;
+    [SerializeField] private GameObject GardenShedMap;
+    [SerializeField] private GameObject LivingRoomMap;
+    [SerializeField] private GameObject BasementMap;
+    [SerializeField] private GameObject IsolationRoomMap;
+    [SerializeField] private GameObject HallwayMap;
 
     private string teamName;
 
@@ -28,7 +34,33 @@ public class Player : MonoBehaviour
     private int currentDiscard;
 
     public GameObject timeOut;
-    public void Awake(){instance = this;}
+
+    private MapCard BackyardCards;
+    private MapCard GardenShedCards;
+    private MapCard LivingRoomCards;
+    private MapCard BasementCards;
+    private MapCard IsolationRoomCards;
+    private MapCard HallwayCards;
+
+    private bool isBackyardCard = true;
+    private bool isGardenShedCard = true;
+    private bool isLivingRoomCard = true;
+    private bool isBasementCard = true;
+    private bool isIsolationRoomCard = true;
+    private bool isHallwayCard = true;
+    public void Start()
+    {
+        foreach (GameObject card in BackyardCards.cardList) AddCards(card);
+    }
+    public void Awake(){
+        instance = this;
+        BackyardCards = BackyardMap.GetComponent<MapCard>();
+        GardenShedCards = GardenShedMap.GetComponent<MapCard>();
+        LivingRoomCards = LivingRoomMap.GetComponent<MapCard>();
+        BasementCards = BasementMap.GetComponent<MapCard>();
+        IsolationRoomCards = IsolationRoomMap.GetComponent<MapCard>();
+        HallwayCards = HallwayMap.GetComponent<MapCard>();
+    }
     public void Init()
     {
         teamName = DBManager.username;
@@ -100,6 +132,32 @@ public class Player : MonoBehaviour
             listCard.AddCardToList(tesObj5);
             Debug.Log("berhasil5");
             //test
+        }
+        if (isGardenShedCard && GameManager.Instance.activeMap == ActiveMap.BackyardandGardenShed)
+        {
+            foreach (GameObject card in GardenShedCards.cardList) AddCards(card);
+            isGardenShedCard = false;
+        }
+
+        else if (isLivingRoomCard && GameManager.Instance.activeMap == ActiveMap.LivingRoomandKitchen)
+        {
+            foreach (GameObject card in LivingRoomCards.cardList) AddCards(card);
+            isLivingRoomCard = false;
+        }
+        else if (isBasementCard && GameManager.Instance.activeMap == ActiveMap.Basement)
+        {
+            foreach (GameObject card in BasementCards.cardList) AddCards(card);
+            isBasementCard = false;
+        }
+        else if (isIsolationRoomCard && GameManager.Instance.activeMap == ActiveMap.IsolationRoom)
+        {
+            foreach (GameObject card in IsolationRoomCards.cardList) AddCards(card);
+            isIsolationRoomCard = false;
+        }
+        else if (isHallwayCard && GameManager.Instance.activeMap == ActiveMap.Hallway)
+        {
+            foreach (GameObject card in HallwayCards.cardList) AddCards(card);
+            isHallwayCard = false;
         }
     }
 
