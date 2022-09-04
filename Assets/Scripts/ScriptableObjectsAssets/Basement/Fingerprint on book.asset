@@ -18,5 +18,5 @@ MonoBehaviour:
   cardType: 4
   combineCardsProducesID: 
   hiddenCardID: 53
-  unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardAnswer: 1
+  unlockCardID: H

@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
-  m_Name: GardenShed
+  m_Name: Table With Radio 1
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: 43e52f2d5baa92d4ea4f0eb69792f323, type: 3}
-  cardDescription: 
-  cardID: Q
-  cardType: 5
+  cardSprite: {fileID: 21300000, guid: 4279e584ece006244be6c3fd78e6388d, type: 3}
+  cardDescription: Korden bisa dibuka dengan nomor tersembunyi
+  cardID: 44
+  cardType: 0
   combineCardsProducesID: 
-  hiddenCardID: 
+  hiddenCardID: 29
   unlockCardAnswer: 
   unlockCardID: 

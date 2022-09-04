@@ -8,17 +8,31 @@ public class HiddenCardPanel : MonoBehaviour
 {
     public TMP_InputField inputText;
     public CardDetailSO cardDetail;
+    public GameObject PenaltyPanel;
+    public GameObject silangButton;
+    public GameObject warning;
 
     private void OnEnable()
     {
         GameManager.Instance.activePanel = ActivePanel.hidden;
     }
 
+    public void removeCardFromHolder()
+    {
+        silangButton.SetActive(false);
+        GameManager.Instance.selectedCardHidden = null;
+        GameManager.Instance.hiddenCardImageSelected.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
+    }
+
     public void HiddenCardSubmit()
     {
-        if(GameManager.Instance.selectedCardHidden.hiddenCardID == inputText.text && inputText.text != "0")
+        if (GameManager.Instance.selectedCardHidden == null)
         {
-            if(GameManager.Instance.GetCardByID(inputText.text) != null)
+            warning.SetActive(true);
+        }
+        if (GameManager.Instance.selectedCardHidden.hiddenCardID == inputText.text && inputText.text != "0" && inputText.text != "")
+        {
+            if(CardSpawner.instance.GetCardByID(inputText.text, CardSpawner.instance.spawnRoots) != null)
             {
                 Debug.Log("Udah pernah kebuka");
                 return;
@@ -26,18 +40,46 @@ public class HiddenCardPanel : MonoBehaviour
 
             Debug.Log("Ketemu hiddennya");
             var generatedCard = Instantiate(GameResource.Instance.card, GameManager.Instance.cardListHolder.transform);
-            generatedCard.transform.GetComponent<Card>().cardDetail = GameManager.Instance.GetCardDetailByID(inputText.text);
+            generatedCard.transform.GetComponent<Card>().cardDetail = GameManager.Instance.GetCardDetailByID(GameManager.Instance.selectedCardHidden.hiddenCardID);
+            generatedCard.transform.GetComponent<Image>().sprite = generatedCard.GetComponent<Card>().cardDetail.cardSprite;
+            generatedCard.transform.GetComponent<Card>().panelCard = GameManager.Instance.cardDetailPanel;
+            generatedCard.transform.GetComponent<Card>().imageDetail = GameManager.Instance.detailImageCard;
+            inputText.text = "";
+            Player.instance.AddCards(generatedCard);
 
-            // Misal kartu terhidden, maka kartu akan hilang
-            //Destroy(GameManager.Instance.GetCardByID(GameManager.Instance.selectedCard.cardID));
+            if (generatedCard.GetComponent<Card>().cardDetail.cardType == CardType.map)
+            {
+                if(generatedCard.GetComponent<Card>().cardDetail.cardID == "Q")
+                {
+                    GameManager.Instance.dualMapBackGarden.SetActive(true);
+                }
+                else if (generatedCard.GetComponent<Card>().cardDetail.cardID == "32")
+                {
+                    GameManager.Instance.dualMapKitchenLobby.SetActive(true);
+                }
+                else
+                {
+                    GameManager.Instance.dualMapBackGarden.SetActive(false);
+                    GameManager.Instance.dualMapKitchenLobby.SetActive(false);
+                    GameManager.Instance.MapPanel.GetComponent<Image>().sprite = generatedCard.GetComponent<Image>().sprite;
+                }
+            }
 
+            Destroy(generatedCard);
+
+            //Misal terunlock, maka kartu akan hilang
+            silangButton.SetActive(false);
+            //Destroy(GameManager.Instance.GetCardByID(GameManager.Instance.selectedCardUnlock.cardID));
+            Player.instance.DiscardCards(GameManager.Instance.selectedCardHidden.cardID);
+            GameManager.Instance.selectedCardHidden = null;
+            GameManager.Instance.hiddenCardImageSelected.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
         }
         else
         {
-            Debug.Log("ga nemu");
-            var cardPanel = Instantiate(GameResource.Instance.detailPanel, GameManager.Instance.panelTransform);
-            cardPanel.transform.GetChild(0).transform.GetChild(1).GetComponent<Image>().sprite = cardDetail.cardSprite;
-            cardPanel.transform.GetChild(0).transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = cardDetail.cardDescription;
+            warning.SetActive(false);
+            PenaltyPanel.SetActive(true);
+            Debug.Log("Salah");
+            GameManager.Instance.player.getPenalty(180);
         }
     }
 
@@ -50,5 +92,11 @@ public class HiddenCardPanel : MonoBehaviour
     {
         GameManager.Instance.CloseAllPanel();
         this.gameObject.SetActive(true);
+    }
+
+    public void OnDisable()
+    {
+        this.removeCardFromHolder();
+        inputText.text = "";
     }
 }

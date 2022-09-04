@@ -113,8 +113,16 @@ public class Player : MonoBehaviour
             discUI.SetDiscard(currentDiscard);
         }
     }
+    public void AddCards(params GameObject[] cards)
+    {
+        foreach (GameObject card in cards)
+        {
+            CardSpawner.instance.SetSpawn(card);
+            listCard.AddCardToList(card);
+        }
+    }
 
-    private bool getPenalty(int time)
+    public bool getPenalty(int time)
     {
         currentTime -= time;
         timeUI.SetTime(currentTime);

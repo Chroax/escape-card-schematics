@@ -21,10 +21,6 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
-    }
-
-    private void Start()
-    {
         cards.sprite = cardDetail.cardSprite;
     }
 
@@ -67,12 +63,23 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
     public void OnPointerDown(PointerEventData eventData)
     {
         isDraged = false;
-        panelCard.SetActive(true);
-        imageDetail.sprite = cards.sprite;
+        originPosition = rectTransform.anchoredPosition;
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        if(!isDraged)
+        {
+            panelCard.SetActive(true);
+            imageDetail.sprite = cards.sprite;
+        }
+        else
+        {
+            if (true)
+            {
+                rectTransform.anchoredPosition = originPosition;
+            }
+        }
 
     }
 

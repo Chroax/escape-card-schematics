@@ -57,27 +57,31 @@ public class ListCard : MonoBehaviour
     {
         CloseAllListPanel();
         greenList.SetActive(true);
-    }
+    } 
 
     public void AddCardToList(GameObject card)
     {
-        card.GetComponent<Card>().enabled = false;
         switch (card.GetComponent<Card>().cardDetail.cardType)
         {
             case CardType.red:
-                Instantiate(card, cardRedList);
+                GameObject redCard = Instantiate(card, cardRedList);
+                redCard.GetComponent<Card>().enabled = false;
                 break;
-            case CardType.blue:
-                Instantiate(card, cardBlueList);
+            case CardType.blue: 
+                GameObject blueCard = Instantiate(card, cardBlueList);
+                blueCard.GetComponent<Card>().enabled = false;
                 break;
-            case CardType.yellow:
-                Instantiate(card, cardYellowList);
+            case CardType.yellow: 
+                GameObject yellowCard = Instantiate(card, cardYellowList);
+                yellowCard.GetComponent<Card>().enabled = false;
                 break;
-            case CardType.grey:
-                Instantiate(card, cardGreyList);
+            case CardType.grey: 
+                GameObject greyCard = Instantiate(card, cardGreyList);
+                greyCard.GetComponent<Card>().enabled = false;
                 break;
-            case CardType.green:
-                Instantiate(card, cardGreenList);
+            case CardType.green: 
+                GameObject greenCard = Instantiate(card, cardGreenList);
+                greenCard.GetComponent<Card>().enabled = false;
                 break;
         }
     }

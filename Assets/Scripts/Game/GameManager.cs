@@ -48,8 +48,12 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     public GameObject hintCardImageSelected;
     public GameObject combineCardProducedImage;
     public GameObject combineCardPanel;
-    public GameObject BackyardMapPanel;
+    public GameObject MapPanel;
     public GameObject machineCardPanel;
+    public GameObject cardDetailPanel;
+    public GameObject dualMapBackGarden;
+    public GameObject dualMapKitchenLobby;
+    public Image detailImageCard;
     
 
 
@@ -99,6 +103,6 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         unlockCardPanel.SetActive(false);
         combineCardPanel.SetActive(false);
         machineCardPanel.SetActive(false);
-        BackyardMapPanel.SetActive(false);
+        MapPanel.SetActive(false);
     }
 }

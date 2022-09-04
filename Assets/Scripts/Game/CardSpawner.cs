@@ -16,7 +16,8 @@ public class CardSpawner : MonoBehaviour
     public Transform greenList;
     public void SetSpawn(GameObject objToSpawn)
     {
-        Instantiate(objToSpawn, spawnRoots);
+        if(objToSpawn.GetComponent<Card>().cardDetail.cardType != CardType.map)
+            Instantiate(objToSpawn, spawnRoots);
     }
 
     public void DestroyCard(string id)
