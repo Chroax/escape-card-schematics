@@ -28,21 +28,23 @@ public class Option : MonoBehaviour
     public void setVolume(float volume)
     {
         audioMixerMusic.SetFloat("volume", volume);
+        if(musicSlider.value == -30)
+        {
+            audioMixerMusic.SetFloat("volume", -80);
+        }
     }
 
     public void setSFX(float volume)
     {
         audioMixerSFX.SetFloat("volume", volume);
+        if (sfxSlider.value == -30)
+        {
+            audioMixerSFX.SetFloat("volume", -80);
+        }
     }
 
     public void setFullscreen(bool isFullscreen)
     {
         Screen.fullScreen = isFullscreen;
-    }
-
-    public void setBrigthness(float brightness)
-    {
-        Screen.brightness = brightness;
-        Debug.Log("Changed");
     }
 }
