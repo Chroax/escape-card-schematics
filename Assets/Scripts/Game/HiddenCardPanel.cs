@@ -99,4 +99,9 @@ public class HiddenCardPanel : MonoBehaviour
         this.removeCardFromHolder();
         inputText.text = "";
     }
+    private void Update(){
+        if(GameManager.Instance.selectedCardHidden != null){
+            silangButton.SetActive(true);
+        }
+    }
 }

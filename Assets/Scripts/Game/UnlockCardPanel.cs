@@ -24,6 +24,7 @@ public class UnlockCardPanel : MonoBehaviour
         silangButton.SetActive(false);
         GameManager.Instance.selectedCardUnlock = null;
         GameManager.Instance.unlockCardImageSelected.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
+        inputText.text=  "";
     }
 
     public void UnlockCardSubmit()
@@ -95,5 +96,13 @@ public class UnlockCardPanel : MonoBehaviour
     {
         GameManager.Instance.CloseAllPanel();
         this.gameObject.SetActive(true);
+    }
+    private void OnDisable(){
+        this.removeCardFromHolder();
+    }
+    private void Update(){
+        if(GameManager.Instance.selectedCardUnlock != null){
+            silangButton.SetActive(true);
+        }
     }
 }
