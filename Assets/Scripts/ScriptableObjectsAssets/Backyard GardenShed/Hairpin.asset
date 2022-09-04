@@ -16,7 +16,7 @@ MonoBehaviour:
   cardDescription: Hairpin untuk membuka suatu benda
   cardID: 30
   cardType: 3
-  combineCardsProducesID: 41
+  combineCardsProducesID: 71
   hiddenCardID: 
   unlockCardAnswer: 
   unlockCardID: 
