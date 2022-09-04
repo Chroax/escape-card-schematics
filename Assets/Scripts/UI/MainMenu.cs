@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
     public TextMeshProUGUI text;
     public GameObject panel;
     public GameObject mainMenu;
-
+    public LogoutScript logoutScript;
 
     public void HoverText()
     {
@@ -45,8 +45,8 @@ public class MainMenu : MonoBehaviour
 
     public void QuitGame()
     {
-        DBManager.Logout();
-        SceneManager.LoadScene("Scenes/Login Scene");
+        //handle logout
+        logoutScript.CallLogout();
     }
 
     public void BackFromPanel()

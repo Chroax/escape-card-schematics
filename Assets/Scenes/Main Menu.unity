@@ -493,6 +493,7 @@ MonoBehaviour:
   text: {fileID: 1780893118}
   panel: {fileID: 0}
   mainMenu: {fileID: 0}
+  logoutScript: {fileID: 0}
 --- !u!1 &382430783
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,6 +695,7 @@ MonoBehaviour:
   text: {fileID: 562457697}
   panel: {fileID: 1515033273}
   mainMenu: {fileID: 2018519091}
+  logoutScript: {fileID: 0}
 --- !u!1 &488476921
 GameObject:
   m_ObjectHideFlags: 0
@@ -1038,6 +1040,7 @@ MonoBehaviour:
   text: {fileID: 1606665771}
   panel: {fileID: 108332837}
   mainMenu: {fileID: 2018519091}
+  logoutScript: {fileID: 0}
 --- !u!1 &662634391
 GameObject:
   m_ObjectHideFlags: 0
@@ -1515,6 +1518,7 @@ MonoBehaviour:
   text: {fileID: 782765938}
   panel: {fileID: 0}
   mainMenu: {fileID: 0}
+  logoutScript: {fileID: 0}
 --- !u!1 &886380520
 GameObject:
   m_ObjectHideFlags: 0
@@ -1885,6 +1889,7 @@ MonoBehaviour:
   text: {fileID: 1616929887}
   panel: {fileID: 1515033273}
   mainMenu: {fileID: 2018519091}
+  logoutScript: {fileID: 0}
 --- !u!1 &1147842807
 GameObject:
   m_ObjectHideFlags: 0
@@ -1955,6 +1960,51 @@ RectTransform:
   m_AnchoredPosition: {x: 190, y: 0}
   m_SizeDelta: {x: 44.72, y: 44.72}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1338777614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1338777616}
+  - component: {fileID: 1338777615}
+  m_Layer: 0
+  m_Name: LogOut
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1338777615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338777614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d38ee9d38f794b84b932884f48276782, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  url: http://localhost/gamedevDB/logout.php
+--- !u!4 &1338777616
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338777614}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 782.23364, y: 341.6751, z: -276.44626}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1470589634
 GameObject:
   m_ObjectHideFlags: 0
@@ -3827,6 +3877,7 @@ MonoBehaviour:
   text: {fileID: 1575237320}
   panel: {fileID: 1515033273}
   mainMenu: {fileID: 0}
+  logoutScript: {fileID: 1338777615}
 --- !u!1 &2018519091
 GameObject:
   m_ObjectHideFlags: 0
