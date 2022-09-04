@@ -94,10 +94,11 @@ public class Player : MonoBehaviour
             UseCoin(5);
 
             //test
-            DiscardCards("25");
+            //DiscardCards("25");
         }
         if (Input.GetKeyDown(KeyCode.Tab))
             GetCoin(5);
+        /*
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             CardSpawner.instance.SetSpawn(tesObj1);
@@ -133,6 +134,7 @@ public class Player : MonoBehaviour
             Debug.Log("berhasil5");
             //test
         }
+        */
         if (isGardenShedCard && GameManager.Instance.activeMap == ActiveMap.BackyardandGardenShed)
         {
             foreach (GameObject card in GardenShedCards.cardList) AddCards(card);
