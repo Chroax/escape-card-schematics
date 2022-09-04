@@ -13,6 +13,12 @@ public class CombineCardPanel : MonoBehaviour
     private CardDetailSO combinedCardProducedDetails;
     private bool cardCollected = true;
     private GameObject generatedCard;
+    public GameObject map;
+    MapCardPanel cardPanel;
+    private void Awake()
+    {
+        cardPanel = map.GetComponent<MapCardPanel>();
+    }
 
     private void OnEnable()
     {
@@ -64,20 +70,7 @@ public class CombineCardPanel : MonoBehaviour
 
             if (generatedCard.GetComponent<Card>().cardDetail.cardType == CardType.map)
             {
-                if(generatedCard.GetComponent<Card>().cardDetail.cardID == "Q")
-                {
-                    GameManager.Instance.dualMapBackGarden.SetActive(true);
-                }
-                else if (generatedCard.GetComponent<Card>().cardDetail.cardID == "32")
-                {
-                    GameManager.Instance.dualMapKitchenLobby.SetActive(true);
-                }
-                else
-                {
-                    GameManager.Instance.dualMapBackGarden.SetActive(false);
-                    GameManager.Instance.dualMapKitchenLobby.SetActive(false);
-                    GameManager.Instance.MapPanel.GetComponent<Image>().sprite = generatedCard.GetComponent<Image>().sprite;
-                }
+                cardPanel.changepanel();
             }
 
             GameManager.Instance.combineCardProducedImage.GetComponent<Image>().sprite = generatedCard.GetComponent<Card>().cardDetail.cardSprite;

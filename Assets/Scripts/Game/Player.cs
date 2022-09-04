@@ -20,12 +20,12 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject tesObj4;
     [SerializeField] private GameObject tesObj5;
     [SerializeField] private ListCard listCard;
-    [SerializeField] private GameObject BackyardMap;
-    [SerializeField] private GameObject GardenShedMap;
-    [SerializeField] private GameObject LivingRoomMap;
-    [SerializeField] private GameObject BasementMap;
-    [SerializeField] private GameObject IsolationRoomMap;
-    [SerializeField] private GameObject HallwayMap;
+    public GameObject BackyardMap;
+    public GameObject GardenShedMap;
+    public GameObject LivingRoomMap;
+    public GameObject BasementMap;
+    public GameObject IsolationRoomMap;
+    public GameObject HallwayMap;
 
     private string teamName;
 

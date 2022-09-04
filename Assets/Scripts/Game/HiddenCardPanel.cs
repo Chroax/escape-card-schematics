@@ -11,6 +11,12 @@ public class HiddenCardPanel : MonoBehaviour
     public GameObject PenaltyPanel;
     public GameObject silangButton;
     public GameObject warning;
+    public GameObject map;
+    MapCardPanel cardPanel;
+    private void Awake()
+    {
+        cardPanel = map.GetComponent<MapCardPanel>();
+    }
 
     private void OnEnable()
     {
@@ -49,23 +55,9 @@ public class HiddenCardPanel : MonoBehaviour
             inputText.text = "";
             Player.instance.AddCards(generatedCard);
 
-            
             if (generatedCard.GetComponent<Card>().cardDetail.cardType == CardType.map)
             {
-                if(generatedCard.GetComponent<Card>().cardDetail.cardID == "Q")
-                {
-                    GameManager.Instance.dualMapBackGarden.SetActive(true);
-                }
-                else if (generatedCard.GetComponent<Card>().cardDetail.cardID == "32")
-                {
-                    GameManager.Instance.dualMapKitchenLobby.SetActive(true);
-                }
-                else
-                {
-                    GameManager.Instance.dualMapBackGarden.SetActive(false);
-                    GameManager.Instance.dualMapKitchenLobby.SetActive(false);
-                    GameManager.Instance.MapPanel.GetComponent<Image>().sprite = generatedCard.GetComponent<Image>().sprite;
-                }
+                cardPanel.changepanel();
             }
 
             Destroy(generatedCard);
