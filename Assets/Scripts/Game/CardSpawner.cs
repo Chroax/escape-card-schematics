@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class CardSpawner : MonoBehaviour
@@ -16,10 +17,12 @@ public class CardSpawner : MonoBehaviour
     public Transform greenList;
     public void SetSpawn(GameObject objToSpawn)
     {
-        if(objToSpawn.GetComponent<Card>().cardDetail.cardType != CardType.map)
-            Instantiate(objToSpawn, spawnRoots);
+        if (objToSpawn.GetComponent<Card>().cardDetail.cardType != CardType.map)
+        {
+            GameObject card = Instantiate(objToSpawn, spawnRoots);
+            card.GetComponent<Button>().enabled = false;
+        }
     }
-
     public void DestroyCard(string id)
     {
         GameObject objToDestroy = GetCardByID(id, spawnRoots);
