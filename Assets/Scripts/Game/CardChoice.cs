@@ -15,11 +15,6 @@ public class CardChoice : MonoBehaviour
             switch (GameManager.Instance.activePanel)
             {
                 case ActivePanel.hidden:
-                    if(cardDetail.cardType != GameManager.Instance.hiddenCardType)
-                    {
-                        Debug.Log("Salah type card");
-                        break;
-                    }
                     GameManager.Instance.selectedCardHidden = cardDetail;
                     GameManager.Instance.hiddenCardImageSelected.GetComponent<Image>().sprite = cardDetail.cardSprite;
                     break;
