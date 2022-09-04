@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 8363853093573485647}
   - component: {fileID: 8363853093573485640}
   - component: {fileID: -8875709783444141035}
-  - component: {fileID: 491394170508784081}
   - component: {fileID: 257679084240061466}
-  - component: {fileID: -1441583922514617222}
+  - component: {fileID: -7640467490064563881}
+  - component: {fileID: -8184759319154067215}
   m_Layer: 5
-  m_Name: Mirror
+  m_Name: CardResources
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7b66cf091544e4a47bb4c8eaa83da8dc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 04a2f3fdca5ed534db2a4a4bb3558ff8, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -92,23 +92,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a73c637f30077547a29fce5269d95fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cards: {fileID: 8363853093573485640}
-  cardDetail: {fileID: 11400000, guid: 7ed50c55edf3f7d46bfaa32fa2702002, type: 2}
+  cards: {fileID: 0}
+  cardDetail: {fileID: 0}
   imageDetail: {fileID: 0}
   panelCard: {fileID: 0}
---- !u!114 &491394170508784081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8363853093573485642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9244099c2af165545be713ffdfe40bac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cardDetail: {fileID: 11400000, guid: 7ed50c55edf3f7d46bfaa32fa2702002, type: 2}
 --- !u!225 &257679084240061466
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -121,7 +108,20 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &-1441583922514617222
+--- !u!114 &-7640467490064563881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8363853093573485642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9244099c2af165545be713ffdfe40bac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardDetail: {fileID: 0}
+--- !u!114 &-8184759319154067215
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 491394170508784081}
+      - m_Target: {fileID: -7640467490064563881}
         m_TargetAssemblyTypeName: CardChoice, Assembly-CSharp
         m_MethodName: SelectCard
         m_Mode: 1

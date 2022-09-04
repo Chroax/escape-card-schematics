@@ -12785,6 +12785,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 697621460}
     m_Modifications:
+    - target: {fileID: -9064091878411659207, guid: 3e9402df02849ce4c858461f917e8cd6, type: 3}
+      propertyPath: cardDetail
+      value: 
+      objectReference: {fileID: 11400000, guid: 5dd567007f3b75b45be87ecaf7124a70, type: 2}
     - target: {fileID: -8875709783444141035, guid: 3e9402df02849ce4c858461f917e8cd6, type: 3}
       propertyPath: cards
       value: 
