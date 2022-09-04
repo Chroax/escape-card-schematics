@@ -48,6 +48,7 @@ public class UnlockCardPanel : MonoBehaviour
             generatedCard.transform.GetComponent<Image>().sprite = generatedCard.GetComponent<Card>().cardDetail.cardSprite;
             generatedCard.transform.GetComponent<Card>().panelCard = GameManager.Instance.cardDetailPanel;
             generatedCard.transform.GetComponent<Card>().imageDetail = GameManager.Instance.detailImageCard;
+            generatedCard.transform.GetComponent<CardChoice>().cardDetail = GameManager.Instance.GetCardDetailByID(GameManager.Instance.selectedCardUnlock.unlockCardID);
             inputText.text = "";
             Player.instance.AddCards(generatedCard);
 
