@@ -62,7 +62,7 @@ public class UnlockCardPanel : MonoBehaviour
                 cardPanel.changepanel();
             }
 
-            Destroy(generatedCard);
+            Player.instance.DiscardCards(GameManager.Instance.selectedCardUnlock.destroyedCardID);
 
             //Misal terunlock, maka kartu akan hilang
             silangButton.SetActive(false);

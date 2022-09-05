@@ -20,3 +20,6 @@ MonoBehaviour:
   hiddenCardID: 
   unlockCardAnswer: 
   unlockCardID: 
+  destroyedCardID:
+  - 15
+  - 36

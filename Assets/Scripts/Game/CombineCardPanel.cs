@@ -79,9 +79,7 @@ public class CombineCardPanel : MonoBehaviour
              //Misal terunlock, maka kartu akan hilang
             silangButton1.SetActive(false);
             silangButton2.SetActive(false);
-            //Destroy(GameManager.Instance.GetCardByID(GameManager.Instance.selectedCardUnlock.cardID));
-            Player.instance.DiscardCards(GameManager.Instance.selectedCombineCard1.cardID);
-            Player.instance.DiscardCards(GameManager.Instance.selectedCombineCard2.cardID);
+            Player.instance.DiscardCards(generatedCard.transform.GetComponent<CardChoice>().cardDetail.destroyedCardID);
             GameManager.Instance.selectedCombineCard1 = null;
             GameManager.Instance.selectedCombineCard2 = null;
             GameManager.Instance.combineCardImageSelected1.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;

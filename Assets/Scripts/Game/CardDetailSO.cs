@@ -21,5 +21,6 @@ public class CardDetailSO : ScriptableObject
     // Unlock card detail, misal card tidak ada unlocknya, isi value dengan 0
     public string unlockCardAnswer;
     public string unlockCardID;
+    public string[] destroyedCardID;
 }
 

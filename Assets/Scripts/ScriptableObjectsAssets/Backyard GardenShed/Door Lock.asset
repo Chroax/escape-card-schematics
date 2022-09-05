@@ -20,3 +20,6 @@ MonoBehaviour:
   hiddenCardID: B
   unlockCardAnswer: 3251
   unlockCardID: Q
+  destroyedCardID:
+  - M
+  - 51
