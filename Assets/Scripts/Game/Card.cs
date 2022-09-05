@@ -24,20 +24,16 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
         cards.sprite = cardDetail.cardSprite;
     }
 
-    Vector3 temp = new Vector3(30f, 0, 0);
-
     public void OnPointerEnter(PointerEventData eventData)
     {
         Debug.Log("Mouse enter");
         transform.localScale += new Vector3(0.1f, 0.1f, 0f);
-        this.transform.position -= temp;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         Debug.Log("Mouse exit");
         transform.localScale -= new Vector3(0.1f, 0.1f, 0f);
-        this.transform.position += temp;
     }
 
     public void OnBeginDrag(PointerEventData eventData)

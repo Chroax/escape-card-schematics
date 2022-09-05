@@ -55,7 +55,11 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     public GameObject dualMapBackGarden;
     public GameObject dualMapKitchenLobby;
     public Image detailImageCard;
-    
+    public GameObject warningCombine;
+    public GameObject warningUnlock;
+    public GameObject warningHidden;
+
+
 
 
     #region Header Card Type Panel Settings

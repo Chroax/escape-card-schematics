@@ -36,6 +36,7 @@ public class UnlockCardPanel : MonoBehaviour
         if (GameManager.Instance.selectedCardUnlock == null)
         {
             warning.SetActive(true);
+            return;
         }
         else if (GameManager.Instance.selectedCardUnlock.unlockCardAnswer == inputText.text && inputText.text != "0" && inputText.text != "")
         {
@@ -91,6 +92,7 @@ public class UnlockCardPanel : MonoBehaviour
     }
     private void OnDisable(){
         this.removeCardFromHolder();
+        GameManager.Instance.warningUnlock.SetActive(false);
     }
     private void Update(){
         if(GameManager.Instance.selectedCardUnlock != null){

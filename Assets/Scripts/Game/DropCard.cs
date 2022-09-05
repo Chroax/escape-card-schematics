@@ -23,16 +23,10 @@ public class DropCard : MonoBehaviour, IDropHandler
                 switch (GameManager.Instance.activePanel)
                 {
                     case ActivePanel.hidden:
-                        /*
-                        if (cardDetail.cardType != GameManager.Instance.hiddenCardType)
-                        {
-                            Debug.Log("Salah type card");
-                            break;
-                        }
-                        */
                         silangButton.SetActive(true);
                         GameManager.Instance.selectedCardHidden = cardDetail;
                         GameManager.Instance.hiddenCardImageSelected.GetComponent<Image>().sprite = cardDetail.cardSprite;
+                        GameManager.Instance.warningHidden.SetActive(false);
                         break;
 
                     case ActivePanel.unlock:
@@ -41,6 +35,7 @@ public class DropCard : MonoBehaviour, IDropHandler
                             Debug.Log("Salah type card");
                             break;
                         }
+                        GameManager.Instance.warningHidden.SetActive(false);
                         silangButton.SetActive(true);
                         GameManager.Instance.selectedCardUnlock = cardDetail;
                         GameManager.Instance.unlockCardImageSelected.GetComponent<Image>().sprite = cardDetail.cardSprite;
@@ -74,6 +69,7 @@ public class DropCard : MonoBehaviour, IDropHandler
                     GameManager.Instance.selectedCombineCard2 = cardDetail;
                     GameManager.Instance.combineCardImageSelected2.GetComponent<Image>().sprite = cardDetail.cardSprite;
                 }
+                GameManager.Instance.warningCombine.SetActive(false);
             }
         }
     }

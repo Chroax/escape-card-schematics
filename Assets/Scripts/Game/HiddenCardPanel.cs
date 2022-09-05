@@ -1,8 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class HiddenCardPanel : MonoBehaviour
 {
@@ -22,7 +21,6 @@ public class HiddenCardPanel : MonoBehaviour
     {
         GameManager.Instance.activePanel = ActivePanel.hidden;
     }
-
     public void removeCardFromHolder()
     {
         silangButton.SetActive(false);
@@ -35,10 +33,11 @@ public class HiddenCardPanel : MonoBehaviour
         if (GameManager.Instance.selectedCardHidden == null)
         {
             warning.SetActive(true);
+            return;
         }
-        if (GameManager.Instance.selectedCardHidden.hiddenCardID == inputText.text && inputText.text != "0" && inputText.text != "")
+        else if (GameManager.Instance.selectedCardHidden.hiddenCardID == inputText.text && inputText.text != "0" && inputText.text != "")
         {
-            if(CardSpawner.instance.GetCardByID(inputText.text, CardSpawner.instance.spawnRoots) != null)
+            if (CardSpawner.instance.GetCardByID(inputText.text, CardSpawner.instance.spawnRoots) != null)
             {
                 Debug.Log("Udah pernah kebuka");
                 return;
@@ -50,7 +49,7 @@ public class HiddenCardPanel : MonoBehaviour
             generatedCard.transform.GetComponent<Image>().sprite = generatedCard.GetComponent<Card>().cardDetail.cardSprite;
             generatedCard.transform.GetComponent<Card>().panelCard = GameManager.Instance.cardDetailPanel;
             generatedCard.transform.GetComponent<Card>().imageDetail = GameManager.Instance.detailImageCard;
-            
+
             generatedCard.transform.GetComponent<CardChoice>().cardDetail = GameManager.Instance.GetCardDetailByID(GameManager.Instance.selectedCardHidden.hiddenCardID);
             inputText.text = "";
             Player.instance.AddCards(generatedCard);
@@ -91,6 +90,7 @@ public class HiddenCardPanel : MonoBehaviour
 
     public void OnDisable()
     {
+        GameManager.Instance.warningHidden.SetActive(false);
         this.removeCardFromHolder();
         inputText.text = "";
     }

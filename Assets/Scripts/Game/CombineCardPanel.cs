@@ -137,7 +137,9 @@ public class CombineCardPanel : MonoBehaviour
 
     public void OnDisable()
     {
+        GameManager.Instance.warningCombine.SetActive(false);
         this.removeCard1FromHolder();
         this.removeCard2FromHolder();
+
     }
 }

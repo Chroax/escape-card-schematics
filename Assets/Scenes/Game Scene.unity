@@ -2150,6 +2150,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8363853093573485641, guid: cc2a0849a1ccad74380b4f11eec53f8a, type: 3}
   m_PrefabInstance: {fileID: 225383143}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &233274005 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3202382625390237782, guid: d1db7461c9f9c7c4c9fd0bd5ba062141, type: 3}
+  m_PrefabInstance: {fileID: 448920879}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &238674596 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8363853093573485642, guid: e5a77d8eb3dfbf24a9c8435123771c9b, type: 3}
@@ -12397,6 +12402,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1064702384 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1229639243304205782, guid: ed1fbe0654d69a94e81b04069ed889ff, type: 3}
+  m_PrefabInstance: {fileID: 6365824530891952286}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1067316006
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19333,6 +19343,9 @@ MonoBehaviour:
   dualMapBackGarden: {fileID: 0}
   dualMapKitchenLobby: {fileID: 0}
   detailImageCard: {fileID: 663211870}
+  warningCombine: {fileID: 233274005}
+  warningUnlock: {fileID: 1064702384}
+  warningHidden: {fileID: 1607059824}
   hiddenCardType: 6
   unlockCardType: 1
   combineCardType1: 0
@@ -19352,6 +19365,11 @@ Transform:
   m_Father: {fileID: 1060065944}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1607059824 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8866965670038480047, guid: 498452a4d85ca3943af242dae25dc11b, type: 3}
+  m_PrefabInstance: {fileID: 6413533386265406297}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1613846535 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8363853093573485640, guid: 72898d08b02cf4a49ac0468d2212ff54, type: 3}

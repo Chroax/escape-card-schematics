@@ -16,6 +16,7 @@ public class CardChoice : MonoBehaviour
             switch (GameManager.Instance.activePanel)
             {
                 case ActivePanel.hidden:
+                    GameManager.Instance.warningHidden.SetActive(false);
                     GameManager.Instance.selectedCardHidden = cardDetail;
                     GameManager.Instance.hiddenCardImageSelected.GetComponent<Image>().sprite = cardDetail.cardSprite;
                     break;
@@ -26,6 +27,7 @@ public class CardChoice : MonoBehaviour
                         Debug.Log("Salah type card");
                         break;
                     }
+                    GameManager.Instance.warningUnlock.SetActive(false);
                     GameManager.Instance.selectedCardUnlock = cardDetail;
                     GameManager.Instance.unlockCardImageSelected.GetComponent<Image>().sprite = cardDetail.cardSprite;
                     break;
@@ -69,6 +71,7 @@ public class CardChoice : MonoBehaviour
                 Debug.Log("Warna Kartu Tidak Sesuai!");
                 GameManager.Instance.panelChoiceCard.SetActive(false);
             }
+            GameManager.Instance.warningCombine.SetActive(false);
         }
     }
 }
