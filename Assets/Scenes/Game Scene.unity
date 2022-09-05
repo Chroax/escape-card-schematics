@@ -7799,6 +7799,11 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &685927345 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3202382625390237782, guid: d1db7461c9f9c7c4c9fd0bd5ba062141, type: 3}
+  m_PrefabInstance: {fileID: 448920879}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &697621459
 GameObject:
   m_ObjectHideFlags: 0
@@ -12892,6 +12897,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1127843310}
   m_CullTransparentMesh: 1
+--- !u!1 &1131009473 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1229639243304205782, guid: ed1fbe0654d69a94e81b04069ed889ff, type: 3}
+  m_PrefabInstance: {fileID: 6365824530891952286}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1132888111 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5516339867660125598, guid: d44b7a5f4f61ed64d998d34e6fffc604, type: 3}
@@ -19265,6 +19275,11 @@ RectTransform:
   m_AnchoredPosition: {x: 959.8208, y: -482.9024}
   m_SizeDelta: {x: 940.18, y: 467.74}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1589390484 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8866965670038480047, guid: 498452a4d85ca3943af242dae25dc11b, type: 3}
+  m_PrefabInstance: {fileID: 6413533386265406297}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1597385309
 GameObject:
   m_ObjectHideFlags: 0
@@ -19409,6 +19424,9 @@ MonoBehaviour:
   dualMapBackGarden: {fileID: 0}
   dualMapKitchenLobby: {fileID: 0}
   detailImageCard: {fileID: 663211870}
+  warningCombine: {fileID: 685927345}
+  warningUnlock: {fileID: 1131009473}
+  warningHidden: {fileID: 1589390484}
   hiddenCardType: 6
   unlockCardType: 1
   combineCardType1: 0
