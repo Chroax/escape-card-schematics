@@ -16,7 +16,9 @@ MonoBehaviour:
   cardDescription: Untuk memecahkan suatu benda
   cardID: 63
   cardType: 3
-  combineCardsProducesID: 81
-  hiddenCardID: 
+  combineCardsProducesID: []
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID:
+  - 5

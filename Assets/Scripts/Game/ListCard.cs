@@ -57,58 +57,60 @@ public class ListCard : MonoBehaviour
     {
         CloseAllListPanel();
         greenList.SetActive(true);
-    } 
+    }
 
-    public void AddCardToList(GameObject card)
+    public void AddCardToList(string id)
     {
-        switch (card.GetComponent<Card>().cardDetail.cardType)
+        CardDetailSO cardDetail = GameManager.Instance.GetCardDetailByID(id);
+        GameObject card = null;
+        switch (cardDetail.cardType)
         {
             case CardType.red:
-                GameObject redCard = Instantiate(card, cardRedList);
-                redCard.GetComponent<Card>().enabled = false;
+                card = Instantiate(GameResource.Instance.cardChoice, cardRedList);
                 break;
-            case CardType.blue: 
-                GameObject blueCard = Instantiate(card, cardBlueList);
-                blueCard.GetComponent<Card>().enabled = false;
+            case CardType.blue:
+                card = Instantiate(GameResource.Instance.cardChoice, cardBlueList);
                 break;
-            case CardType.yellow: 
-                GameObject yellowCard = Instantiate(card, cardYellowList);
-                yellowCard.GetComponent<Card>().enabled = false;
+            case CardType.yellow:
+                card = Instantiate(GameResource.Instance.cardChoice, cardYellowList);
                 break;
-            case CardType.grey: 
-                GameObject greyCard = Instantiate(card, cardGreyList);
-                greyCard.GetComponent<Card>().enabled = false;
+            case CardType.grey:
+                card = Instantiate(GameResource.Instance.cardChoice, cardGreyList);
                 break;
-            case CardType.green: 
-                GameObject greenCard = Instantiate(card, cardGreenList);
-                greenCard.GetComponent<Card>().enabled = false;
+            case CardType.green:
+                card = Instantiate(GameResource.Instance.cardChoice, cardGreenList);
                 break;
+        }
+        if (cardDetail.cardType != CardType.map && card != null)
+        {
+            card.GetComponent<CardChoice>().cardDetail = cardDetail;
+            card.GetComponent<Image>().sprite = cardDetail.cardSprite;
         }
     }
 
     public void DeleteCardFromList(string id)
     {
-        GameObject card = CardSpawner.instance.GetCardByID(id, CardSpawner.instance.spawnRoots);
-        switch (card.GetComponent<Card>().cardDetail.cardType)
+        CardDetailSO cardDetail = GameManager.Instance.GetCardDetailByID(id);
+        switch (cardDetail.cardType)
         {
             case CardType.red:
-                GameObject findRedCard = CardSpawner.instance.GetCardByID(id, cardRedList);
+                GameObject findRedCard = GameManager.Instance.GetCardListByID(id, cardRedList);
                 Destroy(findRedCard);
                 break;
             case CardType.blue:
-                GameObject findBlueCard = CardSpawner.instance.GetCardByID(id, cardBlueList);
+                GameObject findBlueCard = GameManager.Instance.GetCardListByID(id, cardBlueList);
                 Destroy(findBlueCard);
                 break;
             case CardType.yellow:
-                GameObject findYellowCard = CardSpawner.instance.GetCardByID(id, cardYellowList);
+                GameObject findYellowCard = GameManager.Instance.GetCardListByID(id, cardYellowList);
                 Destroy(findYellowCard);
                 break;
             case CardType.grey:
-                GameObject findGreyCard = CardSpawner.instance.GetCardByID(id, cardGreyList);
+                GameObject findGreyCard = GameManager.Instance.GetCardListByID(id, cardGreyList);
                 Destroy(findGreyCard);
                 break;
             case CardType.green:
-                GameObject findGreenCard = CardSpawner.instance.GetCardByID(id, cardGreenList);
+                GameObject findGreenCard = GameManager.Instance.GetCardListByID(id, cardGreenList);
                 Destroy(findGreenCard);
                 break;
         }

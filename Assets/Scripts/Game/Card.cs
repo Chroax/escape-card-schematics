@@ -21,7 +21,11 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
-        cards.sprite = cardDetail.cardSprite;
+    }
+
+    void Start()
+    {
+        transform.GetComponent<Image>().sprite = cardDetail.cardSprite;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -61,38 +65,14 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
         isDraged = false;
         originPosition = rectTransform.anchoredPosition;
     }
-
-    public void OnPointerUp(PointerEventData eventData)
-    {
-        if(!isDraged)
-        {
-            panelCard.SetActive(true);
-            imageDetail.sprite = cards.sprite;
-        }
-        else
-        {
-            if (true)
-            {
-                rectTransform.anchoredPosition = originPosition;
-            }
-        }
-
-    }
-
-    /*
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        isDraged = false;
-        originPosition = rectTransform.anchoredPosition;
-    }
+    
 
     public void OnPointerUp(PointerEventData eventData)
     {
         if (!isDraged)
         {
             var cardPanel = Instantiate(GameResource.Instance.detailPanel, GameManager.Instance.panelTransform);
-            cardPanel.transform.GetChild(0).transform.GetChild(1).GetComponent<Image>().sprite = cardDetail.cardSprite;
-            cardPanel.transform.GetChild(0).transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = cardDetail.cardDescription;
+            cardPanel.transform.GetChild(1).GetComponent<Image>().sprite = cardDetail.cardSprite;
         }
         else
         {
@@ -102,5 +82,5 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
             }
         }
     }
-    */
+    
 }

@@ -52,8 +52,6 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     public GameObject MapPanel;
     public GameObject machineCardPanel;
     public GameObject cardDetailPanel;
-    public GameObject dualMapBackGarden;
-    public GameObject dualMapKitchenLobby;
     public Image detailImageCard;
     public GameObject warningCombine;
     public GameObject warningUnlock;
@@ -100,6 +98,18 @@ public class GameManager : SingletonMonobehaviour<GameManager>
             }
         }
         Debug.Log("Gada kartunya beb");
+        return null;
+    }
+
+    public GameObject GetCardListByID(string cardID, Transform transform)
+    {
+        foreach (Transform child in transform)
+        {
+            if (child.GetComponent<CardChoice>().cardDetail.cardID == cardID)
+            {
+                return child.gameObject;
+            }
+        }
         return null;
     }
 

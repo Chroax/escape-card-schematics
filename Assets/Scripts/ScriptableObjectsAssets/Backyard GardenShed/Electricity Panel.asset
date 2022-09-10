@@ -16,7 +16,10 @@ MonoBehaviour:
   cardDescription: electrical panel bisa dibuka dengan suatu benda
   cardID: 41
   cardType: 0
-  combineCardsProducesID: 71
-  hiddenCardID: 
+  combineCardsProducesID:
+  - 71
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID:
+  - 5

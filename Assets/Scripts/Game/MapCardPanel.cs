@@ -23,6 +23,7 @@ public class MapCardPanel : MonoBehaviour
     }
     public void changepanel()
     {
+        Debug.Log(index);
         listmap[index].SetActive(false);
         index++;
         if (index >= listmap.Length)

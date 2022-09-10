@@ -2,18 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 public class CardMapDetail : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler,IPointerDownHandler
 {
 
 
-    [SerializeField] private GameObject card;
-    private Card cardScript;
-
-    void Awake()
-    {
-        cardScript = card.GetComponent<Card>();
-    }
+    [SerializeField] private string id;
 
     // Update is called once per frame
     public void OnPointerEnter(PointerEventData eventData)
@@ -26,8 +21,8 @@ public class CardMapDetail : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     }
     public void OnPointerDown(PointerEventData eventData)
     {
-
-        cardScript.panelCard.SetActive(true);
-        cardScript.imageDetail.sprite = cardScript.cards.sprite;
+        CardDetailSO cardDetail = GameManager.Instance.GetCardDetailByID(id);
+        var cardPanel = Instantiate(GameResource.Instance.detailPanel, GameManager.Instance.panelTransform);
+        cardPanel.transform.GetChild(1).GetComponent<Image>().sprite = cardDetail.cardSprite;
     }
 }

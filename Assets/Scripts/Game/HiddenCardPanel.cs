@@ -35,7 +35,7 @@ public class HiddenCardPanel : MonoBehaviour
             warning.SetActive(true);
             return;
         }
-        else if (GameManager.Instance.selectedCardHidden.hiddenCardID == inputText.text && inputText.text != "0" && inputText.text != "")
+        else if (GameManager.Instance.selectedCardHidden.hiddenCardProducesID == inputText.text && inputText.text != "0" && inputText.text != "")
         {
             if (CardSpawner.instance.GetCardByID(inputText.text, CardSpawner.instance.spawnRoots) != null)
             {
@@ -45,26 +45,23 @@ public class HiddenCardPanel : MonoBehaviour
 
             Debug.Log("Ketemu hiddennya");
             var generatedCard = Instantiate(GameResource.Instance.card, GameManager.Instance.cardListHolder.transform);
-            generatedCard.transform.GetComponent<Card>().cardDetail = GameManager.Instance.GetCardDetailByID(GameManager.Instance.selectedCardHidden.hiddenCardID);
+            generatedCard.transform.GetComponent<Card>().cardDetail = GameManager.Instance.GetCardDetailByID(GameManager.Instance.selectedCardHidden.hiddenCardProducesID);
             generatedCard.transform.GetComponent<Image>().sprite = generatedCard.GetComponent<Card>().cardDetail.cardSprite;
-            generatedCard.transform.GetComponent<Card>().panelCard = GameManager.Instance.cardDetailPanel;
-            generatedCard.transform.GetComponent<Card>().imageDetail = GameManager.Instance.detailImageCard;
+            GameManager.Instance.panelChoiceCard.GetComponent<ListCard>().AddCardToList(generatedCard.transform.GetComponent<Card>().cardDetail.cardID);
 
-            generatedCard.transform.GetComponent<CardChoice>().cardDetail = GameManager.Instance.GetCardDetailByID(GameManager.Instance.selectedCardHidden.hiddenCardID);
             inputText.text = "";
-            Player.instance.AddCards(generatedCard);
-
-            if (generatedCard.GetComponent<Card>().cardDetail.cardType == CardType.map)
-            {
-                cardPanel.changepanel();
-            }
-
-            Destroy(generatedCard);
 
             //Misal terunlock, maka kartu akan hilang
             silangButton.SetActive(false);
-            //Destroy(GameManager.Instance.GetCardByID(GameManager.Instance.selectedCardUnlock.cardID));
-            Player.instance.DiscardCards(GameManager.Instance.selectedCardHidden.cardID);
+
+            foreach (string id in generatedCard.transform.GetComponent<Card>().cardDetail.destroyedCardID)
+            {
+                Destroy(GameManager.Instance.GetCardByID(id));
+                GameManager.Instance.panelChoiceCard.GetComponent<ListCard>().DeleteCardFromList(id);
+                Player.instance.currentDiscard++;
+                Player.instance.discUI.SetDiscard(Player.instance.currentDiscard);
+            }
+
             GameManager.Instance.selectedCardHidden = null;
             GameManager.Instance.hiddenCardImageSelected.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
         }

@@ -11,8 +11,8 @@ public class CombineCardPanel : MonoBehaviour
     public GameObject silangButton2;
 
     private CardDetailSO combinedCardProducedDetails;
+    private CardDetailSO selectedCardDetails;
     private bool cardCollected = true;
-    private GameObject generatedCard;
     public GameObject map;
     MapCardPanel cardPanel;
     private void Awake()
@@ -48,8 +48,16 @@ public class CombineCardPanel : MonoBehaviour
             return;
         }
 
-        if (GameManager.Instance.selectedCombineCard1.combineCardsProducesID == GameManager.Instance.selectedCombineCard2.combineCardsProducesID 
-                && GameManager.Instance.selectedCombineCard1.combineCardsProducesID != "0" 
+        bool sameProduce = true;
+        foreach(string id in GameManager.Instance.selectedCombineCard1.combineCardsProducesID)
+        {
+            if (!GameManager.Instance.selectedCombineCard2.combineCardsProducesID.Contains(id)){
+                sameProduce = false;
+                break;
+            }
+        }
+
+        if (sameProduce && GameManager.Instance.selectedCombineCard1.combineCardsProducesID[0] != "0" 
                 && GameManager.Instance.selectedCombineCard1.cardID != GameManager.Instance.selectedCombineCard2.cardID)
         {
             Debug.Log("tercombine");
@@ -59,27 +67,38 @@ public class CombineCardPanel : MonoBehaviour
                 warning.SetActive(true);
             }
 
+            foreach (string id in GameManager.Instance.selectedCombineCard1.destroyedCardID)
+            {
+                if (GameManager.Instance.GetCardByID(id) == null)
+                {
+                    Debug.Log("Clue yang dikumpulkan belum cukup");
+                    return;
+                }
+            }
+
             Debug.Log("tercombine");
 
-            generatedCard = Instantiate(GameResource.Instance.card, GameManager.Instance.cardListHolder.transform);
-            generatedCard.transform.GetComponent<Card>().cardDetail = GameManager.Instance.GetCardDetailByID(GameManager.Instance.selectedCombineCard1.combineCardsProducesID);
-            generatedCard.transform.GetComponent<Image>().sprite = generatedCard.GetComponent<Card>().cardDetail.cardSprite;
-            generatedCard.transform.GetComponent<Card>().panelCard = GameManager.Instance.cardDetailPanel;
-            generatedCard.transform.GetComponent<Card>().imageDetail = GameManager.Instance.detailImageCard;
-            generatedCard.transform.GetComponent<CardChoice>().cardDetail = GameManager.Instance.GetCardDetailByID(GameManager.Instance.selectedCombineCard1.combineCardsProducesID);
+            selectedCardDetails = GameManager.Instance.GetCardDetailByID(GameManager.Instance.selectedCombineCard1.cardID);
+            combinedCardProducedDetails = GameManager.Instance.GetCardDetailByID(GameManager.Instance.selectedCombineCard1.combineCardsProducesID[0]);
+            GameManager.Instance.combineCardProducedImage.GetComponent<Image>().sprite = combinedCardProducedDetails.cardSprite;
 
-            if (generatedCard.GetComponent<Card>().cardDetail.cardType == CardType.map)
+            if (combinedCardProducedDetails.cardType == CardType.map)
             {
                 cardPanel.changepanel();
             }
 
-            GameManager.Instance.combineCardProducedImage.GetComponent<Image>().sprite = generatedCard.GetComponent<Card>().cardDetail.cardSprite;
-
-
-             //Misal terunlock, maka kartu akan hilang
+            //Misal terunlock, maka kartu akan hilang
             silangButton1.SetActive(false);
             silangButton2.SetActive(false);
-            Player.instance.DiscardCards(generatedCard.transform.GetComponent<CardChoice>().cardDetail.destroyedCardID);
+
+            foreach (string id in combinedCardProducedDetails.destroyedCardID)
+            {
+                Destroy(GameManager.Instance.GetCardByID(id));
+                GameManager.Instance.panelChoiceCard.GetComponent<ListCard>().DeleteCardFromList(id);
+                Player.instance.currentDiscard++;
+                Player.instance.discUI.SetDiscard(Player.instance.currentDiscard);
+            }
+
             GameManager.Instance.selectedCombineCard1 = null;
             GameManager.Instance.selectedCombineCard2 = null;
             GameManager.Instance.combineCardImageSelected1.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
@@ -115,8 +134,16 @@ public class CombineCardPanel : MonoBehaviour
     {
         if (!cardCollected)
         {
-            Player.instance.AddCards(generatedCard);
-            Destroy(generatedCard);
+            foreach(string id in selectedCardDetails.combineCardsProducesID)
+            {
+
+                var generatedCard = Instantiate(GameResource.Instance.card, GameManager.Instance.cardListHolder.transform);
+                generatedCard.transform.GetComponent<Card>().cardDetail = GameManager.Instance.GetCardDetailByID(id);
+                if (generatedCard.transform.GetComponent<Card>().cardDetail.cardType == CardType.map)
+                    Destroy(generatedCard);
+                else
+                    GameManager.Instance.panelChoiceCard.GetComponent<ListCard>().AddCardToList(id);
+            }
             cardCollected = true;
             GameManager.Instance.combineCardProducedImage.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
         }
@@ -138,6 +165,5 @@ public class CombineCardPanel : MonoBehaviour
         GameManager.Instance.warningCombine.SetActive(false);
         this.removeCard1FromHolder();
         this.removeCard2FromHolder();
-
     }
 }

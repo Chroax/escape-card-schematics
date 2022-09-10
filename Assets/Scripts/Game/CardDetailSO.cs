@@ -13,14 +13,14 @@ public class CardDetailSO : ScriptableObject
     public CardType cardType;
 
     // Combine Cards detail, misal card tidak bisa dicombine, isi value dengan 0
-    public string combineCardsProducesID;
+    public List<string> combineCardsProducesID;
 
     // Hidden card detail, misal card tidak ada hiddennya, isi value dengan 0
-    public string hiddenCardID;
+    public string hiddenCardProducesID;
 
     // Unlock card detail, misal card tidak ada unlocknya, isi value dengan 0
     public string unlockCardAnswer;
-    public string unlockCardID;
+    public string[] unlockCardProducesID;
     public string[] destroyedCardID;
 }
 

@@ -46,4 +46,16 @@ public class CardSpawner : MonoBehaviour
         }
         return null;
     }
+
+    public GameObject GetCardListByID(string cardID, Transform transform)
+    {
+        foreach (Transform child in transform)
+        {
+            if (child.GetComponent<CardChoice>().cardDetail.cardID == cardID)
+            {
+                return child.gameObject;
+            }
+        }
+        return null;
+    }
 }

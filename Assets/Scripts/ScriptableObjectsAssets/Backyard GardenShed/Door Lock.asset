@@ -16,10 +16,16 @@ MonoBehaviour:
   cardDescription: Kode kunci dari Pot Bunga
   cardID: 5
   cardType: 1
-  combineCardsProducesID: 
-  hiddenCardID: B
+  combineCardsProducesID:
+  - 0
+  hiddenCardProducesID: 
   unlockCardAnswer: 3251
-  unlockCardID: Q
+  unlockCardProducesID:
+  - 41
+  - 10
+  - 63
+  - 56
+  - Q
   destroyedCardID:
   - M
   - 51

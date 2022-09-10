@@ -16,8 +16,10 @@ MonoBehaviour:
   cardDescription: Melihat tempat yang tidak bisa diraih
   cardID: 36
   cardType: 3
-  combineCardsProducesID: 51
-  hiddenCardID: 
+  combineCardsProducesID:
+  - 51
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
-  destroyedCardID: []
+  unlockCardProducesID: []
+  destroyedCardID:
+  - 25

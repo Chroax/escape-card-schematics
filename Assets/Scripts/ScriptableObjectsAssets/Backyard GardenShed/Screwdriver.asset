@@ -16,7 +16,9 @@ MonoBehaviour:
   cardDescription: Untuk membuka suatu objek
   cardID: 56
   cardType: 3
-  combineCardsProducesID: 62
-  hiddenCardID: 
+  combineCardsProducesID: []
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID:
+  - 5

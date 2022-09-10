@@ -16,7 +16,9 @@ MonoBehaviour:
   cardDescription: Perhatikan bawah meja
   cardID: 10
   cardType: 0
-  combineCardsProducesID: 
-  hiddenCardID: 30
+  combineCardsProducesID: []
+  hiddenCardProducesID: 30
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID:
+  - 5

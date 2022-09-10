@@ -16,7 +16,8 @@ MonoBehaviour:
   cardDescription: Perhatikan di dalam tempat sampah
   cardID: 25
   cardType: 0
-  combineCardsProducesID: 
-  hiddenCardID: 36
+  combineCardsProducesID: []
+  hiddenCardProducesID: 36
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: 
+  destroyedCardID: []

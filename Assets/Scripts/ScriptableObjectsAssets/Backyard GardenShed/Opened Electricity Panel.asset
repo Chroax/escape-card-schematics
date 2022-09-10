@@ -16,7 +16,10 @@ MonoBehaviour:
   cardDescription: Warna di panel untuk membuka pintu
   cardID: 71
   cardType: 2
-  combineCardsProducesID: 
-  hiddenCardID: 
+  combineCardsProducesID: []
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID:
+  - 30
+  - 41

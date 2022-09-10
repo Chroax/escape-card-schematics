@@ -16,7 +16,9 @@ MonoBehaviour:
   cardDescription: Kabelnya terhubung dengan sesuatu
   cardID: 21
   cardType: 0
-  combineCardsProducesID: 32
-  hiddenCardID: 
+  combineCardsProducesID:
+  - 0
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID: []

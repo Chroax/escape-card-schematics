@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 0a08e20f9956dc3408dc2f2b80a02e1c, type: 3}
   cardDescription: Kaca bisa dipecahkan
-  cardID: 63
+  cardID: 18
   cardType: 0
-  combineCardsProducesID: 81
-  hiddenCardID: 
+  combineCardsProducesID: []
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID: []
