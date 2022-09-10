@@ -4098,6 +4098,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 867984509}
     m_Modifications:
+    - target: {fileID: 7293117567078463161, guid: d1db7461c9f9c7c4c9fd0bd5ba062141, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7293117567335261875, guid: d1db7461c9f9c7c4c9fd0bd5ba062141, type: 3}
       propertyPath: map
       value: 
@@ -4193,6 +4197,10 @@ PrefabInstance:
     - target: {fileID: 7293117567335262031, guid: d1db7461c9f9c7c4c9fd0bd5ba062141, type: 3}
       propertyPath: m_Name
       value: Combine Card
+      objectReference: {fileID: 0}
+    - target: {fileID: 7293117567335262031, guid: d1db7461c9f9c7c4c9fd0bd5ba062141, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7293117567489286262, guid: d1db7461c9f9c7c4c9fd0bd5ba062141, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -18632,15 +18640,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91726629e8c4c3b449c67dd5ce80b4b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultCoin: 10000
   coinUI: {fileID: 1497317975}
-  defaultTimer: 3600
   timeUI: {fileID: 1751916806}
-  defaultDiscard: 0
   discUI: {fileID: 1069207026}
   teamUI: {fileID: 1166342545}
   listCard: {fileID: 1642202297}
-  startMap: {fileID: 11400000, guid: 514c2634d0a3ac644b9112e712e6fe3f, type: 2}
+  saveData: {fileID: 11400000, guid: e096091f5f6e13d4c85b052ee7c31ebb, type: 2}
+  ownedCardId: []
   mapIndex: 0
   currentDiscard: 0
   timeOut: {fileID: 1467881293}
@@ -19230,15 +19236,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1531110656}
-  cardListHolder: {fileID: 546982500}
-  selectedCardHidden: {fileID: 0}
-  selectedCardHint: {fileID: 0}
-  selectedCardUnlock: {fileID: 0}
-  panelChoiceCard: {fileID: 1642202294}
-  selectedCombineCard1: {fileID: 0}
-  selectedCombineCard2: {fileID: 0}
-  choiceCombineCard1: 0
-  choiceCombineCard2: 0
   canvas: {fileID: 1410452278}
   cardHolder: {fileID: 21300000, guid: afe05623755d9ff4691a4bc08e26a0f6, type: 3}
   allCardDetailList:
@@ -19326,22 +19323,31 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b45e9055cb9267043a71b805b5766a88, type: 2}
   - {fileID: 11400000, guid: 95611d99c87e1db4384560db368841ed, type: 2}
   panelTransform: {fileID: 947423073}
+  selectedCardHidden: {fileID: 0}
+  selectedCardHint: {fileID: 0}
+  selectedCardUnlock: {fileID: 0}
+  selectedCombineCard1: {fileID: 0}
+  selectedCombineCard2: {fileID: 0}
+  choiceCombineCard1: 0
+  choiceCombineCard2: 0
   activePanel: 5
   activeMap: 0
-  hiddenCardImageSelected: {fileID: 870367456}
   hiddenCardPanel: {fileID: 1823683554}
-  unlockCardImageSelected: {fileID: 2117961209}
   unlockCardPanel: {fileID: 1969685838}
-  combineCardImageSelected1: {fileID: 448920884}
-  combineCardImageSelected2: {fileID: 448920883}
   HintCardPanel: {fileID: 532605036}
-  hintCardImageSelected: {fileID: 453963205}
-  combineCardProducedImage: {fileID: 448920882}
   combineCardPanel: {fileID: 448920881}
   MapPanel: {fileID: 478333715}
   machineCardPanel: {fileID: 57014999}
   cardDetailPanel: {fileID: 947423072}
-  detailImageCard: {fileID: 0}
+  hiddenCardImageSelected: {fileID: 870367456}
+  unlockCardImageSelected: {fileID: 2117961209}
+  combineCardImageSelectedRed: {fileID: 448920884}
+  combineCardImageSelectedBlue: {fileID: 448920883}
+  combineCardProducedImage: {fileID: 448920882}
+  hintCardImageSelected: {fileID: 453963205}
+  machineCardImageSelected: {fileID: 2069954708}
+  deckCardHolder: {fileID: 546982500}
+  listCardHolder: {fileID: 1642202294}
   warningCombine: {fileID: 685927345}
   warningUnlock: {fileID: 1131009473}
   warningHidden: {fileID: 1589390484}
@@ -26565,6 +26571,10 @@ PrefabInstance:
       propertyPath: map
       value: 
       objectReference: {fileID: 478333715}
+    - target: {fileID: 6365824529632024012, guid: ed1fbe0654d69a94e81b04069ed889ff, type: 3}
+      propertyPath: sceneName
+      value: IntroCutScene
+      objectReference: {fileID: 0}
     - target: {fileID: 6365824529632024012, guid: ed1fbe0654d69a94e81b04069ed889ff, type: 3}
       propertyPath: PenaltyPanel
       value: 

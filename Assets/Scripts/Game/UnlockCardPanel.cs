@@ -13,11 +13,13 @@ public class UnlockCardPanel : MonoBehaviour
     public GameObject map;
     MapCardPanel cardPanel;
     private CardDetailSO produceCardDetail;
+    public string sceneName;
+    private bool isChangeScene;
+
     private void Awake()
     {
         cardPanel = map.GetComponent<MapCardPanel>();
     }
-
 
     private void OnEnable()
     {
@@ -68,11 +70,17 @@ public class UnlockCardPanel : MonoBehaviour
 
                 if (produceCardDetail.cardType == CardType.map)
                 {
+                    if (produceCardDetail.cardID.Equals("Q"))
+                        isChangeScene = true;
                     cardPanel.ChangePanel(produceCardDetail.mapIndex);
                     Destroy(generatedCard);
                 }
                 else
+                {
+                    Player.instance.ownedCardId.Add(generatedCard.transform.GetComponent<Card>().cardDetail.cardID);
+                    Player.instance.saveData.ownedCardId.Add(id);
                     GameManager.Instance.listCardHolder.GetComponent<ListCard>().AddCardToList(produceCardDetail.cardID);
+                }
             }
 
             //Misal terunlock, maka kartu akan hilang
@@ -80,15 +88,22 @@ public class UnlockCardPanel : MonoBehaviour
             //Destroy(GameManager.Instance.GetCardByID(GameManager.Instance.selectedCardUnlock.cardID));
             foreach (string id in produceCardDetail.destroyedCardID)
             {
+                Player.instance.saveData.ownedCardId.Remove(id);
+                Player.instance.ownedCardId.Remove(id);
                 Destroy(GameManager.Instance.GetCardByID(id));
                 GameManager.Instance.listCardHolder.GetComponent<ListCard>().DeleteCardFromList(id);
                 Player.instance.currentDiscard++;
+                Player.instance.currentDiscard++;
                 Player.instance.discUI.SetDiscard(Player.instance.currentDiscard);
+                Player.instance.saveData.score += 5;
                 Player.instance.score += 5;
             }
 
             GameManager.Instance.selectedCardUnlock = null;
             GameManager.Instance.unlockCardImageSelected.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
+
+            if(isChangeScene)
+                GameManager.Instance.ChangeScene(sceneName);
         }
         else
         {

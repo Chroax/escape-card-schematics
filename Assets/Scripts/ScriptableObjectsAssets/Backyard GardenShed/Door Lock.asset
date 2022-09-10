@@ -26,6 +26,5 @@ MonoBehaviour:
   - 63
   - 56
   - Q
-  destroyedCardID:
-  - M
-  - 51
+  destroyedCardID: []
+  mapIndex: 0

@@ -7,18 +7,14 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public static Player instance;
-    [SerializeField] private int defaultCoin;
     [SerializeField] private CoinSystem coinUI;
-    [SerializeField] private float defaultTimer;
     [SerializeField] private TimeSystem timeUI;
-    [SerializeField] private int defaultDiscard;
     [SerializeField] public DiscardSystem discUI;
     [SerializeField] private TeamUI teamUI;
     [SerializeField] private ListCard listCard;
-    [SerializeField] private CardDetailSO startMap;
+    [SerializeField] public SaveDataSO saveData;
 
-    [HideInInspector] public List<string> ownedCardId;
-    [HideInInspector] public List<string> discardCardId;
+    public List<string> ownedCardId;
 
     private string teamName;
     public int mapIndex;
@@ -28,33 +24,31 @@ public class Player : MonoBehaviour
 
     public GameObject timeOut;
     public int score { get; set; }
-    private MapCard BackyardCards;
     public GameObject map;
     MapCardPanel mapCardPanel;
+    public void Awake(){
+        instance = this;
+    }
 
-    public void Start()
+    public void Init()
     {
-        mapIndex = 0;
-        score = 0;
+        teamName = DBManager.username;
+        mapIndex = saveData.mapIndex;
+        score = saveData.score;
+        foreach (string id in saveData.ownedCardId)
+            ownedCardId.Add(id);
+        currentCoin = saveData.currentCoin;
+        currentDiscard = saveData.currentDiscard;
+        currentTime = saveData.currentTime;
+
         mapCardPanel = map.GetComponent<MapCardPanel>();
-        mapCardPanel.ChangePanel(startMap.mapIndex);
-        foreach (string id in startMap.unlockCardProducesID)
+        mapCardPanel.ChangePanel(mapIndex);
+        foreach (string id in ownedCardId)
         {
             var generatedCard = Instantiate(GameResource.Instance.card, GameManager.Instance.deckCardHolder.transform);
             generatedCard.transform.GetComponent<Card>().cardDetail = GameManager.Instance.GetCardDetailByID(id);
             GameManager.Instance.listCardHolder.GetComponent<ListCard>().AddCardToList(id);
         }
-    }
-    public void Awake(){
-        instance = this;
-    }
-    public void Init()
-    {
-        teamName = DBManager.username;
-        currentCoin = defaultCoin;
-        currentTime = defaultTimer;
-        currentDiscard = defaultDiscard;
-
         teamUI.SetName(teamName);
         timeUI.SetTime(currentTime);
         coinUI.SetCoin(currentCoin);
@@ -65,6 +59,7 @@ public class Player : MonoBehaviour
     {   
         //countdown
         currentTime -= Time.deltaTime;
+        saveData.currentTime = currentTime;
         timeUI.SetTime(currentTime);
         
         //penalty

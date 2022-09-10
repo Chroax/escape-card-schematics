@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [DisallowMultipleComponent]
 public class GameManager : SingletonMonobehaviour<GameManager>
@@ -71,11 +72,6 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     public GameObject warningUnlock;
     public GameObject warningHidden;
 
-    #region Selected Card References
-    [Space(10)]
-    [Header("Selected Card References")]
-    #endregion
-
     #region Header Card Type Panel Settings
     [Space(10)]
     [Header("Card Type Per Panel")]
@@ -136,5 +132,10 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         combineCardPanel.SetActive(false);
         machineCardPanel.SetActive(false);
         MapPanel.SetActive(false);
+    }
+
+    public void ChangeScene(string nameScene)
+    {
+        SceneManager.LoadScene(nameScene);
     }
 }

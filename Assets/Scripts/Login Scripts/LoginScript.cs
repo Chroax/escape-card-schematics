@@ -23,6 +23,7 @@ public class LoginScript : MonoBehaviour
     {
         StartCoroutine(Login());
     }
+
     IEnumerator Login()
     {
         WWWForm form = new();
@@ -70,9 +71,6 @@ public class LoginScript : MonoBehaviour
             yield return null;
 
         }
-
-
-
     }
     public void VerifyInput()
     {
