@@ -17,7 +17,7 @@ MonoBehaviour:
   cardID: 15
   cardType: 0
   combineCardsProducesID:
-  - 52
+  - 51
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []

@@ -25,13 +25,14 @@ public class Player : MonoBehaviour
     public int currentDiscard;
 
     public GameObject timeOut;
-
+    public int score { get; set; }
     private MapCard BackyardCards;
     public GameObject map;
     MapCardPanel mapCardPanel;
 
     public void Start()
     {
+        score = 0;
         mapCardPanel = map.GetComponent<MapCardPanel>();
         mapCardPanel.OpenPanelMap();
         foreach (string id in startMap.unlockCardProducesID)

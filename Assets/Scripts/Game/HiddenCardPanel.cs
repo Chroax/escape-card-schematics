@@ -60,6 +60,7 @@ public class HiddenCardPanel : MonoBehaviour
                 GameManager.Instance.panelChoiceCard.GetComponent<ListCard>().DeleteCardFromList(id);
                 Player.instance.currentDiscard++;
                 Player.instance.discUI.SetDiscard(Player.instance.currentDiscard);
+                Player.instance.score += 5;
             }
 
             GameManager.Instance.selectedCardHidden = null;

@@ -1294,6 +1294,7 @@ MonoBehaviour:
   PenaltyPanel: {fileID: 0}
   silangButton1: {fileID: 2745704384622941596}
   silangButton2: {fileID: 2745704384836857217}
+  map: {fileID: 0}
 --- !u!114 &7293117567335262029
 MonoBehaviour:
   m_ObjectHideFlags: 0

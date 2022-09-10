@@ -388,8 +388,6 @@ MonoBehaviour:
   warning: {fileID: 1229639243304205782}
   PenaltyPanel: {fileID: 0}
   silangButton: {fileID: 1980207182836651852}
-  mapLandscape: {fileID: 0}
-  mapPotrait: {fileID: 0}
   map: {fileID: 0}
 --- !u!114 &6365824529632024014
 MonoBehaviour:
