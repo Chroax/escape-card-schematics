@@ -39,8 +39,6 @@ public class MainMenu : MonoBehaviour
     public void PanelPopUp()
     {
         panel.SetActive(true);
-        logo.SetActive(false);
-        mainMenu.SetActive(false);
     }
 
     public void QuitGame()
