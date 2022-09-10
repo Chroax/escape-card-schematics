@@ -6,33 +6,19 @@ using UnityEngine;
 public class MapCardPanel : MonoBehaviour
 {
     public GameObject[] listmap;
-    private int index = 0;
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            changepanel();
-        }
-    }
 
     public void OpenPanelMap()
     {
         GameManager.Instance.CloseAllPanel();
         this.gameObject.SetActive(true);
     }
-    public void changepanel()
+    public void ChangePanel(int index)
     {
-        Debug.Log(index);
-        listmap[index].SetActive(false);
-        index++;
-        if (index >= listmap.Length)
-        {
-            index = 0;
-        }
-        listmap[index].SetActive(true);
-        //make switchcase for each map
-        switch (index)
+        listmap[Player.instance.mapIndex].SetActive(false);
+        Player.instance.mapIndex = index;
+
+        listmap[Player.instance.mapIndex].SetActive(true);
+        switch (Player.instance.mapIndex)
         {
             case 0:
                 GameManager.Instance.activeMap = ActiveMap.Backyard;
@@ -45,7 +31,7 @@ public class MapCardPanel : MonoBehaviour
                 break;
             case 3:
                 GameManager.Instance.activeMap = ActiveMap.Basement;
-            break;
+                break;
             case 4:
                 GameManager.Instance.activeMap = ActiveMap.IsolationRoom;
                 break;

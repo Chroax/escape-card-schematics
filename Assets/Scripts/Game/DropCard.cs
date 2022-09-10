@@ -55,7 +55,7 @@ public class DropCard : MonoBehaviour, IDropHandler
                     }
                     silangButtonLeft.SetActive(true);
                     GameManager.Instance.selectedCombineCard1 = cardDetail;
-                    GameManager.Instance.combineCardImageSelected1.GetComponent<Image>().sprite = cardDetail.cardSprite;
+                    GameManager.Instance.combineCardImageSelectedRed.GetComponent<Image>().sprite = cardDetail.cardSprite;
                 }
                 else
                 {
@@ -67,7 +67,7 @@ public class DropCard : MonoBehaviour, IDropHandler
                     }
                     silangButtonRight.SetActive(true);
                     GameManager.Instance.selectedCombineCard2 = cardDetail;
-                    GameManager.Instance.combineCardImageSelected2.GetComponent<Image>().sprite = cardDetail.cardSprite;
+                    GameManager.Instance.combineCardImageSelectedBlue.GetComponent<Image>().sprite = cardDetail.cardSprite;
                 }
                 GameManager.Instance.warningCombine.SetActive(false);
             }

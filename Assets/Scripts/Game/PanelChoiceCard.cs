@@ -16,7 +16,7 @@ public class PanelChoiceCard : MonoBehaviour
 
     private void OnEnable()
     {
-        foreach (Transform child in GameManager.Instance.cardListHolder.transform)
+        foreach (Transform child in GameManager.Instance.deckCardHolder.transform)
         {
             var cardChoice = Instantiate(GameResource.Instance.cardChoice, cardListParent);
             cardChoice.GetComponent<Image>().sprite = child.GetComponent<Card>().cardDetail.cardSprite;

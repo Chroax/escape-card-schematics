@@ -16,7 +16,9 @@ MonoBehaviour:
   cardDescription: Korden bisa dibuka dengan nomor tersembunyi
   cardID: B
   cardType: 5
-  combineCardsProducesID: 
-  hiddenCardID: 
+  combineCardsProducesID: []
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID: []
+  mapIndex: 2

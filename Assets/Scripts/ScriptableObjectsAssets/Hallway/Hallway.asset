@@ -16,7 +16,9 @@ MonoBehaviour:
   cardDescription: 
   cardID: 76
   cardType: 5
-  combineCardsProducesID: 
-  hiddenCardID: 
+  combineCardsProducesID: []
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID: []
+  mapIndex: 5

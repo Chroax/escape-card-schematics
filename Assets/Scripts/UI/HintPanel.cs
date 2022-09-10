@@ -39,7 +39,7 @@ public class HintPanel : MonoBehaviour
     }
     public void SelectCardChoice()
     {
-         GameManager.Instance.panelChoiceCard.SetActive(true);
+         GameManager.Instance.listCardHolder.SetActive(true);
     } 
     public void ConfirmHint()
     {

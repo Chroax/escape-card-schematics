@@ -17,9 +17,11 @@ public class Player : MonoBehaviour
     [SerializeField] private ListCard listCard;
     [SerializeField] private CardDetailSO startMap;
 
+    [HideInInspector] public List<string> ownedCardId;
+    [HideInInspector] public List<string> discardCardId;
 
     private string teamName;
-
+    public int mapIndex;
     private int currentCoin;
     private float currentTime;
     public int currentDiscard;
@@ -32,14 +34,15 @@ public class Player : MonoBehaviour
 
     public void Start()
     {
+        mapIndex = 0;
         score = 0;
         mapCardPanel = map.GetComponent<MapCardPanel>();
-        mapCardPanel.OpenPanelMap();
+        mapCardPanel.ChangePanel(startMap.mapIndex);
         foreach (string id in startMap.unlockCardProducesID)
         {
-            var generatedCard = Instantiate(GameResource.Instance.card, GameManager.Instance.cardListHolder.transform);
+            var generatedCard = Instantiate(GameResource.Instance.card, GameManager.Instance.deckCardHolder.transform);
             generatedCard.transform.GetComponent<Card>().cardDetail = GameManager.Instance.GetCardDetailByID(id);
-            GameManager.Instance.panelChoiceCard.GetComponent<ListCard>().AddCardToList(id);
+            GameManager.Instance.listCardHolder.GetComponent<ListCard>().AddCardToList(id);
         }
     }
     public void Awake(){

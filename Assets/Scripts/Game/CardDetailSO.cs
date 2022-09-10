@@ -22,5 +22,6 @@ public class CardDetailSO : ScriptableObject
     public string unlockCardAnswer;
     public string[] unlockCardProducesID;
     public string[] destroyedCardID;
+    public int mapIndex;
 }
 

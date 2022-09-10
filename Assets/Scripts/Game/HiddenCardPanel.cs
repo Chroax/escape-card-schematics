@@ -44,10 +44,11 @@ public class HiddenCardPanel : MonoBehaviour
             }
 
             Debug.Log("Ketemu hiddennya");
-            var generatedCard = Instantiate(GameResource.Instance.card, GameManager.Instance.cardListHolder.transform);
+            var generatedCard = Instantiate(GameResource.Instance.card, GameManager.Instance.deckCardHolder.transform);
             generatedCard.transform.GetComponent<Card>().cardDetail = GameManager.Instance.GetCardDetailByID(GameManager.Instance.selectedCardHidden.hiddenCardProducesID);
             generatedCard.transform.GetComponent<Image>().sprite = generatedCard.GetComponent<Card>().cardDetail.cardSprite;
-            GameManager.Instance.panelChoiceCard.GetComponent<ListCard>().AddCardToList(generatedCard.transform.GetComponent<Card>().cardDetail.cardID);
+            GameManager.Instance.listCardHolder.GetComponent<ListCard>().AddCardToList(generatedCard.transform.GetComponent<Card>().cardDetail.cardID);
+            Player.instance.ownedCardId.Add(generatedCard.transform.GetComponent<Card>().cardDetail.cardID);
 
             inputText.text = "";
 
@@ -56,8 +57,9 @@ public class HiddenCardPanel : MonoBehaviour
 
             foreach (string id in generatedCard.transform.GetComponent<Card>().cardDetail.destroyedCardID)
             {
+                Player.instance.discardCardId.Add(id);
                 Destroy(GameManager.Instance.GetCardByID(id));
-                GameManager.Instance.panelChoiceCard.GetComponent<ListCard>().DeleteCardFromList(id);
+                GameManager.Instance.listCardHolder.GetComponent<ListCard>().DeleteCardFromList(id);
                 Player.instance.currentDiscard++;
                 Player.instance.discUI.SetDiscard(Player.instance.currentDiscard);
                 Player.instance.score += 5;
@@ -77,7 +79,7 @@ public class HiddenCardPanel : MonoBehaviour
 
     public void SelectCardChoice()
     {
-        GameManager.Instance.panelChoiceCard.SetActive(true);
+        GameManager.Instance.listCardHolder.SetActive(true);
     }
 
     public void OpenPanelHidden()

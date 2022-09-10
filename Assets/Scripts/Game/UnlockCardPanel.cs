@@ -60,7 +60,7 @@ public class UnlockCardPanel : MonoBehaviour
             foreach(string id in GameManager.Instance.selectedCardUnlock.unlockCardProducesID)
             {
                 produceCardDetail = GameManager.Instance.GetCardDetailByID(id);
-                var generatedCard = Instantiate(GameResource.Instance.card, GameManager.Instance.cardListHolder.transform);
+                var generatedCard = Instantiate(GameResource.Instance.card, GameManager.Instance.deckCardHolder.transform);
                 generatedCard.transform.GetComponent<Card>().cardDetail = produceCardDetail;
                 generatedCard.transform.GetComponent<Image>().sprite = produceCardDetail.cardSprite;
 
@@ -68,11 +68,11 @@ public class UnlockCardPanel : MonoBehaviour
 
                 if (produceCardDetail.cardType == CardType.map)
                 {
-                    cardPanel.changepanel();
+                    cardPanel.ChangePanel(produceCardDetail.mapIndex);
                     Destroy(generatedCard);
                 }
                 else
-                    GameManager.Instance.panelChoiceCard.GetComponent<ListCard>().AddCardToList(produceCardDetail.cardID);
+                    GameManager.Instance.listCardHolder.GetComponent<ListCard>().AddCardToList(produceCardDetail.cardID);
             }
 
             //Misal terunlock, maka kartu akan hilang
@@ -81,7 +81,7 @@ public class UnlockCardPanel : MonoBehaviour
             foreach (string id in produceCardDetail.destroyedCardID)
             {
                 Destroy(GameManager.Instance.GetCardByID(id));
-                GameManager.Instance.panelChoiceCard.GetComponent<ListCard>().DeleteCardFromList(id);
+                GameManager.Instance.listCardHolder.GetComponent<ListCard>().DeleteCardFromList(id);
                 Player.instance.currentDiscard++;
                 Player.instance.discUI.SetDiscard(Player.instance.currentDiscard);
                 Player.instance.score += 5;
@@ -101,7 +101,7 @@ public class UnlockCardPanel : MonoBehaviour
 
     public void SelectCardChoice()
     {
-        GameManager.Instance.panelChoiceCard.SetActive(true);
+        GameManager.Instance.listCardHolder.SetActive(true);
     }
 
     public void OpenPanelUnlock()

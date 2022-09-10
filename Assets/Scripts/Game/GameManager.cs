@@ -14,21 +14,18 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     [Header("General References")]
     #endregion
     public Player player;
-    public GameObject cardListHolder;
-    [HideInInspector] public CardDetailSO selectedCardHidden;
-    [HideInInspector] public CardDetailSO selectedCardHint;
-    [HideInInspector] public CardDetailSO selectedCardUnlock;
-    public GameObject panelChoiceCard;
-
-    [HideInInspector] public CardDetailSO selectedCombineCard1;
-    [HideInInspector] public CardDetailSO selectedCombineCard2;
-    [HideInInspector] public bool choiceCombineCard1 = false;
-    [HideInInspector] public bool choiceCombineCard2 = false;
-
     public Canvas canvas;
     public Sprite cardHolder;
     public List<CardDetailSO> allCardDetailList;
     public Transform panelTransform;
+
+    [HideInInspector] public CardDetailSO selectedCardHidden;
+    [HideInInspector] public CardDetailSO selectedCardHint;
+    [HideInInspector] public CardDetailSO selectedCardUnlock;
+    [HideInInspector] public CardDetailSO selectedCombineCard1;
+    [HideInInspector] public CardDetailSO selectedCombineCard2;
+    [HideInInspector] public bool choiceCombineCard1 = false;
+    [HideInInspector] public bool choiceCombineCard2 = false;
 
     // Keeps track which panel open
     [HideInInspector] public ActivePanel activePanel = ActivePanel.main;
@@ -39,26 +36,45 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     [Space(10)]
     [Header("Panels References")]
     #endregion
-    public GameObject hiddenCardImageSelected;
     public GameObject hiddenCardPanel;
-    public GameObject unlockCardImageSelected;
     public GameObject unlockCardPanel;
-    public GameObject combineCardImageSelected1;
-    public GameObject combineCardImageSelected2;
     public GameObject HintCardPanel;
-    public GameObject hintCardImageSelected;
-    public GameObject combineCardProducedImage;
     public GameObject combineCardPanel;
     public GameObject MapPanel;
     public GameObject machineCardPanel;
     public GameObject cardDetailPanel;
-    public Image detailImageCard;
+
+    #region Selected Card References
+    [Space(10)]
+    [Header("Selected Card References")]
+    #endregion
+    public GameObject hiddenCardImageSelected;
+    public GameObject unlockCardImageSelected;
+    public GameObject combineCardImageSelectedRed;
+    public GameObject combineCardImageSelectedBlue;
+    public GameObject combineCardProducedImage;
+    public GameObject hintCardImageSelected;
+    public GameObject machineCardImageSelected;
+
+    #region Header Placeholder Card References
+    [Space(10)]
+    [Header("Placeholder Card References")]
+    #endregion
+    public GameObject deckCardHolder;
+    public GameObject listCardHolder;
+
+    #region Warning References
+    [Space(10)]
+    [Header("Warning References")]
+    #endregion
     public GameObject warningCombine;
     public GameObject warningUnlock;
     public GameObject warningHidden;
 
-
-
+    #region Selected Card References
+    [Space(10)]
+    [Header("Selected Card References")]
+    #endregion
 
     #region Header Card Type Panel Settings
     [Space(10)]
@@ -90,7 +106,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     // Existing Card
     public GameObject GetCardByID(string cardID)
     {
-        foreach(Transform child in cardListHolder.transform)
+        foreach(Transform child in deckCardHolder.transform)
         {
             if(child.GetComponent<Card>().cardDetail.cardID == cardID)
             {

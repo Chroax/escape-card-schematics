@@ -22,3 +22,4 @@ MonoBehaviour:
   unlockCardProducesID: []
   destroyedCardID:
   - 5
+  mapIndex: 1

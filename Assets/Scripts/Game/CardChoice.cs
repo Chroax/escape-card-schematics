@@ -11,7 +11,7 @@ public class CardChoice : MonoBehaviour
         if(GameManager.Instance.activePanel != ActivePanel.combine)
         {
             Debug.Log("bukan combine");
-            GameManager.Instance.panelChoiceCard.SetActive(false);
+            GameManager.Instance.listCardHolder.SetActive(false);
 
             switch (GameManager.Instance.activePanel)
             {
@@ -46,7 +46,7 @@ public class CardChoice : MonoBehaviour
             
             if(GameManager.Instance.choiceCombineCard1 && !GameManager.Instance.choiceCombineCard2 && cardDetail.cardType == CardType.red)
             {
-                GameManager.Instance.panelChoiceCard.SetActive(false);
+                GameManager.Instance.listCardHolder.SetActive(false);
                 if (cardDetail.cardType != GameManager.Instance.combineCardType1)
                 {
                     Debug.Log("Salah type card 1");
@@ -54,11 +54,11 @@ public class CardChoice : MonoBehaviour
                 }
                 GameManager.Instance.selectedCombineCard1 = cardDetail;
 
-                GameManager.Instance.combineCardImageSelected1.GetComponent<Image>().sprite = cardDetail.cardSprite;
+                GameManager.Instance.combineCardImageSelectedRed.GetComponent<Image>().sprite = cardDetail.cardSprite;
             }
             else if(!GameManager.Instance.choiceCombineCard1 && GameManager.Instance.choiceCombineCard2 && cardDetail.cardType == CardType.blue)
             {
-                GameManager.Instance.panelChoiceCard.SetActive(false);
+                GameManager.Instance.listCardHolder.SetActive(false);
                 if (cardDetail.cardType != GameManager.Instance.combineCardType2)
                 {
                     Debug.Log("Salah type card 2");
@@ -66,10 +66,10 @@ public class CardChoice : MonoBehaviour
                 }
                 GameManager.Instance.selectedCombineCard2 = cardDetail;
 
-                GameManager.Instance.combineCardImageSelected2.GetComponent<Image>().sprite = cardDetail.cardSprite;
+                GameManager.Instance.combineCardImageSelectedBlue.GetComponent<Image>().sprite = cardDetail.cardSprite;
             }else{
                 Debug.Log("Warna Kartu Tidak Sesuai!");
-                GameManager.Instance.panelChoiceCard.SetActive(false);
+                GameManager.Instance.listCardHolder.SetActive(false);
             }
             GameManager.Instance.warningCombine.SetActive(false);
         }

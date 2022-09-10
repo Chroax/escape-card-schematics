@@ -29,14 +29,14 @@ public class CombineCardPanel : MonoBehaviour
     {
         silangButton1.SetActive(false);
         GameManager.Instance.selectedCombineCard1 = null;
-        GameManager.Instance.combineCardImageSelected1.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
+        GameManager.Instance.combineCardImageSelectedRed.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
     }
 
     public void removeCard2FromHolder()
     {
         silangButton2.SetActive(false);
         GameManager.Instance.selectedCombineCard2 = null;
-        GameManager.Instance.combineCardImageSelected2.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
+        GameManager.Instance.combineCardImageSelectedBlue.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
     }
     
 
@@ -84,7 +84,7 @@ public class CombineCardPanel : MonoBehaviour
 
             if (combinedCardProducedDetails.cardType == CardType.map)
             {
-                cardPanel.changepanel();
+                cardPanel.ChangePanel(combinedCardProducedDetails.mapIndex);
             }
 
             //Misal terunlock, maka kartu akan hilang
@@ -94,7 +94,7 @@ public class CombineCardPanel : MonoBehaviour
             foreach (string id in combinedCardProducedDetails.destroyedCardID)
             {
                 Destroy(GameManager.Instance.GetCardByID(id));
-                GameManager.Instance.panelChoiceCard.GetComponent<ListCard>().DeleteCardFromList(id);
+                GameManager.Instance.listCardHolder.GetComponent<ListCard>().DeleteCardFromList(id);
                 Player.instance.currentDiscard++;
                 Player.instance.discUI.SetDiscard(Player.instance.currentDiscard);
                 Player.instance.score += 5;
@@ -102,8 +102,8 @@ public class CombineCardPanel : MonoBehaviour
 
             GameManager.Instance.selectedCombineCard1 = null;
             GameManager.Instance.selectedCombineCard2 = null;
-            GameManager.Instance.combineCardImageSelected1.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
-            GameManager.Instance.combineCardImageSelected2.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
+            GameManager.Instance.combineCardImageSelectedRed.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
+            GameManager.Instance.combineCardImageSelectedBlue.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
 
             cardCollected = false;
         }
@@ -119,14 +119,14 @@ public class CombineCardPanel : MonoBehaviour
 
     public void SelectCardChoice1() 
     {
-        GameManager.Instance.panelChoiceCard.SetActive(true);
+        GameManager.Instance.listCardHolder.SetActive(true);
         GameManager.Instance.choiceCombineCard1 = true;
         GameManager.Instance.choiceCombineCard2 = false;
     }
 
     public void SelectCardChoice2()
     {
-        GameManager.Instance.panelChoiceCard.SetActive(true);
+        GameManager.Instance.listCardHolder.SetActive(true);
         GameManager.Instance.choiceCombineCard2 = true;
         GameManager.Instance.choiceCombineCard1 = false;
     }
@@ -138,12 +138,12 @@ public class CombineCardPanel : MonoBehaviour
             foreach(string id in selectedCardDetails.combineCardsProducesID)
             {
 
-                var generatedCard = Instantiate(GameResource.Instance.card, GameManager.Instance.cardListHolder.transform);
+                var generatedCard = Instantiate(GameResource.Instance.card, GameManager.Instance.deckCardHolder.transform);
                 generatedCard.transform.GetComponent<Card>().cardDetail = GameManager.Instance.GetCardDetailByID(id);
                 if (generatedCard.transform.GetComponent<Card>().cardDetail.cardType == CardType.map)
                     Destroy(generatedCard);
                 else
-                    GameManager.Instance.panelChoiceCard.GetComponent<ListCard>().AddCardToList(id);
+                    GameManager.Instance.listCardHolder.GetComponent<ListCard>().AddCardToList(id);
             }
             cardCollected = true;
             GameManager.Instance.combineCardProducedImage.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
@@ -152,7 +152,7 @@ public class CombineCardPanel : MonoBehaviour
 
     public void SelectCardChoice()
     {
-        GameManager.Instance.panelChoiceCard.SetActive(true);
+        GameManager.Instance.listCardHolder.SetActive(true);
     }
 
     public void OpenPanelCombine()
