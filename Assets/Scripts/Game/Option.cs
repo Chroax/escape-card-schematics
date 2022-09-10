@@ -12,15 +12,12 @@ public class Option : MonoBehaviour
 
     public Slider musicSlider;
     public Slider sfxSlider;
-    public Slider brightness;
 
     void Start()
     {
 
         audioMixerMusic.GetFloat("musicVolume", out float music);
         audioMixerSFX.GetFloat("effectVolume", out float effect);
-
-        brightness.value = Screen.brightness;
 
         musicSlider.value = music;
         sfxSlider.value = effect;
