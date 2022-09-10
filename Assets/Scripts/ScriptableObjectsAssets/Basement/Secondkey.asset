@@ -13,10 +13,15 @@ MonoBehaviour:
   m_Name: Secondkey
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 11d3a11d9f36bb34388792f58162a58f, type: 3}
-  cardDescription: Untuk membuka suatu obyek
+  cardDescription: Dapat digunakkan untuk membuka sesuatu
   cardID: 86
   cardType: 3
-  combineCardsProducesID: 87
-  hiddenCardID: 
+  combineCardsProducesID:
+  - 87
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID:
+  - 47
+  - 39
+  mapIndex: 0

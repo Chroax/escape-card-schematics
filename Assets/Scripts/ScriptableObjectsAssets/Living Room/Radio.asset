@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: Radio
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: bbd7dd02253c7704a9ff6d5f6b50d9aa, type: 3}
-  cardDescription: Bisa dibuka dengan sesuatu
+  cardDescription: Ditutup dengan sekrup
   cardID: 6
   cardType: 0
-  combineCardsProducesID: 62
-  hiddenCardID: 
+  combineCardsProducesID:
+  - 62
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID: []
+  mapIndex: 0

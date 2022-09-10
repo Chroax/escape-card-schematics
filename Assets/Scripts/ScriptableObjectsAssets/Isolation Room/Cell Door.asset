@@ -13,10 +13,17 @@ MonoBehaviour:
   m_Name: Cell Door
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 6d6cd2284eb56c543b186d50df674c3a, type: 3}
-  cardDescription: 
+  cardDescription: Bagian bawah pintu berlubang
   cardID: 17
   cardType: 0
-  combineCardsProducesID: 87
-  hiddenCardID: 
+  combineCardsProducesID:
+  - 79
+  - 58
+  - 45
+  - 79
+  - 49
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID: []
+  mapIndex: 0

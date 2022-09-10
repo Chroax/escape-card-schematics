@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Statue
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: f6f38ae7a03b09b4db88472e426e898a, type: 3}
-  cardDescription: Patung ini menunjuk pada suatu arah
+  cardDescription: Perhatikan patung ini, ada simbol aneh didalamnya
   cardID: U
   cardType: 4
-  combineCardsProducesID: 
-  hiddenCardID: 
+  combineCardsProducesID: []
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID: []
+  mapIndex: 0

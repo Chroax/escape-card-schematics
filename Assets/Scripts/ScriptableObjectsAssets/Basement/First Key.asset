@@ -13,10 +13,14 @@ MonoBehaviour:
   m_Name: First Key
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: d16ccf519994cad418785e4fd03adb24, type: 3}
-  cardDescription: Lihat dibawah kunci
-  cardID: 14
+  cardDescription: Memiliki kunci yang unik namun tidak dapat digunakkan untuk membuka
+    apapun
+  cardID: 85
   cardType: 0
-  combineCardsProducesID: 
-  hiddenCardID: 
+  combineCardsProducesID: []
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID:
+  - 85
+  mapIndex: 0

@@ -19395,6 +19395,7 @@ MonoBehaviour:
   unlockCardType: 1
   combineCardType1: 0
   combineCardType2: 3
+  machineCardType: 0
 --- !u!4 &1597385311
 Transform:
   m_ObjectHideFlags: 0

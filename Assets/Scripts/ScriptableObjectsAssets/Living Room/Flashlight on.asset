@@ -10,13 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
-  m_Name: Modifier 11
+  m_Name: Flashlight on
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: 22b7fac6cd93e46489ecf4c5305b6585, type: 3}
-  cardDescription: Gabungkan dengan pintu
-  cardID: 11
+  cardSprite: {fileID: 21300000, guid: 01e9212864156e1449a46d7ed373f32d, type: 3}
+  cardDescription: Untuk melihat tempat terpencil
+  cardID: 103
   cardType: 3
-  combineCardsProducesID: 32
-  hiddenCardID: 
+  combineCardsProducesID:
+  - 103
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID:
+  - 12
+  - 62
+  mapIndex: 0

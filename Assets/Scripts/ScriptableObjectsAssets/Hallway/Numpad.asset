@@ -16,7 +16,10 @@ MonoBehaviour:
   cardDescription: Kunci berhubungan dengan grid cell
   cardID: 79
   cardType: 1
-  combineCardsProducesID: 
-  hiddenCardID: 
+  combineCardsProducesID: []
+  hiddenCardProducesID: 
   unlockCardAnswer: 4231
-  unlockCardID: C
+  unlockCardProducesID:
+  - C
+  destroyedCardID: []
+  mapIndex: 0

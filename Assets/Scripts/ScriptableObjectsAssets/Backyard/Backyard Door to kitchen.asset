@@ -10,16 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
-  m_Name: Opened Electricity Panel
+  m_Name: Backyard Door to kitchen
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: 29206786665ed104292c66273a0f6ae2, type: 3}
-  cardDescription: Warna di panel untuk membuka pintu
-  cardID: 71
-  cardType: 2
-  combineCardsProducesID: []
+  cardSprite: {fileID: 21300000, guid: 12451eabaf67ef14eae96ea9bb8e11ee, type: 3}
+  cardDescription: Kabelnya terhubung dengan sesuatu
+  cardID: 21
+  cardType: 0
+  combineCardsProducesID:
+  - 18
+  - 44
+  - U
+  - 6
+  - 73
+  - B
+  - G
+  - 32
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []
-  destroyedCardID:
-  - 30
-  - 41
+  destroyedCardID: []
+  mapIndex: 0

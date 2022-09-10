@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Cell
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 6d6cd2284eb56c543b186d50df674c3a, type: 3}
-  cardDescription: 
+  cardDescription: Buka pintu cell
   cardID: 58
   cardType: 0
-  combineCardsProducesID: 
-  hiddenCardID: 23
+  combineCardsProducesID: []
+  hiddenCardProducesID: 23
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID: []
+  mapIndex: 0

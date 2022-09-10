@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: Screwdriver
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: a31ac9d8205ffd64c96178e9f0dd4fc3, type: 3}
-  cardDescription: Untuk membuka suatu objek
+  cardDescription: Digunakan untuk melepas sekrup barang elektronik
   cardID: 56
   cardType: 3
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 62
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []
-  destroyedCardID:
-  - 5
+  destroyedCardID: []
+  mapIndex: 0

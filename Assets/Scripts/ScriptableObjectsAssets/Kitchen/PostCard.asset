@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: PostCard
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: bb37443abadd0cb43b5b8330d37efeb4, type: 3}
-  cardDescription: 
+  cardDescription: Huruf pada postcard memiliki pola
   cardID: G
   cardType: 0
-  combineCardsProducesID: 
-  hiddenCardID: 
+  combineCardsProducesID: []
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID: []
+  mapIndex: 0

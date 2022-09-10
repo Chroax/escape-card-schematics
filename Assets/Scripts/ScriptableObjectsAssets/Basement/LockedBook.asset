@@ -16,7 +16,11 @@ MonoBehaviour:
   cardDescription: Bisa dibuka dengan kunci
   cardID: 53
   cardType: 1
-  combineCardsProducesID: 
-  hiddenCardID: 
+  combineCardsProducesID: []
+  hiddenCardProducesID: 
   unlockCardAnswer: 3214
-  unlockCardID: 3
+  unlockCardProducesID:
+  - 3
+  destroyedCardID:
+  - 95
+  mapIndex: 0

@@ -16,7 +16,15 @@ MonoBehaviour:
   cardDescription: 
   cardID: Y
   cardType: 1
-  combineCardsProducesID: 
-  hiddenCardID: 
+  combineCardsProducesID: []
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID:
+  - H
+  - 8
+  - 39
+  - 85
+  - 47
+  - 1
+  destroyedCardID: []
+  mapIndex: 0

@@ -10,21 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
-  m_Name: Door Lock
+  m_Name: Work Table
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: 1ba90eb268de62442bc979d39b91bec9, type: 3}
-  cardDescription: Kode kunci dari Pot Bunga
-  cardID: 5
-  cardType: 1
-  combineCardsProducesID:
-  - 0
-  hiddenCardProducesID: 
-  unlockCardAnswer: 3251
-  unlockCardProducesID:
-  - 41
-  - 10
-  - 63
-  - 56
-  - Q
+  cardSprite: {fileID: 21300000, guid: ab9741c69d048e649a54d750779328f2, type: 3}
+  cardDescription: Perhatikan bawah meja
+  cardID: 10
+  cardType: 0
+  combineCardsProducesID: []
+  hiddenCardProducesID: 30
+  unlockCardAnswer: 
+  unlockCardProducesID: []
   destroyedCardID: []
   mapIndex: 0

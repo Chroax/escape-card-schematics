@@ -12,13 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: Isolation Room
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: 7a642204bce63ee4089d5988ce5c21c4, type: 3}
+  cardSprite: {fileID: 21300000, guid: 733482df99ffc9943b4ce0d85aa9d95a, type: 3}
   cardDescription: 
-  cardID: 
+  cardID: A
   cardType: 5
   combineCardsProducesID: []
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []
-  destroyedCardID: []
+  destroyedCardID:
+  - 11
+  - 3
   mapIndex: 4

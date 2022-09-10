@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: Box with a hole 1
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 116efc24927846a42881c4b428dc828c, type: 3}
-  cardDescription: 
+  cardDescription: Terdapat sebuah item, namun lubang terlalu kecil untuk tangan
   cardID: 39
   cardType: 0
-  combineCardsProducesID: 86
-  hiddenCardID: 
+  combineCardsProducesID:
+  - 86
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID: []
+  mapIndex: 0

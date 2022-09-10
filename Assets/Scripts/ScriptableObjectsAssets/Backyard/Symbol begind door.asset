@@ -10,14 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
-  m_Name: Trash Can
+  m_Name: Symbol begind door
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: 918f91f4b1ee79e468777cb5247a5822, type: 3}
-  cardDescription: Perhatikan di dalam tempat sampah
-  cardID: 25
-  cardType: 0
+  cardSprite: {fileID: 21300000, guid: 2f81c2a85c12e0a49bf4b6117f5c9679, type: 3}
+  cardDescription: Karena ini kaca, pantulannya terbalik
+  cardID: 51
+  cardType: 4
   combineCardsProducesID: []
-  hiddenCardProducesID: 36
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardProducesID: 
-  destroyedCardID: []
+  unlockCardProducesID: []
+  destroyedCardID:
+  - 15
+  - 36
+  mapIndex: 0

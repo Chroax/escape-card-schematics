@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: Bookshelf
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 8b0c6fb8e5930aa45addeb640bfec8ae, type: 3}
-  cardDescription: Bisa dilakukan sesuatu untuk meliat benda yang tersembunyi
+  cardDescription: Terdapat sesuatu yang tidak bisa dilihat oleh mata
   cardID: 8
   cardType: 0
-  combineCardsProducesID: 95
-  hiddenCardID: 
+  combineCardsProducesID:
+  - 95
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID: []
+  mapIndex: 0

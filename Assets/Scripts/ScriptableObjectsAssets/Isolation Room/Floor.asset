@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Floor
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: a7f9df0206d325d4782b3c326bd09c8f, type: 3}
-  cardDescription: Pecahkan dengan symbol di dinding
+  cardDescription: Ada yang tersembunyi didalam lantai
   cardID: 68
   cardType: 2
-  combineCardsProducesID: 
-  hiddenCardID: 
+  combineCardsProducesID: []
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID: []
+  mapIndex: 0

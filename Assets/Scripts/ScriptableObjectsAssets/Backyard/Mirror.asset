@@ -10,15 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
-  m_Name: Backyard Door to kitchen
+  m_Name: Mirror
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: 12451eabaf67ef14eae96ea9bb8e11ee, type: 3}
-  cardDescription: Kabelnya terhubung dengan sesuatu
-  cardID: 21
-  cardType: 0
+  cardSprite: {fileID: 21300000, guid: 7b66cf091544e4a47bb4c8eaa83da8dc, type: 3}
+  cardDescription: Untuk memantulkan sesuatu yang tidak dapat diraih
+  cardID: 36
+  cardType: 3
   combineCardsProducesID:
-  - 0
+  - 51
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []
-  destroyedCardID: []
+  destroyedCardID:
+  - 25
+  mapIndex: 0

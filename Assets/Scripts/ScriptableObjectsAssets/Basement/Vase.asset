@@ -16,7 +16,10 @@ MonoBehaviour:
   cardDescription: Air pada vas dituangkan pada suatu benda
   cardID: 47
   cardType: 3
-  combineCardsProducesID: 86
-  hiddenCardID: 
+  combineCardsProducesID:
+  - 86
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID: []
+  mapIndex: 0

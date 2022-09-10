@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: Mossed door
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: f4738bea07350fb49ba81859c0be96e7, type: 3}
-  cardDescription: Lumutnya bisa dibersihkan
+  cardDescription: Ada simbol namun terlalu kotor sehingga tidak dapat dilihat
   cardID: 45
   cardType: 0
-  combineCardsProducesID: 97
-  hiddenCardID: 
+  combineCardsProducesID:
+  - 97
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID: []
+  mapIndex: 0

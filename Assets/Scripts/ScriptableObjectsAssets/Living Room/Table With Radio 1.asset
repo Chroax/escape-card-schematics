@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: Table With Radio 1
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: 4279e584ece006244be6c3fd78e6388d, type: 3}
+  cardSprite: {fileID: 21300000, guid: d2b77b6ed327ecd49a82ea8a30a6d845, type: 3}
   cardDescription: Korden bisa dibuka dengan nomor tersembunyi
   cardID: 44
   cardType: 0
-  combineCardsProducesID: 
-  hiddenCardID: 29
+  combineCardsProducesID: []
+  hiddenCardProducesID: 88
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID: []
+  mapIndex: 0
