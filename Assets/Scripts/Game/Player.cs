@@ -97,6 +97,7 @@ public class Player : MonoBehaviour
         if(coin <= currentCoin)
         {
             currentCoin -= coin;
+            saveData.currentCoin = currentCoin;
             coinUI.SetCoin(currentCoin);
             return true;
         }

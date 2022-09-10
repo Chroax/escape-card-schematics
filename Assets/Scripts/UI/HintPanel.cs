@@ -56,11 +56,6 @@ public class HintPanel : MonoBehaviour
     {
         confirmationPanel.SetActive(false);
     }
-    
-    public void GetSetCardHintCost()
-    {
-
-    }
 
     public void GetSetCardHintText(string text)
     {

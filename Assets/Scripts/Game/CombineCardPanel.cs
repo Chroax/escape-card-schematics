@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CombineCardPanel : MonoBehaviour
 {
@@ -68,7 +69,6 @@ public class CombineCardPanel : MonoBehaviour
             }
 
             Debug.Log("tercombine");
-
             selectedCardDetails = GameManager.Instance.GetCardDetailByID(GameManager.Instance.selectedCombineCard1.cardID);
             combinedCardProducedDetails = GameManager.Instance.GetCardDetailByID(GameManager.Instance.selectedCombineCard1.combineCardsProducesID[0]);
             GameManager.Instance.combineCardProducedImage.GetComponent<Image>().sprite = combinedCardProducedDetails.cardSprite;
@@ -99,6 +99,8 @@ public class CombineCardPanel : MonoBehaviour
             GameManager.Instance.selectedCombineCard2 = null;
             GameManager.Instance.combineCardImageSelectedRed.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
             GameManager.Instance.combineCardImageSelectedBlue.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
+            GameManager.Instance.notification.SetActive(true);
+            GameManager.Instance.notification.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = selectedCardDetails.combineCardsProducesID.Count.ToString();
 
             cardCollected = false;
         }
@@ -130,7 +132,8 @@ public class CombineCardPanel : MonoBehaviour
     {
         if (!cardCollected)
         {
-            foreach(string id in selectedCardDetails.combineCardsProducesID)
+            GameManager.Instance.notification.SetActive(false);
+            foreach (string id in selectedCardDetails.combineCardsProducesID)
             {
                 var generatedCard = Instantiate(GameResource.Instance.card, GameManager.Instance.deckCardHolder.transform);
                 generatedCard.transform.GetComponent<Card>().cardDetail = GameManager.Instance.GetCardDetailByID(id);

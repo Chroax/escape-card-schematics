@@ -19,6 +19,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     public Sprite cardHolder;
     public List<CardDetailSO> allCardDetailList;
     public Transform panelTransform;
+    public GameObject notification;
 
     [HideInInspector] public CardDetailSO selectedCardHidden;
     [HideInInspector] public CardDetailSO selectedCardHint;
@@ -80,6 +81,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     public CardType unlockCardType;
     public CardType combineCardType1;
     public CardType combineCardType2;
+    public CardType machineCardType;
 
     public void Start()
     {
