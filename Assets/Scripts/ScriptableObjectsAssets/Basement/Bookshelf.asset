@@ -21,5 +21,12 @@ MonoBehaviour:
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []
-  destroyedCardID: []
+  destroyedCardID:
+  - 81
+  - 32
+  - G
+  - B
+  - U
+  - 191
+  - Y
   mapIndex: 0
