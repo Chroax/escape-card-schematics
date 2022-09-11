@@ -31,6 +31,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
     public void OnPointerEnter(PointerEventData eventData)
     {
         Debug.Log("Mouse enter");
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().hoverSoundPlay();
         transform.localScale += new Vector3(0.1f, 0.1f, 0f);
     }
 
@@ -71,6 +72,7 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
     {
         if (!isDraged)
         {
+            GameManager.Instance.audioManager.GetComponent<SoundManager>().clickSoundPlay();
             var cardPanel = Instantiate(GameResource.Instance.detailPanel, GameManager.Instance.panelTransform);
             cardPanel.transform.GetChild(1).GetComponent<Image>().sprite = cardDetail.cardSprite;
         }
