@@ -26,6 +26,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     [HideInInspector] public CardDetailSO selectedCardUnlock;
     [HideInInspector] public CardDetailSO selectedCombineCard1;
     [HideInInspector] public CardDetailSO selectedCombineCard2;
+    [HideInInspector] public CardDetailSO selectedMachineCard;
     [HideInInspector] public bool choiceCombineCard1 = false;
     [HideInInspector] public bool choiceCombineCard2 = false;
 

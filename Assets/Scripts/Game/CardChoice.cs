@@ -38,6 +38,15 @@ public class CardChoice : MonoBehaviour
                     GameManager.Instance.hintCardImageSelected.GetComponent<Image>().sprite = cardDetail.cardSprite;
                     break;
 
+                case ActivePanel.machine:
+                    if (cardDetail.cardType != GameManager.Instance.machineCardType){
+                        Debug.Log("Salah type card");
+                        break;
+                    }
+                    GameManager.Instance.selectedMachineCard = cardDetail;
+                    GameManager.Instance.machineCardImageSelected.GetComponent<Image>().sprite = cardDetail.cardSprite;
+                    break;
+
             }
         }
         else
