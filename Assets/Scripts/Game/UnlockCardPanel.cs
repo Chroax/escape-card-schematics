@@ -49,11 +49,15 @@ public class UnlockCardPanel : MonoBehaviour
                 Debug.Log("Udah pernah keunlock");
                 return;
             }
-            foreach(string id in GameManager.Instance.selectedCardUnlock.destroyedCardID)
+            produceCardDetail = GameManager.Instance.GetCardDetailByID(GameManager.Instance.selectedCardUnlock.unlockCardProducesID[0]);
+            foreach (string id in produceCardDetail.destroyedCardID)
             {
+                produceCardDetail = GameManager.Instance.GetCardDetailByID(id);
                 if(GameManager.Instance.GetCardByID(id) == null)
                 {
                     Debug.Log("Clue yang dikumpulkan belum cukup");
+                    PenaltyPanel.SetActive(true);
+                    GameManager.Instance.player.getPenalty(180);
                     return;
                 }
             }
