@@ -41,6 +41,18 @@ public class DropCard : MonoBehaviour, IDropHandler
                         GameManager.Instance.unlockCardImageSelected.GetComponent<Image>().sprite = cardDetail.cardSprite;
                         break;
 
+                    case ActivePanel.machine:
+                        if (cardDetail.cardType != GameManager.Instance.machineCardType)
+                        {
+                            Debug.Log("Salah type card");
+                            break;
+                        }
+                        silangButton.SetActive(true);
+                        GameManager.Instance.selectedMachineCard = cardDetail;
+                        GameManager.Instance.machineCardImageSelected.GetComponent<Image>().sprite = cardDetail.cardSprite;
+                        break;
+
+
                 }
             }
             else
