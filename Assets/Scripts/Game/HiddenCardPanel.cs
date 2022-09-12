@@ -24,12 +24,14 @@ public class HiddenCardPanel : MonoBehaviour
     public void removeCardFromHolder()
     {
         silangButton.SetActive(false);
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().clickSoundPlay();
         GameManager.Instance.selectedCardHidden = null;
         GameManager.Instance.hiddenCardImageSelected.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
     }
 
     public void HiddenCardSubmit()
     {
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().clickSoundPlay();
         if (GameManager.Instance.selectedCardHidden == null)
         {
             warning.SetActive(true);
@@ -84,6 +86,7 @@ public class HiddenCardPanel : MonoBehaviour
 
     public void SelectCardChoice()
     {
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().clickSoundPlay();
         GameManager.Instance.listCardHolder.SetActive(true);
     }
 

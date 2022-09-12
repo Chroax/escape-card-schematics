@@ -17,6 +17,7 @@ public class MachineCardPanel : MonoBehaviour
     }
 
     public void SelectCardChoice(){
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().clickSoundPlay();
         GameManager.Instance.listCardHolder.SetActive(true);
     }
     private void Update(){
@@ -27,6 +28,7 @@ public class MachineCardPanel : MonoBehaviour
 
     public void removeCardFromHolder()
     {
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().clickSoundPlay();
         silangButton.SetActive(false);
         GameManager.Instance.selectedMachineCard = null;
         GameManager.Instance.machineCardImageSelected.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;

@@ -9,7 +9,8 @@ public class CloseButton : MonoBehaviour
     // Start is called before the first frame update
     public void DeactivePanel()
     {
-        if(gameObject.activeInHierarchy)
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().clickSoundPlay();
+        if (gameObject.activeInHierarchy)
             this.gameObject.SetActive(false);
     }
 }

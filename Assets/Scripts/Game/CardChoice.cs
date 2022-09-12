@@ -8,7 +8,8 @@ public class CardChoice : MonoBehaviour
     public CardDetailSO cardDetail;
     public void SelectCard()
     {
-        if(GameManager.Instance.activePanel != ActivePanel.combine)
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().clickSoundPlay();
+        if (GameManager.Instance.activePanel != ActivePanel.combine)
         {
             Debug.Log("bukan combine");
             GameManager.Instance.listCardHolder.SetActive(false);
