@@ -27,7 +27,6 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
     {
         transform.GetComponent<Image>().sprite = cardDetail.cardSprite;
     }
-
     public void OnPointerEnter(PointerEventData eventData)
     {
         Debug.Log("Mouse enter");
