@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: Opened Electricity Panel
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: 29206786665ed104292c66273a0f6ae2, type: 3}
+  cardSprite: {fileID: 21300000, guid: 62734670b3a6aa34e9460fb2d9efa570, type: 3}
   cardDescription: Menghubungkan pada suatu kabel
   cardID: 71
   cardType: 2

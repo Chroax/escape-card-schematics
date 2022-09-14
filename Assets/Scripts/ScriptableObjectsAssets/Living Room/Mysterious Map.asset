@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: Mysterious Map
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: 2e013221ce5b0ef4ca1072fbe0a7fb00, type: 3}
+  cardSprite: {fileID: 21300000, guid: e89df88d78d185e4daee200d6073b957, type: 3}
   cardDescription: 
   cardID: Y
   cardType: 1
