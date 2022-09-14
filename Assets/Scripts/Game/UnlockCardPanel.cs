@@ -28,6 +28,7 @@ public class UnlockCardPanel : MonoBehaviour
 
     public void removeCardFromHolder()
     {
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().clickSoundPlay();
         silangButton.SetActive(false);
         GameManager.Instance.selectedCardUnlock = null;
         GameManager.Instance.unlockCardImageSelected.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
@@ -36,6 +37,7 @@ public class UnlockCardPanel : MonoBehaviour
 
     public void UnlockCardSubmit()
     {
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().clickSoundPlay();
         if (GameManager.Instance.selectedCardUnlock == null)
         {
             warning.SetActive(true);
@@ -120,6 +122,7 @@ public class UnlockCardPanel : MonoBehaviour
 
     public void SelectCardChoice()
     {
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().clickSoundPlay();
         GameManager.Instance.listCardHolder.SetActive(true);
     }
 

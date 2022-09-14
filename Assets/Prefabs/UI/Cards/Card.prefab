@@ -90,7 +90,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a73c637f30077547a29fce5269d95fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cards: {fileID: 0}
   cardDetail: {fileID: 0}
+  imageDetail: {fileID: 0}
+  panelCard: {fileID: 0}
 --- !u!225 &257679084240061466
 CanvasGroup:
   m_ObjectHideFlags: 0

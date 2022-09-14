@@ -28,6 +28,7 @@ public class CombineCardPanel : MonoBehaviour
 
     public void removeCard1FromHolder()
     {
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().clickSoundPlay();
         silangButton1.SetActive(false);
         GameManager.Instance.selectedCombineCard1 = null;
         GameManager.Instance.combineCardImageSelectedRed.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
@@ -35,6 +36,7 @@ public class CombineCardPanel : MonoBehaviour
 
     public void removeCard2FromHolder()
     {
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().clickSoundPlay();
         silangButton2.SetActive(false);
         GameManager.Instance.selectedCombineCard2 = null;
         GameManager.Instance.combineCardImageSelectedBlue.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
@@ -43,6 +45,7 @@ public class CombineCardPanel : MonoBehaviour
 
     public void CombineCardSubmit()
     {
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().clickSoundPlay();
         if (GameManager.Instance.selectedCombineCard1 == null || GameManager.Instance.selectedCombineCard2 == null)
         {
             warning.SetActive(true);
@@ -116,6 +119,7 @@ public class CombineCardPanel : MonoBehaviour
 
     public void SelectCardChoice1() 
     {
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().clickSoundPlay();
         GameManager.Instance.listCardHolder.SetActive(true);
         GameManager.Instance.choiceCombineCard1 = true;
         GameManager.Instance.choiceCombineCard2 = false;
@@ -123,6 +127,7 @@ public class CombineCardPanel : MonoBehaviour
 
     public void SelectCardChoice2()
     {
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().clickSoundPlay();
         GameManager.Instance.listCardHolder.SetActive(true);
         GameManager.Instance.choiceCombineCard2 = true;
         GameManager.Instance.choiceCombineCard1 = false;
@@ -132,6 +137,7 @@ public class CombineCardPanel : MonoBehaviour
     {
         if (!cardCollected)
         {
+            GameManager.Instance.audioManager.GetComponent<SoundManager>().clickSoundPlay();
             GameManager.Instance.notification.SetActive(false);
             foreach (string id in selectedCardDetails.combineCardsProducesID)
             {

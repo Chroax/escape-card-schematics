@@ -15,7 +15,8 @@ public class DropCard : MonoBehaviour, IDropHandler
     public void OnDrop(PointerEventData eventData)
     {
         Debug.Log("Droped");
-        if(eventData.pointerDrag != null)
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().clickSoundPlay();
+        if (eventData.pointerDrag != null)
         {
             CardDetailSO cardDetail = eventData.pointerDrag.GetComponent<Card>().cardDetail;
             if (GameManager.Instance.activePanel != ActivePanel.combine)

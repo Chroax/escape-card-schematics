@@ -16,8 +16,8 @@ public class Option : MonoBehaviour
     void Start()
     {
 
-        audioMixerMusic.GetFloat("musicVolume", out float music);
-        audioMixerSFX.GetFloat("effectVolume", out float effect);
+        audioMixerMusic.GetFloat("volume", out float music);
+        audioMixerSFX.GetFloat("volume", out float effect);
 
         musicSlider.value = music;
         sfxSlider.value = effect;

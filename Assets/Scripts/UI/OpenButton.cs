@@ -8,7 +8,8 @@ public class OpenButton : MonoBehaviour
     // Start is called before the first frame update
     public void ActivatePanel()
     {
-        if(!gameObject.activeInHierarchy)
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().clickSoundPlay();
+        if (!gameObject.activeInHierarchy)
             gameObject.SetActive(true);
     }
 }
