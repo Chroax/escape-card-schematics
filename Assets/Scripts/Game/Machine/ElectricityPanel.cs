@@ -10,12 +10,14 @@ public class ElectricityPanel : MonoBehaviour
     public GameObject onBlackButton;
     public GameObject onGreenButton;
     public GameObject onYellowButton;
+    public GameObject infoPanel;
     public void OnAndOffRedButton()
     {
         if (!onRedButton.activeInHierarchy)
             onRedButton.SetActive(true);
         else
             onRedButton.SetActive(false);
+        infoPanel.SetActive(false);
     }
     public void OnAndOffBrownButton()
     {
@@ -23,6 +25,7 @@ public class ElectricityPanel : MonoBehaviour
             onBrownButton.SetActive(true);
         else
             onBrownButton.SetActive(false);
+        infoPanel.SetActive(false);
     }
     public void OnAndOffBlueButton()
     {
@@ -30,6 +33,7 @@ public class ElectricityPanel : MonoBehaviour
             onBlueButton.SetActive(true);
         else
             onBlueButton.SetActive(false);
+        infoPanel.SetActive(false);
     }
     public void OnAndOffBlackButton()
     {
@@ -37,6 +41,7 @@ public class ElectricityPanel : MonoBehaviour
             onBlackButton.SetActive(true);
         else
             onBlackButton.SetActive(false);
+        infoPanel.SetActive(false);
     }
     public void OnAndOffGreenButton()
     {
@@ -44,6 +49,7 @@ public class ElectricityPanel : MonoBehaviour
             onGreenButton.SetActive(true);
         else
             onGreenButton.SetActive(false);
+        infoPanel.SetActive(false);
     }
     public void OnAndOffYellowButton()
     {
@@ -51,6 +57,7 @@ public class ElectricityPanel : MonoBehaviour
             onYellowButton.SetActive(true);
         else
             onYellowButton.SetActive(false);
+        infoPanel.SetActive(false);
     }
 
     public void Submit()
@@ -76,5 +83,6 @@ public class ElectricityPanel : MonoBehaviour
         onBlackButton.SetActive(false);
         onGreenButton.SetActive(false);
         onYellowButton.SetActive(false);
+        infoPanel.SetActive(true);
     }
 }

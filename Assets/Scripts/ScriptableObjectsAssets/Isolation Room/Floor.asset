@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: Floor
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: a7f9df0206d325d4782b3c326bd09c8f, type: 3}
+  cardSprite: {fileID: 21300000, guid: 74edcd9f204781b4a8dd6d85de05abf5, type: 3}
   cardDescription: Ada yang tersembunyi didalam lantai
   cardID: 68
   cardType: 2
   combineCardsProducesID:
   - 0
   hiddenCardProducesID: 
-  unlockCardAnswer: 
+  unlockCardAnswer: 3628
   unlockCardProducesID: []
   destroyedCardID:
   - H

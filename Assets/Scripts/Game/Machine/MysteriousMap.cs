@@ -13,8 +13,9 @@ public class MysteriousMap : MonoBehaviour
     public GameObject arrowA;
     public GameObject arrowQ;
     public GameObject arrowH;
+    public GameObject infoPanel;
     public GameObject warningInfo;
-    public TextMeshProUGUI textWarning;
+    private TextMeshProUGUI textWarning;
     public void Start()
     {
         textWarning = warningInfo.GetComponent<TextMeshProUGUI>();
@@ -40,6 +41,7 @@ public class MysteriousMap : MonoBehaviour
             arrowE.SetActive(false);
             arrowV.SetActive(false);
         }
+        infoPanel.SetActive(false);
     }
     public void OnAndOffArrowV()
     {
@@ -77,6 +79,7 @@ public class MysteriousMap : MonoBehaviour
             arrowT.SetActive(false);
             arrowP.SetActive(false);
         }
+        infoPanel.SetActive(false);
     }
     public void OnAndOffArrowP()
     {
@@ -116,6 +119,7 @@ public class MysteriousMap : MonoBehaviour
             arrowQ.SetActive(false);
             arrowH.SetActive(false);
         }
+        infoPanel.SetActive(false);
     }
     public void OnAndOffArrowA()
     {
