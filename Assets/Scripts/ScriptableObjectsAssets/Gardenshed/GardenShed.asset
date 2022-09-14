@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: GardenShed
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 43e52f2d5baa92d4ea4f0eb69792f323, type: 3}
-  cardDescription: 
+  cardDescription: Tidak ada
   cardID: Q
   cardType: 5
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []

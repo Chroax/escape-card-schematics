@@ -16,7 +16,8 @@ MonoBehaviour:
   cardDescription: Karena ini kaca, pantulannya terbalik
   cardID: 51
   cardType: 4
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []

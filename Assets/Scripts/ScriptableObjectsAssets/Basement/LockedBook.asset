@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: LockedBook
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: d2106d7dfef5b1a498684bdef904dcc1, type: 3}
-  cardDescription: Bisa dibuka dengan kunci
+  cardDescription: Tidak ada
   cardID: 53
   cardType: 1
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 
   unlockCardAnswer: 3214
   unlockCardProducesID:

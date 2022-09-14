@@ -13,15 +13,16 @@ MonoBehaviour:
   m_Name: Hallway
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 7c16b97e92807c54ca30ad3a1286f2ba, type: 3}
-  cardDescription: 
+  cardDescription: Tidak ada
   cardID: 76
   cardType: 5
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []
   destroyedCardID:
   - 17
   - 7
-  - 7
+  - A
   mapIndex: 5

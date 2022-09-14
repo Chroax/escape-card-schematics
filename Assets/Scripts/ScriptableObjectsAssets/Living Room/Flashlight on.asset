@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Flashlight on
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 01e9212864156e1449a46d7ed373f32d, type: 3}
-  cardDescription: Untuk melihat tempat terpencil
-  cardID: 103
+  cardDescription: Tidak ada
+  cardID: 74
   cardType: 3
   combineCardsProducesID:
   - 103

@@ -22,7 +22,6 @@ MonoBehaviour:
   unlockCardAnswer: 
   unlockCardProducesID: []
   destroyedCardID:
-  - 81
   - 32
   - G
   - B

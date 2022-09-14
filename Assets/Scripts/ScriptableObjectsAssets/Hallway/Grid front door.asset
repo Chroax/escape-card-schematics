@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: Grid front door
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: a39f6f845672a0b45a22513425340067, type: 3}
+  cardSprite: {fileID: 21300000, guid: 8671ae823b22d8e468f3385310e8b59e, type: 3}
   cardDescription: Sepertinya simbol yang ada terputus
-  cardID: 72
+  cardID: 97
   cardType: 4
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []

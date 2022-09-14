@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Broken Bookcase
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: d774546262fd4de45820bf8f2e0388c9, type: 3}
-  cardDescription: 
+  cardDescription: Ada batang yang bisa diambil
   cardID: 81
   cardType: 0
-  combineCardsProducesID: []
-  hiddenCardProducesID: 
+  combineCardsProducesID:
+  - 0
+  hiddenCardProducesID: 12
   unlockCardAnswer: 
   unlockCardProducesID: []
   destroyedCardID:

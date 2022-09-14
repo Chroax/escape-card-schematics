@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Kitchen Map
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 974b61cad598d9f43844aa8f1a579736, type: 3}
-  cardDescription: 
+  cardDescription: Tidak ada
   cardID: 32
   cardType: 5
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []
@@ -24,5 +25,5 @@ MonoBehaviour:
   - Q
   - 11
   - 21
-  - 2
+  - Z
   mapIndex: 2

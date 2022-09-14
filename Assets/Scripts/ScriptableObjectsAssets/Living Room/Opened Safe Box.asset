@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Opened Safe Box
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: bcddaa37a2407b14baa2e99b91a070c8, type: 3}
-  cardDescription: 
+  cardDescription: Tidak ada
   cardID: 191
   cardType: 0
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []

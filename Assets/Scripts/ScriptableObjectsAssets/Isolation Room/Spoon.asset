@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Spoon
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 816259cc2e21fe24a8b0b9a676c1330d, type: 3}
-  cardDescription: 
+  cardDescription: Tidak ada
   cardID: 27
   cardType: 3
   combineCardsProducesID:

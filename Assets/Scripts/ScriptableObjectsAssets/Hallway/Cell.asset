@@ -16,7 +16,8 @@ MonoBehaviour:
   cardDescription: Buka pintu cell
   cardID: 58
   cardType: 0
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 23
   unlockCardAnswer: 
   unlockCardProducesID: []

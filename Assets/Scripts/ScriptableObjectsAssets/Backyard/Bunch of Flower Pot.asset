@@ -16,7 +16,8 @@ MonoBehaviour:
   cardDescription: Jumlah bunga merepresentasikan sesuatu
   cardID: M
   cardType: 4
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []

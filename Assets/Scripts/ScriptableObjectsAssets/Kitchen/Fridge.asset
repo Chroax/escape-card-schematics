@@ -16,7 +16,8 @@ MonoBehaviour:
   cardDescription: Perhatikan di sekitar kulkas
   cardID: 73
   cardType: 0
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 29
   unlockCardAnswer: 
   unlockCardProducesID: []
@@ -24,5 +25,5 @@ MonoBehaviour:
   - Q
   - 11
   - 21
-  - 2
+  - Z
   mapIndex: 0

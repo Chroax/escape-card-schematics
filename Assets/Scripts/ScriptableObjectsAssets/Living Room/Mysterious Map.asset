@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Mysterious Map
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: e89df88d78d185e4daee200d6073b957, type: 3}
-  cardDescription: 
+  cardDescription: Berhubungan dengan statue dan post card
   cardID: Y
-  cardType: 1
-  combineCardsProducesID: []
+  cardType: 2
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID:

@@ -16,9 +16,10 @@ MonoBehaviour:
   cardDescription: Perhatikan buku-buku
   cardID: 95
   cardType: 4
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 53
-  unlockCardAnswer: 1
+  unlockCardAnswer: 
   unlockCardProducesID: []
   destroyedCardID:
   - 8

@@ -16,11 +16,12 @@ MonoBehaviour:
   cardDescription: Ada yang tersembunyi didalam lantai
   cardID: 68
   cardType: 2
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []
   destroyedCardID:
-  - 11
+  - H
   - 3
   mapIndex: 0

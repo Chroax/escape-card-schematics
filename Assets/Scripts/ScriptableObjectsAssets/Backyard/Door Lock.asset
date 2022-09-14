@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Door Lock
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 1ba90eb268de62442bc979d39b91bec9, type: 3}
-  cardDescription: Kode kunci dari Pot Bunga
+  cardDescription: Tidak ada
   cardID: 5
   cardType: 1
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 
   unlockCardAnswer: 3251
   unlockCardProducesID:

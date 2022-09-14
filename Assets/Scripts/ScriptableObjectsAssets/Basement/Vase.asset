@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Vase
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 98704bf09a5ab7a4f944a1f38a478863, type: 3}
-  cardDescription: Air pada vas dituangkan pada suatu benda
+  cardDescription: Tidak ada
   cardID: 47
   cardType: 3
   combineCardsProducesID:
@@ -22,7 +22,6 @@ MonoBehaviour:
   unlockCardAnswer: 
   unlockCardProducesID: []
   destroyedCardID:
-  - 81
   - 32
   - G
   - B

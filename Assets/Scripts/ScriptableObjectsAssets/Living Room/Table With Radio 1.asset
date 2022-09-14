@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Table With Radio 1
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: d2b77b6ed327ecd49a82ea8a30a6d845, type: 3}
-  cardDescription: Korden bisa dibuka dengan nomor tersembunyi
+  cardDescription: Perhatikan di sekitar dinding
   cardID: 44
   cardType: 0
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 88
   unlockCardAnswer: 
   unlockCardProducesID: []
@@ -24,5 +25,5 @@ MonoBehaviour:
   - Q
   - 11
   - 21
-  - 2
+  - Z
   mapIndex: 0

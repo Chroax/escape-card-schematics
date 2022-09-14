@@ -18,7 +18,6 @@ MonoBehaviour:
   cardType: 0
   combineCardsProducesID:
   - 81
-  - 12
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []
@@ -26,5 +25,5 @@ MonoBehaviour:
   - Q
   - 11
   - 21
-  - 2
+  - Z
   mapIndex: 0

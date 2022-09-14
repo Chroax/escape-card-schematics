@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Backyard
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 833ebab33fafd6649ab38872b7256646, type: 3}
-  cardDescription: 
+  cardDescription: Tidak ada
   cardID: Z
   cardType: 5
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID:
@@ -26,3 +27,4 @@ MonoBehaviour:
   - M
   - 5
   destroyedCardID: []
+  mapIndex: 0

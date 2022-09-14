@@ -16,7 +16,8 @@ MonoBehaviour:
   cardDescription: Melihat yang tidak dapat dilihat mata
   cardID: 95
   cardType: 3
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []

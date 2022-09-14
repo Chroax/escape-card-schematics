@@ -15,9 +15,10 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: d16ccf519994cad418785e4fd03adb24, type: 3}
   cardDescription: Memiliki kunci yang unik namun tidak dapat digunakkan untuk membuka
     apapun
-  cardID: 85
+  cardID: 14
   cardType: 0
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []

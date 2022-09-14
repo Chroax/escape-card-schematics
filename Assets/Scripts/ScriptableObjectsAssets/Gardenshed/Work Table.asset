@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Work Table
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 43e6e742d45ddef478b7d157d68a628a, type: 3}
-  cardDescription: Perhatikan bawah meja
+  cardDescription: Perhatikan di bawah meja
   cardID: 10
   cardType: 0
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 30
   unlockCardAnswer: 
   unlockCardProducesID: []

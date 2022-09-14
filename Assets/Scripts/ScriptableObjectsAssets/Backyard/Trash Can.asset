@@ -16,7 +16,8 @@ MonoBehaviour:
   cardDescription: Perhatikan ada yang tersembunyi di dalam tempat sampah
   cardID: 25
   cardType: 0
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 36
   unlockCardAnswer: 
   unlockCardProducesID: []

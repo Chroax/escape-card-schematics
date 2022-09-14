@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Basement
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 660d3b59fa83d284d8ab6c8e8877d03f, type: 3}
-  cardDescription: 
+  cardDescription: Tidak ada
   cardID: H
   cardType: 5
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []
   destroyedCardID:
-  - 81
   - 32
   - G
   - B

@@ -16,7 +16,15 @@ MonoBehaviour:
   cardDescription: Dapat digunakan dengan sebuah benda merah
   cardID: 11
   cardType: 3
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 18
+  - 44
+  - U
+  - 6
+  - 73
+  - B
+  - G
+  - 32
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []

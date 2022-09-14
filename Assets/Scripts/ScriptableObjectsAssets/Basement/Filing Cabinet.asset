@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Filing Cabinet
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 2fe41440a6b1b94419a1feba010da5df, type: 3}
-  cardDescription: Bisa dibuka dengan kunci
+  cardDescription: Tidak ada
   cardID: 1
   cardType: 0
   combineCardsProducesID:
@@ -22,7 +22,6 @@ MonoBehaviour:
   unlockCardAnswer: 
   unlockCardProducesID: []
   destroyedCardID:
-  - 81
   - 32
   - G
   - B

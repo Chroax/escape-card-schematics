@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: a39f6f845672a0b45a22513425340067, type: 3}
   cardDescription: Sepertinya simbol yang ada terputus
-  cardID: 97
+  cardID: 72
   cardType: 4
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []

@@ -16,7 +16,8 @@ MonoBehaviour:
   cardDescription: Perhatikan patung ini, ada simbol aneh didalamnya
   cardID: U
   cardType: 4
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []
@@ -24,5 +25,5 @@ MonoBehaviour:
   - Q
   - 11
   - 21
-  - 2
+  - Z
   mapIndex: 0

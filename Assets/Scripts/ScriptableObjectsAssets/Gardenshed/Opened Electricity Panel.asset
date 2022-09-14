@@ -16,10 +16,12 @@ MonoBehaviour:
   cardDescription: Menghubungkan pada suatu kabel
   cardID: 71
   cardType: 2
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardProducesID: []
+  unlockCardProducesID:
+  - 11
   destroyedCardID:
   - 30
   - 41

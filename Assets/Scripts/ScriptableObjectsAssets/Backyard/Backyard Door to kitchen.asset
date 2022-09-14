@@ -15,7 +15,7 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 6e6d0e0ccf31605449334ea6d33b9948, type: 3}
   cardDescription: Kabelnya terhubung dengan sesuatu
   cardID: 21
-  cardType: 2
+  cardType: 0
   combineCardsProducesID:
   - 18
   - 44

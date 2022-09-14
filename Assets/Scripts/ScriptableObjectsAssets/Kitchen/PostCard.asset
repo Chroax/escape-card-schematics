@@ -15,8 +15,9 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: bb37443abadd0cb43b5b8330d37efeb4, type: 3}
   cardDescription: Huruf pada postcard memiliki pola
   cardID: G
-  cardType: 0
-  combineCardsProducesID: []
+  cardType: 4
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []
@@ -24,5 +25,5 @@ MonoBehaviour:
   - Q
   - 11
   - 21
-  - 2
+  - Z
   mapIndex: 0

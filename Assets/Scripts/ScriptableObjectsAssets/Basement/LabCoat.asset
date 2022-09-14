@@ -16,12 +16,12 @@ MonoBehaviour:
   cardDescription: Perhatikkan jas lab
   cardID: 85
   cardType: 3
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 14
   unlockCardAnswer: 
   unlockCardProducesID: []
   destroyedCardID:
-  - 81
   - 32
   - G
   - B

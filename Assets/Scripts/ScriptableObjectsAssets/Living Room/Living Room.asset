@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Living Room
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 8f52057f48bd35648861345588102681, type: 3}
-  cardDescription: Korden bisa dibuka dengan nomor tersembunyi
+  cardDescription: Tidak ada
   cardID: B
   cardType: 5
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []
@@ -24,5 +25,5 @@ MonoBehaviour:
   - Q
   - 11
   - 21
-  - 2
+  - Z
   mapIndex: 2

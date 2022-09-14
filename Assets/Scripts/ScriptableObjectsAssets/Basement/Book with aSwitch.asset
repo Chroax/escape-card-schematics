@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Book with aSwitch
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 1cd9d6bdc3b6b844b91651ac2fb034b5, type: 3}
-  cardDescription: 
+  cardDescription: Tidak ada
   cardID: 3
   cardType: 2
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID:
