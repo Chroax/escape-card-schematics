@@ -9333,6 +9333,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 867984509}
+  - component: {fileID: 867984510}
   m_Layer: 5
   m_Name: LayoutButton
   m_TagString: Untagged
@@ -9365,6 +9366,17 @@ RectTransform:
   m_AnchoredPosition: {x: 483.49988, y: 0.000015258789}
   m_SizeDelta: {x: 967, y: 650}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!210 &867984510
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867984508}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &870367456 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6413533385948785593, guid: 498452a4d85ca3943af242dae25dc11b, type: 3}
@@ -23688,6 +23700,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2066413754}
+  - component: {fileID: 2066413755}
   m_Layer: 5
   m_Name: DeckPanel
   m_TagString: Untagged
@@ -23718,6 +23731,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -0.000011444092}
   m_SizeDelta: {x: 761.0194, y: 665}
   m_Pivot: {x: 1, y: 0.5}
+--- !u!210 &2066413755
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2066413753}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &2067736175
 GameObject:
   m_ObjectHideFlags: 0
@@ -25065,6 +25089,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 867984509}
     m_Modifications:
+    - target: {fileID: 482401413228344906, guid: 9d65add43062805419d4bdb7bd18a2d3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 464.7291
+      objectReference: {fileID: 0}
+    - target: {fileID: 482401413228344906, guid: 9d65add43062805419d4bdb7bd18a2d3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 60.7946
+      objectReference: {fileID: 0}
+    - target: {fileID: 482401413228344906, guid: 9d65add43062805419d4bdb7bd18a2d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 32.5353
+      objectReference: {fileID: 0}
+    - target: {fileID: 482401413228344906, guid: 9d65add43062805419d4bdb7bd18a2d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -3.7731
+      objectReference: {fileID: 0}
     - target: {fileID: 848031940505181520, guid: 9d65add43062805419d4bdb7bd18a2d3, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: RemoveCardFromHolder
@@ -25197,6 +25237,14 @@ PrefabInstance:
       propertyPath: penaltyPanel
       value: 
       objectReference: {fileID: 1245995125}
+    - target: {fileID: 5831364823085181528, guid: 9d65add43062805419d4bdb7bd18a2d3, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5831364823085181528, guid: 9d65add43062805419d4bdb7bd18a2d3, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d65add43062805419d4bdb7bd18a2d3, type: 3}
 --- !u!114 &945246525834184457
