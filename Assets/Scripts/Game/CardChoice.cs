@@ -46,6 +46,10 @@ public class CardChoice : MonoBehaviour
                     }
                     GameManager.Instance.selectedMachineCard = cardDetail;
                     GameManager.Instance.machineCardImageSelected.GetComponent<Image>().sprite = cardDetail.cardSprite;
+                    if (GameManager.Instance.isTutorial)
+                        GameManager.Instance.machineCardPanel.GetComponent<MachineCardPanelTutor>().ActiveMachine();
+                    else
+                        GameManager.Instance.machineCardPanel.GetComponent<MachineCardPanel>().ActiveMachine();
                     break;
             }
         }
