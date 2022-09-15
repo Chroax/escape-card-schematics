@@ -25,7 +25,7 @@ public class Option : MonoBehaviour
     public void setVolume(float volume)
     {
         audioMixerMusic.SetFloat("volume", volume);
-        if(musicSlider.value == -30)
+        if(musicSlider.value == -20)
         {
             audioMixerMusic.SetFloat("volume", -80);
         }
@@ -34,7 +34,7 @@ public class Option : MonoBehaviour
     public void setSFX(float volume)
     {
         audioMixerSFX.SetFloat("volume", volume);
-        if (sfxSlider.value == -30)
+        if (sfxSlider.value == -20)
         {
             audioMixerSFX.SetFloat("volume", -80);
         }

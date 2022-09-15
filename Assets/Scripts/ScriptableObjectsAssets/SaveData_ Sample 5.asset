@@ -15,7 +15,7 @@ MonoBehaviour:
   score: 0
   mapIndex: 0
   currentCoin: 500
-  currentTime: 3600
+  currentTime: 3380.9417
   currentDiscard: 0
   ownedCardId:
   - 21
