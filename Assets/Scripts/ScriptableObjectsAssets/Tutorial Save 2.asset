@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   mapIndex: 0
-  currentCoin: 495
-  currentTime: 360
-  currentDiscard: 4
+  currentCoin: 490
+  currentTime: 600
+  currentDiscard: 0
   ownedCardId:
   - 27
   - 16
