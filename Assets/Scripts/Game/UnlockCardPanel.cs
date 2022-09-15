@@ -51,65 +51,70 @@ public class UnlockCardPanel : MonoBehaviour
                 Debug.Log("Udah pernah keunlock");
                 return;
             }
-            produceCardDetail = GameManager.Instance.GetCardDetailByID(GameManager.Instance.selectedCardUnlock.unlockCardProducesID[0]);
-            foreach (string id in produceCardDetail.destroyedCardID)
+            if (GameManager.Instance.selectedCardUnlock.unlockCardProducesID[0] == "WIN")
             {
-                produceCardDetail = GameManager.Instance.GetCardDetailByID(id);
-                if(GameManager.Instance.GetCardByID(id) == null)
-                {
-                    Debug.Log("Clue yang dikumpulkan belum cukup");
-                    PenaltyPanel.SetActive(true);
-                    GameManager.Instance.player.getPenalty(180);
-                    return;
-                }
+                GameManager.Instance.winPanel.SetActive(true);
             }
-
-            Debug.Log("benar");
-            foreach(string id in GameManager.Instance.selectedCardUnlock.unlockCardProducesID)
+            else
             {
-                produceCardDetail = GameManager.Instance.GetCardDetailByID(id);
-                var generatedCard = Instantiate(GameResource.Instance.card, GameManager.Instance.deckCardHolder.transform);
-                generatedCard.transform.GetComponent<Card>().cardDetail = produceCardDetail;
-                generatedCard.transform.GetComponent<Image>().sprite = produceCardDetail.cardSprite;
-
-                inputText.text = "";
-
-                if (produceCardDetail.cardType == CardType.map)
+                produceCardDetail = GameManager.Instance.GetCardDetailByID(GameManager.Instance.selectedCardUnlock.unlockCardProducesID[0]);
+                foreach (string id in produceCardDetail.destroyedCardID)
                 {
-                    if (produceCardDetail.cardID.Equals("Q"))
-                        isChangeScene = true;
-                    cardPanel.ChangePanel(produceCardDetail.mapIndex);
-                    Destroy(generatedCard);
+                    produceCardDetail = GameManager.Instance.GetCardDetailByID(id);
+                    if (GameManager.Instance.GetCardByID(id) == null)
+                    {
+                        Debug.Log("Clue yang dikumpulkan belum cukup");
+                        PenaltyPanel.SetActive(true);
+                        GameManager.Instance.player.getPenalty(180);
+                        return;
+                    }
                 }
-                else
+                foreach (string id in GameManager.Instance.selectedCardUnlock.unlockCardProducesID)
                 {
-                    Player.instance.ownedCardId.Add(generatedCard.transform.GetComponent<Card>().cardDetail.cardID);
-                    Player.instance.saveData.ownedCardId.Add(id);
-                    GameManager.Instance.listCardHolder.GetComponent<ListCard>().AddCardToList(produceCardDetail.cardID);
+                    produceCardDetail = GameManager.Instance.GetCardDetailByID(id);
+                    var generatedCard = Instantiate(GameResource.Instance.card, GameManager.Instance.deckCardHolder.transform);
+                    generatedCard.transform.GetComponent<Card>().cardDetail = produceCardDetail;
+                    generatedCard.transform.GetComponent<Image>().sprite = produceCardDetail.cardSprite;
+
+                    inputText.text = "";
+
+                    if (produceCardDetail.cardType == CardType.map)
+                    {
+                        if (produceCardDetail.cardID.Equals("Q"))
+                            isChangeScene = true;
+                        cardPanel.ChangePanel(produceCardDetail.mapIndex);
+                        Destroy(generatedCard);
+                    }
+                    else
+                    {
+                        Player.instance.ownedCardId.Add(generatedCard.transform.GetComponent<Card>().cardDetail.cardID);
+                        Player.instance.saveData.ownedCardId.Add(id);
+                        GameManager.Instance.listCardHolder.GetComponent<ListCard>().AddCardToList(produceCardDetail.cardID);
+                    }
                 }
+
+                //Misal terunlock, maka kartu akan hilang
+                silangButton.SetActive(false);
+                //Destroy(GameManager.Instance.GetCardByID(GameManager.Instance.selectedCardUnlock.cardID));
+                foreach (string id in produceCardDetail.destroyedCardID)
+                {
+                    Player.instance.saveData.ownedCardId.Remove(id);
+                    Player.instance.ownedCardId.Remove(id);
+                    Destroy(GameManager.Instance.GetCardByID(id));
+                    GameManager.Instance.listCardHolder.GetComponent<ListCard>().DeleteCardFromList(id);
+                    Player.instance.currentDiscard++;
+                    Player.instance.currentDiscard++;
+                    Player.instance.discUI.SetDiscard(Player.instance.currentDiscard);
+                    Player.instance.saveData.score += 5;
+                    Player.instance.score += 5;
+                }
+
+                GameManager.Instance.selectedCardUnlock = null;
+                GameManager.Instance.unlockCardImageSelected.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
+
+                if (isChangeScene)
+                    GameManager.Instance.ChangeScene(sceneName);
             }
-
-            //Misal terunlock, maka kartu akan hilang
-            silangButton.SetActive(false);
-            //Destroy(GameManager.Instance.GetCardByID(GameManager.Instance.selectedCardUnlock.cardID));
-            foreach (string id in produceCardDetail.destroyedCardID)
-            {
-                Player.instance.saveData.ownedCardId.Remove(id);
-                Player.instance.ownedCardId.Remove(id);
-                Destroy(GameManager.Instance.GetCardByID(id));
-                GameManager.Instance.listCardHolder.GetComponent<ListCard>().DeleteCardFromList(id);
-                Player.instance.currentDiscard++;
-                Player.instance.currentDiscard++;
-                Player.instance.discUI.SetDiscard(Player.instance.currentDiscard);
-                Player.instance.saveData.score += 5;
-                Player.instance.score += 5;
-            }
-
-            GameManager.Instance.selectedCardUnlock = null;
-            GameManager.Instance.unlockCardImageSelected.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
-
-            if(isChangeScene)
-                GameManager.Instance.ChangeScene(sceneName);
         }
         else
         {

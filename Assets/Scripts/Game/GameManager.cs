@@ -47,6 +47,8 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     public GameObject mapPanel;
     public GameObject machineCardPanel;
     public GameObject cardDetailPanel;
+    public GameObject penaltyPanel;
+    public GameObject winPanel;
 
     #region Selected Card References
     [Space(10)]
