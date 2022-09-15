@@ -16,7 +16,7 @@ MonoBehaviour:
   cardDescription: Memiliki kunci yang unik namun tidak dapat digunakkan untuk membuka
     apapun
   cardID: 14
-  cardType: 0
+  cardType: 3
   combineCardsProducesID:
   - 0
   hiddenCardProducesID: 
