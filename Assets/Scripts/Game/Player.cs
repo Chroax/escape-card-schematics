@@ -65,6 +65,8 @@ public class Player : MonoBehaviour
         //penalty
         if(currentTime <= 0)
         {
+            if (GameManager.Instance.penaltyPanel.activeInHierarchy)
+                GameManager.Instance.penaltyPanel.SetActive(false);
             timeOut.SetActive(true);
             currentTime = 0;
         }
