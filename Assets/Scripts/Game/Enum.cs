@@ -29,3 +29,11 @@ public enum ActiveMap
     IsolationRoom,
     Hallway
 }
+
+public enum ActiveMachine
+{
+    Electricity,
+    MysteriousMap,
+    BookSwitch,
+    Floor
+}

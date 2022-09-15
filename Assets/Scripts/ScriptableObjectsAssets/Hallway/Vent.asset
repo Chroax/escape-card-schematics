@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: Vent
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: 7c16b97e92807c54ca30ad3a1286f2ba, type: 3}
+  cardSprite: {fileID: 21300000, guid: 1a774f2bd566f284cb2dd659222db749, type: 3}
   cardDescription: Ventilasi berada di tempat yang terlalu tinggi
   cardID: 49
   cardType: 0
@@ -23,6 +23,6 @@ MonoBehaviour:
   unlockCardProducesID: []
   destroyedCardID:
   - 17
-  - 7
-  - 7
+  - 70
+  - A
   mapIndex: 0

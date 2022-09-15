@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 073049dd52cdbcf48bff2e9789094d1d, type: 3}
   cardDescription: Melihat yang tidak dapat dilihat mata
-  cardID: 95
+  cardID: 87
   cardType: 3
   combineCardsProducesID:
-  - 0
+  - 95
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []

@@ -47,7 +47,6 @@ public class CardChoice : MonoBehaviour
                     GameManager.Instance.selectedMachineCard = cardDetail;
                     GameManager.Instance.machineCardImageSelected.GetComponent<Image>().sprite = cardDetail.cardSprite;
                     break;
-
             }
         }
         else

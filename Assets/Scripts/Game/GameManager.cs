@@ -19,7 +19,6 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     public Sprite cardHolder;
     public List<CardDetailSO> allCardDetailList;
     public Transform panelTransform;
-    public GameObject notification;
     public GameObject audioManager;
 
     [HideInInspector] public CardDetailSO selectedCardHidden;
@@ -42,9 +41,9 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     #endregion
     public GameObject hiddenCardPanel;
     public GameObject unlockCardPanel;
-    public GameObject HintCardPanel;
+    public GameObject hintCardPanel;
     public GameObject combineCardPanel;
-    public GameObject MapPanel;
+    public GameObject mapPanel;
     public GameObject machineCardPanel;
     public GameObject cardDetailPanel;
 
@@ -135,7 +134,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
         unlockCardPanel.SetActive(false);
         combineCardPanel.SetActive(false);
         machineCardPanel.SetActive(false);
-        MapPanel.SetActive(false);
+        mapPanel.SetActive(false);
     }
 
     public void ChangeScene(string nameScene)

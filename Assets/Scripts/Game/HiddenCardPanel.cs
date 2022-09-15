@@ -21,7 +21,7 @@ public class HiddenCardPanel : MonoBehaviour
     {
         GameManager.Instance.activePanel = ActivePanel.hidden;
     }
-    public void removeCardFromHolder()
+    public void RemoveCardFromHolder()
     {
         silangButton.SetActive(false);
         GameManager.Instance.audioManager.GetComponent<SoundManager>().clickSoundPlay();
@@ -99,7 +99,8 @@ public class HiddenCardPanel : MonoBehaviour
     public void OnDisable()
     {
         GameManager.Instance.warningHidden.SetActive(false);
-        this.removeCardFromHolder();
+        if(GameManager.Instance.selectedCardHidden != null)
+            this.RemoveCardFromHolder();
         inputText.text = "";
     }
     private void Update(){

@@ -26,7 +26,7 @@ public class UnlockCardPanel : MonoBehaviour
         GameManager.Instance.activePanel = ActivePanel.unlock;
     }
 
-    public void removeCardFromHolder()
+    public void RemoveCardFromHolder()
     {
         GameManager.Instance.audioManager.GetComponent<SoundManager>().clickSoundPlay();
         silangButton.SetActive(false);
@@ -132,7 +132,8 @@ public class UnlockCardPanel : MonoBehaviour
         this.gameObject.SetActive(true);
     }
     private void OnDisable(){
-        this.removeCardFromHolder();
+        if (GameManager.Instance.selectedCardUnlock != null)
+            this.RemoveCardFromHolder();
         GameManager.Instance.warningUnlock.SetActive(false);
     }
     private void Update(){

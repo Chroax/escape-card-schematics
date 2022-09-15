@@ -23,6 +23,6 @@ MonoBehaviour:
   unlockCardProducesID: []
   destroyedCardID:
   - 17
-  - 7
+  - 70
   - A
   mapIndex: 5

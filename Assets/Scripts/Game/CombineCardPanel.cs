@@ -10,6 +10,7 @@ public class CombineCardPanel : MonoBehaviour
     public GameObject PenaltyPanel;
     public GameObject silangButton1;
     public GameObject silangButton2;
+    public GameObject notification;
 
     private CardDetailSO combinedCardProducedDetails;
     private CardDetailSO selectedCardDetails;
@@ -26,7 +27,7 @@ public class CombineCardPanel : MonoBehaviour
         GameManager.Instance.activePanel = ActivePanel.combine;
     }
 
-    public void removeCard1FromHolder()
+    public void RemoveCard1FromHolder()
     {
         GameManager.Instance.audioManager.GetComponent<SoundManager>().clickSoundPlay();
         silangButton1.SetActive(false);
@@ -34,7 +35,7 @@ public class CombineCardPanel : MonoBehaviour
         GameManager.Instance.combineCardImageSelectedRed.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
     }
 
-    public void removeCard2FromHolder()
+    public void RemoveCard2FromHolder()
     {
         GameManager.Instance.audioManager.GetComponent<SoundManager>().clickSoundPlay();
         silangButton2.SetActive(false);
@@ -76,11 +77,6 @@ public class CombineCardPanel : MonoBehaviour
             combinedCardProducedDetails = GameManager.Instance.GetCardDetailByID(GameManager.Instance.selectedCombineCard1.combineCardsProducesID[0]);
             GameManager.Instance.combineCardProducedImage.GetComponent<Image>().sprite = combinedCardProducedDetails.cardSprite;
 
-            if (combinedCardProducedDetails.cardType == CardType.map)
-            {
-                cardPanel.ChangePanel(combinedCardProducedDetails.mapIndex);
-            }
-
             //Misal terunlock, maka kartu akan hilang
             silangButton1.SetActive(false);
             silangButton2.SetActive(false);
@@ -102,8 +98,8 @@ public class CombineCardPanel : MonoBehaviour
             GameManager.Instance.selectedCombineCard2 = null;
             GameManager.Instance.combineCardImageSelectedRed.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
             GameManager.Instance.combineCardImageSelectedBlue.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
-            GameManager.Instance.notification.SetActive(true);
-            GameManager.Instance.notification.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = selectedCardDetails.combineCardsProducesID.Count.ToString();
+            notification.SetActive(true);
+            notification.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = selectedCardDetails.combineCardsProducesID.Count.ToString();
 
             cardCollected = false;
         }
@@ -138,13 +134,16 @@ public class CombineCardPanel : MonoBehaviour
         if (!cardCollected)
         {
             GameManager.Instance.audioManager.GetComponent<SoundManager>().clickSoundPlay();
-            GameManager.Instance.notification.SetActive(false);
+            notification.SetActive(false);
             foreach (string id in selectedCardDetails.combineCardsProducesID)
             {
                 var generatedCard = Instantiate(GameResource.Instance.card, GameManager.Instance.deckCardHolder.transform);
                 generatedCard.transform.GetComponent<Card>().cardDetail = GameManager.Instance.GetCardDetailByID(id);
                 if (generatedCard.transform.GetComponent<Card>().cardDetail.cardType == CardType.map)
+                {
+                    cardPanel.ChangePanel(generatedCard.GetComponent<Card>().cardDetail.mapIndex);
                     Destroy(generatedCard);
+                }
                 else
                 {
                     GameManager.Instance.listCardHolder.GetComponent<ListCard>().AddCardToList(id);
@@ -171,7 +170,9 @@ public class CombineCardPanel : MonoBehaviour
     public void OnDisable()
     {
         GameManager.Instance.warningCombine.SetActive(false);
-        this.removeCard1FromHolder();
-        this.removeCard2FromHolder();
+        if(GameManager.Instance.selectedCombineCard2 != null)
+            this.RemoveCard2FromHolder();
+        if (GameManager.Instance.selectedCombineCard1 != null)
+            this.RemoveCard1FromHolder();
     }
 }
