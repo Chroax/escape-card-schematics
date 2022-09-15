@@ -19,11 +19,14 @@ public class BookSwitch : MonoBehaviour
         if(on.activeInHierarchy)
         {
             sign.text = "OFF";
+
             on.SetActive(false);
             off.SetActive(true);
+            GameManager.Instance.audioManager.GetComponent<SoundManager>().switchMachineSoundPlay();
         }
         else
         {
+            GameManager.Instance.audioManager.GetComponent<SoundManager>().switchMachineSoundPlay();
             sign.text = "ON";
             off.SetActive(false);
             on.SetActive(true);
