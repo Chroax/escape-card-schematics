@@ -51,10 +51,11 @@ public class DropCard : MonoBehaviour, IDropHandler
                         silangButton.SetActive(true);
                         GameManager.Instance.selectedMachineCard = cardDetail;
                         GameManager.Instance.machineCardImageSelected.GetComponent<Image>().sprite = cardDetail.cardSprite;
-                        GameManager.Instance.machineCardPanel.GetComponent<MachineCardPanel>().ActiveMachine();
+                        if(GameManager.Instance.isTutorial)
+                            GameManager.Instance.machineCardPanel.GetComponent<MachineCardPanelTutor>().ActiveMachine();
+                        else
+                            GameManager.Instance.machineCardPanel.GetComponent<MachineCardPanel>().ActiveMachine();
                         break;
-
-
                 }
             }
             else

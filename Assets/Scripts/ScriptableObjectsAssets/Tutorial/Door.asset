@@ -20,7 +20,8 @@ MonoBehaviour:
   - 0
   hiddenCardProducesID: 
   unlockCardAnswer: 2509
-  unlockCardProducesID: []
+  unlockCardProducesID:
+  - WIN
   destroyedCardID:
   - Z
   - A

@@ -20,6 +20,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     public List<CardDetailSO> allCardDetailList;
     public Transform panelTransform;
     public GameObject audioManager;
+    public bool isTutorial;
 
     [HideInInspector] public CardDetailSO selectedCardHidden;
     [HideInInspector] public CardDetailSO selectedCardHint;
