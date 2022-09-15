@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: Door
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: 473afd4da17386c4e842683953b4e772, type: 3}
+  cardSprite: {fileID: 21300000, guid: ac09520df87403a41bc219e0014f6b5c, type: 3}
   cardDescription: Tidak ada
-  cardID: 15
+  cardID: 1
   cardType: 1
   combineCardsProducesID:
   - 0
