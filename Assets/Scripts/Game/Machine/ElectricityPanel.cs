@@ -21,6 +21,7 @@ public class ElectricityPanel : MonoBehaviour
 
     public void OnAndOffRedButton()
     {
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().switchMachineSoundPlay();
         if (!onRedButton.activeInHierarchy)
             onRedButton.SetActive(true);
         else
@@ -29,6 +30,7 @@ public class ElectricityPanel : MonoBehaviour
     }
     public void OnAndOffBrownButton()
     {
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().switchMachineSoundPlay();
         if (!onBrownButton.activeInHierarchy)
             onBrownButton.SetActive(true);
         else
@@ -37,6 +39,7 @@ public class ElectricityPanel : MonoBehaviour
     }
     public void OnAndOffBlueButton()
     {
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().switchMachineSoundPlay();
         if (!onBlueButton.activeInHierarchy)
             onBlueButton.SetActive(true);
         else
@@ -45,6 +48,7 @@ public class ElectricityPanel : MonoBehaviour
     }
     public void OnAndOffBlackButton()
     {
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().switchMachineSoundPlay();
         if (!onBlackButton.activeInHierarchy)
             onBlackButton.SetActive(true);
         else
@@ -53,6 +57,7 @@ public class ElectricityPanel : MonoBehaviour
     }
     public void OnAndOffGreenButton()
     {
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().switchMachineSoundPlay();
         if (!onGreenButton.activeInHierarchy)
             onGreenButton.SetActive(true);
         else
@@ -61,6 +66,7 @@ public class ElectricityPanel : MonoBehaviour
     }
     public void OnAndOffYellowButton()
     {
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().switchMachineSoundPlay();
         if (!onYellowButton.activeInHierarchy)
             onYellowButton.SetActive(true);
         else

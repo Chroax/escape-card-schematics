@@ -7,6 +7,12 @@ public class SoundManager : MonoBehaviour
     public AudioSource hoverSound;
     public AudioSource clickSound;
 
+    public AudioSource winPanel;
+    public AudioSource losePanel;
+    public AudioSource penalty;
+    public AudioSource switchMachine;
+    public AudioSource mapMachine;
+
     public void hoverSoundPlay()
     {
         hoverSound.Play();
@@ -15,5 +21,30 @@ public class SoundManager : MonoBehaviour
     public void clickSoundPlay()
     {
         clickSound.Play();
+    }
+
+    public void winSoundPlay()
+    {
+        winPanel.Play();
+    }
+
+    public void loseSoundPlay()
+    {
+        losePanel.Play();
+    }
+
+    public void penaltySoundPlay()
+    {
+        penalty.Play();
+    }
+
+    public void switchMachineSoundPlay()
+    {
+        switchMachine.Play();
+    }
+
+    public void mapMachineSoundPlay()
+    {
+        mapMachine.Play();
     }
 }

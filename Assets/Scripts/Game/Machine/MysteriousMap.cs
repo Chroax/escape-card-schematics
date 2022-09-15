@@ -30,6 +30,7 @@ public class MysteriousMap : MonoBehaviour
 
     public void OnAndOffArrowE()
     {
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().mapMachineSoundPlay();
         if (!arrowE.activeInHierarchy)
         {
             if (arrowL.activeInHierarchy || arrowT.activeInHierarchy)
@@ -53,6 +54,7 @@ public class MysteriousMap : MonoBehaviour
     }
     public void OnAndOffArrowV()
     {
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().mapMachineSoundPlay();
         if (!arrowV.activeInHierarchy && arrowE.activeInHierarchy)
         {
             if (!arrowE.activeInHierarchy)
@@ -68,6 +70,7 @@ public class MysteriousMap : MonoBehaviour
     }
     public void OnAndOffArrowT()
     {
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().mapMachineSoundPlay();
         if (!arrowT.activeInHierarchy)
         {
             if (arrowL.activeInHierarchy || arrowE.activeInHierarchy)
@@ -91,6 +94,7 @@ public class MysteriousMap : MonoBehaviour
     }
     public void OnAndOffArrowP()
     {
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().mapMachineSoundPlay();
         if (!arrowP.activeInHierarchy)
         {
             if (!arrowT.activeInHierarchy)
@@ -106,6 +110,7 @@ public class MysteriousMap : MonoBehaviour
     }
     public void OnAndOffArrowL()
     {
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().mapMachineSoundPlay();
         if (!arrowL.activeInHierarchy)
         {
             if (arrowT.activeInHierarchy || arrowE.activeInHierarchy)
@@ -131,6 +136,7 @@ public class MysteriousMap : MonoBehaviour
     }
     public void OnAndOffArrowA()
     {
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().mapMachineSoundPlay();
         if (!arrowA.activeInHierarchy)
         {
             if (!arrowL.activeInHierarchy)
@@ -150,6 +156,7 @@ public class MysteriousMap : MonoBehaviour
     }
     public void OnAndOffArrowQ()
     {
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().mapMachineSoundPlay();
         if (!arrowQ.activeInHierarchy)
         {
             if (!arrowA.activeInHierarchy)
@@ -168,6 +175,7 @@ public class MysteriousMap : MonoBehaviour
     }
     public void OnAndOffArrowH()
     {
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().mapMachineSoundPlay();
         if (!arrowH.activeInHierarchy)
         {
             if (!arrowQ.activeInHierarchy)
