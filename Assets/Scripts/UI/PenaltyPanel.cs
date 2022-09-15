@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class PenaltyPanel : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void OnEnable()
+    private void OnEnable()
     {
-        
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().penaltySoundPlay();
     }
 }
