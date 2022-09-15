@@ -17931,6 +17931,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8866965670038480047, guid: 498452a4d85ca3943af242dae25dc11b, type: 3}
   m_PrefabInstance: {fileID: 6413533386265406297}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1589611423 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2403327684227787661, guid: edfd72b86b9ca254884744dd40e43472, type: 3}
+  m_PrefabInstance: {fileID: 2403327685456133489}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1597385309
 GameObject:
   m_ObjectHideFlags: 0
@@ -18049,6 +18054,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 95611d99c87e1db4384560db368841ed, type: 2}
   panelTransform: {fileID: 947423073}
   audioManager: {fileID: 955484483}
+  isTutorial: 0
   selectedCardHidden: {fileID: 0}
   selectedCardHint: {fileID: 0}
   selectedCardUnlock: {fileID: 0}
@@ -18066,6 +18072,8 @@ MonoBehaviour:
   mapPanel: {fileID: 478333715}
   machineCardPanel: {fileID: 57014999}
   cardDetailPanel: {fileID: 947423072}
+  penaltyPanel: {fileID: 1467881293}
+  winPanel: {fileID: 1589611423}
   hiddenCardImageSelected: {fileID: 870367456}
   unlockCardImageSelected: {fileID: 2117961209}
   combineCardImageSelectedRed: {fileID: 448920884}
