@@ -14,14 +14,17 @@ public class HintPanel : MonoBehaviour
     public TextMeshProUGUI hintCost;
     public Sprite placHolder;
     void Awake() { instance = this;  }
+    ActivePanel previousPanel;
     public void OnEnable()
     {
+        previousPanel = GameManager.Instance.activePanel;
         GameManager.Instance.activePanel = ActivePanel.hint;
         hintPanel.SetActive(true);
     }
 
     public void OnDisable()
     {
+        GameManager.Instance.activePanel = previousPanel;
         GameManager.Instance.selectedCardHint = null;
         GetSetCardHintText("");
         GameManager.Instance.hintCardImageSelected.GetComponent<Image>().sprite = placHolder;
