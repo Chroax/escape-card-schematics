@@ -14392,7 +14392,7 @@ MonoBehaviour:
   mapPanel: {fileID: 5516339869036690961}
   machineCardPanel: {fileID: 57014999}
   cardDetailPanel: {fileID: 947423072}
-  penaltyPanel: {fileID: 1467881293}
+  penaltyPanel: {fileID: 1245995125}
   winPanel: {fileID: 505061264}
   hiddenCardImageSelected: {fileID: 870367456}
   unlockCardImageSelected: {fileID: 2117961209}
