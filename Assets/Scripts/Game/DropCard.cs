@@ -14,7 +14,6 @@ public class DropCard : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData)
     {
-        Debug.Log("Droped");
         GameManager.Instance.audioManager.GetComponent<SoundManager>().clickSoundPlay();
         if (eventData.pointerDrag != null)
         {
@@ -33,7 +32,6 @@ public class DropCard : MonoBehaviour, IDropHandler
                     case ActivePanel.unlock:
                         if (cardDetail.cardType != GameManager.Instance.unlockCardType)
                         {
-                            Debug.Log("Salah type card");
                             break;
                         }
                         GameManager.Instance.warningHidden.SetActive(false);
@@ -45,7 +43,6 @@ public class DropCard : MonoBehaviour, IDropHandler
                     case ActivePanel.machine:
                         if (cardDetail.cardType != GameManager.Instance.machineCardType)
                         {
-                            Debug.Log("Salah type card");
                             break;
                         }
                         silangButton.SetActive(true);
@@ -62,10 +59,8 @@ public class DropCard : MonoBehaviour, IDropHandler
             {
                 if (isCombineCardLeft)
                 {
-                    Debug.Log("Droped kiri");
                     if (cardDetail.cardType != GameManager.Instance.combineCardType1)
                     {
-                        Debug.Log("Salah type card 1");
                         return;
                     }
                     silangButtonLeft.SetActive(true);
@@ -74,10 +69,8 @@ public class DropCard : MonoBehaviour, IDropHandler
                 }
                 else
                 {
-                    Debug.Log("Droped knani");
                     if (cardDetail.cardType != GameManager.Instance.combineCardType2)
                     {
-                        Debug.Log("Salah type card 2");
                         return;
                     }
                     silangButtonRight.SetActive(true);

@@ -48,7 +48,6 @@ public class UnlockCardPanel : MonoBehaviour
             warning.SetActive(false);
             if(CardSpawner.instance.GetCardByID(GameManager.Instance.selectedCardUnlock.unlockCardProducesID[0], CardSpawner.instance.spawnRoots) != null)
             {
-                Debug.Log("Udah pernah keunlock");
                 return;
             }
             if (GameManager.Instance.selectedCardUnlock.unlockCardProducesID[0] == "WIN")
@@ -63,7 +62,6 @@ public class UnlockCardPanel : MonoBehaviour
                     produceCardDetail = GameManager.Instance.GetCardDetailByID(id);
                     if (GameManager.Instance.GetCardByID(id) == null)
                     {
-                        Debug.Log("Clue yang dikumpulkan belum cukup");
                         PenaltyPanel.SetActive(true);
                         GameManager.Instance.player.getPenalty(180);
                         return;
@@ -120,7 +118,6 @@ public class UnlockCardPanel : MonoBehaviour
         {
             warning.SetActive(false);
             PenaltyPanel.SetActive(true);
-            Debug.Log("Salah");
             GameManager.Instance.player.getPenalty(180);
         }
     }

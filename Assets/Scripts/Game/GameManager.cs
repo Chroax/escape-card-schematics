@@ -115,7 +115,6 @@ public class GameManager : SingletonMonobehaviour<GameManager>
                 return child.gameObject;
             }
         }
-        Debug.Log("Gada kartunya beb");
         return null;
     }
 

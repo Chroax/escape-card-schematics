@@ -29,20 +29,17 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("Mouse enter");
         GameManager.Instance.audioManager.GetComponent<SoundManager>().hoverSoundPlay();
         transform.localScale += new Vector3(0.1f, 0.1f, 0f);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("Mouse exit");
         transform.localScale -= new Vector3(0.1f, 0.1f, 0f);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("Begin drag");
         canvasGroup.alpha = 0.6f;
         canvasGroup.blocksRaycasts = false;
         isDraged = true;
@@ -50,7 +47,6 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("End drag");
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
     }

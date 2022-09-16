@@ -26,7 +26,6 @@ public class Safebox : MonoBehaviour
             GameManager.Instance.audioManager.GetComponent<SoundManager>().clickSoundPlay();
             produceCardDetail = GameManager.Instance.GetCardDetailByID(GameManager.Instance.selectedMachineCard.unlockCardProducesID[0]);
 
-            Debug.Log("benar");
             foreach (string id in GameManager.Instance.selectedMachineCard.unlockCardProducesID)
             {
                 produceCardDetail = GameManager.Instance.GetCardDetailByID(id);
@@ -65,7 +64,6 @@ public class Safebox : MonoBehaviour
         else
         {
             penaltyPanel.SetActive(true);
-            Debug.Log("Salah");
             GameManager.Instance.player.getPenalty(180);
             ResetButton();
         }

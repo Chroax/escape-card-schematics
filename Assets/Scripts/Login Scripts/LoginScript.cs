@@ -40,14 +40,11 @@ public class LoginScript : MonoBehaviour
         }
         else
         {
-            Debug.Log("Form upload complete!");
-            Debug.Log("server message " + webRequest.downloadHandler.text);
             //Check for a confirmation from the web
             if (webRequest.downloadHandler.text[0]=='0')
             {
                 string rawResponse = webRequest.downloadHandler.text;
                 string[] users = rawResponse.Split('/');
-                Debug.Log("Login confirmed!!");
                 DBManager.team_name = users[1];
                 DBManager.account_id = users[2];
                 DBManager.player_id = users[3];
@@ -65,12 +62,10 @@ public class LoginScript : MonoBehaviour
                 DBManager.remaining_hours -= diffTime;
                 if (users[11] == "true")
                 {
-                    Debug.Log("istutor");
                     DBManager.firstLogin = true;
                 }
                 else
                 {
-                    Debug.Log("nottutor");
                     DBManager.firstLogin = false;
                 }
                 if (users[12] == "1")

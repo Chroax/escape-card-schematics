@@ -26,15 +26,6 @@ public class SaveData : MonoBehaviour
         while(true)
         {
             WWWForm form = new();
-            Debug.Log(DBManager.team_name);
-            Debug.Log(DBManager.account_id);
-            Debug.Log(DBManager.player_id);
-            Debug.Log(DBManager.remaining_coins);
-            Debug.Log(DBManager.remaining_hours);
-            Debug.Log(DBManager.discardCardsCount);
-            Debug.Log(DBManager.scores);
-            Debug.Log(DBManager.mapID);
-            Debug.Log(DBManager.ownedCards);
 
             form.AddField("team_name", DBManager.team_name);
             form.AddField("account_id", DBManager.account_id);
@@ -52,7 +43,6 @@ public class SaveData : MonoBehaviour
                 if (i < DBManager.ownedCards.Count - 1)
                     ownedCards += ",";
             }
-            Debug.Log(ownedCards);
             form.AddField("ownedCards", ownedCards);
 
             UnityWebRequest webRequest = UnityWebRequest.Post(urlSave, form);
@@ -60,12 +50,9 @@ public class SaveData : MonoBehaviour
             yield return webRequest.SendWebRequest();
             if (webRequest.result != UnityWebRequest.Result.Success)
             {
-                Debug.Log(webRequest.error);
             }
             else
             {
-                Debug.Log("Form upload complete!");
-                Debug.Log("server message " + webRequest.downloadHandler.text);
                 //Check for a confirmation from the web
 
                 webRequest.Dispose();

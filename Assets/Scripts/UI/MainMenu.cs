@@ -28,7 +28,8 @@ public class MainMenu : MonoBehaviour
 
     public void GoToPlayGames()
     {
-        SceneManager.LoadScene("Game Scene");
+        if(!DBManager.isTutorial)
+            SceneManager.LoadScene("Game Scene");
     }
 
     public void GoToTutorial()

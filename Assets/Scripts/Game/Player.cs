@@ -103,7 +103,6 @@ public class Player : MonoBehaviour
         }
         else
         {
-            Debug.Log("Not Enough Coin");
             return false;
         }
     }

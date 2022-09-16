@@ -16,7 +16,7 @@ public class LogoutScript : MonoBehaviour
     IEnumerator Logout()
     {
         WWWForm form = new();
-        form.AddField("request", DBManager.username);
+        form.AddField("request", DBManager.account_id);
 
         // TL DR, make a new form and use the post method to send info
 
@@ -28,11 +28,8 @@ public class LogoutScript : MonoBehaviour
         }
         else
         {
-            Debug.Log("Form logout complete!");
-            Debug.Log("server message " + webRequest.downloadHandler.text);
             DBManager.Logout();
             //Check the state if user is logged in or not
-            Debug.Log("Login " + DBManager.LoggedIn);
             webRequest.Dispose();
             yield return null;
 

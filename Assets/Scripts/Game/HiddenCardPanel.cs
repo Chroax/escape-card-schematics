@@ -41,11 +41,9 @@ public class HiddenCardPanel : MonoBehaviour
         {
             if (CardSpawner.instance.GetCardByID(inputText.text, CardSpawner.instance.spawnRoots) != null)
             {
-                Debug.Log("Udah pernah kebuka");
                 return;
             }
 
-            Debug.Log("Ketemu hiddennya");
             var generatedCard = Instantiate(GameResource.Instance.card, GameManager.Instance.deckCardHolder.transform);
             generatedCard.transform.GetComponent<Card>().cardDetail = GameManager.Instance.GetCardDetailByID(GameManager.Instance.selectedCardHidden.hiddenCardProducesID);
             generatedCard.transform.GetComponent<Image>().sprite = generatedCard.GetComponent<Card>().cardDetail.cardSprite;
@@ -78,7 +76,6 @@ public class HiddenCardPanel : MonoBehaviour
         {
             warning.SetActive(false);
             PenaltyPanel.SetActive(true);
-            Debug.Log("Salah");
             GameManager.Instance.player.getPenalty(180);
         }
     }

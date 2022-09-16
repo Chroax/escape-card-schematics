@@ -32,7 +32,9 @@ public class CardSpawner : MonoBehaviour
             Destroy(objToDestroy);
         }
         else
-            Debug.Log("Card Not Found");
+        {
+
+        }
     }
 
     public GameObject GetCardByID(string cardID, Transform transform)

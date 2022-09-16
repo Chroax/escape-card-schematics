@@ -65,14 +65,11 @@ public class CombineCardPanel : MonoBehaviour
         if (sameProduce && GameManager.Instance.selectedCombineCard1.combineCardsProducesID[0] != "0" 
                 && GameManager.Instance.selectedCombineCard1.cardID != GameManager.Instance.selectedCombineCard2.cardID)
         {
-            Debug.Log("tercombine");
             if (!cardCollected)
             {
-                Debug.Log("Ambil dulu kartu hasil combine");
                 warning.SetActive(true);
             }
 
-            Debug.Log("tercombine");
             selectedCardDetails = GameManager.Instance.GetCardDetailByID(GameManager.Instance.selectedCombineCard1.cardID);
             combinedCardProducedDetails = GameManager.Instance.GetCardDetailByID(GameManager.Instance.selectedCombineCard1.combineCardsProducesID[0]);
             GameManager.Instance.combineCardProducedImage.GetComponent<Image>().sprite = combinedCardProducedDetails.cardSprite;
@@ -105,10 +102,8 @@ public class CombineCardPanel : MonoBehaviour
         }
         else
         {
-            Debug.Log("PIPIP KENAK PENALTY!!!!");
             warning.SetActive(false);
             PenaltyPanel.SetActive(true);
-            Debug.Log("Salah");
             GameManager.Instance.player.getPenalty(180);
         }
     }
