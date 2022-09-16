@@ -175,4 +175,16 @@ public class CombineCardPanel : MonoBehaviour
         if (GameManager.Instance.selectedCombineCard1 != null)
             this.RemoveCard1FromHolder();
     }
+    private void Update()
+    {
+        if (GameManager.Instance.selectedCombineCard1 != null)
+        {
+            silangButton1.SetActive(true);
+        }
+
+        if (GameManager.Instance.selectedCombineCard2 != null)
+        {
+            silangButton2.SetActive(true);
+        }
+    }
 }
