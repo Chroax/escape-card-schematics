@@ -1,16 +1,23 @@
 <?php
 
 // configure as needed
+include('DotEnv.php');
 
-$server="localhost";
-$username = "root";
-$password = "";
-$db="gameschematics";
+(new DotEnv(__DIR__ . '/.env'))->load();
 
-$connect= new mysqli($server, $username, $password, $db);
+
+$host=getenv('host');
+$username = getenv('username');
+$password = getenv('password');
+$db=getenv('db');
+$port=getenv('port');
+
+// mysqli_connect(host, username, password, dbname, port, socket)
+
+$connect= new mysqli($host, $username, $password, $db, $port);
 if (mysqli_connect_errno()) {
     # code...
-    echo "Connection failed";
+    echo "w\tConnection failed";
     exit();
 }
 

@@ -7,8 +7,10 @@
 -- Table: account_log
 CREATE TABLE account_log (
     account_log_id varchar(20) NOT NULL,
+    account_first_login timestamp NULL DEFAULT CURRENT_TIMESTAMP,
     account_login timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-    account_logout timestamp NULL,
+    account_logout timestamp NULL DEFAULT NULL,
+    account_expect_finish timestamp NULL DEFAULT (CURRENT_TIMESTAMP + INTERVAL 2 HOUR),
     account_id varchar(20) NOT NULL,
     CONSTRAINT account_log_pk PRIMARY KEY (account_log_id)
 );
@@ -122,4 +124,3 @@ INSERT INTO `members` (`member_id`, `name`, `member_type`, `created_at`, `modifi
 ('3', 'Raiden', 'Beban', current_timestamp(), NULL, '2'); 
 
 -- End of file.
-

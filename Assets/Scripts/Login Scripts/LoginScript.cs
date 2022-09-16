@@ -41,6 +41,7 @@ public class LoginScript : MonoBehaviour
         else
         {
             Debug.Log("Form upload complete!");
+            Debug.Log("server message " + webRequest.downloadHandler.text);
             //Check for a confirmation from the web
             if (webRequest.downloadHandler.text[0]=='0')
             {
@@ -49,7 +50,6 @@ public class LoginScript : MonoBehaviour
                 Debug.Log("Login confirmed!!");
                 //Set a username and score to the system
                 DBManager.username = usernameField.text;
-                DBManager.score = webRequest.downloadHandler.text.Split('\t')[1];
             }
             else
             {
