@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3422204cf79030946b815a9c8ddae1f7, type: 3}
   m_Name: Tutorial Save 2
   m_EditorClassIdentifier: 
-  score: 0
+  score: 30
   mapIndex: 0
-  currentCoin: 490
-  currentTime: 600
+  currentCoin: 500
+  currentTime: 360
   currentDiscard: 0
   ownedCardId:
   - 27

@@ -7790,8 +7790,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: MachineCardPanel, Assembly-CSharp
+        - m_Target: {fileID: 57015003}
+          m_TargetAssemblyTypeName: MachineCardPanelTutor, Assembly-CSharp
           m_MethodName: RemoveCardFromHolder
           m_Mode: 1
           m_Arguments:
@@ -19534,8 +19534,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MachineCardPanel, Assembly-CSharp
+      - m_Target: {fileID: 57015003}
+        m_TargetAssemblyTypeName: MachineCardPanelTutor, Assembly-CSharp
         m_MethodName: SelectCardChoice
         m_Mode: 1
         m_Arguments:

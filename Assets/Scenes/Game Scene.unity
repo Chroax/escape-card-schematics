@@ -18122,7 +18122,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 482401413228344906, guid: 9d65add43062805419d4bdb7bd18a2d3, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 464.7291
+      value: 241.549
       objectReference: {fileID: 0}
     - target: {fileID: 482401413228344906, guid: 9d65add43062805419d4bdb7bd18a2d3, type: 3}
       propertyPath: m_SizeDelta.y
@@ -18130,11 +18130,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 482401413228344906, guid: 9d65add43062805419d4bdb7bd18a2d3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 32.5353
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 482401413228344906, guid: 9d65add43062805419d4bdb7bd18a2d3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -3.7731
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 848031940505181520, guid: 9d65add43062805419d4bdb7bd18a2d3, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName

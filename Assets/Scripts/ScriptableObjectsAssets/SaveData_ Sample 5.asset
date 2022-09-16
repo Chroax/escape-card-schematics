@@ -12,16 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3422204cf79030946b815a9c8ddae1f7, type: 3}
   m_Name: SaveData_ Sample 5
   m_EditorClassIdentifier: 
-  score: 225
-  mapIndex: 4
+  score: 0
+  mapIndex: 0
   currentCoin: 500
-  currentTime: 3120.4788
-  currentDiscard: 31
+  currentTime: 3600
+  currentDiscard: 0
   ownedCardId:
-  - 34
-  - 17
-  - 9
-  - 52
-  - 68
-  - X
-  - Y
+  - 21
+  - 25
+  - M
+  - 5
+  - 15
