@@ -11,13 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 53708ff9eeb29ea4ea181149f04c21ad
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Game Scene.unity
     guid: 59d6f8870f7fb0949b577c6c25b4d2bf
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/IntroCutScene.unity
     guid: 065c37e581c131142b0894c1b3e71132
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Tutorial.unity
     guid: e308422e91c014845a6f08e9d475e997
   m_configObjects: {}
