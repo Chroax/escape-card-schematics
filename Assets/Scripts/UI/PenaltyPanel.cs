@@ -8,4 +8,9 @@ public class PenaltyPanel : MonoBehaviour
     {
         GameManager.Instance.audioManager.GetComponent<SoundManager>().penaltySoundPlay();
     }
+
+    private void OnDisable()
+    {
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().penaltySoundStop();
+    }
 }

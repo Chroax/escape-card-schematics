@@ -38,6 +38,11 @@ public class SoundManager : MonoBehaviour
         penalty.Play();
     }
 
+    public void penaltySoundStop()
+    {
+        penalty.Stop();
+    }
+
     public void switchMachineSoundPlay()
     {
         switchMachine.Play();

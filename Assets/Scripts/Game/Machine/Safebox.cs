@@ -14,7 +14,8 @@ public class Safebox : MonoBehaviour
     }
     public void EnterButton(string text)
     {
-        if(digitalText.text.Length < 4)
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().mapMachineSoundPlay();
+        if (digitalText.text.Length < 4)
             digitalText.text += text;
     }
     public void Submit()
@@ -72,7 +73,8 @@ public class Safebox : MonoBehaviour
     }
     public void DeleteButton()
     {
-        if(digitalText.text.Length > 0)
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().mapMachineSoundPlay();
+        if (digitalText.text.Length > 0)
         {
             string text = digitalText.text.ToString();
             string finalText = "";
@@ -84,6 +86,7 @@ public class Safebox : MonoBehaviour
 
     public void ResetButton()
     {
+        GameManager.Instance.audioManager.GetComponent<SoundManager>().mapMachineSoundPlay();
         digitalText.text = "";
     }
 }
