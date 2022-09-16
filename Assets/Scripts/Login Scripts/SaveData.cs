@@ -45,12 +45,14 @@ public class SaveData : MonoBehaviour
             form.AddField("scores", DBManager.scores);
             form.AddField("mapID", DBManager.mapID);
             string ownedCards = "";
+
             for(int i = 0; i < DBManager.ownedCards.Count; i++)
             {
                 ownedCards += DBManager.ownedCards[i];
                 if (i < DBManager.ownedCards.Count - 1)
                     ownedCards += ",";
             }
+            Debug.Log(ownedCards);
             form.AddField("ownedCards", ownedCards);
 
             UnityWebRequest webRequest = UnityWebRequest.Post(urlSave, form);

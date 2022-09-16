@@ -1674,7 +1674,6 @@ MonoBehaviour:
   passwordField: {fileID: 396959916}
   loginButton: {fileID: 1731103540}
   warningMessage: {fileID: 2077759145}
-  url: http://localhost/gamedevDB/login.php
 --- !u!4 &1413704383
 Transform:
   m_ObjectHideFlags: 0

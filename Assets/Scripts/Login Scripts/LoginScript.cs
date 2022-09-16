@@ -56,9 +56,27 @@ public class LoginScript : MonoBehaviour
                 int.TryParse(users[6], out DBManager.discardCardsCount);
                 int.TryParse(users[7], out DBManager.scores);
                 int.TryParse(users[8], out DBManager.mapID);
+                DBManager.ownedCards.RemoveRange(0, DBManager.ownedCards.Count);
                 string[] cards = users[9].Split(",");
-                foreach(string card in cards)
+                foreach (string card in cards)
                     DBManager.ownedCards.Add(card);
+                int diffTime;
+                int.TryParse(users[10], out diffTime);
+                DBManager.remaining_hours -= diffTime;
+                if (users[11] == "true")
+                {
+                    Debug.Log("istutor");
+                    DBManager.firstLogin = true;
+                }
+                else
+                {
+                    Debug.Log("nottutor");
+                    DBManager.firstLogin = false;
+                }
+                if (users[12] == "1")
+                    DBManager.isTutorial = true;
+                else
+                    DBManager.isTutorial = false;
             }
             else
             {
