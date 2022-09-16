@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5516339867660125599}
-  - component: {fileID: 5516339867660125596}
   m_Layer: 5
   m_Name: GardenShed
   m_TagString: Untagged
@@ -45,21 +44,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.0015869141}
   m_SizeDelta: {x: 967, y: 650}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5516339867660125596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5516339867660125598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74e9ac39791e63044bbb844f13555389, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cardList:
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &5516339867669148436
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,7 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20044d478f1ac04b8ece38cb2bf28c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  id: 
 --- !u!1 &5516339867673837019
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20044d478f1ac04b8ece38cb2bf28c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  id: 
 --- !u!1 &5516339867698835399
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,7 +751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20044d478f1ac04b8ece38cb2bf28c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  id: 
 --- !u!1 &5516339867808683378
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,7 +855,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5516339867816912144}
-  - component: {fileID: 5516339867816912145}
   m_Layer: 5
   m_Name: Isolation Room
   m_TagString: Untagged
@@ -906,24 +889,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.0015869141}
   m_SizeDelta: {x: 967, y: 650}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5516339867816912145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5516339867816912147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74e9ac39791e63044bbb844f13555389, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cardList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &5516339867819334176
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,7 +1016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20044d478f1ac04b8ece38cb2bf28c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  id: 
 --- !u!1 &5516339867874210783
 GameObject:
   m_ObjectHideFlags: 0
@@ -1103,7 +1068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20044d478f1ac04b8ece38cb2bf28c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  id: 
 --- !u!1 &5516339867887932711
 GameObject:
   m_ObjectHideFlags: 0
@@ -1460,7 +1425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20044d478f1ac04b8ece38cb2bf28c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  id: 
 --- !u!1 &5516339867947806867
 GameObject:
   m_ObjectHideFlags: 0
@@ -1647,7 +1612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20044d478f1ac04b8ece38cb2bf28c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  id: 
 --- !u!1 &5516339867972099398
 GameObject:
   m_ObjectHideFlags: 0
@@ -3141,7 +3106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20044d478f1ac04b8ece38cb2bf28c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  id: 
 --- !u!1 &5516339868280986410
 GameObject:
   m_ObjectHideFlags: 0
@@ -3193,7 +3158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20044d478f1ac04b8ece38cb2bf28c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  id: 
 --- !u!1 &5516339868299137316
 GameObject:
   m_ObjectHideFlags: 0
@@ -3245,7 +3210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20044d478f1ac04b8ece38cb2bf28c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  id: 
 --- !u!1 &5516339868318020144
 GameObject:
   m_ObjectHideFlags: 0
@@ -3255,7 +3220,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5516339868318020145}
-  - component: {fileID: 5516339868318020158}
   m_Layer: 5
   m_Name: Basement
   m_TagString: Untagged
@@ -3289,24 +3253,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.0015869141}
   m_SizeDelta: {x: 967, y: 650}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5516339868318020158
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5516339868318020144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74e9ac39791e63044bbb844f13555389, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cardList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &5516339868318577191
 GameObject:
   m_ObjectHideFlags: 0
@@ -3935,7 +3881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20044d478f1ac04b8ece38cb2bf28c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  id: 
 --- !u!1 &5516339868452783106
 GameObject:
   m_ObjectHideFlags: 0
@@ -4063,7 +4009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20044d478f1ac04b8ece38cb2bf28c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  id: 
 --- !u!1 &5516339868526877775
 GameObject:
   m_ObjectHideFlags: 0
@@ -4302,7 +4248,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5516339868600730549}
-  - component: {fileID: 5516339868600730546}
   m_Layer: 5
   m_Name: Hallway
   m_TagString: Untagged
@@ -4335,23 +4280,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.0015869141}
   m_SizeDelta: {x: 967, y: 650}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5516339868600730546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5516339868600730548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74e9ac39791e63044bbb844f13555389, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cardList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &5516339868614415706
 GameObject:
   m_ObjectHideFlags: 0
@@ -4995,7 +4923,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5516339868692906412}
-  - component: {fileID: 5516339868692906413}
   m_Layer: 5
   m_Name: Kitchen
   m_TagString: Untagged
@@ -5029,23 +4956,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.0015869141}
   m_SizeDelta: {x: 967, y: 650}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5516339868692906413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5516339868692906415}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74e9ac39791e63044bbb844f13555389, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cardList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &5516339868701696854
 GameObject:
   m_ObjectHideFlags: 0
@@ -5504,7 +5414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20044d478f1ac04b8ece38cb2bf28c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  id: 
 --- !u!1 &5516339868810734733
 GameObject:
   m_ObjectHideFlags: 0
@@ -5650,7 +5560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20044d478f1ac04b8ece38cb2bf28c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  id: 
 --- !u!1 &5516339868986375316
 GameObject:
   m_ObjectHideFlags: 0
@@ -5702,7 +5612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20044d478f1ac04b8ece38cb2bf28c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  id: 
 --- !u!1 &5516339868990086921
 GameObject:
   m_ObjectHideFlags: 0
@@ -5965,7 +5875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20044d478f1ac04b8ece38cb2bf28c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  id: 
 --- !u!1 &5516339869059064187
 GameObject:
   m_ObjectHideFlags: 0
@@ -6093,7 +6003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20044d478f1ac04b8ece38cb2bf28c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  id: 
 --- !u!1 &5516339869106961825
 GameObject:
   m_ObjectHideFlags: 0
@@ -6145,7 +6055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20044d478f1ac04b8ece38cb2bf28c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  id: 
 --- !u!1 &5516339869136743807
 GameObject:
   m_ObjectHideFlags: 0
@@ -6197,7 +6107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20044d478f1ac04b8ece38cb2bf28c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  id: 
 --- !u!1 &5516339869164550334
 GameObject:
   m_ObjectHideFlags: 0
@@ -6689,7 +6599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20044d478f1ac04b8ece38cb2bf28c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  id: 
 --- !u!1 &5516339869308268669
 GameObject:
   m_ObjectHideFlags: 0
@@ -6876,7 +6786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20044d478f1ac04b8ece38cb2bf28c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  id: 
 --- !u!1 &5516339869319136225
 GameObject:
   m_ObjectHideFlags: 0
@@ -7116,7 +7026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20044d478f1ac04b8ece38cb2bf28c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  id: 
 --- !u!1 &5516339869415150097
 GameObject:
   m_ObjectHideFlags: 0
@@ -7168,7 +7078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20044d478f1ac04b8ece38cb2bf28c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  id: 
 --- !u!1 &5516339869464308016
 GameObject:
   m_ObjectHideFlags: 0
@@ -7825,7 +7735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20044d478f1ac04b8ece38cb2bf28c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  id: 
 --- !u!1 &5516339869592667346
 GameObject:
   m_ObjectHideFlags: 0
@@ -8105,7 +8015,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5516339869654700539}
-  - component: {fileID: 5516339869654700536}
   m_Layer: 5
   m_Name: Backyard
   m_TagString: Untagged
@@ -8138,24 +8047,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.0015869141}
   m_SizeDelta: {x: 967, y: 650}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &5516339869654700536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5516339869654700538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74e9ac39791e63044bbb844f13555389, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cardList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &5516339869666011640
 GameObject:
   m_ObjectHideFlags: 0
@@ -8342,7 +8233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20044d478f1ac04b8ece38cb2bf28c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  id: 
 --- !u!1 &5516339869684465821
 GameObject:
   m_ObjectHideFlags: 0
@@ -8394,7 +8285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20044d478f1ac04b8ece38cb2bf28c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  id: 
 --- !u!1 &5516339869692011098
 GameObject:
   m_ObjectHideFlags: 0
@@ -8446,7 +8337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20044d478f1ac04b8ece38cb2bf28c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  id: 
 --- !u!1 &5516339869698579650
 GameObject:
   m_ObjectHideFlags: 0
@@ -8633,7 +8524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20044d478f1ac04b8ece38cb2bf28c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  id: 
 --- !u!1 &5516339869744755262
 GameObject:
   m_ObjectHideFlags: 0
@@ -8914,7 +8805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f20044d478f1ac04b8ece38cb2bf28c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  id: 
 --- !u!1 &5516339869780093886
 GameObject:
   m_ObjectHideFlags: 0
