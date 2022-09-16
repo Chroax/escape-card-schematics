@@ -4212,6 +4212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObject: {fileID: 1642202294}
+  audioManager: {fileID: 0}
 --- !u!114 &482973197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4259,7 +4260,7 @@ MonoBehaviour:
       - m_Target: {fileID: 482973196}
         m_TargetAssemblyTypeName: CloseButton, Assembly-CSharp
         m_MethodName: DeactivePanel
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10299,6 +10300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObject: {fileID: 947423072}
+  audioManager: {fileID: 0}
 --- !u!1 &951962740 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8363853093573485642, guid: c79dd6d7b49a01b4c9fd7922c3e18fb3, type: 3}
