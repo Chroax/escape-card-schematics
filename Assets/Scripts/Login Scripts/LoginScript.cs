@@ -34,11 +34,7 @@ public class LoginScript : MonoBehaviour
 
         UnityWebRequest webRequest = UnityWebRequest.Post(urlLogin, form);
         yield return webRequest.SendWebRequest(); 
-        if (webRequest.result != UnityWebRequest.Result.Success)
-        {
-            Debug.Log(webRequest.error);
-        }
-        else
+        if (webRequest.result == UnityWebRequest.Result.Success)
         {
             //Check for a confirmation from the web
             if (webRequest.downloadHandler.text[0]=='0')
@@ -81,20 +77,14 @@ public class LoginScript : MonoBehaviour
             }
 
             //Check the state if user is logged in or not
-            Debug.Log("Login " + DBManager.LoggedIn);
+
             if (DBManager.LoggedIn)
             {
-                //Load a scene or something
+                Debug.Log("Berhasil Login");
                 SceneManager.LoadScene("Main Menu");
             }
-
             webRequest.Dispose();
             yield return null;
-
         }
-    }
-    public void VerifyInput()
-    {
-        loginButton.interactable = (usernameField.text.Length >= 3 && passwordField.text.Length >= 3);
     }
 }

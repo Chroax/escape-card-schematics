@@ -9,6 +9,7 @@ public class Option : MonoBehaviour
     public AudioMixer audioMixerMusic;
     public AudioMixer audioMixerSFX;
     private float value;
+    public Toggle fullScreen;
 
     public Slider musicSlider;
     public Slider sfxSlider;
@@ -20,6 +21,11 @@ public class Option : MonoBehaviour
 
         musicSlider.value = music;
         sfxSlider.value = effect;
+    }
+
+    private void Update()
+    {
+        fullScreen.isOn = Screen.fullScreen;
     }
     public void setVolume(float volume)
     {
@@ -39,8 +45,8 @@ public class Option : MonoBehaviour
         }
     }
 
-    public void setFullscreen(bool isFullscreen)
+    public void setFullscreen()
     {
-        Screen.fullScreen = isFullscreen;
+        Screen.fullScreen = !Screen.fullScreen;
     }
 }
