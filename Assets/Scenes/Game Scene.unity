@@ -8575,10 +8575,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8503810315897823964, guid: 986118c4e84dba040bd268347cbac6f1, type: 3}
-      propertyPath: audioManager
-      value: 
-      objectReference: {fileID: 955484483}
     - target: {fileID: 8649525580266833722, guid: 986118c4e84dba040bd268347cbac6f1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1

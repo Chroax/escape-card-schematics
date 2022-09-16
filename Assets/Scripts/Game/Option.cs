@@ -10,10 +10,7 @@ public class Option : MonoBehaviour
     public AudioMixer audioMixerSFX;
     private float value;
 
-    public GameObject audioManager;
-
     public Slider musicSlider;
-    public Toggle fullScreen;
     public Slider sfxSlider;
 
     void Start()
@@ -21,15 +18,8 @@ public class Option : MonoBehaviour
         audioMixerMusic.GetFloat("volume", out float music);
         audioMixerSFX.GetFloat("volume", out float effect);
 
-        fullScreen.isOn = Screen.fullScreen;
-
         musicSlider.value = music;
         sfxSlider.value = effect;
-    }
-
-    private void Update()
-    {
-        fullScreen.isOn = Screen.fullScreen;
     }
     public void setVolume(float volume)
     {
@@ -49,11 +39,8 @@ public class Option : MonoBehaviour
         }
     }
 
-    public void setFullscreen()
+    public void setFullscreen(bool isFullscreen)
     {
-        Debug.Log(Screen.fullScreen);
-        audioManager.GetComponent<SoundManager>().clickSoundPlay();
-        Screen.fullScreen = !Screen.fullScreen;
-        Debug.Log(Screen.fullScreen);
+        Screen.fullScreen = isFullscreen;
     }
 }
