@@ -83,14 +83,14 @@ public class CombineCardPanel : MonoBehaviour
 
             foreach (string id in combinedCardProducedDetails.destroyedCardID)
             {
-                //Player.instance.saveData.ownedCardId.Remove(id);
+                Player.instance.saveData.ownedCardId.Remove(id);
                 Player.instance.ownedCardId.Remove(id);
                 Destroy(GameManager.Instance.GetCardByID(id));
                 GameManager.Instance.listCardHolder.GetComponent<ListCard>().DeleteCardFromList(id);
                 Player.instance.currentDiscard++;
-                //Player.instance.saveData.currentDiscard++;
+                Player.instance.saveData.currentDiscard++;
                 Player.instance.discUI.SetDiscard(Player.instance.currentDiscard);
-                //Player.instance.saveData.score += 5;
+                Player.instance.saveData.score += 5;
                 Player.instance.score += 5;
             }
 
@@ -147,7 +147,7 @@ public class CombineCardPanel : MonoBehaviour
                 else
                 {
                     GameManager.Instance.listCardHolder.GetComponent<ListCard>().AddCardToList(id);
-                    //Player.instance.saveData.ownedCardId.Add(id);
+                    Player.instance.saveData.ownedCardId.Add(id);
                     Player.instance.ownedCardId.Add(generatedCard.transform.GetComponent<Card>().cardDetail.cardID);
                 }
             }

@@ -4,15 +4,8 @@ using UnityEngine;
 
 public static class DBManager 
 {
-    public static string team_name;
-    public static string account_id;
-    public static string player_id;
-    public static int remaining_coins;
-    public static int remaining_hours;
-    public static int discardCardsCount;
-    public static int scores;
-    public static int mapID;
-    public static string ownedCards;
-    public static bool LoggedIn => team_name != null;
-    public static void Logout() => team_name = null;
+    public static string username;
+    public static string score;
+    public static bool LoggedIn => username != null;
+    public static void Logout() => username = null;
 }
