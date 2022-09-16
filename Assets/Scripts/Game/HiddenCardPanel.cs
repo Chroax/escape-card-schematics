@@ -51,7 +51,7 @@ public class HiddenCardPanel : MonoBehaviour
             generatedCard.transform.GetComponent<Image>().sprite = generatedCard.GetComponent<Card>().cardDetail.cardSprite;
             GameManager.Instance.listCardHolder.GetComponent<ListCard>().AddCardToList(generatedCard.transform.GetComponent<Card>().cardDetail.cardID);
             Player.instance.ownedCardId.Add(generatedCard.transform.GetComponent<Card>().cardDetail.cardID);
-            //Player.instance.saveData.ownedCardId.Add(generatedCard.transform.GetComponent<Card>().cardDetail.cardID);
+            DBManager.ownedCards.Add(generatedCard.transform.GetComponent<Card>().cardDetail.cardID);
 
             inputText.text = "";
 
@@ -61,14 +61,14 @@ public class HiddenCardPanel : MonoBehaviour
             foreach (string id in generatedCard.transform.GetComponent<Card>().cardDetail.destroyedCardID)
             {
                 Player.instance.ownedCardId.Remove(id);
-                //Player.instance.saveData.ownedCardId.Remove(id);
+                DBManager.ownedCards.Remove(id);
                 Destroy(GameManager.Instance.GetCardByID(id));
                 GameManager.Instance.listCardHolder.GetComponent<ListCard>().DeleteCardFromList(id);
                 Player.instance.currentDiscard++;
-                //Player.instance.saveData.currentDiscard++;
+                DBManager.discardCardsCount++;
                 Player.instance.discUI.SetDiscard(Player.instance.currentDiscard);
                 Player.instance.score += 5;
-                //Player.instance.saveData.score += 5;
+                DBManager.scores += 5;
             }
 
             GameManager.Instance.selectedCardHidden = null;

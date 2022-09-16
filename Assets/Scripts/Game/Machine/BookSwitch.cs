@@ -55,7 +55,7 @@ public class BookSwitch : MonoBehaviour
                 else
                 {
                     Player.instance.ownedCardId.Add(generatedCard.transform.GetComponent<Card>().cardDetail.cardID);
-                    //Player.instance.saveData.ownedCardId.Add(id);
+                    DBManager.ownedCards.Add(id);
                     GameManager.Instance.listCardHolder.GetComponent<ListCard>().AddCardToList(produceCardDetail.cardID);
                 }
             }
@@ -63,14 +63,14 @@ public class BookSwitch : MonoBehaviour
             GameManager.Instance.machineCardPanel.transform.GetChild(1).transform.GetChild(0).transform.GetChild(2).gameObject.SetActive(false);
             foreach (string id in produceCardDetail.destroyedCardID)
             {
-                //Player.instance.saveData.ownedCardId.Remove(id);
+                DBManager.ownedCards.Remove(id);
                 Player.instance.ownedCardId.Remove(id);
                 Destroy(GameManager.Instance.GetCardByID(id));
                 GameManager.Instance.listCardHolder.GetComponent<ListCard>().DeleteCardFromList(id);
                 Player.instance.currentDiscard++;
-                Player.instance.currentDiscard++;
+                DBManager.discardCardsCount++;
                 Player.instance.discUI.SetDiscard(Player.instance.currentDiscard);
-                //Player.instance.saveData.score += 5;
+                DBManager.scores += 5;
                 Player.instance.score += 5;
             }
             GameManager.Instance.machineCardPanel.GetComponent<MachineCardPanel>().RemoveCardFromHolder();

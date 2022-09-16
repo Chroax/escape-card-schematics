@@ -13,7 +13,6 @@ public class LoginScript : MonoBehaviour
     [SerializeField] private Button loginButton;
     [SerializeField] private TextMeshProUGUI warningMessage;
     [HideInInspector] private string urlLogin = "http://localhost/gamedevDB/login.php";
-    [HideInInspector] private string urlRetrieve = "http://localhost/gamedevDB/getrequest.php";
 
     private void Start()
     {
@@ -53,11 +52,13 @@ public class LoginScript : MonoBehaviour
                 DBManager.account_id = users[2];
                 DBManager.player_id = users[3];
                 int.TryParse(users[4], out DBManager.remaining_coins);
-                int.TryParse(users[5], out DBManager.remaining_hours);
+                float.TryParse(users[5], out DBManager.remaining_hours);
                 int.TryParse(users[6], out DBManager.discardCardsCount);
                 int.TryParse(users[7], out DBManager.scores);
                 int.TryParse(users[8], out DBManager.mapID);
-                DBManager.ownedCards = users[9];
+                string[] cards = users[9].Split(",");
+                foreach(string card in cards)
+                    DBManager.ownedCards.Add(card);
             }
             else
             {

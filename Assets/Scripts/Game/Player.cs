@@ -34,8 +34,7 @@ public class Player : MonoBehaviour
         teamName = DBManager.team_name;
         mapIndex = DBManager.mapID;
         score = DBManager.scores;
-        string[] ownedCards = DBManager.ownedCards.Split(",");
-        foreach (string id in ownedCards)
+        foreach (string id in DBManager.ownedCards)
             ownedCardId.Add(id);
         currentCoin = DBManager.remaining_coins;
         currentDiscard = DBManager.discardCardsCount;
@@ -57,9 +56,8 @@ public class Player : MonoBehaviour
 
     void Update()
     {   
-        //countdown
         currentTime -= Time.deltaTime;
-        //saveData.currentTime = currentTime;
+        DBManager.remaining_hours = currentTime;
         timeUI.SetTime(currentTime);
         
         //penalty
@@ -99,7 +97,7 @@ public class Player : MonoBehaviour
         if(coin <= currentCoin)
         {
             currentCoin -= coin;
-            //saveData.currentCoin = currentCoin;
+            DBManager.remaining_coins = currentCoin;
             coinUI.SetCoin(currentCoin);
             return true;
         }

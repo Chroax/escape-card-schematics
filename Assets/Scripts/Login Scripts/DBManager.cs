@@ -8,11 +8,11 @@ public static class DBManager
     public static string account_id;
     public static string player_id;
     public static int remaining_coins;
-    public static int remaining_hours;
+    public static float remaining_hours;
     public static int discardCardsCount;
     public static int scores;
     public static int mapID;
-    public static string ownedCards;
+    public static List<string> ownedCards = new List<string>();
     public static bool LoggedIn => team_name != null;
     public static void Logout() => team_name = null;
 }

@@ -16,7 +16,7 @@ public class MapCardPanel : MonoBehaviour
     {
         Debug.Log(index);
         listmap[Player.instance.mapIndex].SetActive(false);
-        //Player.instance.saveData.mapIndex = index;
+        DBManager.mapID = index;
         Player.instance.mapIndex = index;
 
         listmap[Player.instance.mapIndex].SetActive(true);
