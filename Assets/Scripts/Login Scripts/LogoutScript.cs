@@ -16,7 +16,7 @@ public class LogoutScript : MonoBehaviour
     IEnumerator Logout()
     {
         WWWForm form = new();
-        form.AddField("request", DBManager.username);
+        form.AddField("request", DBManager.account_id);
 
         // TL DR, make a new form and use the post method to send info
 
