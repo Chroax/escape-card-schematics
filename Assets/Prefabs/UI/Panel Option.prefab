@@ -1257,8 +1257,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.22074999, y: 0.18866666}
   m_AnchorMax: {x: 0.7665625, y: 0.80855554}
-  m_AnchoredPosition: {x: -0.4882202, y: 1.5953064}
-  m_SizeDelta: {x: 0.9764, y: -3.1906}
+  m_AnchoredPosition: {x: 294.05548, y: 190.18}
+  m_SizeDelta: {x: 608.369, y: 380.3599}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8503810315897823964
 MonoBehaviour:
@@ -1276,7 +1276,6 @@ MonoBehaviour:
   audioMixerSFX: {fileID: 24100000, guid: c5384a2847d067140887314ec45b3b11, type: 2}
   musicSlider: {fileID: 9146705841627349312}
   sfxSlider: {fileID: 5140580971813643731}
-  brightness: {fileID: 0}
 --- !u!1 &1931882478497970095
 GameObject:
   m_ObjectHideFlags: 0
