@@ -12,7 +12,6 @@ public class Player : MonoBehaviour
     [SerializeField] public DiscardSystem discUI;
     [SerializeField] private TeamUI teamUI;
     [SerializeField] private ListCard listCard;
-    [SerializeField] public SaveDataSO saveData;
 
     public List<string> ownedCardId;
 
@@ -32,14 +31,15 @@ public class Player : MonoBehaviour
 
     public void Init()
     {
-        teamName = DBManager.username;
-        mapIndex = saveData.mapIndex;
-        score = saveData.score;
-        foreach (string id in saveData.ownedCardId)
+        teamName = DBManager.team_name;
+        mapIndex = DBManager.mapID;
+        score = DBManager.scores;
+        string[] ownedCards = DBManager.ownedCards.Split(",");
+        foreach (string id in ownedCards)
             ownedCardId.Add(id);
-        currentCoin = saveData.currentCoin;
-        currentDiscard = saveData.currentDiscard;
-        currentTime = saveData.currentTime;
+        currentCoin = DBManager.remaining_coins;
+        currentDiscard = DBManager.discardCardsCount;
+        currentTime = DBManager.remaining_hours;
 
         mapCardPanel = map.GetComponent<MapCardPanel>();
         mapCardPanel.ChangePanel(mapIndex);
@@ -59,7 +59,7 @@ public class Player : MonoBehaviour
     {   
         //countdown
         currentTime -= Time.deltaTime;
-        saveData.currentTime = currentTime;
+        //saveData.currentTime = currentTime;
         timeUI.SetTime(currentTime);
         
         //penalty
@@ -99,7 +99,7 @@ public class Player : MonoBehaviour
         if(coin <= currentCoin)
         {
             currentCoin -= coin;
-            saveData.currentCoin = currentCoin;
+            //saveData.currentCoin = currentCoin;
             coinUI.SetCoin(currentCoin);
             return true;
         }

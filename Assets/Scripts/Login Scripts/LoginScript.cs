@@ -12,7 +12,8 @@ public class LoginScript : MonoBehaviour
     [SerializeField] private TMP_InputField passwordField;
     [SerializeField] private Button loginButton;
     [SerializeField] private TextMeshProUGUI warningMessage;
-    [SerializeField] private string url = "http://localhost/gamedevDB/login.php";
+    [HideInInspector] private string urlLogin = "http://localhost/gamedevDB/login.php";
+    [HideInInspector] private string urlRetrieve = "http://localhost/gamedevDB/getrequest.php";
 
     private void Start()
     {
@@ -27,12 +28,12 @@ public class LoginScript : MonoBehaviour
     IEnumerator Login()
     {
         WWWForm form = new();
-        form.AddField("name", usernameField.text);
+        form.AddField("team_name", usernameField.text);
         form.AddField("password", passwordField.text);
 
         // TL DR, make a new form and use the post method to send info
 
-        UnityWebRequest webRequest = UnityWebRequest.Post(url, form);
+        UnityWebRequest webRequest = UnityWebRequest.Post(urlLogin, form);
         yield return webRequest.SendWebRequest(); 
         if (webRequest.result != UnityWebRequest.Result.Success)
         {
@@ -45,11 +46,18 @@ public class LoginScript : MonoBehaviour
             //Check for a confirmation from the web
             if (webRequest.downloadHandler.text[0]=='0')
             {
-                warningMessage.gameObject.SetActive(false);
-
+                string rawResponse = webRequest.downloadHandler.text;
+                string[] users = rawResponse.Split('/');
                 Debug.Log("Login confirmed!!");
-                //Set a username and score to the system
-                DBManager.username = usernameField.text;
+                DBManager.team_name = users[1];
+                DBManager.account_id = users[2];
+                DBManager.player_id = users[3];
+                int.TryParse(users[4], out DBManager.remaining_coins);
+                int.TryParse(users[5], out DBManager.remaining_hours);
+                int.TryParse(users[6], out DBManager.discardCardsCount);
+                int.TryParse(users[7], out DBManager.scores);
+                int.TryParse(users[8], out DBManager.mapID);
+                DBManager.ownedCards = users[9];
             }
             else
             {
@@ -60,7 +68,6 @@ public class LoginScript : MonoBehaviour
 
             //Check the state if user is logged in or not
             Debug.Log("Login " + DBManager.LoggedIn);
-
             if (DBManager.LoggedIn)
             {
                 //Load a scene or something
