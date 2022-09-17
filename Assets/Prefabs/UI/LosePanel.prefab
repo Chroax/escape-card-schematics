@@ -277,9 +277,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Waktumu Telah Habis
-
-    Kalian Tertangkap Oleh Professor'
+  m_text: Waktumu Telah Habis!!!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7852338743f1eba4cb32bb71cf2b650f, type: 2}
   m_sharedMaterial: {fileID: -6866017832135869851, guid: 7852338743f1eba4cb32bb71cf2b650f, type: 2}
