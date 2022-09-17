@@ -20,6 +20,43 @@ public class ListCard : MonoBehaviour
 
     private void Awake(){ instance = this; }
 
+    private void OnEnable()
+    {
+        if (GameManager.Instance.selectedCardHidden != null)
+        {
+            CloseAllListPanel();
+            OpenRedCard();
+
+        }
+        if (GameManager.Instance.selectedCardHint != null)
+        {
+            CloseAllListPanel();
+            OpenRedCard();
+        }
+        if (GameManager.Instance.selectedCardUnlock != null)
+        {
+            CloseAllListPanel();
+            OpenYellowCard();
+        }
+        if (GameManager.Instance.selectedMachineCard != null)
+        {
+            CloseAllListPanel();
+            OpenGreenCard();
+        }
+        if (GameManager.Instance.selectedCombineCard1 != null)
+        {
+            CloseAllListPanel();
+            OpenRedCard();
+        }
+        if (GameManager.Instance.selectedCombineCard2 != null)
+        {
+            CloseAllListPanel();
+            OpenBlueCard();
+        }
+
+
+    }
+
     public void CloseAllListPanel()
     {
         redList.SetActive(false);
