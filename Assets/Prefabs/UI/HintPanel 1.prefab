@@ -936,7 +936,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: afe05623755d9ff4691a4bc08e26a0f6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 873d74c3f5f3fe740b2f917de9d9482e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1011,8 +1011,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hintPanel: {fileID: 3966681438268985705}
   cardHint: {fileID: 0}
+  confirmationPanel: {fileID: 0}
   cardHintText: {fileID: 0}
   hintCost: {fileID: 3966681437186589536}
+  placHolder: {fileID: 0}
 --- !u!114 &3966681438268985711
 MonoBehaviour:
   m_ObjectHideFlags: 0

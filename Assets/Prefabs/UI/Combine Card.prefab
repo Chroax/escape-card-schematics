@@ -1106,7 +1106,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: afe05623755d9ff4691a4bc08e26a0f6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 873d74c3f5f3fe740b2f917de9d9482e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1544,6 +1544,7 @@ MonoBehaviour:
   PenaltyPanel: {fileID: 0}
   silangButton1: {fileID: 2745704384622941596}
   silangButton2: {fileID: 2745704384836857217}
+  notification: {fileID: 0}
   map: {fileID: 0}
 --- !u!114 &7293117567335262029
 MonoBehaviour:
@@ -1788,7 +1789,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: afe05623755d9ff4691a4bc08e26a0f6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 873d74c3f5f3fe740b2f917de9d9482e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
