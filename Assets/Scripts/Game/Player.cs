@@ -28,7 +28,6 @@ public class Player : MonoBehaviour
     public void Awake(){
         instance = this;
     }
-
     public void Init()
     {
         teamName = DBManager.team_name;
@@ -53,7 +52,7 @@ public class Player : MonoBehaviour
         coinUI.SetCoin(currentCoin);
         discUI.SetDiscard(currentDiscard);
     }
-
+    
     void Update()
     {   
         currentTime -= Time.deltaTime;

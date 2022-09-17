@@ -24,6 +24,7 @@ public class HintPanel : MonoBehaviour
 
     public void OnDisable()
     {
+        confirmationPanel.SetActive(false);
         GameManager.Instance.activePanel = previousPanel;
         GameManager.Instance.selectedCardHint = null;
         GetSetCardHintText("");
