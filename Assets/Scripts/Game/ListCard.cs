@@ -22,37 +22,39 @@ public class ListCard : MonoBehaviour
 
     private void OnEnable()
     {
-        Debug.Log("mASUJ");
-        if (GameManager.Instance.selectedCardHidden != null)
-        {
-            CloseAllListPanel();
-            OpenRedCard();
-
-        }
-        if (GameManager.Instance.selectedCardHint != null)
+        if (GameManager.Instance.activePanel == ActivePanel.hidden)
         {
             CloseAllListPanel();
             OpenRedCard();
         }
-        if (GameManager.Instance.selectedCardUnlock != null)
+        else if (GameManager.Instance.activePanel == ActivePanel.unlock)
         {
             CloseAllListPanel();
             OpenYellowCard();
         }
-        if (GameManager.Instance.selectedMachineCard != null)
+       else if (GameManager.Instance.activePanel == ActivePanel.machine)
         {
             CloseAllListPanel();
             OpenGreenCard();
         }
-        if (GameManager.Instance.selectedCombineCard1 != null)
+        else if (GameManager.Instance.activePanel == ActivePanel.combine)
+        {
+            if (GameManager.Instance.choiceCombineCard1 && !GameManager.Instance.choiceCombineCard2)
+            {
+                CloseAllListPanel();
+                OpenRedCard();
+            }
+            if (GameManager.Instance.choiceCombineCard2 && !GameManager.Instance.choiceCombineCard1)
+            {
+                CloseAllListPanel();
+                OpenBlueCard();
+            }
+        }
+
+        else
         {
             CloseAllListPanel();
             OpenRedCard();
-        }
-        if (GameManager.Instance.selectedCombineCard2 != null)
-        {
-            CloseAllListPanel();
-            OpenBlueCard();
         }
 
 

@@ -111,17 +111,17 @@ public class CombineCardPanel : MonoBehaviour
     public void SelectCardChoice1() 
     {
         GameManager.Instance.audioManager.GetComponent<SoundManager>().clickSoundPlay();
-        GameManager.Instance.listCardHolder.SetActive(true);
         GameManager.Instance.choiceCombineCard1 = true;
         GameManager.Instance.choiceCombineCard2 = false;
+        GameManager.Instance.listCardHolder.SetActive(true);
     }
 
     public void SelectCardChoice2()
     {
         GameManager.Instance.audioManager.GetComponent<SoundManager>().clickSoundPlay();
-        GameManager.Instance.listCardHolder.SetActive(true);
         GameManager.Instance.choiceCombineCard2 = true;
         GameManager.Instance.choiceCombineCard1 = false;
+        GameManager.Instance.listCardHolder.SetActive(true);
     }
 
     public void CombinedCardCollect()
