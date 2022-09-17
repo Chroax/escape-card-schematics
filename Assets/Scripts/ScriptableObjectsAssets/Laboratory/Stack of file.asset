@@ -12,11 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: Stack of file
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: 9d011ae4e5b516245b497fa3378759d2, type: 3}
-  cardDescription: 
+  cardSprite: {fileID: 21300000, guid: ed821d20f61762d43abe90637b18a609, type: 3}
+  cardDescription: Petunjuk ada di nama lukisan
   cardID: V
   cardType: 4
-  combineCardsProducesID: 
-  hiddenCardID: J
+  combineCardsProducesID: []
+  hiddenCardProducesID: 72
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID:
+  - 72
+  - 79
+  - 97
+  - 76
+  mapIndex: 0

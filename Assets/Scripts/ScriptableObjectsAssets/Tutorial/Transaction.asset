@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Transaction
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 3871c52e9c3d6cd4a986a476a625e4a3, type: 3}
-  cardDescription: Berkaitan dengan news yang ada
+  cardDescription: Cocokkan pola yang ditemui pada news serta simbol yang dibutuhkan,
+    berkaitan dengan <color=red>w</color><color=yellow>a</color><color=green>r</color><color=blue>n</color><color=purple>a</color>
   cardID: Z
   cardType: 4
   combineCardsProducesID:

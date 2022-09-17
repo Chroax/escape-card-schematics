@@ -10,13 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
-  m_Name: Slider
+  m_Name: Slide
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: 8e0d3ec5d8cb9d84b84d8581a25fb0bf, type: 3}
-  cardDescription: 
+  cardSprite: {fileID: 21300000, guid: 7ad4dc4ba2574f3498e1d0777f4c53af, type: 3}
+  cardDescription: Slide foto berisi pintu
   cardID: 37
   cardType: 3
-  combineCardsProducesID: 80
-  hiddenCardID: 
+  combineCardsProducesID:
+  - 80
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID:
+  - 90
+  - 122
+  mapIndex: 0

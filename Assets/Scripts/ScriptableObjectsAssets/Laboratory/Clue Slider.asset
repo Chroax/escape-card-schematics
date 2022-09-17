@@ -12,11 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: Clue Slider
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: bb3b0f380810dc14daeeede50578e012, type: 3}
-  cardDescription: 
+  cardSprite: {fileID: 21300000, guid: 90e7af6ac558b384bbebc902581a5d13, type: 3}
+  cardDescription: Tidak Ada
   cardID: 26
   cardType: 4
-  combineCardsProducesID: 
-  hiddenCardID: 
+  combineCardsProducesID: []
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID:
+  - 22
+  - 4
+  mapIndex: 0

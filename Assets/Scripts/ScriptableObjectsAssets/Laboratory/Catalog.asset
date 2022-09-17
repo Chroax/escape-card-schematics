@@ -12,11 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: Catalog
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: 88f2145a753bcc448b53bbcf5eb4f28e, type: 3}
-  cardDescription: 
+  cardSprite: {fileID: 21300000, guid: 67ba223964923dc48b9064980253f63d, type: 3}
+  cardDescription: Tidak Ada
   cardID: K
   cardType: 4
-  combineCardsProducesID: 
-  hiddenCardID: 
+  combineCardsProducesID: []
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID:
+  - 72
+  - 97
+  - 79
+  - 76
+  mapIndex: 0

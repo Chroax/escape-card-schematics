@@ -15,7 +15,7 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 0956af4d981035d44b9478e272675898, type: 3}
   cardDescription: Tidak ada
   cardID: 13
-  cardType: 0
+  cardType: 4
   combineCardsProducesID:
   - 0
   hiddenCardProducesID: 
