@@ -12,11 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: Monster
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: de874b47f28de544eb7ed0a329bdca8c, type: 3}
-  cardDescription: 
+  cardSprite: {fileID: 21300000, guid: 06482c296c79a94439b6a73172a5a719, type: 3}
+  cardDescription: Monster yang menyerupai manusia, sepertinya dia meminta tolong
   cardID: 67
   cardType: 0
-  combineCardsProducesID: 
-  hiddenCardID: 
+  combineCardsProducesID:
+  - 122
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID:
+  - 38
+  - 19
+  mapIndex: 0

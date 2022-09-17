@@ -12,11 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: Painting
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 0}
-  cardDescription: 
-  cardID: 
-  cardType: 0
-  combineCardsProducesID: 
-  hiddenCardID: 
+  cardSprite: {fileID: 21300000, guid: 66406b11d4852c6439fd02e496d14ea5, type: 3}
+  cardDescription: Temukan nama lukisan di katalog
+  cardID: S
+  cardType: 4
+  combineCardsProducesID: []
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID:
+  - 72
+  - 97
+  - 79
+  - 76
+  mapIndex: 0

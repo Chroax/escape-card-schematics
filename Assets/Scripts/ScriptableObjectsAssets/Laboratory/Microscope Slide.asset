@@ -12,11 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: Microscope Slide
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: 97efc94c6e2092d4c87f62416cfdca77, type: 3}
-  cardDescription: 
-  cardID: 4
+  cardSprite: {fileID: 21300000, guid: 1af48b61bc245fc4daa1002b3a9915c7, type: 3}
+  cardDescription: Seperti terdapat tulisan kecil
+  cardID: 22
   cardType: 3
-  combineCardsProducesID: 26
-  hiddenCardID: 
+  combineCardsProducesID:
+  - 26
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID:
+  - J
+  - E
+  - 59
+  mapIndex: 0

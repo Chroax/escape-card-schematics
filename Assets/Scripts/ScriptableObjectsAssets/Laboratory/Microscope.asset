@@ -12,11 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: Microscope
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: ad733e5d092dc0b4a89ac18d6a64a914, type: 3}
-  cardDescription: 
-  cardID: 22
+  cardSprite: {fileID: 21300000, guid: 826f6a10493f46842ad9fd9a41ee9f82, type: 3}
+  cardDescription: Digunakkan untuk mengamati objek yang ukurannya sangat kecil
+  cardID: 4
   cardType: 0
-  combineCardsProducesID: 26
-  hiddenCardID: 
+  combineCardsProducesID:
+  - 26
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID:
+  - 72
+  - 97
+  - 79
+  - 76
+  mapIndex: 0

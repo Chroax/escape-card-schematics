@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: Hidden Door
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: ca429a81d34444f438da4bcda287fe33, type: 3}
-  cardDescription: 
+  cardSprite: {fileID: 21300000, guid: 68f6379716bd19548ba9b7e3064ce13d, type: 3}
+  cardDescription: Tidak Ada
   cardID: 80
   cardType: 1
-  combineCardsProducesID: 
-  hiddenCardID: 
+  combineCardsProducesID: []
+  hiddenCardProducesID: 
   unlockCardAnswer: 1957
-  unlockCardID: selesai
+  unlockCardProducesID:
+  - WIN
+  destroyedCardID: []
+  mapIndex: 0

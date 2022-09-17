@@ -10,13 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
-  m_Name: CardDetail_
+  m_Name: Potion Recipe
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 0}
-  cardDescription: 
-  cardID: 90
-  cardType: 1
-  combineCardsProducesID: 
-  hiddenCardID: 
+  cardSprite: {fileID: 21300000, guid: 2bb9a3e941dd8b942b50b3eb03d27c94, type: 3}
+  cardDescription: Nanti
+  cardID: O
+  cardType: 4
+  combineCardsProducesID: []
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 37
+  unlockCardProducesID: []
+  destroyedCardID:
+  - J
+  - E
+  - 59
+  mapIndex: 0

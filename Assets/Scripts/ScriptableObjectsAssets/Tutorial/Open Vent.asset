@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: Open Vent
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: 228c0997e176d994eb89602bcb497407, type: 3}
+  cardSprite: {fileID: 21300000, guid: a83b8e1055b510747903735b7c6c6ff6, type: 3}
   cardDescription: Tidak ada
   cardID: 48
   cardType: 4

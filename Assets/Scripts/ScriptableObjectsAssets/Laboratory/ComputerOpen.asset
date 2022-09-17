@@ -12,11 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: ComputerOpen
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: 6d09f10780dbfa94989b56a25a41c3cf, type: 3}
-  cardDescription: 
+  cardSprite: {fileID: 21300000, guid: a2ef546ba60e5264ab0f24f828d137da, type: 3}
+  cardDescription: Terdapat bukti video dari professor, bagaimana menyimpannya ?
   cardID: 7
   cardType: 0
-  combineCardsProducesID: 31
-  hiddenCardID: 
+  combineCardsProducesID: []
+  hiddenCardProducesID: 80
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID:
+  - 65
+  - 26
+  mapIndex: 0

@@ -12,11 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: Evidence
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: 0fbfc93d1389065478426c85633f0ab1, type: 3}
-  cardDescription: 
+  cardSprite: {fileID: 21300000, guid: ed737f385d25e9f49b4bbb7b0d13f48e, type: 3}
+  cardDescription: Tidak Ada
   cardID: 31
   cardType: 4
-  combineCardsProducesID: 
-  hiddenCardID: 
+  combineCardsProducesID: []
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID:
+  - 24
+  - 7
+  mapIndex: 0

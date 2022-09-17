@@ -12,11 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: Frosted Room Glass
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: a8e79d2a7b0182f4fb85a5e1e51a3583, type: 3}
-  cardDescription: 
+  cardSprite: {fileID: 21300000, guid: eafb95985288dea4d8b18fc5448149ec, type: 3}
+  cardDescription: Kaca berembun, dapat dibersihkan menggunakan kain
   cardID: 38
   cardType: 0
-  combineCardsProducesID: 57
-  hiddenCardID: 
+  combineCardsProducesID:
+  - 57
+  - 67
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID:
+  - 72
+  - 97
+  - 79
+  - 80
+  mapIndex: 0

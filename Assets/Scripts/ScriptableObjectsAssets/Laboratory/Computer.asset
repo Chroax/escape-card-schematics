@@ -12,11 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: Computer
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: 71e49911419b2bf428a8b5e3c34e3bcb, type: 3}
-  cardDescription: 
-  cardID: 
+  cardSprite: {fileID: 21300000, guid: 65aa38c29835ef84d851ead1cef1c72d, type: 3}
+  cardDescription: Komputer dikunci, dibutuhkan kata sandi
+  cardID: 65
   cardType: 1
-  combineCardsProducesID: 26
-  hiddenCardID: 
-  unlockCardAnswer: '1614 '
-  unlockCardID: 7
+  combineCardsProducesID: []
+  hiddenCardProducesID: 
+  unlockCardAnswer: 4513
+  unlockCardProducesID:
+  - 7
+  destroyedCardID:
+  - 72
+  - 97
+  - 79
+  - 78
+  mapIndex: 0

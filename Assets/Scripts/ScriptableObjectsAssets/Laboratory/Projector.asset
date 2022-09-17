@@ -12,11 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: Projector
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: 8dc6e4ad44bc61842be2f920258834f6, type: 3}
-  cardDescription: 
+  cardSprite: {fileID: 21300000, guid: efbf19b68f943774585bbb5133ee5904, type: 3}
+  cardDescription: Isi projector kosong
   cardID: 43
   cardType: 0
-  combineCardsProducesID: 80
-  hiddenCardID: 
+  combineCardsProducesID:
+  - 80
+  hiddenCardProducesID: 
   unlockCardAnswer: 
-  unlockCardID: 
+  unlockCardProducesID: []
+  destroyedCardID:
+  - 72
+  - 97
+  - 79
+  - 76
+  mapIndex: 0
