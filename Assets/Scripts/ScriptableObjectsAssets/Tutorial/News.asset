@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: b0e92dfb1533724468751b055bf91f62, type: 3}
   cardDescription: Lihatlah pola yang dibuat (2 0)
-  cardID: ' A'
+  cardID: A
   cardType: 4
   combineCardsProducesID:
   - 0

@@ -80,14 +80,17 @@ public class CombineCardPanel : MonoBehaviour
 
             foreach (string id in combinedCardProducedDetails.destroyedCardID)
             {
-                DBManager.ownedCards.Remove(id);
+                if (!DBManager.isTutorial)
+                    DBManager.ownedCards.Remove(id);
                 Player.instance.ownedCardId.Remove(id);
                 Destroy(GameManager.Instance.GetCardByID(id));
                 GameManager.Instance.listCardHolder.GetComponent<ListCard>().DeleteCardFromList(id);
                 Player.instance.currentDiscard++;
-                DBManager.discardCardsCount++;
+                if (!DBManager.isTutorial)
+                    DBManager.discardCardsCount++;
                 Player.instance.discUI.SetDiscard(Player.instance.currentDiscard);
-                DBManager.scores += 5;
+                if (!DBManager.isTutorial)
+                    DBManager.scores += 5;
                 Player.instance.score += 5;
             }
 
@@ -133,6 +136,7 @@ public class CombineCardPanel : MonoBehaviour
             foreach (string id in selectedCardDetails.combineCardsProducesID)
             {
                 var generatedCard = Instantiate(GameResource.Instance.card, GameManager.Instance.deckCardHolder.transform);
+                Debug.Log(GameManager.Instance.GetCardDetailByID(id).cardID);
                 generatedCard.transform.GetComponent<Card>().cardDetail = GameManager.Instance.GetCardDetailByID(id);
                 if (generatedCard.transform.GetComponent<Card>().cardDetail.cardType == CardType.map)
                 {
@@ -142,7 +146,8 @@ public class CombineCardPanel : MonoBehaviour
                 else
                 {
                     GameManager.Instance.listCardHolder.GetComponent<ListCard>().AddCardToList(id);
-                    DBManager.ownedCards.Add(id);
+                    if (!DBManager.isTutorial)
+                        DBManager.ownedCards.Add(id);
                     Player.instance.ownedCardId.Add(generatedCard.transform.GetComponent<Card>().cardDetail.cardID);
                 }
             }

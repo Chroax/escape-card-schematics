@@ -41,7 +41,8 @@ public class Safebox : MonoBehaviour
                 else
                 {
                     Player.instance.ownedCardId.Add(generatedCard.transform.GetComponent<Card>().cardDetail.cardID);
-                    DBManager.ownedCards.Add(id);
+                    if(!DBManager.isTutorial)
+                        DBManager.ownedCards.Add(id);
                     GameManager.Instance.listCardHolder.GetComponent<ListCard>().AddCardToList(produceCardDetail.cardID);
                 }
             }
@@ -49,14 +50,17 @@ public class Safebox : MonoBehaviour
             GameManager.Instance.machineCardPanel.transform.GetChild(1).transform.GetChild(0).transform.GetChild(2).gameObject.SetActive(false);
             foreach (string id in produceCardDetail.destroyedCardID)
             {
-                DBManager.ownedCards.Remove(id);
+                if (!DBManager.isTutorial)
+                    DBManager.ownedCards.Remove(id);
                 Player.instance.ownedCardId.Remove(id);
                 Destroy(GameManager.Instance.GetCardByID(id));
                 GameManager.Instance.listCardHolder.GetComponent<ListCard>().DeleteCardFromList(id);
                 Player.instance.currentDiscard++;
-                DBManager.discardCardsCount++;
+                if (!DBManager.isTutorial)
+                    DBManager.discardCardsCount++;
                 Player.instance.discUI.SetDiscard(Player.instance.currentDiscard);
-                DBManager.scores += 5;
+                if (!DBManager.isTutorial)
+                    DBManager.scores += 5;
                 Player.instance.score += 5;
             }
             GameManager.Instance.machineCardPanel.GetComponent<MachineCardPanelTutor>().RemoveCardFromHolder();

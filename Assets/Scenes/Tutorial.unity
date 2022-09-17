@@ -22837,10 +22837,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 867984509}
     m_Modifications:
-    - target: {fileID: 6365824529452094821, guid: ed1fbe0654d69a94e81b04069ed889ff, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 873d74c3f5f3fe740b2f917de9d9482e, type: 3}
     - target: {fileID: 6365824529473861809, guid: ed1fbe0654d69a94e81b04069ed889ff, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: RemoveCardFromHolder

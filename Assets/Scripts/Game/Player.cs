@@ -30,34 +30,6 @@ public class Player : MonoBehaviour
     }
     public void Init()
     {
-        teamName = "OK";
-        mapIndex = 0;
-        score = 0;
-        ownedCardId.Add("25");
-        ownedCardId.Add("21");
-        ownedCardId.Add("15");
-        ownedCardId.Add("M");
-        ownedCardId.Add("5");
-        currentCoin = 0;
-        currentDiscard = 0;
-        currentTime = 3600;
-
-        mapCardPanel = map.GetComponent<MapCardPanel>();
-        mapCardPanel.ChangePanel(mapIndex);
-        foreach (string id in ownedCardId)
-        {
-            var generatedCard = Instantiate(GameResource.Instance.card, GameManager.Instance.deckCardHolder.transform);
-            generatedCard.transform.GetComponent<Card>().cardDetail = GameManager.Instance.GetCardDetailByID(id);
-            GameManager.Instance.listCardHolder.GetComponent<ListCard>().AddCardToList(id);
-        }
-        teamUI.SetName(teamName);
-        timeUI.SetTime(currentTime);
-        coinUI.SetCoin(currentCoin);
-        discUI.SetDiscard(currentDiscard);
-    }
-    /*
-    public void Init()
-    {
         teamName = DBManager.team_name;
         mapIndex = DBManager.mapID;
         score = DBManager.scores;
@@ -80,7 +52,6 @@ public class Player : MonoBehaviour
         coinUI.SetCoin(currentCoin);
         discUI.SetDiscard(currentDiscard);
     }
-    */
     void Update()
     {   
         currentTime -= Time.deltaTime;

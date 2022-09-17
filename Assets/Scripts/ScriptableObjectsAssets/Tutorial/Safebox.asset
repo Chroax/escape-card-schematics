@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: Safebox
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: f5785e4152b06b041a5b91c2cfa1750f, type: 3}
+  cardSprite: {fileID: 21300000, guid: 87f9d89f6b86c4b48b1aa415f77fff82, type: 3}
   cardDescription: Brankas yang terkunci dengan kombinasi angka
   cardID: 42
   cardType: 2

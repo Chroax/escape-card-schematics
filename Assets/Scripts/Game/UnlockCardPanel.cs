@@ -86,7 +86,8 @@ public class UnlockCardPanel : MonoBehaviour
                     else
                     {
                         Player.instance.ownedCardId.Add(generatedCard.transform.GetComponent<Card>().cardDetail.cardID);
-                        DBManager.ownedCards.Add(id);
+                        if (!DBManager.isTutorial)
+                            DBManager.ownedCards.Add(id);
                         GameManager.Instance.listCardHolder.GetComponent<ListCard>().AddCardToList(produceCardDetail.cardID);
                     }
                 }
@@ -96,14 +97,17 @@ public class UnlockCardPanel : MonoBehaviour
                 //Destroy(GameManager.Instance.GetCardByID(GameManager.Instance.selectedCardUnlock.cardID));
                 foreach (string id in produceCardDetail.destroyedCardID)
                 {
-                    DBManager.ownedCards.Remove(id);
+                    if (!DBManager.isTutorial)
+                        DBManager.ownedCards.Remove(id);
                     Player.instance.ownedCardId.Remove(id);
                     Destroy(GameManager.Instance.GetCardByID(id));
                     GameManager.Instance.listCardHolder.GetComponent<ListCard>().DeleteCardFromList(id);
                     Player.instance.currentDiscard++;
-                    DBManager.discardCardsCount++;
+                    if (!DBManager.isTutorial)
+                        DBManager.discardCardsCount++;
                     Player.instance.discUI.SetDiscard(Player.instance.currentDiscard);
-                    DBManager.scores += 5;
+                    if (!DBManager.isTutorial)
+                        DBManager.scores += 5;
                     Player.instance.score += 5;
                 }
 
