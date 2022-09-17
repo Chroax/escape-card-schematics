@@ -147,7 +147,7 @@ public class CombineCardPanel : MonoBehaviour
                 }
             }
             cardCollected = true;
-            GameManager.Instance.combineCardProducedImage.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
+            GameManager.Instance.combineCardProducedImage.GetComponent<Image>().sprite = GameManager.Instance.resultCardHolder;
         }
     }
 

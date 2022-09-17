@@ -17,6 +17,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     public Player player;
     public Canvas canvas;
     public Sprite cardHolder;
+    public Sprite resultCardHolder;
     public List<CardDetailSO> allCardDetailList;
     public Transform panelTransform;
     public GameObject audioManager;
