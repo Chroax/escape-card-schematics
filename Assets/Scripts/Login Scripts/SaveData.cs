@@ -14,7 +14,7 @@ public class SaveData : MonoBehaviour
     public static int scores;
     public static int mapID;
     public static string ownedCards;
-    [HideInInspector] private string urlSave = "http://localhost/gamedevDB/save.php";
+    [HideInInspector] private string urlSave = "https://schematics.its.ac.id/gameapi/save.php";
 
     void Start()
     {
@@ -45,18 +45,20 @@ public class SaveData : MonoBehaviour
             }
             form.AddField("ownedCards", ownedCards);
 
-            UnityWebRequest webRequest = UnityWebRequest.Post(urlSave, form);
-
-            yield return webRequest.SendWebRequest();
-            if (webRequest.result != UnityWebRequest.Result.Success)
+            using (UnityWebRequest webRequest = UnityWebRequest.Post(urlSave, form))
             {
-            }
-            else
-            {
-                //Check for a confirmation from the web
+                webRequest.SetRequestHeader("Access-Control-Allow-Origin", "*");
+                yield return webRequest.SendWebRequest();
+                if (webRequest.result != UnityWebRequest.Result.Success)
+                {
+                    Debug.Log(webRequest.error);
+                }
+                else
+                {
+                    webRequest.Dispose();
+                    yield return new WaitForSeconds(2);
 
-                webRequest.Dispose();
-                yield return new WaitForSeconds(2);
+                }
             }
         }
     }
