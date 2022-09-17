@@ -13863,7 +13863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1531110656}
   canvas: {fileID: 1410452278}
-  cardHolder: {fileID: 21300000, guid: afe05623755d9ff4691a4bc08e26a0f6, type: 3}
+  cardHolder: {fileID: 21300000, guid: 5eb2990ba3bc5f949865c7f6eeb06a4a, type: 3}
   allCardDetailList:
   - {fileID: 11400000, guid: 80fcd0831a2201c429bea6c192ccc1ff, type: 2}
   - {fileID: 11400000, guid: 7b5c86dca789da8448575e831b3ae8ee, type: 2}
@@ -22860,6 +22860,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 867984509}
     m_Modifications:
+    - target: {fileID: 6365824529452094821, guid: ed1fbe0654d69a94e81b04069ed889ff, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 873d74c3f5f3fe740b2f917de9d9482e, type: 3}
     - target: {fileID: 6365824529473861809, guid: ed1fbe0654d69a94e81b04069ed889ff, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: RemoveCardFromHolder

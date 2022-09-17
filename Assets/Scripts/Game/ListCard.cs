@@ -22,6 +22,7 @@ public class ListCard : MonoBehaviour
 
     private void OnEnable()
     {
+        Debug.Log("mASUJ");
         if (GameManager.Instance.selectedCardHidden != null)
         {
             CloseAllListPanel();
