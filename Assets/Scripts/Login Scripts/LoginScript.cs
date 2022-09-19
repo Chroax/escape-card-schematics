@@ -12,7 +12,7 @@ public class LoginScript : MonoBehaviour
     [SerializeField] private TMP_InputField passwordField;
     [SerializeField] private Button loginButton;
     [SerializeField] private TextMeshProUGUI warningMessage;
-    [HideInInspector] private string urlLogin = "https://schematics.its.ac.id/gameapi/login.php";
+    private string urlLogin = "https://schematics.its.ac.id/gameapi/login.php";
 
     private void Start()
     {
@@ -57,18 +57,21 @@ public class LoginScript : MonoBehaviour
                     int diffTime;
                     int.TryParse(users[10], out diffTime);
                     DBManager.remaining_hours -= diffTime;
+                    if (DBManager.remaining_hours < 0)
+                        DBManager.remaining_hours = 0;
                     if (users[11] == "true")
-                    {
                         DBManager.firstLogin = true;
-                    }
                     else
-                    {
                         DBManager.firstLogin = false;
-                    }
                     if (users[12] == "1")
                         DBManager.isTutorial = true;
                     else
                         DBManager.isTutorial = false;
+                }
+                else if(webRequest.downloadHandler.text == "is_login")
+                {
+                    warningMessage.text = $"currently login, please log out first";
+                    warningMessage.gameObject.SetActive(true);
                 }
                 else
                 {

@@ -52,6 +52,16 @@ public class UnlockCardPanel : MonoBehaviour
             }
             if (GameManager.Instance.selectedCardUnlock.unlockCardProducesID[0] == "WIN")
             {
+                if (!DBManager.isTutorial)
+                {
+                    DBManager.discardCardsCount += Player.instance.ownedCardId.Count ;
+                    DBManager.scores += Player.instance.ownedCardId.Count * 5 + Player.instance.currentCoin;
+                    if (DBManager.ownedCards.Contains("31"))
+                        DBManager.scores += 50;
+                    DBManager.ownedCards.Clear();
+                    DBManager.remaining_hours = 0;
+                    DBManager.isWin = true;
+                }
                 GameManager.Instance.winPanel.SetActive(true);
             }
             else
@@ -94,7 +104,6 @@ public class UnlockCardPanel : MonoBehaviour
 
                 //Misal terunlock, maka kartu akan hilang
                 silangButton.SetActive(false);
-                //Destroy(GameManager.Instance.GetCardByID(GameManager.Instance.selectedCardUnlock.cardID));
                 foreach (string id in produceCardDetail.destroyedCardID)
                 {
                     if (!DBManager.isTutorial)

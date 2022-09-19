@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
 
     private string teamName;
     public int mapIndex;
-    private int currentCoin;
+    public int currentCoin { get; set; }
     private float currentTime;
     public int currentDiscard;
 

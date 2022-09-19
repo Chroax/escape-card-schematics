@@ -5,16 +5,7 @@ using UnityEngine.Networking;
 
 public class SaveData : MonoBehaviour
 {
-    public static string team_name;
-    public static string account_id;
-    public static string player_id;
-    public static int remaining_coins;
-    public static int remaining_hours;
-    public static int discardCardsCount;
-    public static int scores;
-    public static int mapID;
-    public static string ownedCards;
-    [HideInInspector] private string urlSave = "https://schematics.its.ac.id/gameapi/save.php";
+    private string urlSave = "https://schematics.its.ac.id/gameapi/save.php";
 
     void Start()
     {
@@ -23,7 +14,7 @@ public class SaveData : MonoBehaviour
 
     IEnumerator PostData()
     {
-        while(true)
+        while(!DBManager.isWin)
         {
             WWWForm form = new();
 
@@ -57,7 +48,6 @@ public class SaveData : MonoBehaviour
                 {
                     webRequest.Dispose();
                     yield return new WaitForSeconds(2);
-
                 }
             }
         }
