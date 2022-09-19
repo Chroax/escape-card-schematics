@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class LogoutScript : MonoBehaviour
 {
-    private string url = "https://schematics.its.ac.id/gameapi/logout.php";
+    private string url = "http://localhost/gamedevDB/logout.php";
     // Start is called before the first frame update
     public void CallLogout()
     {

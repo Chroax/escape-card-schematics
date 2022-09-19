@@ -1,10 +1,16 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.Networking;
 using UnityEngine;
+using TMPro;
 
 public class ReloadLeaderboard : MonoBehaviour
 {
-    private string uri = "";
+    private List<GameObject> rankList = new List<GameObject>();
+    public GameObject leaderboardContainer;
+    public GameObject rankTemplate;
+    public GameObject teamRank;
+    private string uri = "http://localhost/gamedevDB/leaderboard.php";
     public void ClickButton()
     {
         StartCoroutine(LeaderboardRequest());
@@ -26,8 +32,41 @@ public class ReloadLeaderboard : MonoBehaviour
                         if(data != "")
                         {
                             string[] info = data.Split("/");
-                            Debug.Log("team_name: " + info[0] + ", scores: " + info[1]);
-                        }   
+                            GameObject gameObject = null;
+                            if (leaderboardContainer.transform.Find(info[0]) == null)
+                            {
+                                gameObject = Instantiate(rankTemplate, leaderboardContainer.transform);
+                                gameObject.name = info[0];
+                                rankList.Add(gameObject);
+                            }
+                            else
+                                gameObject = leaderboardContainer.transform.Find(info[0]).gameObject;
+
+                            gameObject.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = info[0];
+                            gameObject.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text = info[1];
+                            if (DBManager.team_name == info[0])
+                            {
+                                teamRank.transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text = info[0];
+                                teamRank.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text = info[1];
+                            }
+                        }
+                    }
+                    if(rankList.Count > 0)
+                    {
+                        rankList.Sort(delegate (GameObject a, GameObject b)
+                        {
+                            return (int.Parse(a.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text).CompareTo
+                            (int.Parse(b.transform.GetChild(2).gameObject.GetComponent<TextMeshProUGUI>().text)));
+                        });
+                        rankList.Reverse();
+                    }
+
+                    for (int i = 0; i < rankList.Count; i++)
+                    {
+                        rankList[i].transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = (i + 1).ToString();
+                        rankList[i].transform.SetSiblingIndex(i);
+                        if (DBManager.team_name == rankList[i].transform.GetChild(1).gameObject.GetComponent<TextMeshProUGUI>().text)
+                            teamRank.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = (i + 1).ToString();
                     }
                     break;
             }

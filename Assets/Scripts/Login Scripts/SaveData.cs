@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 
 public class SaveData : MonoBehaviour
 {
-    private string urlSave = "https://schematics.its.ac.id/gameapi/save.php";
+    private string urlSave = "http://localhost/gamedevDB/save.php";
 
     void Start()
     {

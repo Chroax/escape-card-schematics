@@ -12,7 +12,7 @@ public class LoginScript : MonoBehaviour
     [SerializeField] private TMP_InputField passwordField;
     [SerializeField] private Button loginButton;
     [SerializeField] private TextMeshProUGUI warningMessage;
-    private string urlLogin = "https://schematics.its.ac.id/gameapi/login.php";
+    private string urlLogin = "http://localhost/gamedevDB/login.php";
 
     private void Start()
     {
@@ -70,6 +70,7 @@ public class LoginScript : MonoBehaviour
                 }
                 else if(webRequest.downloadHandler.text == "is_login")
                 {
+                    Debug.Log(webRequest.downloadHandler.text);
                     warningMessage.text = $"currently login, please log out first";
                     warningMessage.gameObject.SetActive(true);
                 }
