@@ -59,7 +59,7 @@ public class LoginScript : MonoBehaviour
                     DBManager.remaining_hours -= diffTime;
                     if (DBManager.remaining_hours < 0)
                         DBManager.remaining_hours = 0;
-                    if (users[11] == "true")
+                    if (users[11] == "1")
                         DBManager.firstLogin = true;
                     else
                         DBManager.firstLogin = false;
@@ -67,6 +67,11 @@ public class LoginScript : MonoBehaviour
                         DBManager.isTutorial = true;
                     else
                         DBManager.isTutorial = false;
+                    Debug.Log(users[14]);
+                    if (users[14] == "1")
+                        DBManager.isWin = true;
+                    else
+                        DBManager.isWin = false;
                 }
                 else if(webRequest.downloadHandler.text == "is_login")
                 {
@@ -76,6 +81,7 @@ public class LoginScript : MonoBehaviour
                 }
                 else
                 {
+                    Debug.Log(webRequest.downloadHandler.text);
                     //Clear username and password field to prep for another input
                     warningMessage.text = $"wrong username or password!!";
                     warningMessage.gameObject.SetActive(true);

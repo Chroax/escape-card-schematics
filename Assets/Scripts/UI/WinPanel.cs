@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Runtime.InteropServices;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 
@@ -17,23 +16,12 @@ public class WinPanel : MonoBehaviour
 
     public void toMainMenu()
     {
-        if(DBManager.isTutorial)
-            SceneManager.LoadScene("Main Menu");
-        else
-        {
-            StartCoroutine(GetTotalWinTeam());
-            OpenSchematicsLink();
-        }
+        Debug.Log(DBManager.isTutorial);
+        StartCoroutine(GetTotalWinTeam());
     }
-    public void OpenSchematicsLink()
-    {
-        #if !UNITY_EDITOR
-        openWindow("https://schematics.its.ac.id/");
-        #endif
-    }
-
     IEnumerator PostWin()
     {
+        Debug.Log(DBManager.scores);
         WWWForm form = new();
 
         form.AddField("team_name", DBManager.team_name);
@@ -43,8 +31,12 @@ public class WinPanel : MonoBehaviour
         form.AddField("remaining_hours", DBManager.remaining_hours.ToString());
         form.AddField("discardCardsCount", DBManager.discardCardsCount);
         form.AddField("scores", DBManager.scores);
+
         form.AddField("mapID", DBManager.mapID);
-        form.AddField("isWin", DBManager.isWin.ToString());
+        if(DBManager.isWin)
+            form.AddField("isWin", 1);
+        else
+            form.AddField("isWin", 0);
         string ownedCards = "";
         form.AddField("ownedCards", ownedCards);
 
@@ -59,7 +51,7 @@ public class WinPanel : MonoBehaviour
             else
             {
                 webRequest.Dispose();
-                yield return new WaitForSeconds(2);
+                SceneManager.LoadScene("Main Menu");
             }
         }
     }
@@ -73,17 +65,25 @@ public class WinPanel : MonoBehaviour
 
             switch (webRequest.result)
             {
+                case UnityWebRequest.Result.ConnectionError:
+                    Debug.LogError(": Error: " + webRequest.error);
+                    break;
                 case UnityWebRequest.Result.Success:
-                    string[] total = webRequest.downloadHandler.text.Split('/');
-                    DBManager.scores = 1000 - int.Parse(total[0]) * 5;
-                    if (DBManager.scores < 200)
-                        DBManager.scores = 0;
+                    if(!DBManager.isWin)
+                    {
+                        DBManager.remaining_coins = 0;
+                        DBManager.isWin = true;
+                        Debug.Log(webRequest.downloadHandler.text);
+                        string[] total = webRequest.downloadHandler.text.Split('/');
+                        DBManager.scores += 1000 - (int.Parse(total[0]) * 5);
+                        Debug.Log(DBManager.scores);
+                        if (DBManager.scores < 200)
+                            DBManager.scores = 200;
+                    }
                     break;
             }
+            Debug.Log(webRequest.result);
+            StartCoroutine(PostWin());
         }
-        StartCoroutine(PostWin());
     }
-
-    [DllImport("_Internal")]
-    private static extern void openWindow(string url);
 }

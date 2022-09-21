@@ -10,6 +10,8 @@ public class BookSwitch : MonoBehaviour
     public GameObject penaltyPanel;
     private CardDetailSO produceCardDetail;
     MapCardPanel cardPanel;
+    private bool isChangeScene;
+    private string sceneName;
     private void Awake()
     {
         cardPanel = GameManager.Instance.mapPanel.GetComponent<MapCardPanel>();
@@ -48,6 +50,11 @@ public class BookSwitch : MonoBehaviour
 
                 if (produceCardDetail.cardType == CardType.map)
                 {
+                    if (produceCardDetail.cardID.Equals("A"))
+                    {
+                        sceneName = "Kidnap Scene";
+                        isChangeScene = true;
+                    }
                     cardPanel.ChangePanel(produceCardDetail.mapIndex);
                     Destroy(generatedCard);
                 }
@@ -74,6 +81,9 @@ public class BookSwitch : MonoBehaviour
             }
             GameManager.Instance.machineCardPanel.GetComponent<MachineCardPanel>().RemoveCardFromHolder();
             ResetButton();
+
+            if (isChangeScene)
+                GameManager.Instance.ChangeScene(sceneName);
         }
         else
         {

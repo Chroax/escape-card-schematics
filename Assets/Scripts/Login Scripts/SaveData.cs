@@ -9,13 +9,15 @@ public class SaveData : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(PostData());
+        if(!DBManager.isWin)
+            StartCoroutine(PostData());
     }
 
     IEnumerator PostData()
     {
         while(!DBManager.isWin)
         {
+            Debug.Log("Saving");
             WWWForm form = new();
 
             form.AddField("team_name", DBManager.team_name);

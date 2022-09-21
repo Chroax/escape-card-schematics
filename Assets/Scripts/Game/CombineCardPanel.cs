@@ -80,17 +80,14 @@ public class CombineCardPanel : MonoBehaviour
 
             foreach (string id in combinedCardProducedDetails.destroyedCardID)
             {
-                if (!DBManager.isTutorial)
-                    DBManager.ownedCards.Remove(id);
+                DBManager.ownedCards.Remove(id);
                 Player.instance.ownedCardId.Remove(id);
                 Destroy(GameManager.Instance.GetCardByID(id));
                 GameManager.Instance.listCardHolder.GetComponent<ListCard>().DeleteCardFromList(id);
                 Player.instance.currentDiscard++;
-                if (!DBManager.isTutorial)
-                    DBManager.discardCardsCount++;
+                DBManager.discardCardsCount++;
                 Player.instance.discUI.SetDiscard(Player.instance.currentDiscard);
-                if (!DBManager.isTutorial)
-                    DBManager.scores += 5;
+                DBManager.scores += 5;
                 Player.instance.score += 5;
             }
 
@@ -146,8 +143,7 @@ public class CombineCardPanel : MonoBehaviour
                 else
                 {
                     GameManager.Instance.listCardHolder.GetComponent<ListCard>().AddCardToList(id);
-                    if (!DBManager.isTutorial)
-                        DBManager.ownedCards.Add(id);
+                    DBManager.ownedCards.Add(id);
                     Player.instance.ownedCardId.Add(generatedCard.transform.GetComponent<Card>().cardDetail.cardID);
                 }
             }

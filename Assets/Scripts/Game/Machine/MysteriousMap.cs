@@ -18,6 +18,8 @@ public class MysteriousMap : MonoBehaviour
     private CardDetailSO produceCardDetail;
     private TextMeshProUGUI textWarning;
     MapCardPanel cardPanel;
+    private bool isChangeScene;
+    private string sceneName;
 
     public void Start()
     {
@@ -207,6 +209,11 @@ public class MysteriousMap : MonoBehaviour
 
                 if (produceCardDetail.cardType == CardType.map)
                 {
+                    if (produceCardDetail.cardID.Equals("H"))
+                    {
+                        sceneName = "Basement Scene";
+                        isChangeScene = true;
+                    }
                     cardPanel.ChangePanel(produceCardDetail.mapIndex);
                     Destroy(generatedCard);
                 }
@@ -233,6 +240,8 @@ public class MysteriousMap : MonoBehaviour
             }
             GameManager.Instance.machineCardPanel.GetComponent<MachineCardPanel>().RemoveCardFromHolder();
             ResetArrow();
+            if (isChangeScene)
+                GameManager.Instance.ChangeScene(sceneName);
         }
         else
         {

@@ -1,7 +1,6 @@
 using System.Collections;
 using UnityEngine.Networking;
 using UnityEngine;
-using System.Runtime.InteropServices;
 using UnityEngine.SceneManagement;
 
 public class LosePanel : MonoBehaviour
@@ -15,14 +14,9 @@ public class LosePanel : MonoBehaviour
 
     public void ToMainMenu()
     {
-        if (DBManager.isTutorial)
-            SceneManager.LoadScene("Main Menu");
-        else
-        {
-            DBManager.isWin = false;
-            StartCoroutine(PostLose());
-            OpenSchematicsLink();
-        }
+        DBManager.remaining_coins = 0;
+        DBManager.isWin = false;
+        StartCoroutine(PostLose());
     }
 
     IEnumerator PostLose()
@@ -37,7 +31,10 @@ public class LosePanel : MonoBehaviour
         form.AddField("discardCardsCount", DBManager.discardCardsCount);
         form.AddField("scores", DBManager.scores);
         form.AddField("mapID", DBManager.mapID);
-        form.AddField("isWin", DBManager.isWin.ToString());
+        if (DBManager.isWin)
+            form.AddField("isWin", 1);
+        else
+            form.AddField("isWin", 0);
         string ownedCards = "";
         form.AddField("ownedCards", ownedCards);
 
@@ -52,18 +49,8 @@ public class LosePanel : MonoBehaviour
             else
             {
                 webRequest.Dispose();
-                yield return new WaitForSeconds(2);
+                SceneManager.LoadScene("Main Menu");
             }
         }
     }
-
-    public void OpenSchematicsLink()
-    {
-        #if !UNITY_EDITOR
-        openWindow("https://schematics.its.ac.id/");
-        #endif
-    }
-
-    [DllImport("_Internal")]
-    private static extern void openWindow(string url);
 }

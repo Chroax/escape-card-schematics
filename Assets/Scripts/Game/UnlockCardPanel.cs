@@ -13,8 +13,7 @@ public class UnlockCardPanel : MonoBehaviour
     public GameObject map;
     MapCardPanel cardPanel;
     private CardDetailSO produceCardDetail;
-    public string sceneName;
-    private bool isChangeScene;
+    private string sceneName;
 
     private void Awake()
     {
@@ -50,19 +49,24 @@ public class UnlockCardPanel : MonoBehaviour
             {
                 return;
             }
+
+            Debug.Log(GameManager.Instance.selectedCardUnlock.unlockCardProducesID[0]);
             if (GameManager.Instance.selectedCardUnlock.unlockCardProducesID[0] == "WIN")
             {
-                if (!DBManager.isTutorial)
+                Debug.Log("win");
+                DBManager.discardCardsCount += Player.instance.ownedCardId.Count;
+                DBManager.scores += Player.instance.ownedCardId.Count * 5 + Player.instance.currentCoin;
+                if (DBManager.ownedCards.Contains("31"))
+                    DBManager.scores += 50;
+                DBManager.ownedCards.Clear();
+                DBManager.remaining_hours = 0;
+                if(DBManager.isTutorial)
+                    GameManager.Instance.winPanel.SetActive(true);
+                else
                 {
-                    DBManager.discardCardsCount += Player.instance.ownedCardId.Count ;
-                    DBManager.scores += Player.instance.ownedCardId.Count * 5 + Player.instance.currentCoin;
-                    if (DBManager.ownedCards.Contains("31"))
-                        DBManager.scores += 50;
-                    DBManager.ownedCards.Clear();
-                    DBManager.remaining_hours = 0;
-                    DBManager.isWin = true;
+                    sceneName = "Free Scene";
+                    GameManager.Instance.ChangeScene(sceneName);
                 }
-                GameManager.Instance.winPanel.SetActive(true);
             }
             else
             {
@@ -88,16 +92,13 @@ public class UnlockCardPanel : MonoBehaviour
 
                     if (produceCardDetail.cardType == CardType.map)
                     {
-                        if (produceCardDetail.cardID.Equals("Q"))
-                            isChangeScene = true;
                         cardPanel.ChangePanel(produceCardDetail.mapIndex);
                         Destroy(generatedCard);
                     }
                     else
                     {
                         Player.instance.ownedCardId.Add(generatedCard.transform.GetComponent<Card>().cardDetail.cardID);
-                        if (!DBManager.isTutorial)
-                            DBManager.ownedCards.Add(id);
+                        DBManager.ownedCards.Add(id);
                         GameManager.Instance.listCardHolder.GetComponent<ListCard>().AddCardToList(produceCardDetail.cardID);
                     }
                 }
@@ -106,25 +107,20 @@ public class UnlockCardPanel : MonoBehaviour
                 silangButton.SetActive(false);
                 foreach (string id in produceCardDetail.destroyedCardID)
                 {
-                    if (!DBManager.isTutorial)
-                        DBManager.ownedCards.Remove(id);
+                    DBManager.ownedCards.Remove(id);
                     Player.instance.ownedCardId.Remove(id);
                     Destroy(GameManager.Instance.GetCardByID(id));
                     GameManager.Instance.listCardHolder.GetComponent<ListCard>().DeleteCardFromList(id);
                     Player.instance.currentDiscard++;
-                    if (!DBManager.isTutorial)
-                        DBManager.discardCardsCount++;
+                    DBManager.discardCardsCount++;
                     Player.instance.discUI.SetDiscard(Player.instance.currentDiscard);
-                    if (!DBManager.isTutorial)
-                        DBManager.scores += 5;
+                    DBManager.scores += 5;
                     Player.instance.score += 5;
                 }
 
                 GameManager.Instance.selectedCardUnlock = null;
                 GameManager.Instance.unlockCardImageSelected.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
 
-                if (isChangeScene)
-                    GameManager.Instance.ChangeScene(sceneName);
             }
         }
         else
@@ -134,22 +130,23 @@ public class UnlockCardPanel : MonoBehaviour
             GameManager.Instance.player.getPenalty(180);
         }
     }
-
     public void SelectCardChoice()
     {
         GameManager.Instance.audioManager.GetComponent<SoundManager>().clickSoundPlay();
         GameManager.Instance.listCardHolder.SetActive(true);
     }
-
     public void OpenPanelUnlock()
     {
         GameManager.Instance.CloseAllPanel();
         this.gameObject.SetActive(true);
     }
     private void OnDisable(){
-        if (GameManager.Instance.selectedCardUnlock != null)
-            this.RemoveCardFromHolder();
-        GameManager.Instance.warningUnlock.SetActive(false);
+        if(!DBManager.isWin)
+        {
+            if (GameManager.Instance.selectedCardUnlock != null)
+                this.RemoveCardFromHolder();
+            GameManager.Instance.warningUnlock.SetActive(false);
+        }
     }
     private void Update(){
         if(GameManager.Instance.selectedCardUnlock != null){

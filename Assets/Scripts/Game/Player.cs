@@ -30,51 +30,71 @@ public class Player : MonoBehaviour
     }
     public void Init()
     {
-        teamName = DBManager.team_name;
-        mapIndex = DBManager.mapID;
-        score = DBManager.scores;
-        foreach (string id in DBManager.ownedCards)
-            ownedCardId.Add(id);
-        currentCoin = DBManager.remaining_coins;
-        currentDiscard = DBManager.discardCardsCount;
-        currentTime = DBManager.remaining_hours;
-
-        mapCardPanel = map.GetComponent<MapCardPanel>();
-        mapCardPanel.ChangePanel(mapIndex);
-        foreach (string id in ownedCardId)
+        if(DBManager.isWin)
         {
-            var generatedCard = Instantiate(GameResource.Instance.card, GameManager.Instance.deckCardHolder.transform);
-            generatedCard.transform.GetComponent<Card>().cardDetail = GameManager.Instance.GetCardDetailByID(id);
-            GameManager.Instance.listCardHolder.GetComponent<ListCard>().AddCardToList(id);
+            GameManager.Instance.winPanel.SetActive(true);
         }
-        teamUI.SetName(teamName);
-        timeUI.SetTime(currentTime);
-        coinUI.SetCoin(currentCoin);
-        discUI.SetDiscard(currentDiscard);
+        else
+        {
+            
+            teamName = DBManager.team_name;
+            mapIndex = DBManager.mapID;
+            score = DBManager.scores;
+            
+            currentCoin = DBManager.remaining_coins;
+            currentDiscard = DBManager.discardCardsCount;
+            currentTime = DBManager.remaining_hours;
+
+            mapCardPanel = map.GetComponent<MapCardPanel>();
+            mapCardPanel.ChangePanel(mapIndex);
+            
+            teamUI.SetName(teamName);
+            timeUI.SetTime(currentTime);
+            coinUI.SetCoin(currentCoin);
+            discUI.SetDiscard(currentDiscard);
+            if (currentTime > 0)
+            {
+                foreach (string id in DBManager.ownedCards)
+                    ownedCardId.Add(id);
+                foreach (string id in ownedCardId)
+                {
+                    var generatedCard = Instantiate(GameResource.Instance.card, GameManager.Instance.deckCardHolder.transform);
+                    generatedCard.transform.GetComponent<Card>().cardDetail = GameManager.Instance.GetCardDetailByID(id);
+                    GameManager.Instance.listCardHolder.GetComponent<ListCard>().AddCardToList(id);
+                }
+            }
+            else
+            {
+                if (GameManager.Instance.penaltyPanel.activeInHierarchy)
+                    GameManager.Instance.penaltyPanel.SetActive(false);
+                timeOut.SetActive(true);
+                currentTime = 0;
+                DBManager.remaining_hours = currentTime;
+            }
+        }
     }
     void Update()
-    {   
-        currentTime -= Time.deltaTime;
-        DBManager.remaining_hours = currentTime;
-        timeUI.SetTime(currentTime);
-        
-        //penalty
-        if(currentTime <= 0)
+    {
+        Debug.Log(DBManager.isWin);
+        if (!DBManager.isWin && currentTime > 0)
         {
-            if (GameManager.Instance.penaltyPanel.activeInHierarchy)
-                GameManager.Instance.penaltyPanel.SetActive(false);
-            timeOut.SetActive(true);
-            currentTime = 0;
+            if(currentTime > 0)
+            {
+                currentTime -= Time.deltaTime;
+                DBManager.remaining_hours = currentTime;
+                timeUI.SetTime(currentTime);
+            }
+
+            //penalty
+            if (currentTime <= 0)
+            {
+                if (GameManager.Instance.penaltyPanel.activeInHierarchy)
+                    GameManager.Instance.penaltyPanel.SetActive(false);
+                timeOut.SetActive(true);
+                currentTime = 0;
+                DBManager.remaining_hours = currentTime;
+            }
         }
-        
-        //debug
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            getPenalty(10);
-            UseCoin(5);
-        }
-        if (Input.GetKeyDown(KeyCode.Tab))
-            GetCoin(5);
     }
 
     public bool getPenalty(int time)
