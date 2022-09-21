@@ -22,6 +22,7 @@ public class GameManager : SingletonMonobehaviour<GameManager>
     public Transform panelTransform;
     public GameObject audioManager;
     public bool isTutorial;
+    public bool isPenjelasan = false;
 
     [HideInInspector] public CardDetailSO selectedCardHidden;
     [HideInInspector] public CardDetailSO selectedCardHint;

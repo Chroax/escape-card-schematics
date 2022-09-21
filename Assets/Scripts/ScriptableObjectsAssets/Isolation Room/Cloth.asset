@@ -16,7 +16,8 @@ MonoBehaviour:
   cardDescription: 
   cardID: 19
   cardType: 3
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []

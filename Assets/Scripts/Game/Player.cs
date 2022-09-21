@@ -36,7 +36,6 @@ public class Player : MonoBehaviour
         }
         else
         {
-            
             teamName = DBManager.team_name;
             mapIndex = DBManager.mapID;
             score = DBManager.scores;
@@ -63,7 +62,7 @@ public class Player : MonoBehaviour
                     GameManager.Instance.listCardHolder.GetComponent<ListCard>().AddCardToList(id);
                 }
             }
-            else
+            else if(!GameManager.Instance.isPenjelasan)
             {
                 if (GameManager.Instance.penaltyPanel.activeInHierarchy)
                     GameManager.Instance.penaltyPanel.SetActive(false);
@@ -71,12 +70,24 @@ public class Player : MonoBehaviour
                 currentTime = 0;
                 DBManager.remaining_hours = currentTime;
             }
+            else
+            {
+                ownedCardId.Add("16");
+                ownedCardId.Add("32");
+
+                foreach (string id in ownedCardId)
+                {
+                    var generatedCard = Instantiate(GameResource.Instance.card, GameManager.Instance.deckCardHolder.transform);
+                    generatedCard.transform.GetComponent<Card>().cardDetail = GameManager.Instance.GetCardDetailByID(id);
+                    GameManager.Instance.listCardHolder.GetComponent<ListCard>().AddCardToList(id);
+                }
+            }
         }
     }
     void Update()
     {
         Debug.Log(DBManager.isWin);
-        if (!DBManager.isWin && currentTime > 0)
+        if (!DBManager.isWin && currentTime > 0 && !GameManager.Instance.isPenjelasan)
         {
             if(currentTime > 0)
             {
