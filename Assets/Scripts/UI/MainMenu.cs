@@ -34,7 +34,7 @@ public class MainMenu : MonoBehaviour
 
     public void GoToTutorial()
     {
-        SceneManager.LoadScene("Tutorial");
+        SceneManager.LoadScene("Tutorial Study");
     }
 
     public void PanelPopUp()
