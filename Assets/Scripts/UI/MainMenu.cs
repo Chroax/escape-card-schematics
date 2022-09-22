@@ -29,12 +29,13 @@ public class MainMenu : MonoBehaviour
     public void GoToPlayGames()
     {
         if(!DBManager.isTutorial)
-            SceneManager.LoadScene("Game Scene");
+            SceneManager.LoadScene("Intro Scene");
     }
 
     public void GoToTutorial()
     {
-        SceneManager.LoadScene("Tutorial Study");
+        if (DBManager.isTutorial)
+            SceneManager.LoadScene("Tutorial Study");
     }
 
     public void PanelPopUp()

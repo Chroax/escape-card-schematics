@@ -13,13 +13,16 @@ MonoBehaviour:
   m_Name: Cloth
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 6da7159cd4850e2429763f012c0823a0, type: 3}
-  cardDescription: 
+  cardDescription: Digunakkan untuk mengelap sesuatu
   cardID: 19
   cardType: 3
   combineCardsProducesID:
-  - 0
+  - 57
+  - 67
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []
-  destroyedCardID: []
+  destroyedCardID:
+  - H
+  - 3
   mapIndex: 0

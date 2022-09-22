@@ -10,7 +10,7 @@ public class ReloadLeaderboard : MonoBehaviour
     public GameObject leaderboardContainer;
     public GameObject rankTemplate;
     public GameObject teamRank;
-    private string uri = "http://localhost/gamedevDB/leaderboard.php";
+    private string uri = "https://schematics.its.ac.id/gameapi/leaderboard.php";
     public void ClickButton()
     {
         StartCoroutine(LeaderboardRequest());

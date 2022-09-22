@@ -12,6 +12,9 @@ public class HiddenCardPanel : MonoBehaviour
     public GameObject warning;
     public GameObject map;
     MapCardPanel cardPanel;
+    private bool isChangeScene;
+    private string sceneName;
+
     private void Awake()
     {
         cardPanel = map.GetComponent<MapCardPanel>();
@@ -51,6 +54,12 @@ public class HiddenCardPanel : MonoBehaviour
             Player.instance.ownedCardId.Add(generatedCard.transform.GetComponent<Card>().cardDetail.cardID);
             DBManager.ownedCards.Add(generatedCard.transform.GetComponent<Card>().cardDetail.cardID);
 
+            if (generatedCard.transform.GetComponent<Card>().cardDetail.Equals("23"))
+            {
+                sceneName = "Saving Scene";
+                isChangeScene = true;
+            }
+
             inputText.text = "";
 
             //Misal terunlock, maka kartu akan hilang
@@ -71,6 +80,9 @@ public class HiddenCardPanel : MonoBehaviour
 
             GameManager.Instance.selectedCardHidden = null;
             GameManager.Instance.hiddenCardImageSelected.GetComponent<Image>().sprite = GameManager.Instance.cardHolder;
+
+            if (isChangeScene)
+                GameManager.Instance.ChangeScene(sceneName);
         }
         else
         {
