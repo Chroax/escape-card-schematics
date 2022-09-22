@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: Potion Recipe
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: 2bb9a3e941dd8b942b50b3eb03d27c94, type: 3}
+  cardSprite: {fileID: 21300000, guid: 26dea5cefe1ce1947a656b22adb7e822, type: 3}
   cardDescription: Nanti
   cardID: O
   cardType: 4

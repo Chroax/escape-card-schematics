@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: Monster Room
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: 06482c296c79a94439b6a73172a5a719, type: 3}
+  cardSprite: {fileID: 21300000, guid: 66b877ec73e7b16458cec90a7f2c63a0, type: 3}
   cardDescription: Tidak Ada
   cardID: 57
   cardType: 5

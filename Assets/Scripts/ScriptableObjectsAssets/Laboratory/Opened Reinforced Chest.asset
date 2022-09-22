@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: Opened Reinforced Chest
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: 1cbfbf97886bddd4aa0808211e51c5e3, type: 3}
+  cardSprite: {fileID: 21300000, guid: bea2934bcd0aabe4e994ecf5da13d435, type: 3}
   cardDescription: Tidak Ada
   cardID: L
   cardType: 4
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 31
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []

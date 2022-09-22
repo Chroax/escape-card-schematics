@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: Potion Maker
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: d6e91c78ba56d3348912397f67dc1f29, type: 3}
+  cardSprite: {fileID: 21300000, guid: c408016c05b27234994a08c7d2a9a5c1, type: 3}
   cardDescription: Tidak Ada
   cardID: 28
   cardType: 2
   combineCardsProducesID: []
   hiddenCardProducesID: 
-  unlockCardAnswer: 42
-  unlockCardProducesID: []
+  unlockCardAnswer: 
+  unlockCardProducesID:
+  - 42
   destroyedCardID:
   - 72
   - 97
