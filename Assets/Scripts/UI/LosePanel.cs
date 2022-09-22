@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LosePanel : MonoBehaviour
 {
-    private string uri = "http://localhost/gamedevDB/finish.php";
+    private string uri = "https://schematics.its.ac.id/gameapi/finish.php";
 
     private void OnEnable()
     {

@@ -12,7 +12,7 @@ public class LoginScript : MonoBehaviour
     [SerializeField] private TMP_InputField passwordField;
     [SerializeField] private Button loginButton;
     [SerializeField] private TextMeshProUGUI warningMessage;
-    private string urlLogin = "http://localhost/gamedevDB/login.php";
+    private string urlLogin = "https://schematics.its.ac.id/gameapi/login.php";
 
     private void Start()
     {

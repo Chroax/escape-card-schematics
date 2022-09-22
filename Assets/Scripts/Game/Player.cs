@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
     }
     public void Init()
     {
-        if(DBManager.isWin)
+        if(DBManager.isWin && !GameManager.Instance.isPenjelasan)
         {
             GameManager.Instance.winPanel.SetActive(true);
         }

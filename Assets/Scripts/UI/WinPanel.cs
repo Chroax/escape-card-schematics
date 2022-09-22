@@ -6,8 +6,9 @@ using UnityEngine.Networking;
 
 public class WinPanel : MonoBehaviour
 {
-    private string uri = "http://localhost/gamedevDB/finish.php";
-    private string uriTotalTeam = "http://localhost/gamedevDB/getall.php";
+    
+    private string uri = "https://schematics.its.ac.id/gameapi/finish.php";
+    private string uriTotalTeam = "https://schematics.its.ac.id/gameapi/getall.php";
 
     private void OnEnable()
     {
