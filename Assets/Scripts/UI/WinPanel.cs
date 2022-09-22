@@ -13,12 +13,13 @@ public class WinPanel : MonoBehaviour
     private void OnEnable()
     {
         GameManager.Instance.audioManager.GetComponent<SoundManager>().winSoundPlay();
+        StartCoroutine(GetTotalWinTeam());
     }
 
     public void toMainMenu()
     {
         Debug.Log(DBManager.isTutorial);
-        StartCoroutine(GetTotalWinTeam());
+        SceneManager.LoadScene("Main Menu");
     }
     IEnumerator PostWin()
     {
@@ -52,7 +53,7 @@ public class WinPanel : MonoBehaviour
             else
             {
                 webRequest.Dispose();
-                SceneManager.LoadScene("Main Menu");
+                
             }
         }
     }

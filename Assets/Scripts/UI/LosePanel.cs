@@ -10,13 +10,14 @@ public class LosePanel : MonoBehaviour
     private void OnEnable()
     {
         GameManager.Instance.audioManager.GetComponent<SoundManager>().loseSoundPlay();
+        DBManager.remaining_coins = 0;
+        DBManager.isWin = false;
+        StartCoroutine(PostLose());
     }
 
     public void ToMainMenu()
     {
-        DBManager.remaining_coins = 0;
-        DBManager.isWin = false;
-        StartCoroutine(PostLose());
+        SceneManager.LoadScene("Main Menu");
     }
 
     IEnumerator PostLose()
@@ -49,7 +50,7 @@ public class LosePanel : MonoBehaviour
             else
             {
                 webRequest.Dispose();
-                SceneManager.LoadScene("Main Menu");
+                
             }
         }
     }
