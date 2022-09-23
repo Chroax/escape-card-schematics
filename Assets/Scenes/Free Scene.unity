@@ -159,8 +159,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.00015258789, y: 206.79532}
-  m_SizeDelta: {x: 1822.7, y: 333.0194}
+  m_AnchoredPosition: {x: 0.00015258789, y: 198}
+  m_SizeDelta: {x: 1850.031, y: 338.013}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &80655795
 MonoBehaviour:
@@ -432,7 +432,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: eb3699cee7392c049ab30ad0acf3c7bc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6fe1ddd688b237248b50f14fadab2647, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -599,20 +599,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Meskipun tidak memiliki teman di tempat perkuliahannya, Elsi memiliki
-    sahabat \r\nsedari kecil bernama Pisi yang sekarang berkuliah di Universitas
-    yang berbeda. \r\nMemiliki rambut panjang hitam, berkacamata bulat, Pisi adalah
-    gadis cantik yang \r\nmerupakan salah satu mahasiswi cerdas di universitasnya."
+  m_text: Elsi dan Pisi berhasil kabur dari rumah profesor dan atas kejahatannya,
+    profesor ditangkap oleh polisi dirumahnya setelah kejadian penculikan Pisi tersebut
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e2ff71c3e10ff9546ae48839ee91e517, type: 2}
-  m_sharedMaterial: {fileID: -6866017832135869851, guid: e2ff71c3e10ff9546ae48839ee91e517, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7852338743f1eba4cb32bb71cf2b650f, type: 2}
+  m_sharedMaterial: {fileID: -6866017832135869851, guid: 7852338743f1eba4cb32bb71cf2b650f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 16777215
-  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -696,8 +694,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.00044112, y: 192}
-  m_SizeDelta: {x: 1822.7006, y: 420.6137}
+  m_AnchoredPosition: {x: 0.00044112, y: 182.983}
+  m_SizeDelta: {x: 1850.031, y: 426.921}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &639075629
 MonoBehaviour:
@@ -711,55 +709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec72d967e28d72349af17f170fed29d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoges:
-  - Elsi adalah seorang mahasiswa semester akhir dari sebuah perguruan tinggi  ternama
-    yang sangat jauh dari kampung halamannya. Walaupun telah lama berkuliah,  dia
-    tidak memiliki teman satupun di tempat perkuliahannya. Orang-orang tidak  ingin
-    berteman dengan dia karena sikapnya yang aneh dan lebih suka menyendiri.
-  - Akan tetapi Elsi sebenarnya adalah sosok yang sangat tekun, cerdas, pekerja 
-    keras dan sangat baik terhadap orang orang yang telah dekat dengan dirinya. Hanya 
-    saja dia jarang bersosialisasi dengan orang lain karena sangat fokus terhadap 
-    perkuliahannya. Dia takut seluruh pengorbanan keluarganya untuk dapat memnguliahkan 
-    Elsi di tempat yang jauh dan ternama menjadi sia-sia.
-  - Meskipun tidak memiliki teman di tempat perkuliahannya, Elsi memiliki sahabat 
-    sedari kecil bernama Pisi yang sekarang berkuliah di Universitas yang berbeda. 
-    Memiliki rambut panjang hitam, berkacamata bulat, Pisi adalah gadis cantik yang 
-    merupakan salah satu mahasiswi cerdas di universitasnya.
-  - Di saat liburan semester, Elsi bertemu dengan Pisi setelah sekian lamanya.  Mereka
-    menceritakan kehidupan kuliah mereka masing-masing. Saat Elsi sedang  menceritakan
-    tentang profesornya, Profesor Maddox Hushon, Pisi menjadi semangat  seketika.
-    Pisi menjelaskan pada Elsi betapa kagumnya dia pada Profesor Maddox dan  ingin
-    dapat bertemu langsung jika memiliki kesempatan.
-  - Kebetulan, Elsi akan bertemu profesor Maddox di kediamannya besok lusa. Setelah 
-    mendapat persetujuan profesor melalui telepon, Pisi diperbolehkan ikut Elsi bertemu
-    Beliau.
-  - 'Lusa, sesuai dengan alamat yang diberikan profesor maddox, Elsi dan Pisi pergi 
-    menuju kediaman profesor pada pagi hari. Rumah pada alamat yang diberikan tidak
-    memiliki  tetangga, besar, dan bersih terawat tanpa adanya ilalang yang terlihat.
-    Yakin bahwa  alamat yang dituju sudah benar, Elsi dan Pisi langsung menghampiri
-    pintu depan rumah  tersebut. '
-  - Beberapa saat setelah Elsi dan Pisi mengetuk pintu rumah tersebut, muncul profesor 
-    Maddox membukakan pintu. Terlihat dari celah pintu, ruang tamu profesor yang
-    begitu  mencolok dengan warna tembok krem terang dan furniture yang tertata dengan
-    rapi,  membuat suasana yang begitu berbeda dari tampak luar rumah profesor. Dipersilahkan
-    oleh  profesor, mereka pun masuk kedalam. Di dalam, Berbincang mereka membahas
-    berbagai hal  hingga surut sore hari.
-  - 'Merasa bahasan kali ini masih belum cukup, profesor menawarkan untuk datang
-    kembali  esok hari. Pisi dengan senang hati menerima ajakan profesor. Akan tetapi
-    Elsi yang  memiliki jadwal kelas pada esok hari dengan berat hati menolak ajakan
-    profesor. '
-  - Dua hari telah berlalu, Elsi ingin mengetahui apa saja yang dibahas Pisi dengan 
-    profesor kemarin. Saat Elsi pergi ke rumah Pisi, ternyata Pisi belum juga pulang
-    dari  kemarin.
-  - Karena Elsi mengetahui kalau kemarin Pisi pergi ke rumah profesor, Elsi segera 
-    menelpon profesor. Saat Elsi bertanya tentang Pisi, si profesor tiba-tiba mengangkat 
-    nadanya dan menjawab tidak mengetahui apa pun. Elsi merasa profesor sedang menyembunyikan 
-    sesuatu.
-  - Merasa curiga, Elsi mencoba untuk menyewa detektif swasta untuk memata-matai 
-    profesor. Akan tetapi, untuk dapat menyewa detektif, diperlukan minimal 2 hari
-    untuk  mengumpulkan berkas-berkas yang diperlukan. Tidak dapat menunggu lebih
-    lama lagi, Elsi bertekad  untuk mencari tahu kebenaran nya seorang diri dengan
-    mendatangi rumah profesor sekali  lagi pada keesokan harinya.
+  dialoges: []
 --- !u!1 &1347085130
 GameObject:
   m_ObjectHideFlags: 0
@@ -890,7 +840,7 @@ PlayableDirector:
   m_GameObject: {fileID: 1637713768}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 73aa12f64d83cc145a87d2cab5bc9800, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 7cffd8e6a2a564140ba8dd0bb675a424, type: 2}
   m_InitialState: 1
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -902,6 +852,16 @@ PlayableDirector:
     value: {fileID: 639075625}
   - key: {fileID: 1769613628691619310, guid: 73aa12f64d83cc145a87d2cab5bc9800, type: 2}
     value: {fileID: 80655797}
+  - key: {fileID: -2932379914285497736, guid: 22c2938d1d3109442a542eaa2b3aa7c4, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 934939383517306945, guid: 22c2938d1d3109442a542eaa2b3aa7c4, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -7725280903871950499, guid: 22c2938d1d3109442a542eaa2b3aa7c4, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 3670616156891672999, guid: 7cffd8e6a2a564140ba8dd0bb675a424, type: 2}
+    value: {fileID: 461147792}
+  - key: {fileID: -563994571843740836, guid: 7cffd8e6a2a564140ba8dd0bb675a424, type: 2}
+    value: {fileID: 639075625}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1637713770
