@@ -16,7 +16,8 @@ MonoBehaviour:
   cardDescription: Petunjuk ada di nama lukisan
   cardID: V
   cardType: 4
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: J
   unlockCardAnswer: 
   unlockCardProducesID: []

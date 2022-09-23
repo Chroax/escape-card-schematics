@@ -10036,6 +10036,22 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4675615884029690167, guid: 986118c4e84dba040bd268347cbac6f1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -527
+      objectReference: {fileID: 0}
+    - target: {fileID: 4740945400145216915, guid: 986118c4e84dba040bd268347cbac6f1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7010625852929147634, guid: 986118c4e84dba040bd268347cbac6f1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7436565341285857370, guid: 986118c4e84dba040bd268347cbac6f1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 759
+      objectReference: {fileID: 0}
     - target: {fileID: 7543166231642776110, guid: 986118c4e84dba040bd268347cbac6f1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -13911,6 +13927,7 @@ MonoBehaviour:
   panelTransform: {fileID: 947423073}
   audioManager: {fileID: 955484483}
   isTutorial: 1
+  isPenjelasan: 0
   selectedCardHidden: {fileID: 0}
   selectedCardHint: {fileID: 0}
   selectedCardUnlock: {fileID: 0}
@@ -20709,7 +20726,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.00012207031}
+  m_AnchoredPosition: {x: 0, y: -0.00048828125}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &2125160103
@@ -21723,8 +21740,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3b42a126d0ef48845820573bcbf699e7, type: 2}
-  m_sharedMaterial: {fileID: -52619245289344009, guid: 3b42a126d0ef48845820573bcbf699e7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -21927,8 +21944,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 32
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3b42a126d0ef48845820573bcbf699e7, type: 2}
-  m_sharedMaterial: {fileID: -52619245289344009, guid: 3b42a126d0ef48845820573bcbf699e7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -22034,8 +22051,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 16
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3b42a126d0ef48845820573bcbf699e7, type: 2}
-  m_sharedMaterial: {fileID: -52619245289344009, guid: 3b42a126d0ef48845820573bcbf699e7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -22711,8 +22728,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 27
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3b42a126d0ef48845820573bcbf699e7, type: 2}
-  m_sharedMaterial: {fileID: -52619245289344009, guid: 3b42a126d0ef48845820573bcbf699e7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

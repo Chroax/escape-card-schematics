@@ -16,7 +16,8 @@ MonoBehaviour:
   cardDescription: TIdak Ada
   cardID: C
   cardType: 5
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []

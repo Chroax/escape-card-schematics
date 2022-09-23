@@ -16,7 +16,8 @@ MonoBehaviour:
   cardDescription: Nanti
   cardID: O
   cardType: 4
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []

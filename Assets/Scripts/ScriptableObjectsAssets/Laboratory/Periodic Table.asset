@@ -16,7 +16,8 @@ MonoBehaviour:
   cardDescription: Berhubungan dengan kalender
   cardID: E
   cardType: 4
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []

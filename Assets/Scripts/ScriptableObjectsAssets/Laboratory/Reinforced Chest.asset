@@ -16,7 +16,8 @@ MonoBehaviour:
   cardDescription: Kode didapatkan dari petunjuk kalender
   cardID: 59
   cardType: 1
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 
   unlockCardAnswer: 1614
   unlockCardProducesID:

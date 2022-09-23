@@ -16,7 +16,8 @@ MonoBehaviour:
   cardDescription: Terdapat bukti video dari professor, bagaimana menyimpannya ?
   cardID: 7
   cardType: 0
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 80
   unlockCardAnswer: 
   unlockCardProducesID: []

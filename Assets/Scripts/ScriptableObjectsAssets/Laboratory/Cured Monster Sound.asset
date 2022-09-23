@@ -16,7 +16,8 @@ MonoBehaviour:
   cardDescription: Tidak ada
   cardID: 122
   cardType: 4
-  combineCardsProducesID: []
+  combineCardsProducesID:
+  - 0
   hiddenCardProducesID: 
   unlockCardAnswer: 
   unlockCardProducesID: []
