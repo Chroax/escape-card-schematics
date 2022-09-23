@@ -115,6 +115,7 @@ public class Player : MonoBehaviour
         {
             timeOut.SetActive(true);
             currentTime = 0;
+            DBManager.remaining_hours = currentTime;
             timeUI.SetTime(currentTime);
             return true;
         }

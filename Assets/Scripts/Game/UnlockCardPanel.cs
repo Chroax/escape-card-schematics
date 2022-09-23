@@ -130,9 +130,7 @@ public class UnlockCardPanel : MonoBehaviour
         {
             warning.SetActive(false);
             GameManager.Instance.player.getPenalty(180);
-                        if(DBManager.remaining_hours>0)
-                            PenaltyPanel.SetActive(true);
-            GameManager.Instance.player.getPenalty(180);
+            if(DBManager.remaining_hours>0) PenaltyPanel.SetActive(true);
         }
     }
     public void SelectCardChoice()
