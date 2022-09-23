@@ -93,6 +93,7 @@ public class HiddenCardPanel : MonoBehaviour
 
         }
     }
+    
 
     public void SelectCardChoice()
     {

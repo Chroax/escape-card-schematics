@@ -76,11 +76,9 @@ public class UnlockCardPanel : MonoBehaviour
                     produceCardDetail = GameManager.Instance.GetCardDetailByID(id);
                     if (GameManager.Instance.GetCardByID(id) == null)
                     {
-
                         GameManager.Instance.player.getPenalty(180);
                         if(DBManager.remaining_hours>0)
                             PenaltyPanel.SetActive(true);
-                       
                         return;
                     }
                 }
