@@ -103,8 +103,9 @@ public class CombineCardPanel : MonoBehaviour
         else
         {
             warning.SetActive(false);
-            PenaltyPanel.SetActive(true);
             GameManager.Instance.player.getPenalty(180);
+            if(DBManager.remaining_hours>0)
+                PenaltyPanel.SetActive(true);
         }
     }
 

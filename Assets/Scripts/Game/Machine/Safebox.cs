@@ -63,8 +63,9 @@ public class Safebox : MonoBehaviour
         }
         else
         {
-            penaltyPanel.SetActive(true);
             GameManager.Instance.player.getPenalty(180);
+            if(DBManager.remaining_hours>0)
+                penaltyPanel.SetActive(true);
             ResetButton();
         }
     }
