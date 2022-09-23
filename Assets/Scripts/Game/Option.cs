@@ -19,8 +19,17 @@ public class Option : MonoBehaviour
         audioMixerMusic.GetFloat("volume", out float music);
         audioMixerSFX.GetFloat("volume", out float effect);
 
-        musicSlider.value = music;
-        sfxSlider.value = effect;
+        if (music == -80)
+        {
+            musicSlider.value = -20;
+        }
+        else musicSlider.value = music;
+
+        if (effect == -80)
+        {
+            sfxSlider.value = -20;
+        }
+        else sfxSlider.value = effect;
     }
 
     private void Update()
@@ -30,7 +39,7 @@ public class Option : MonoBehaviour
     public void setVolume(float volume)
     {
         audioMixerMusic.SetFloat("volume", volume);
-        if(musicSlider.value == -20)
+        if(musicSlider.value == -30)
         {
             audioMixerMusic.SetFloat("volume", -80);
         }
@@ -39,7 +48,7 @@ public class Option : MonoBehaviour
     public void setSFX(float volume)
     {
         audioMixerSFX.SetFloat("volume", volume);
-        if (sfxSlider.value == -20)
+        if (sfxSlider.value == -30)
         {
             audioMixerSFX.SetFloat("volume", -80);
         }
