@@ -19,12 +19,11 @@ MonoBehaviour:
   combineCardsProducesID:
   - 0
   hiddenCardProducesID: 
-  unlockCardAnswer: 3333
+  unlockCardAnswer: 1404
   unlockCardProducesID:
   - 37
   destroyedCardID:
   - 72
   - 97
   - 79
-  - 76
   mapIndex: 0

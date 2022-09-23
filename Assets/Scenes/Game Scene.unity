@@ -13100,6 +13100,18 @@ PrefabInstance:
       propertyPath: card
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5516339868013392084, guid: d44b7a5f4f61ed64d998d34e6fffc604, type: 3}
+      propertyPath: listmap.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5516339868013392084, guid: d44b7a5f4f61ed64d998d34e6fffc604, type: 3}
+      propertyPath: listmap.Array.data[6]
+      value: 
+      objectReference: {fileID: 1179965026}
+    - target: {fileID: 5516339868013392084, guid: d44b7a5f4f61ed64d998d34e6fffc604, type: 3}
+      propertyPath: listmap.Array.data[7]
+      value: 
+      objectReference: {fileID: 415018962}
     - target: {fileID: 5516339868013392086, guid: d44b7a5f4f61ed64d998d34e6fffc604, type: 3}
       propertyPath: m_Name
       value: Map

@@ -39,6 +39,12 @@ public class MapCardPanel : MonoBehaviour
             case 5:
                 GameManager.Instance.activeMap = ActiveMap.Hallway;
                 break;
+            case 6:
+                GameManager.Instance.activeMap = ActiveMap.Laboratory;
+                break;
+            case 7:
+                GameManager.Instance.activeMap = ActiveMap.MonsterRoom;
+                break;
         }
     }
 }

@@ -86,7 +86,7 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(DBManager.isWin);
+
         if (!DBManager.isWin && currentTime > 0 && !GameManager.Instance.isPenjelasan)
         {
             if(currentTime > 0)

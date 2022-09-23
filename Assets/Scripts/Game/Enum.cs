@@ -27,7 +27,9 @@ public enum ActiveMap
     LivingRoomandKitchen,
     Basement,
     IsolationRoom,
-    Hallway
+    Hallway,
+    Laboratory,
+    MonsterRoom
 }
 
 public enum ActiveMachine
