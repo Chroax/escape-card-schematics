@@ -21,13 +21,13 @@ public class Option : MonoBehaviour
 
         if (music == -80)
         {
-            musicSlider.value = -20;
+            musicSlider.value = -30;
         }
         else musicSlider.value = music;
 
         if (effect == -80)
         {
-            sfxSlider.value = -20;
+            sfxSlider.value = -30;
         }
         else sfxSlider.value = effect;
     }
