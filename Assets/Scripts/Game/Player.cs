@@ -111,15 +111,14 @@ public class Player : MonoBehaviour
     public bool getPenalty(int time)
     {
         currentTime -= time;
-        
-        timeUI.SetTime(currentTime);
-        
         if(currentTime <= 0)
         {
             timeOut.SetActive(true);
             currentTime = 0;
+            timeUI.SetTime(currentTime);
             return true;
         }
+        timeUI.SetTime(currentTime);
         return false;
     }
 
