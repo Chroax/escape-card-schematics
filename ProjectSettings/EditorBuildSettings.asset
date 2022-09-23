@@ -24,13 +24,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Intro Scene.unity
     guid: eec369416c581c4468de33b6b192552e
   - enabled: 1
-    path: Assets/Scenes/Basement Scene.unity
+    path: Assets/Scenes/Isolation Scene.unity
     guid: 0b5574c69212d334399bcb745993d2ac
   - enabled: 1
     path: Assets/Scenes/Kidnap Scene.unity
     guid: 0b48cf87dbf20ac49bc285c969b6c7e9
   - enabled: 1
-    path: Assets/Scenes/Saving Scene.unity
+    path: Assets/Scenes/Hallway Scene.unity
     guid: 2a7a2cd8fb09ef24c9bbbd89da64c34d
   - enabled: 1
     path: Assets/Scenes/Free Scene.unity

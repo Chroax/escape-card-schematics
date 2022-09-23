@@ -604,8 +604,8 @@ MonoBehaviour:
     sepenuhnya, Elsi berusaha bangkit. Ia yakin telah dibius oleh sang profesor saat
     mereka bertemu tadi.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: e2ff71c3e10ff9546ae48839ee91e517, type: 2}
-  m_sharedMaterial: {fileID: -6866017832135869851, guid: e2ff71c3e10ff9546ae48839ee91e517, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7852338743f1eba4cb32bb71cf2b650f, type: 2}
+  m_sharedMaterial: {fileID: -6866017832135869851, guid: 7852338743f1eba4cb32bb71cf2b650f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
