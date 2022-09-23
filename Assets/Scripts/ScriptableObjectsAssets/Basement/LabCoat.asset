@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4887ea061f6e49542958988cfe021d64, type: 3}
   m_Name: LabCoat
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: bb4b7fc7cfdbeac4b8172efba63c2dd9, type: 3}
+  cardSprite: {fileID: 21300000, guid: ac16948d6836cd84286d12bd85da36a1, type: 3}
   cardDescription: Perhatikkan jas lab
   cardID: 85
   cardType: 3
