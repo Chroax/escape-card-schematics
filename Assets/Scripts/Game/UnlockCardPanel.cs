@@ -47,7 +47,6 @@ public class UnlockCardPanel : MonoBehaviour
                 return;
             }
 
-            //Debug.Log(GameManager.Instance.selectedCardUnlock.unlockCardProducesID[0]);
             if (GameManager.Instance.selectedCardUnlock.unlockCardProducesID[0] == "WIN")
             {
                 DBManager.discardCardsCount += Player.instance.ownedCardId.Count;

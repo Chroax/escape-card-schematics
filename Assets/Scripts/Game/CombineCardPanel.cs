@@ -135,7 +135,6 @@ public class CombineCardPanel : MonoBehaviour
             foreach (string id in selectedCardDetails.combineCardsProducesID)
             {
                 var generatedCard = Instantiate(GameResource.Instance.card, GameManager.Instance.deckCardHolder.transform);
-                Debug.Log(GameManager.Instance.GetCardDetailByID(id).cardID);
                 generatedCard.transform.GetComponent<Card>().cardDetail = GameManager.Instance.GetCardDetailByID(id);
                 if (generatedCard.transform.GetComponent<Card>().cardDetail.cardType == CardType.map)
                 {
