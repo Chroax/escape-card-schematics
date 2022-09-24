@@ -8781,6 +8781,14 @@ PrefabInstance:
       propertyPath: card
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5516339867669588895, guid: d44b7a5f4f61ed64d998d34e6fffc604, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5516339867673837016, guid: d44b7a5f4f61ed64d998d34e6fffc604, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5516339867673837017, guid: d44b7a5f4f61ed64d998d34e6fffc604, type: 3}
       propertyPath: id
       value: 8
@@ -8805,6 +8813,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 5516339867804886849, guid: d44b7a5f4f61ed64d998d34e6fffc604, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5516339867804886862, guid: d44b7a5f4f61ed64d998d34e6fffc604, type: 3}
       propertyPath: id
       value: 39
@@ -8872,6 +8884,10 @@ PrefabInstance:
     - target: {fileID: 5516339867941516634, guid: d44b7a5f4f61ed64d998d34e6fffc604, type: 3}
       propertyPath: m_Name
       value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 5516339867941516635, guid: d44b7a5f4f61ed64d998d34e6fffc604, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5516339867947806865, guid: d44b7a5f4f61ed64d998d34e6fffc604, type: 3}
       propertyPath: m_fontAsset
@@ -9049,9 +9065,13 @@ PrefabInstance:
       propertyPath: card
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5516339868299137317, guid: d44b7a5f4f61ed64d998d34e6fffc604, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5516339868318020144, guid: d44b7a5f4f61ed64d998d34e6fffc604, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5516339868318020145, guid: d44b7a5f4f61ed64d998d34e6fffc604, type: 3}
       propertyPath: m_AnchoredPosition.x

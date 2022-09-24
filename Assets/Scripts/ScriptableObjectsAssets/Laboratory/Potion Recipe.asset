@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Potion Recipe
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 26dea5cefe1ce1947a656b22adb7e822, type: 3}
-  cardDescription: Nanti
+  cardDescription: Resep ini digunakan untuk membuat potion di potion maker
   cardID: O
   cardType: 4
   combineCardsProducesID:
@@ -26,3 +26,5 @@ MonoBehaviour:
   - E
   - 59
   mapIndex: 0
+  haveText: 0
+  text: 
