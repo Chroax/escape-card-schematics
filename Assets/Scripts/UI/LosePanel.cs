@@ -10,7 +10,7 @@ public class LosePanel : MonoBehaviour
     private void OnEnable()
     {
         GameManager.Instance.audioManager.GetComponent<SoundManager>().loseSoundPlay();
-        DBManager.scores += Player.instance.ownedCardId.Count * 5 + Player.instance.currentCoin;
+        DBManager.scores += Player.instance.currentCoin;
         DBManager.remaining_coins = 0;
         DBManager.isWin = false;
         StartCoroutine(PostLose());

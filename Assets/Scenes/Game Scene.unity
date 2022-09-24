@@ -9178,6 +9178,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 24547133414845691, guid: f3edfb655b3348346a916eef3706fae0, type: 2}
     - target: {fileID: 5516339868686777568, guid: d44b7a5f4f61ed64d998d34e6fffc604, type: 3}
+      propertyPath: m_text
+      value: '17
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5516339868686777568, guid: d44b7a5f4f61ed64d998d34e6fffc604, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: f3edfb655b3348346a916eef3706fae0, type: 2}
@@ -9335,7 +9341,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5516339869136743805, guid: d44b7a5f4f61ed64d998d34e6fffc604, type: 3}
       propertyPath: id
-      value: 6
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 5516339869136743805, guid: d44b7a5f4f61ed64d998d34e6fffc604, type: 3}
       propertyPath: card

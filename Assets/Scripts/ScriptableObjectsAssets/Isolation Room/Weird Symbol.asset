@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Weird Symbol
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: ead1066d6c68cea409024ae0e574d4bc, type: 3}
-  cardDescription: 
+  cardDescription: Kecilkan ukuran angka yang terbalik, angka atas selalu terhubung
+    dengan angka yang bawah, berhubungan dengan perkalian
   cardID: X
   cardType: 4
   combineCardsProducesID:
@@ -25,3 +26,5 @@ MonoBehaviour:
   - H
   - 3
   mapIndex: 0
+  haveText: 0
+  text: 
