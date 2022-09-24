@@ -79,13 +79,9 @@ public class PotionMaker : MonoBehaviour
                 var generatedCard = Instantiate(GameResource.Instance.card, GameManager.Instance.deckCardHolder.transform);
                 generatedCard.transform.GetComponent<Card>().cardDetail = produceCardDetail;
                 generatedCard.transform.GetComponent<Image>().sprite = produceCardDetail.cardSprite;
-
-                else
-                {
-                    Player.instance.ownedCardId.Add(generatedCard.transform.GetComponent<Card>().cardDetail.cardID);
-                    DBManager.ownedCards.Add(id);
-                    GameManager.Instance.listCardHolder.GetComponent<ListCard>().AddCardToList(produceCardDetail.cardID);
-                }
+                Player.instance.ownedCardId.Add(generatedCard.transform.GetComponent<Card>().cardDetail.cardID);
+                DBManager.ownedCards.Add(id);
+                GameManager.Instance.listCardHolder.GetComponent<ListCard>().AddCardToList(produceCardDetail.cardID);
             }
 
             GameManager.Instance.machineCardPanel.transform.GetChild(1).transform.GetChild(0).transform.GetChild(2).gameObject.SetActive(false);
