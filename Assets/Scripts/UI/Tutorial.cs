@@ -19,6 +19,6 @@ public class Tutorial : MonoBehaviour
     }
 
     public void SkipTutotrial(){
-        SceneManager.LoadScene("Game Scene");
+        SceneManager.LoadScene("Intro Scene");
     }
 }
