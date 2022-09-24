@@ -23,5 +23,7 @@ public class CardDetailSO : ScriptableObject
     public string[] unlockCardProducesID;
     public string[] destroyedCardID;
     public int mapIndex;
+    public bool haveText = false;
+    public string text;
 }
 

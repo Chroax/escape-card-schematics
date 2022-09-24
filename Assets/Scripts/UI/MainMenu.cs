@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
@@ -34,8 +30,7 @@ public class MainMenu : MonoBehaviour
 
     public void GoToTutorial()
     {
-        if (DBManager.isTutorial)
-            SceneManager.LoadScene("Tutorial Study");
+        SceneManager.LoadScene("Tutorial Study");
     }
 
     public void PanelPopUp()

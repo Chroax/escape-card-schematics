@@ -26,3 +26,5 @@ MonoBehaviour:
   - 67
   - 57
   mapIndex: 0
+  haveText: 1
+  text: Blablablabla

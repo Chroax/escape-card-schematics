@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Tutorial : MonoBehaviour
@@ -22,6 +19,6 @@ public class Tutorial : MonoBehaviour
     }
 
     public void SkipTutotrial(){
-        SceneManager.LoadScene("Tutorial");
+        SceneManager.LoadScene("Game Scene");
     }
 }

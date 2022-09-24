@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -70,6 +68,11 @@ public class Card : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IB
             GameManager.Instance.audioManager.GetComponent<SoundManager>().clickSoundPlay();
             var cardPanel = Instantiate(GameResource.Instance.detailPanel, GameManager.Instance.panelTransform);
             cardPanel.transform.GetChild(1).GetComponent<Image>().sprite = cardDetail.cardSprite;
+            if (cardDetail.haveText)
+            {
+                cardPanel.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = cardDetail.text;
+                cardPanel.transform.GetChild(2).gameObject.SetActive(true);
+            }
         }
         else
         {
