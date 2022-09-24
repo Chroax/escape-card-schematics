@@ -11,6 +11,7 @@ public class MachineCardPanel : MonoBehaviour
     public GameObject MysteriousMapMachine;
     public GameObject BookSwitchMachine;
     public GameObject FloorMachine;
+    public GameObject PotionMakerMachine;
     public void OpenPanelMachine()
     {
         GameManager.Instance.CloseAllPanel();
@@ -64,6 +65,9 @@ public class MachineCardPanel : MonoBehaviour
                 break;
             case "68":
                 FloorMachine.SetActive(true);
+                break;
+            case "28":
+                PotionMakerMachine.SetActive(true);
                 break;
         }
     }
