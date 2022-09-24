@@ -79,5 +79,6 @@ public class MachineCardPanel : MonoBehaviour
         MysteriousMapMachine.SetActive(false);
         BookSwitchMachine.SetActive(false);
         FloorMachine.SetActive(false);
+        PotionMakerMachine.SetActive(false);
     }
 }
