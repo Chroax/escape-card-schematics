@@ -9,6 +9,7 @@ public class WinPanel : MonoBehaviour
     
     private string uri = "https://schematics.its.ac.id/gameapi/finish.php";
     private string uriTotalTeam = "https://schematics.its.ac.id/gameapi/getall.php";
+    private string sceneName;
 
     private void OnEnable()
     {
@@ -18,8 +19,14 @@ public class WinPanel : MonoBehaviour
 
     public void toMainMenu()
     {
+        if (DBManager.isTutorial)
+            GameManager.Instance.winPanel.SetActive(true);
+        else
+        {
+            sceneName = "Free Scene";
+            GameManager.Instance.ChangeScene(sceneName);
+        }
         Debug.Log(DBManager.isTutorial);
-        SceneManager.LoadScene("Main Menu");
     }
     IEnumerator PostWin()
     {

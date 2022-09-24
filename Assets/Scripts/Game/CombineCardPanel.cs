@@ -17,6 +17,8 @@ public class CombineCardPanel : MonoBehaviour
     private bool cardCollected = true;
     public GameObject map;
     MapCardPanel cardPanel;
+    private bool isChangeScene;
+    private string sceneName;
     private void Awake()
     {
         cardPanel = map.GetComponent<MapCardPanel>();
@@ -139,6 +141,11 @@ public class CombineCardPanel : MonoBehaviour
                 generatedCard.transform.GetComponent<Card>().cardDetail = GameManager.Instance.GetCardDetailByID(id);
                 if (generatedCard.transform.GetComponent<Card>().cardDetail.cardType == CardType.map)
                 {
+                    if (generatedCard.transform.GetComponent<Card>().cardDetail.cardID.Equals("76"))
+                    {
+                        sceneName = "Hallway Scene";
+                        isChangeScene = true;
+                    }
                     cardPanel.ChangePanel(generatedCard.GetComponent<Card>().cardDetail.mapIndex);
                     Destroy(generatedCard);
                 }
@@ -151,6 +158,8 @@ public class CombineCardPanel : MonoBehaviour
             }
             cardCollected = true;
             GameManager.Instance.combineCardProducedImage.GetComponent<Image>().sprite = GameManager.Instance.resultCardHolder;
+            if (isChangeScene)
+                GameManager.Instance.ChangeScene(sceneName);
         }
     }
 

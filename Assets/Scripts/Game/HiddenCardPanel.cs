@@ -54,7 +54,7 @@ public class HiddenCardPanel : MonoBehaviour
             Player.instance.ownedCardId.Add(generatedCard.transform.GetComponent<Card>().cardDetail.cardID);
             DBManager.ownedCards.Add(generatedCard.transform.GetComponent<Card>().cardDetail.cardID);
 
-            if (generatedCard.transform.GetComponent<Card>().cardDetail.Equals("23"))
+            if (generatedCard.transform.GetComponent<Card>().cardDetail.cardID.Equals("23"))
             {
                 sceneName = "Saving Scene";
                 isChangeScene = true;

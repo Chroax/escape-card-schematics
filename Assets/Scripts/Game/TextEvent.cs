@@ -16,6 +16,7 @@ public class TextEvent : MonoBehaviour
 
     public void ChangeTextEvent(int index)
     {
-        text.text = dialoges[index];
+        if(dialoges[index] != null)
+            text.text = dialoges[index];
     }
 }

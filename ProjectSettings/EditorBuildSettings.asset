@@ -35,4 +35,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Free Scene.unity
     guid: 3ce275882ceba6343afde2fd6d511d8d
+  - enabled: 1
+    path: Assets/Scenes/Basement Scene.unity
+    guid: 2304d4b794c3d0944905c1d2d1aa4a12
+  - enabled: 1
+    path: Assets/Scenes/Saving Scene.unity
+    guid: f9ce624ac426e6949839266e8fdee6e8
   m_configObjects: {}

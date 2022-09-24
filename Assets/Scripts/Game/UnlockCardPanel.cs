@@ -13,7 +13,6 @@ public class UnlockCardPanel : MonoBehaviour
     public GameObject map;
     MapCardPanel cardPanel;
     private CardDetailSO produceCardDetail;
-    private string sceneName;
 
     private void Awake()
     {
@@ -60,13 +59,6 @@ public class UnlockCardPanel : MonoBehaviour
                     DBManager.scores += 50;
                 DBManager.ownedCards.Clear();
                 DBManager.remaining_hours = 0;
-                if(DBManager.isTutorial)
-                    GameManager.Instance.winPanel.SetActive(true);
-                else
-                {
-                    sceneName = "Free Scene";
-                    GameManager.Instance.ChangeScene(sceneName);
-                }
             }
             else
             {
