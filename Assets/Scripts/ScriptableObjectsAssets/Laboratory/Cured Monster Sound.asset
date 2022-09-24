@@ -27,4 +27,6 @@ MonoBehaviour:
   - 57
   mapIndex: 0
   haveText: 1
-  text: Blablablabla
+  text: Terdapat lantai dengan susunan keramik hitam dan keramik putih, dimana setiap
+    kubik keramik yang ada dipasang bersebelahan dengan dua kubik keramik hitam.
+    Jika lantai berukuran 52x52, berapa jumlah keramik hitam yang dibutuhkan?
