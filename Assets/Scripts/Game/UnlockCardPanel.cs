@@ -50,7 +50,6 @@ public class UnlockCardPanel : MonoBehaviour
             //Debug.Log(GameManager.Instance.selectedCardUnlock.unlockCardProducesID[0]);
             if (GameManager.Instance.selectedCardUnlock.unlockCardProducesID[0] == "WIN")
             {
-                Debug.Log("win");
                 DBManager.discardCardsCount += Player.instance.ownedCardId.Count;
                 DBManager.scores += Player.instance.ownedCardId.Count * 5 + Player.instance.currentCoin;
                 if (DBManager.ownedCards.Contains("31"))
@@ -69,7 +68,6 @@ public class UnlockCardPanel : MonoBehaviour
                     produceCardDetail = GameManager.Instance.GetCardDetailByID(id);
                     if (GameManager.Instance.GetCardByID(id) == null)
                     {
-                        Debug.Log(id);
                         GameManager.Instance.player.getPenalty(180);
                         if(DBManager.remaining_hours>0)
                             PenaltyPanel.SetActive(true);
@@ -100,8 +98,6 @@ public class UnlockCardPanel : MonoBehaviour
 
                 //Misal terunlock, maka kartu akan hilang
                 silangButton.SetActive(false);
-                Debug.Log(produceCardDetail.cardID);
-                Debug.Log(produceCardDetail.destroyedCardID[0]);
                 foreach (string id in produceCardDetail.destroyedCardID)
                 {
                     DBManager.ownedCards.Remove(id);

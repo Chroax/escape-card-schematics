@@ -16,7 +16,6 @@ public class SaveData : MonoBehaviour
     {
         while(!DBManager.isWin)
         {
-            Debug.Log("Saving");
             WWWForm form = new();
 
             form.AddField("team_name", DBManager.team_name);
@@ -43,7 +42,7 @@ public class SaveData : MonoBehaviour
                 yield return webRequest.SendWebRequest();
                 if (webRequest.result != UnityWebRequest.Result.Success)
                 {
-                    Debug.Log(webRequest.error);
+                
                 }
                 else
                 {

@@ -23,7 +23,6 @@ public class LogoutScript : MonoBehaviour
             yield return webRequest.SendWebRequest();
             if (webRequest.result != UnityWebRequest.Result.Success)
             {
-                Debug.Log(webRequest.error);
             }
             else
             {

@@ -24,11 +24,9 @@ public class WinPanel : MonoBehaviour
             sceneName = "Free Scene";
             GameManager.Instance.ChangeScene(sceneName);
         }
-        Debug.Log(DBManager.isTutorial);
     }
     IEnumerator PostWin()
     {
-        Debug.Log(DBManager.scores);
         WWWForm form = new();
 
         form.AddField("team_name", DBManager.team_name);
@@ -53,7 +51,6 @@ public class WinPanel : MonoBehaviour
             yield return webRequest.SendWebRequest();
             if (webRequest.result != UnityWebRequest.Result.Success)
             {
-                Debug.Log(webRequest.error);
             }
             else
             {
@@ -73,23 +70,19 @@ public class WinPanel : MonoBehaviour
             switch (webRequest.result)
             {
                 case UnityWebRequest.Result.ConnectionError:
-                    Debug.LogError(": Error: " + webRequest.error);
                     break;
                 case UnityWebRequest.Result.Success:
                     if(!DBManager.isWin)
                     {
                         DBManager.remaining_coins = 0;
                         DBManager.isWin = true;
-                        Debug.Log(webRequest.downloadHandler.text);
                         string[] total = webRequest.downloadHandler.text.Split('/');
                         DBManager.scores += 400 - (int.Parse(total[0]) * 5);
-                        Debug.Log(DBManager.scores);
                         if (DBManager.scores < 200)
                             DBManager.scores = 200;
                     }
                     break;
             }
-            Debug.Log(webRequest.result);
             StartCoroutine(PostWin())
                 ;
         }

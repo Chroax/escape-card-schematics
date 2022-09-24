@@ -66,7 +66,6 @@ public class LoginScript : MonoBehaviour
                         DBManager.isTutorial = true;
                     else
                         DBManager.isTutorial = false;
-                    Debug.Log(users[14]);
                     if (users[14] == "1")
                         DBManager.isWin = true;
                     else
@@ -74,13 +73,11 @@ public class LoginScript : MonoBehaviour
                 }
                 else if(webRequest.downloadHandler.text == "is_login")
                 {
-                    Debug.Log(webRequest.downloadHandler.text);
                     warningMessage.text = $"currently login, please log out first";
                     warningMessage.gameObject.SetActive(true);
                 }
                 else
                 {
-                    Debug.Log(webRequest.downloadHandler.text);
                     //Clear username and password field to prep for another input
                     warningMessage.text = $"wrong username or password!!";
                     warningMessage.gameObject.SetActive(true);
