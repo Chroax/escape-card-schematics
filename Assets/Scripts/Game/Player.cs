@@ -18,8 +18,9 @@ public class Player : MonoBehaviour
     private string teamName;
     public int mapIndex;
     public int currentCoin { get; set; }
-    private float currentTime;
+    public float currentTime { get; set; }
     public int currentDiscard;
+    public bool isWin { get; set; }
 
     public GameObject timeOut;
     public int score { get; set; }
@@ -87,7 +88,7 @@ public class Player : MonoBehaviour
     void Update()
     {
 
-        if (!DBManager.isWin && currentTime > 0 && !GameManager.Instance.isPenjelasan)
+        if (!(DBManager.isWin || this.isWin) && currentTime > 0 && !GameManager.Instance.isPenjelasan)
         {
             if(currentTime > 0)
             {
@@ -105,6 +106,10 @@ public class Player : MonoBehaviour
                 currentTime = 0;
                 DBManager.remaining_hours = currentTime;
             }
+        }
+        else if(this.isWin && !GameManager.Instance.isPenjelasan)
+        {
+            GameManager.Instance.winPanel.SetActive(true);
         }
     }
 

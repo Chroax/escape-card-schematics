@@ -13118,7 +13118,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5516339868013392086, guid: d44b7a5f4f61ed64d998d34e6fffc604, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5516339868013392087, guid: d44b7a5f4f61ed64d998d34e6fffc604, type: 3}
       propertyPath: m_Pivot.x
@@ -13881,7 +13881,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1931882478292202142, guid: 986118c4e84dba040bd268347cbac6f1, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1931882478292202142, guid: 986118c4e84dba040bd268347cbac6f1, type: 3}
       propertyPath: m_AnchorMax.x
@@ -15790,10 +15790,10 @@ RectTransform:
   - {fileID: 1467881294}
   - {fileID: 1262163709}
   - {fileID: 1245995126}
-  - {fileID: 1642202295}
   - {fileID: 1218375412}
   - {fileID: 532605037}
   - {fileID: 2058107508}
+  - {fileID: 1642202295}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 6.629}
@@ -18228,6 +18228,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 50f9b701f956ee844a9d0b86b87d6ba9, type: 2}
   - {fileID: 11400000, guid: 5ee4c03e31a0b0d47a4622c2cc35ffad, type: 2}
   - {fileID: 11400000, guid: 290fbb3e24cf93d43a1e11a5daf37eca, type: 2}
+  - {fileID: 11400000, guid: b814c06b5f02f04458384ce094581ea3, type: 2}
   panelTransform: {fileID: 947423073}
   audioManager: {fileID: 955484483}
   isTutorial: 0
@@ -18613,7 +18614,7 @@ RectTransform:
   - {fileID: 1908047034}
   - {fileID: 1427571586}
   m_Father: {fileID: 1410452279}
-  m_RootOrder: 9
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -20026,7 +20027,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8306240786864824252, guid: 7145d02b20e43144ebbcf830e8d8f7b2, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8306240786864824252, guid: 7145d02b20e43144ebbcf830e8d8f7b2, type: 3}
       propertyPath: m_AnchorMax.x
@@ -21500,7 +21501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2200402163771787958, guid: 5b59513ba43c6a045b6f6aeff86ca550, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2200402163771787958, guid: 5b59513ba43c6a045b6f6aeff86ca550, type: 3}
       propertyPath: m_AnchorMax.x
@@ -26539,6 +26540,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1211052888}
     - target: {fileID: 848031941375772690, guid: 9d65add43062805419d4bdb7bd18a2d3, type: 3}
+      propertyPath: PotionMakerMachine
+      value: 
+      objectReference: {fileID: 848031941319373514}
+    - target: {fileID: 848031941375772690, guid: 9d65add43062805419d4bdb7bd18a2d3, type: 3}
       propertyPath: MysteriousMapMachine
       value: 
       objectReference: {fileID: 488848380}
@@ -26548,7 +26553,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 848031941375772702, guid: 9d65add43062805419d4bdb7bd18a2d3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1634945214937036265, guid: 9d65add43062805419d4bdb7bd18a2d3, type: 3}
       propertyPath: penaltyPanel
@@ -26648,6 +26653,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d65add43062805419d4bdb7bd18a2d3, type: 3}
+--- !u!1 &848031941319373514 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3963089131749086714, guid: 9d65add43062805419d4bdb7bd18a2d3, type: 3}
+  m_PrefabInstance: {fileID: 848031941319373513}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1507009229700819404
 MonoBehaviour:
   m_ObjectHideFlags: 0

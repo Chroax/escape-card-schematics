@@ -698,7 +698,7 @@ AnimationClip:
   m_Events:
   - time: 166.53334
     functionName: ChangeCutScene
-    data: Isolation Scene
+    data: Game Scene
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

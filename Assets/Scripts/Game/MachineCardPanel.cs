@@ -56,6 +56,7 @@ public class MachineCardPanel : MonoBehaviour
         {
             case "71":
                 ElectricityMachine.SetActive(true);
+                Debug.Log("electric muncul");
                 break;
             case "Y":
                 MysteriousMapMachine.SetActive(true);

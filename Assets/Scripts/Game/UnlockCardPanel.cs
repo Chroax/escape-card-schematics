@@ -49,7 +49,7 @@ public class UnlockCardPanel : MonoBehaviour
                 return;
             }
 
-            Debug.Log(GameManager.Instance.selectedCardUnlock.unlockCardProducesID[0]);
+            //Debug.Log(GameManager.Instance.selectedCardUnlock.unlockCardProducesID[0]);
             if (GameManager.Instance.selectedCardUnlock.unlockCardProducesID[0] == "WIN")
             {
                 Debug.Log("win");
@@ -59,10 +59,13 @@ public class UnlockCardPanel : MonoBehaviour
                     DBManager.scores += 50;
                 DBManager.ownedCards.Clear();
                 DBManager.remaining_hours = 0;
+                Player.instance.currentTime = 0;
+                Player.instance.isWin = true;
             }
             else
             {
                 produceCardDetail = GameManager.Instance.GetCardDetailByID(GameManager.Instance.selectedCardUnlock.unlockCardProducesID[0]);
+                
                 foreach (string id in produceCardDetail.destroyedCardID)
                 {
                     produceCardDetail = GameManager.Instance.GetCardDetailByID(id);
@@ -99,6 +102,8 @@ public class UnlockCardPanel : MonoBehaviour
 
                 //Misal terunlock, maka kartu akan hilang
                 silangButton.SetActive(false);
+                Debug.Log(produceCardDetail.cardID);
+                Debug.Log(produceCardDetail.destroyedCardID[0]);
                 foreach (string id in produceCardDetail.destroyedCardID)
                 {
                     DBManager.ownedCards.Remove(id);

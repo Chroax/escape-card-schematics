@@ -84,7 +84,7 @@ public class WinPanel : MonoBehaviour
                         DBManager.isWin = true;
                         Debug.Log(webRequest.downloadHandler.text);
                         string[] total = webRequest.downloadHandler.text.Split('/');
-                        DBManager.scores += 1000 - (int.Parse(total[0]) * 5);
+                        DBManager.scores += 400 - (int.Parse(total[0]) * 5);
                         Debug.Log(DBManager.scores);
                         if (DBManager.scores < 200)
                             DBManager.scores = 200;
