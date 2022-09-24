@@ -17,6 +17,8 @@ public class CombineCardPanel : MonoBehaviour
     MapCardPanel cardPanel;
     private bool isChangeScene;
     private string sceneName;
+    private string isGenerated;
+
     private void Awake()
     {
         cardPanel = map.GetComponent<MapCardPanel>();
@@ -68,6 +70,7 @@ public class CombineCardPanel : MonoBehaviour
             if (!cardCollected)
             {
                 warning.SetActive(true);
+                return;
             }
 
             selectedCardDetails = GameManager.Instance.GetCardDetailByID(GameManager.Instance.selectedCombineCard1.cardID);
