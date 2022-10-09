@@ -33538,7 +33538,6 @@ GameObject:
   m_Component:
   - component: {fileID: 724717289}
   - component: {fileID: 724717291}
-  - component: {fileID: 724717290}
   m_Layer: 5
   m_Name: DeckCard
   m_TagString: Untagged
@@ -33566,25 +33565,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -0.000022888}
   m_SizeDelta: {x: 660.5744, y: 495.1023}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &724717290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 724717288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b635183eaf875d4eb7d2d01aafd761d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnRoots: {fileID: 724717289}
-  discardRoots: {fileID: 0}
-  redList: {fileID: 0}
-  blueList: {fileID: 0}
-  yellowList: {fileID: 0}
-  greyList: {fileID: 0}
-  greenList: {fileID: 0}
 --- !u!114 &724717291
 MonoBehaviour:
   m_ObjectHideFlags: 0

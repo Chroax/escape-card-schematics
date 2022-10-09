@@ -52,10 +52,18 @@ public class Player : MonoBehaviour
             timeUI.SetTime(currentTime);
             coinUI.SetCoin(currentCoin);
             discUI.SetDiscard(currentDiscard);
-            if (currentTime > 0)
+            if(GameManager.Instance.isPenjelasan)
+            {
+                ownedCardId.Add("16");
+                ownedCardId.Add("32");
+            }
+            else
             {
                 foreach (string id in DBManager.ownedCards)
                     ownedCardId.Add(id);
+            }
+            if (currentTime > 0)
+            {
                 foreach (string id in ownedCardId)
                 {
                     var generatedCard = Instantiate(GameResource.Instance.card, GameManager.Instance.deckCardHolder.transform);
